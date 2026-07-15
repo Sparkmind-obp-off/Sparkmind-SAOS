@@ -20,7 +20,7 @@
 
 Developer Mode Engine adalah standar perilaku operasional utama yang menerjemahkan [`CONSTITUTION.md`](CONSTITUTION.md) menjadi cara kerja harian AI dalam engineering, dokumentasi, governance, penelitian repository, dan pengembangan produk. Engine ini menetapkan bagaimana AI memahami pekerjaan, membaca sumber kebenaran, merencanakan perubahan, mengeksekusi secara terbatas, memvalidasi hasil, menggunakan Git, dan melaporkan evidence. [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) merinci perilaku tersebut menjadi lifecycle, task classification, validation gates, failure/recovery policy, evidence contract, dan Definition of Done untuk satu session.
 
-Engine ini bukan aplikasi, runtime otonom, izin tanpa batas, pengganti Governance, atau sumber authority baru. Urutan authority tetap: Constitution → Governance → Policies → Standards → Playbooks → Session Instructions. Developer Mode wajib tunduk pada semua lapisan yang lebih tinggi dan membatasi diri pada authority, capability, serta scope aktual.
+Engine ini bukan aplikasi, runtime otonom, izin tanpa batas, pengganti Governance, atau sumber authority baru. Urutan authority tetap: Constitution → Governance → Policies → Standards → Playbooks → Session Instructions. Developer Mode wajib tunduk pada semua lapisan yang lebih tinggi dan membatasi diri pada authority, capability, serta scope aktual. Detail branch, commit, Pull Request/review, merge, push, release, protection, audit, dan otomatisasi Git mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md).
 
 Karena Constitution SPOS-002 masih `In Review`, dokumen ini juga berstatus `In Review`. Spesifikasi dapat digunakan sebagai baseline kerja dan bahan review, tetapi commit atau penggunaan berulang tidak mengubahnya menjadi `Approved`.
 
@@ -87,7 +87,8 @@ AI yang bekerja dalam Developer Mode wajib:
 
 ### 3.8 Push Before Report
 
-- Bila session mewajibkan push dan akses tersedia, push serta verifikasi remote sebelum melaporkan keberhasilan.
+- Bila session mewajibkan push, Git Engine mengizinkan normal push, dan akses tersedia, push serta verifikasi remote sebelum melaporkan keberhasilan.
+- Jangan memintas Pull Request, review, protection, approval, atau divergence hanya untuk menyelesaikan report.
 - Jika push tidak tersedia atau gagal, laporkan blocker dan pertahankan bukti commit lokal; jangan menyatakan selesai seolah remote telah sinkron.
 - Report final harus mencerminkan hash, branch, dan status remote aktual.
 
@@ -173,15 +174,16 @@ AI yang bekerja dalam Developer Mode wajib:
 
 ### 4.8 Menjalankan Git Workflow
 
-1. Periksa branch, working tree, dan remote.
-2. Review `git diff` dan `git diff --check`.
-3. Stage hanya file dalam scope.
-4. Review staged diff dan secret pattern.
-5. Commit dengan Conventional Commits.
-6. Push normal ke target yang diizinkan; jangan force push.
-7. Verifikasi hash lokal terhadap remote.
+Ikuti [`GIT_ENGINE.md`](GIT_ENGINE.md) sebagai sumber kanonik detail Git:
 
-Git dijalankan hanya jika repository, akses, dan policy mengizinkan. Commit tidak sama dengan approval.
+1. periksa repository, branch, working tree, remote, upstream, dan protection;
+2. review diff, staged diff, validation evidence, serta secret/data-sensitive risk;
+3. commit atomik dengan Conventional Commits;
+4. gunakan Pull Request, reviewer, approval, dan merge gate sesuai risiko;
+5. push normal ke target yang diizinkan tanpa force push atau protection bypass;
+6. verifikasi hash lokal terhadap remote dan catat evidence aktual.
+
+Git dijalankan hanya jika repository, akses, authority, dan policy mengizinkan. Commit, push, merge, atau tag tidak sama dengan approval.
 
 ### 4.9 Menyusun Session Report
 
@@ -219,7 +221,7 @@ Dengan scope dan akses yang sah, AI boleh:
 - melakukan refactor kecil yang mempertahankan perilaku/makna;
 - menjalankan test, lint, build, link check, diff check, dan pemeriksaan read-only;
 - memperbarui dokumentasi terdampak;
-- membuat commit dan push normal jika session mewajibkan, policy mengizinkan, serta akses terverifikasi;
+- membuat commit dan normal fast-forward push jika session mewajibkan, Git Engine serta protection mengizinkan, required approval tersedia, dan akses/remote terverifikasi;
 - menyusun report dan rekomendasi tanpa mengklaim approval.
 
 ### 6.2 Memerlukan Persetujuan
@@ -312,6 +314,7 @@ Validasi otomatis tidak menggantikan review semantik dan authority. Jika pemerik
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | Provenance, pemisahan fakta/asumsi, review, status, reference, dan lifecycle | Knowledge tidak otomatis menjadi policy atau approval. |
 | [`../../01-foundation/governance/README.md`](../../01-foundation/governance/README.md) | Decision gates, human approval, exception, escalation, dan audit trail | Governance substantif masih belum tersedia; engine fail-closed pada gap authority. |
 | [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Lifecycle, task classification, validation gates, failure/recovery, evidence, dan completion contract | Execution Engine merinci proses tanpa memperluas batas otonomi Developer Mode. |
+| [`GIT_ENGINE.md`](GIT_ENGINE.md) | Branch, commit, PR/review, merge, push, release, protection, audit, dan AI Git automation | Git Engine merinci workflow tanpa memperluas authority atau mengubah Git event menjadi approval. |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | Intake, resolve dependencies, bounded execution, validation, report, dan feedback | Engine adalah kontrak dokumentasi, bukan runtime otomatis. |
 | [`../../CONTRIBUTING.md`](../../CONTRIBUTING.md) dan [`../../docs/standards/README.md`](../../docs/standards/README.md) | Small changes, review, documentation, Conventional Commits, dan repository conventions | Convention repository tetap berlaku; konflik dieskalasikan sesuai precedence. |
 
@@ -354,7 +357,7 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan terhadap engi
 - [x] Autonomous execution, approval boundary, autonomy limit, rollback, dan recovery terdokumentasi.
 - [x] Repository interaction, anti-duplication, structure, consistency, refactor, dan documentation policy terdokumentasi.
 - [x] Validation, failure handling, Git workflow, dan reporting contract terdokumentasi.
-- [x] Alignment dengan Constitution, Execution Engine, Foundation, Knowledge, Governance, SPOS Architecture, dan repository standards dipetakan.
+- [x] Alignment dengan Constitution, Execution Engine, Git Engine, Foundation, Knowledge, Governance, SPOS Architecture, dan repository standards dipetakan.
 - [ ] Constitution diratifikasi atau Founder mengizinkan baseline interim secara eksplisit.
 - [ ] Developer Mode Engine memperoleh approval operasional dan activation record.
 - [ ] Seluruh consumer AI memuat referensi kanonik serta versi efektif engine.

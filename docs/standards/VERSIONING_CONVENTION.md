@@ -2,7 +2,7 @@
 
 ## Tujuan
 
-Menetapkan cara memberi versi pada repository dan dokumen tanpa menciptakan klaim stabilitas atau persetujuan yang menyesatkan.
+Menetapkan cara memberi versi pada repository dan dokumen tanpa menciptakan klaim stabilitas atau persetujuan yang menyesatkan. Workflow release, tagging authority, protection, verification, dan rollback mengikuti [`../../99-prompt-os/00-core/GIT_ENGINE.md`](../../99-prompt-os/00-core/GIT_ENGINE.md).
 
 ## Versioning Repository
 
@@ -21,9 +21,10 @@ Selama Foundation dan dokumen inti belum approved, gunakan versi `0.y.z`. Versi 
 ## Tag Git
 
 - Gunakan annotated tag dengan prefix `v`, misalnya `v0.1.0`.
-- Tag hanya dibuat pada commit yang telah direview dan konsisten.
+- Tag hanya dibuat pada commit `main` yang telah direview, divalidasi, dan memiliki release authority.
+- AI tidak membuat atau mempublikasikan tag tanpa instruksi/delegasi release eksplisit.
 - Tag yang sudah dipublikasikan tidak dipindahkan atau ditimpa.
-- Kesalahan pada rilis ditangani dengan versi baru, bukan rewrite histori.
+- Kesalahan pada rilis ditangani dengan revert/corrective release dan versi baru, bukan rewrite histori atau pemindahan published tag.
 
 ## Versioning Dokumen
 

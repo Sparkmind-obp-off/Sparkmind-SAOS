@@ -20,7 +20,7 @@
 
 Execution Engine adalah standar proses permanen yang menentukan bagaimana setiap AI Agent menerima objective, menganalisis konteks, membaca repository, mengidentifikasi dependency, merencanakan, mengeksekusi, memvalidasi, mendokumentasikan, menjalankan Git workflow, melaporkan, dan menutup pekerjaan dalam ekosistem SparkMind.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Execution Engine menetapkan lifecycle, klasifikasi, gate, evidence, failure handling, dan completion contract untuk satu session.
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Execution Engine menetapkan lifecycle, klasifikasi, gate, evidence, failure handling, dan completion contract untuk satu session. Detail tahap **Perform Git Workflow** mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md).
 
 Execution Engine bukan aplikasi, runtime otonom, scheduler, product workflow, atau sumber authority baru. Engine tidak memberi approval kepada dirinya sendiri, tidak mengubah requirement produk, dan tidak mengesampingkan Governance, owner domain, hukum, keselamatan, atau Founder Authority.
 
@@ -193,20 +193,18 @@ Dokumentasi wajib membedakan completed work, limitation, assumption, technical d
 
 **Tujuan:** membuat perubahan dapat ditelusuri dan, bila diwajibkan serta tersedia, menyinkronkannya ke remote.
 
-Urutan minimum:
+Jalankan [`GIT_ENGINE.md`](GIT_ENGINE.md) sebagai sumber kanonik untuk branch, commit, Pull Request/review, merge, push, release, protection, audit, dan AI automation. Urutan lifecycle minimum tetap:
 
-1. periksa branch, status, dan remote;
-2. review seluruh diff dan `git diff --check`;
-3. jalankan final validation serta secret review;
-4. stage hanya file dalam scope;
-5. review staged diff;
-6. commit atomik menggunakan Conventional Commits;
-7. push normal ke target yang diizinkan; jangan force push atau rewrite shared history;
-8. verifikasi hash lokal terhadap remote.
+1. verifikasi repository, branch, working tree, remote, upstream, authority, dan protection;
+2. review diff, staged diff, validation evidence, serta secret/data-sensitive risk;
+3. commit atomik menggunakan Conventional Commits;
+4. gunakan PR/reviewer/approval/merge gate sesuai risiko dan capability;
+5. lakukan normal fast-forward push tanpa force push, shared-history rewrite, atau protection bypass;
+6. verifikasi hash lokal terhadap ref remote dan catat hasil aktual.
 
-Commit tidak sama dengan approval. Jika Git/push tidak tersedia, jangan mengarang hash atau status; laporkan blocker dan pertahankan pekerjaan secara aman sesuai policy session.
+Commit, push, merge, tag, atau release tidak sama dengan approval. Jika Git/push tidak tersedia, jangan mengarang hash atau status; laporkan blocker dan pertahankan pekerjaan secara aman sesuai policy session.
 
-**Gate keluar:** commit dan push terverifikasi bila diwajibkan, atau blocker tercatat jujur.
+**Gate keluar:** Git Engine checklist yang berlaku lulus; commit/push/remote terverifikasi bila diwajibkan, atau blocker tercatat jujur.
 
 ### 3.10 Generate Session Report
 
@@ -472,6 +470,7 @@ Lesson learned wajib:
 | --- | --- | --- |
 | [`CONSTITUTION.md`](CONSTITUTION.md) | Amanah, Human First, Truth over Assumption, quality, reversibility, oversight, escalation, dan auditability | Engine tidak meratifikasi atau mengubah Constitution. |
 | [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) | Read/plan/review before action, incremental work, validation, documentation, Git, reporting, autonomy, dan rollback | Execution Engine merinci proses; tidak menggandakan authority atau memperluas otonomi. |
+| [`GIT_ENGINE.md`](GIT_ENGINE.md) | Detail branch, commit, PR/review, merge, push, release, protection, audit, dan AI Git automation pada tahap Perform Git Workflow | Git Engine menjadi sumber detail Git tanpa menggantikan lifecycle session. |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, derived-not-duplicated, evidence flow, ownership, lifecycle, feedback, dan playbook boundary | Engine tidak mengambil ownership Foundation atau domain. |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | provenance, status, source review, fact/assumption separation, lifecycle, dan lesson learned routing | Evidence eksekusi tidak otomatis menjadi approved knowledge atau policy. |
 | [`../../01-foundation/governance/README.md`](../../01-foundation/governance/README.md) | authority check, approval, exception, escalation, dan audit trail | Governance substantif belum tersedia; authority ambiguity tetap fail-closed. |
@@ -540,8 +539,8 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Satu objective, incremental changes, validation, documentation, completion, dan repository consistency rules terdokumentasi.
 - [x] Enam Validation Gates terdokumentasi.
 - [x] Error handling, rollback, recovery, retry, failure record, dan lesson learned terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, dan repository standards dipetakan.
-- [x] Git workflow, evidence contract, conflict resolution, dan Definition of Done terdokumentasi.
+- [x] Alignment dengan Constitution, Developer Mode, Git Engine, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, dan repository standards dipetakan.
+- [x] Git lifecycle minimum, evidence contract, conflict resolution, dan Definition of Done terdokumentasi; detail Git didelegasikan ke Git Engine kanonik.
 - [x] Scope tidak membangun aplikasi, fitur produk, runtime, atau Governance Engine.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
 - [ ] Developer Mode dan Execution Engine memperoleh approval operasional serta activation record.

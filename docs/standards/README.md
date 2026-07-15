@@ -2,7 +2,7 @@
 
 ## Tujuan
 
-Folder ini menjadi sumber kanonik untuk standar pengelolaan repository SparkMind SAOS. Standar di sini mengatur bentuk dan workflow repository, bukan menetapkan Vision, Mission, nilai, arsitektur produk, atau implementasi teknis.
+Folder ini menjadi sumber kanonik untuk bentuk dan konvensi repository SparkMind SAOS. Policy Git lintas repository—authority, branch strategy, Pull Request/review, merge, push, release, protection, backup, audit, recovery, dan AI automation—berada di [`../../99-prompt-os/00-core/GIT_ENGINE.md`](../../99-prompt-os/00-core/GIT_ENGINE.md). Standar di sini tidak menetapkan Vision, Mission, nilai, arsitektur produk, atau implementasi teknis.
 
 ## Standar Aktif
 
@@ -23,9 +23,9 @@ Jika ditemukan konflik:
 1. Hukum, kewajiban keselamatan, dan instruksi Founder yang terdokumentasi serta berlaku.
 2. Constitution SPOS yang telah diratifikasi, untuk pekerjaan di dalam SPOS.
 3. Dokumen Kernel approved sebagai source material fundamental sesuai kedudukan dan scope-nya.
-4. Governance dan policy approved yang berlaku.
+4. Governance dan policy approved yang berlaku, termasuk Git Engine setelah aktivasi sah.
 5. Kebijakan root seperti `SECURITY.md`, `LICENSE`, dan `CODE_OF_CONDUCT.md`.
-6. Standar khusus pada folder ini.
+6. Standar khusus pada folder ini sebagai profile repository.
 7. Preferensi gaya lokal yang terdokumentasi.
 
 Hanya artefak dengan status dan approval yang sah memiliki authority operasional. Konflik tidak boleh diselesaikan secara diam-diam; catat sumber, status, serta scope-nya dan eskalasikan bila memengaruhi makna normatif atau hak pihak lain.
@@ -39,4 +39,4 @@ Hanya artefak dengan status dan approval yang sah memiliki authority operasional
 5. Lakukan review konsistensi dan link.
 6. Gunakan commit `docs(standards): ...` atau tipe lain yang paling akurat.
 
-Perubahan standar repository tidak boleh digunakan untuk menyisipkan keputusan strategis yang seharusnya berada di Kernel atau memerlukan persetujuan Founder.
+Perubahan standar repository tidak boleh digunakan untuk menyisipkan keputusan strategis yang seharusnya berada di Kernel/Constitution atau memerlukan persetujuan Founder. Standar branch, commit, dan versioning tidak boleh melemahkan Git Engine; konflik wajib dihentikan dan dieskalasikan.

@@ -26,6 +26,8 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Laporan SPOS-003 serta penyelarasan SPOS Core, SPOS Architecture, indeks repository, dan handoff.
 - Execution Engine SPOS-004 dengan lifecycle sebelas tahap, sepuluh task classification, execution rules, enam validation gates, failure/recovery policy, evidence contract, dan Definition of Done.
 - Laporan SPOS-004 serta penyelarasan SPOS Core, SPOS Architecture, precedence repository standards, indeks repository, dan handoff.
+- Git Engine SPOS-005 dengan branch strategy, Conventional Commits, Pull Request/review/merge policy, push/release workflow, repository protection, backup, audit, failure/recovery, dan AI Git Automation Policy.
+- Laporan SPOS-005 serta penyelarasan Developer Mode, Execution Engine, SPOS Core/Architecture, Governance index, contributing flow, branch/commit/versioning standards, indeks repository, dan handoff.
 
 ### Reviewed
 
@@ -37,6 +39,7 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Cross-review SPOS-002 terhadap Kernel, Foundation, Knowledge, Governance, dan SPOS Architecture, termasuk resolusi interim lokasi instrumen Constitution dan batas ratifikasi Founder.
 - Cross-review SPOS-003 terhadap Constitution, Foundation, Knowledge, Governance, SPOS Architecture, dan repository standards, termasuk batas otonomi serta dependency aktivasi.
 - Cross-review SPOS-004 terhadap Constitution, Developer Mode, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, dan repository standards, termasuk penyelarasan precedence Constitution.
+- Cross-review SPOS-005 terhadap Constitution, Developer Mode, Execution Engine, Foundation, Governance, SPOS Architecture, contributing flow, serta branch/commit/versioning standards, termasuk pemisahan Git policy kanonik dari profile repository.
 
 ## [0.1.0] - 2026-07-15
 

@@ -2,7 +2,7 @@
 
 ## Tujuan
 
-Menjaga histori Git mudah dibaca, dicari, direview, dan digunakan untuk memahami evolusi SparkMind SAOS.
+Menjaga histori Git mudah dibaca, dicari, direview, dan digunakan untuk memahami evolusi SparkMind SAOS. Dokumen ini adalah profil format commit repository; policy kanonik branch, review, push, release, protection, audit, dan AI automation berada di [`../../99-prompt-os/00-core/GIT_ENGINE.md`](../../99-prompt-os/00-core/GIT_ENGINE.md).
 
 ## Format
 
@@ -47,7 +47,11 @@ Contoh:
 ```text
 docs(repository): establish SparkMind repository foundation
 fix(kernel): correct broken terminology links
+docs(spos): establish Git Engine
+refactor(knowledge): simplify index hierarchy
 chore(repository): add editor defaults
+test(engine): cover blocked execution state
+ci(repository): add markdown link check
 ```
 
 ## Body dan Footer
@@ -85,3 +89,5 @@ Setiap commit harus:
 - [ ] Dokumentasi dan changelog sinkron.
 - [ ] Tidak ada secret atau file lokal.
 - [ ] Subject mengikuti format Conventional Commits.
+- [ ] Staged diff telah direview dan hanya memuat satu tujuan logis.
+- [ ] Commit tidak digunakan untuk mengklaim approval, ratifikasi, atau risk acceptance.

@@ -1,6 +1,6 @@
 # SPOS Architecture
 
-> Status: Draft baseline SPOS-004 — diselaraskan dengan Constitution, Developer Mode Engine, dan Execution Engine `In Review`; bukan runtime aktif.
+> Status: Draft baseline SPOS-005 — diselaraskan dengan Constitution, Developer Mode Engine, Execution Engine, dan Git Engine `In Review`; bukan runtime aktif.
 
 ## Tujuan
 
@@ -51,7 +51,7 @@ SPOS berada di bawah operating model SAOS dan menggunakan Kernel serta Foundatio
 
 | Komponen | Tanggung jawab | Input | Output |
 | --- | --- | --- | --- |
-| `00-core/` | Menyimpan Constitution, Developer Mode, Execution Engine, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, operational behavior, execution lifecycle, dan engine specifications |
+| `00-core/` | Menyimpan Constitution, Developer Mode, Execution Engine, Git Engine, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, operational behavior, execution lifecycle, Git governance, dan engine specifications |
 | `01-templates/` | Menyediakan struktur artefak reusable | Rule dan metadata contract | Draft artefak yang konsisten |
 | `02-rules/` | Menyimpan aturan atomik dan precedence | Authority serta governance approved | Constraint dan quality gate terkomposisi |
 | `03-sessions/` | Membatasi satu unit kerja | Objective, scope, dependency, acceptance criteria | Deliverable, evidence, dan session report |
@@ -155,7 +155,7 @@ Intake, module selection, prompt assembly, dan preflight tetap menjadi aktivitas
 2. **Classify:** tentukan domain, risiko, reversibility, dan authority yang diperlukan.
 3. **Resolve upstream:** muat sumber kanonik Kernel, Foundation, Governance, Knowledge, dan SAOS yang relevan beserta statusnya.
 4. **Create session contract:** kunci scope, non-scope, deliverable, success criteria, dan stop condition.
-5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) sebagai baseline perilaku dan [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) sebagai baseline proses hanya sesuai status serta authority aktualnya.
+5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) sebagai baseline perilaku, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) sebagai baseline proses, dan [`GIT_ENGINE.md`](GIT_ENGINE.md) sebagai baseline Git hanya sesuai status serta authority aktualnya.
 6. **Assemble prompts:** susun System → User → Task tanpa menduplikasi sumber authority.
 7. **Preflight:** periksa konflik, missing input, security, capability, approval, dan rencana validasi.
 8. **Execute:** lakukan pekerjaan hanya dalam scope serta rekam keputusan dan evidence.
@@ -217,7 +217,7 @@ Sebelum session ditutup, pastikan:
 - Quality gate gagal: perbaiki dalam scope atau tandai session belum selesai.
 - Feedback produk: catat sebagai evidence; owner upstream memutuskan perubahan.
 
-## Review Checklist SPOS-004
+## Review Checklist SPOS-005
 
 - [x] Tujuan, komponen, dependency, lifecycle, dan execution flow terdokumentasi.
 - [x] Constitution menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder.
@@ -228,6 +228,8 @@ Sebelum session ditutup, pastikan:
 - [x] Prompt template diposisikan sebagai assembly boundary, bukan sumber normatif.
 - [x] Developer Mode Engine diposisikan sebagai kontrak perilaku operasional, bukan runtime atau authority baru.
 - [x] Execution Engine diposisikan sebagai kontrak proses kanonik untuk lifecycle, classification, validation, recovery, evidence, dan completion.
-- [x] Decision gates, autonomy boundary, repository interaction, validation, rollback, dan reporting selaras dengan execution flow.
+- [x] Git Engine diposisikan sebagai kontrak kanonik branch, commit, PR/review, merge, push, release, protection, audit, recovery, dan AI Git automation.
+- [x] Decision gates, autonomy boundary, repository interaction, validation, rollback, Git, dan reporting selaras dengan execution flow.
 - [x] Lifecycle arsitektural dan lifecycle Execution Engine dipetakan tanpa membuat dua sumber proses tandingan.
-- [x] Baseline tidak mengklaim runtime atau automation yang belum dibangun.
+- [x] Perform Git Workflow mendelegasikan detail ke Git Engine tanpa membuat workflow Git tandingan.
+- [x] Baseline tidak mengklaim runtime, hosting, platform protection, atau automation yang belum dibangun/diverifikasi.

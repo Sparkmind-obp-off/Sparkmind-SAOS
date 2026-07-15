@@ -1,6 +1,6 @@
 # SPOS Session Template
 
-> Status: Draft baseline SPOS-004 — gunakan bersama Execution Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
+> Status: Draft baseline SPOS-005 — gunakan bersama Execution Engine dan Git Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
 
 ## Metadata
 
@@ -37,6 +37,7 @@ Jelaskan keadaan awal, alasan session diperlukan, dan fakta yang sudah diverifik
 | Foundation / Governance | `<path>` | `<status>` | `<authority atau workflow>` |
 | Knowledge / Decision | `<path>` | `<status>` | `<context>` |
 | Developer Mode / Execution Engine | `<path dan versi>` | `<status>` | `<behavior, lifecycle, gates, dan completion contract>` |
+| Git Engine | `<path dan versi>` | `<status>` | `<branch, review, commit, push, release, protection, dan automation contract>` |
 | SPOS rule / playbook | `<path>` | `<status>` | `<constraint atau procedure>` |
 
 Jangan memperlakukan dependency Draft sebagai aturan Approved.
@@ -92,8 +93,9 @@ Turunkan tahap tersebut menjadi subtask atomik sesuai klasifikasi pekerjaan. Ses
 - [ ] During Execution Check dan Post-Execution Review lulus.
 - [ ] Acceptance criteria setiap deliverable terpenuhi.
 - [ ] Perubahan strategis memiliki approval yang tepat.
-- [ ] Git diff direview dan whitespace check berhasil.
-- [ ] Commit/push atau alasan blocker diverifikasi.
+- [ ] Git Engine checklist yang berlaku, diff/staged diff, whitespace, dan secret review selesai.
+- [ ] Required branch/PR/reviewer/check/approval/merge dipatuhi.
+- [ ] Commit/push/remote hash atau alasan blocker diverifikasi.
 - [ ] Repository Consistency Check dan Documentation Check lulus.
 - [ ] Definition of Done Check lulus.
 - [ ] Session Report selesai dan tidak menjadi sumber kanonik tandingan.
@@ -111,13 +113,19 @@ Turunkan tahap tersebut menjadi subtask atomik sesuai klasifikasi pekerjaan. Ses
 
 ## 9. Git Workflow
 
-- Branch: `<branch>`
-- Commit subject: `<type>(<scope>): <description>`
-- Remote: `<remote>`
-- Push policy: `<normal push / pull request / blocked>`
-- Verification command or evidence: `<evidence>`
+Ikuti [`../00-core/GIT_ENGINE.md`](../00-core/GIT_ENGINE.md).
 
-Jangan mengklaim commit atau push berhasil sebelum diverifikasi terhadap remote.
+- Branch / upstream: `<branch dan upstream>`
+- Protection / required workflow: `<direct low-risk / pull request / reviewer / checks / blocked>`
+- Commit subject: `<type>(<scope>): <description>`
+- Reviewer / approver: `<role atau N/A dengan alasan>`
+- Merge method: `<squash / merge commit / rebase / N/A>`
+- Remote: `<remote>`
+- Push policy: `<normal fast-forward push / pull request / blocked>`
+- Verification command or evidence: `<local dan remote hash/check>`
+- Tag / release: `<N/A atau version dan approval>`
+
+Jangan mengklaim commit, push, merge, tag, release, protection, atau approval berhasil sebelum diverifikasi.
 
 ## 10. Session Report
 
@@ -141,8 +149,8 @@ Session hanya `Completed` jika:
 - [ ] seluruh deliverable selesai pada lokasi kanonik;
 - [ ] seluruh quality gate wajib lulus;
 - [ ] review dan dokumentasi selesai;
-- [ ] commit dan push selesai jika diwajibkan serta capability tersedia;
-- [ ] jika Git terblokir, session dinyatakan `Blocked`, bukan diklaim selesai;
+- [ ] Git workflow selesai jika diwajibkan serta capability, authority, review, dan protection mengizinkan;
+- [ ] jika Git terblokir, blocker dicatat jujur dan completion mengikuti Definition of Done/policy session;
 - [ ] report final mencerminkan keadaan aktual.
 
 ## 12. Open Questions

@@ -14,7 +14,7 @@
 >
 > Effective: setelah approval, activation record, compatible dependency set, ownership acceptance, consumer mapping, migration, dan control minimum tersedia
 >
-> Review trigger: amendment Constitution; perubahan Foundation, Master Knowledge System, Master Prompt System, Governance, Session, Execution, Documentation, Report, Git, Quality, Developer Mode, SPOS Architecture, authority/dependency map, interface contract, security classification, incident, conflict, atau integration drift
+> Review trigger: amendment Constitution; perubahan Foundation, Master Knowledge System, Master Prompt System, Master Workflow System, Governance, Session, Execution, Documentation, Report, Git, Quality, Developer Mode, SPOS Architecture, authority/dependency map, interface contract, security classification, incident, conflict, atau integration drift
 
 ## 1. Kedudukan dan Tujuan
 
@@ -22,7 +22,7 @@ Master Integration System adalah kontrak arsitektur dokumentasi yang menghubungk
 
 Dokumen ini adalah **integration control map**, bukan authority baru, mega-policy, runtime orchestrator, atau salinan seluruh engine. Ia menetapkan bagaimana sumber kanonik ditemukan, diprioritaskan, dirangkai, divalidasi, ditelusuri, diubah, dan dihentikan secara konsisten.
 
-Sistem ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md), [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md), [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md), [`MASTER_PROMPT_SYSTEM.md`](MASTER_PROMPT_SYSTEM.md), dan seluruh Core Engine. Jika ringkasan integrasi bertentangan dengan sumber kanonik, sumber kanonik dengan authority/status/version yang sah berlaku dan konflik harus dicatat.
+Sistem ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md), [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md), [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md), [`MASTER_PROMPT_SYSTEM.md`](MASTER_PROMPT_SYSTEM.md), [`MASTER_WORKFLOW_SYSTEM.md`](MASTER_WORKFLOW_SYSTEM.md), dan seluruh Core Engine. Jika ringkasan integrasi bertentangan dengan sumber kanonik, sumber kanonik dengan authority/status/version yang sah berlaku dan konflik harus dicatat.
 
 ## 2. Scope dan Non-Scope
 
@@ -168,6 +168,7 @@ Master Integration System berada pada lapisan koordinasi dokumentasi. Ia membaca
 | Master Knowledge System | Claim/evidence, provenance, curation, retrieval/consumption | Classified knowledge package | Source, research, feedback | Knowledge bukan policy/decision otomatis |
 | Governance Engine | Authority, delegation, decision, approval, exception | Decision/delegation/gate contract | Constitution, risk/evidence | Tidak menjalankan domain work |
 | Master Prompt System | Prompt hierarchy, layer, assembly, security | Versioned prompt package manifest | Approved instruction + classified context | Prompt bukan authority/runtime |
+| Master Workflow System | Workflow composition, stage/gate/handoff, flow, state/transition boundary | Workflow contract/profile dan end-to-end map | Canonical system contracts | Bukan runtime; tidak mengambil lifecycle/semantics domain |
 | Session Engine | Identity, lifecycle, state, continuity, closure | Session contract/state/evidence envelope | Objective, authority, dependencies | Session state bukan artefact approval |
 | Execution Engine | Procedure, task class, checkpoint, recovery | Execution evidence/result | Session plan, playbook, capabilities | Completion bukan approval |
 | Documentation Engine | Documentation types, lifecycle, metadata, publication | Controlled document state | Changes/evidence/owner decisions | Document status bukan domain truth |
@@ -630,6 +631,7 @@ Runtime, automation, registry, graph, API, monitoring, atau enforcement hanya da
 | Git | [`GIT_ENGINE.md`](GIT_ENGINE.md) | Preserve version-control trace |
 | Quality | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | Define gates/findings/DoD/audit |
 | AI behavior | [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) | Bound autonomy/tool/repository behavior |
+| Workflow composition | [`MASTER_WORKFLOW_SYSTEM.md`](MASTER_WORKFLOW_SYSTEM.md) | Preserve stage/gate/handoff and lifecycle/state boundaries |
 | SPOS composition | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | Preserve component/lifecycle architecture |
 
 ## 32. Integration Review Checklist SPOS-013
@@ -642,5 +644,6 @@ Runtime, automation, registry, graph, API, monitoring, atau enforcement hanya da
 - [x] Lifecycle artefak, knowledge, prompt, session, execution, report, documentation, dan Git event tetap terpisah.
 - [x] Technical completion, approval, activation, publication, dan risk acceptance tidak disamakan.
 - [x] Master Integration System tidak menjadi runtime, mega-policy, authority baru, atau SSOT tandingan.
+- [x] Master Workflow System menjadi consumer/peta komposisi edge integrasi tanpa mengambil ownership relationship, dependency, interface, compatibility, atau lifecycle integration.
 - [x] Scope documentation-only; tidak ada aplikasi, API, runtime, automation, CI/CD, deployment, infrastructure, database, dashboard, atau monitoring service.
 - [ ] Founder/authorized human approval, Integration Steward acceptance, compatible dependency set, consumer map, validation scenarios, migration, monitoring, audit, dan activation record tersedia.

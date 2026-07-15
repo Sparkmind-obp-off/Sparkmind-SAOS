@@ -43,3 +43,4 @@ Folder ini menyimpan laporan hasil setiap session SparkMind SAOS untuk menjaga k
 - [`SPOS-011.md`](SPOS-011.md) — SparkMind Master Prompt System and System Architecture Layer.
 - [`SPOS-012.md`](SPOS-012.md) — SparkMind Master Knowledge System.
 - [`SPOS-013.md`](SPOS-013.md) — laporan SparkMind [`Master Integration System`](../../99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md).
+- [`SPOS-014.md`](SPOS-014.md) — laporan SparkMind [`Master Workflow System`](../../99-prompt-os/00-core/MASTER_WORKFLOW_SYSTEM.md).

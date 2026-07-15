@@ -1,12 +1,12 @@
 # SparkMind Prompt Operating System (`99-prompt-os`)
 
-> Status: SPOS-013 baseline — engine inti, Master Prompt System, dan Master Integration System tersedia sebagai `In Review`; Master Knowledge System upstream di Foundation juga `In Review`, dan authority operasional menunggu approval yang sah.
+> Status: SPOS-014 baseline — engine inti, Master Prompt System, Master Integration System, dan Master Workflow System tersedia sebagai `In Review`; Master Knowledge System upstream di Foundation juga `In Review`, dan authority operasional menunggu approval yang sah.
 
 ## Apa Itu SPOS
 
 SparkMind Prompt Operating System (SPOS) adalah lapisan dokumentasi operasional yang menerjemahkan arah, batas, dan pengetahuan SparkMind menjadi kontrak kerja AI yang modular. SPOS mengorganisasi architecture, template, rule, session, playbook, dan prompt agar pekerjaan AI dapat direncanakan, dieksekusi, direview, serta dilaporkan secara konsisten.
 
-SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Master Knowledge System SPOS-012 tetap berada di Foundation sebagai dependency pengetahuan, bukan core runtime SPOS. Master Integration System SPOS-013 adalah integration control map dokumentatif, bukan orchestrator atau authority baru. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, dan Master Integration System telah didokumentasikan sebagai `In Review`; semuanya bukan runtime otomatis atau bukti approval.
+SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Master Knowledge System SPOS-012 tetap berada di Foundation sebagai dependency pengetahuan, bukan core runtime SPOS. Master Integration System SPOS-013 adalah integration control map dokumentatif, sedangkan Master Workflow System SPOS-014 adalah workflow orchestration map dokumentatif; keduanya bukan orchestrator runtime atau authority baru. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, Master Integration System, dan Master Workflow System telah didokumentasikan sebagai `In Review`; semuanya bukan runtime otomatis atau bukti approval.
 
 ## Mengapa SPOS Ada
 
@@ -34,7 +34,7 @@ SPOS Constitution (highest authority within SPOS when ratified)
 SAOS
   │ operating model for the SparkMind AI ecosystem
   └── 99-prompt-os (SPOS)
-         │ Governance + Developer Mode + Session + Execution + Git + Documentation + Quality + Report + Master Prompt + Master Integration contracts
+         │ Governance + Developer Mode + Session + Execution + Git + Documentation + Quality + Report + Master Prompt + Master Integration + Master Workflow contracts
          ▼
 Engineering / AI Agents
          │ bounded execution
@@ -77,6 +77,7 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 │   ├── REPORT_ENGINE.md
 │   ├── MASTER_PROMPT_SYSTEM.md
 │   ├── MASTER_INTEGRATION_SYSTEM.md
+│   ├── MASTER_WORKFLOW_SYSTEM.md
 │   └── SPOS_ARCHITECTURE.md
 ├── 01-templates/
 │   └── README.md
@@ -98,7 +99,7 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 
 | Komponen | Fungsi | Status terkini |
 | --- | --- | --- |
-| `00-core/` | Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, Master Integration System, arsitektur, lifecycle, dan engine inti | Seluruh engine inti, Master Prompt System, dan Master Integration System `In Review`; architecture tersedia dan runtime belum dibangun |
+| `00-core/` | Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, Master Integration System, Master Workflow System, arsitektur, lifecycle, dan engine inti | Seluruh engine inti, Master Prompt System, Master Integration System, dan Master Workflow System `In Review`; architecture tersedia dan runtime belum dibangun |
 | `01-templates/` | Kontrak artefak kerja yang dapat digunakan ulang | Kontrak folder tersedia |
 | `02-rules/` | Rule modular dengan authority dan precedence eksplisit | Kontrak folder tersedia |
 | `03-sessions/` | Instance identity, objective, type, state, scope, authority, dependency, lifecycle, continuity, deliverable, validation, report, dan closure | Session Template SPOS-009 tersedia |
@@ -130,11 +131,12 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 10. Baca [`00-core/REPORT_ENGINE.md`](00-core/REPORT_ENGINE.md) untuk taxonomy, lifecycle, struktur, evidence/traceability, validation, correction, publication, archive, aggregation, dan AI Reporting Policy.
 11. Baca [`00-core/MASTER_PROMPT_SYSTEM.md`](00-core/MASTER_PROMPT_SYSTEM.md) untuk hierarchy/layer, Core/Session/Execution/Report/Validation/Review/Approval Prompt, assembly, dependency, lifecycle, versioning, governance, traceability, security, evaluation, dan human approval boundary.
 12. Baca [`00-core/MASTER_INTEGRATION_SYSTEM.md`](00-core/MASTER_INTEGRATION_SYSTEM.md) untuk relationship, dependency, authority, interface, knowledge/prompt/documentation/governance/session/execution/validation/report mapping, information/decision/traceability flow, compatibility, lifecycle, versioning, security, dan quality.
-13. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
-14. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
-15. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt sesuai Master Prompt System; jangan menganggapnya aktif.
-16. Cantumkan dependency/version/status, interface/failure behavior, canonical source/provenance/confidence/applicability/rights, trust classification, type/state, owner, reviewer, approver, decision class, delegation, quality gate, continuity, prompt package manifest, dan unresolved conflict.
-17. Laporkan evidence dan feedback mengikuti Report Engine agar perubahan dapat direview melalui Foundation dan governance.
+13. Baca [`00-core/MASTER_WORKFLOW_SYSTEM.md`](00-core/MASTER_WORKFLOW_SYSTEM.md) untuk workflow architecture/layer/component, stage/gate/handoff, lifecycle/state/transition separation, domain workflow, validation/review/approval, security/quality/governance, traceability, information/decision/escalation/exception/rollback/conflict flow, Human Override, dan AI boundary.
+14. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
+15. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
+16. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt sesuai Master Prompt System; jangan menganggapnya aktif.
+17. Cantumkan dependency/version/status, interface/failure behavior, canonical source/provenance/confidence/applicability/rights, trust classification, type/state, owner, reviewer, approver, decision class, delegation, quality gate, continuity, prompt package manifest, dan unresolved conflict.
+18. Laporkan evidence dan feedback mengikuti Report Engine agar perubahan dapat direview melalui Foundation dan governance.
 
 ## Status Implementasi
 
@@ -220,13 +222,19 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 - Cross-review seluruh 90 dokumen baseline, Constitution, Foundation, Master Knowledge System, Master Prompt System, SPOS Architecture, seluruh Core Engine, templates, prompts, sessions, standards, indexes, changelog, dan handoff.
 - Penyelarasan integrasi sebagai control map dokumentatif tanpa membangun aplikasi, runtime, orchestrator, API, database, dashboard, monitoring, infrastructure, CI/CD, deployment, atau automation.
 
+**SPOS-014**
+
+- Master Workflow System di `00-core/` dengan workflow architecture/layer/component, relationship/dependency/authority, lifecycle/state/transition, workflow domain, validation/review/approval, security/quality/governance, versioning/traceability, information/decision/escalation/exception/rollback/conflict flow, Human Override, AI boundary, future compatibility, dan end-to-end master workflow.
+- Cross-review seluruh 92 dokumen baseline, Constitution, Foundation, Master Knowledge/Prompt/Integration System, SPOS Architecture, seluruh Core Engine, templates, prompts, sessions, standards, indexes, changelog, dan handoff.
+- Penyelarasan workflow sebagai orchestration map dokumentatif tanpa membangun application, API, runtime, workflow engine, automation, infrastructure, CI/CD, deployment, database, dashboard, monitoring, atau source code implementation.
+
 ### Belum Diimplementasikan
 
 - Ratifikasi Founder atas Constitution.
 - Approval operasional dan activation record Developer Mode Engine.
-- Approval operasional dan activation record Governance, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, Master Knowledge System, serta Master Integration System.
+- Approval operasional dan activation record Governance, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, Master Knowledge System, Master Integration System, serta Master Workflow System.
 - Rule substantif, template pekerjaan khusus, playbook, prompt compiler, prompt registry service, evaluation automation, monitoring, atau runtime otomatis.
-- Role/delegation/ownership/decision/exception/audit registry; prompt/session/knowledge/integration registry-index, taxonomy/vocabulary, interface/compatibility matrix, classification/access/retention, compatible version set, consumer migration, transition authority, human role acceptance, enforcement, dan approval SPOS final.
+- Role/delegation/ownership/decision/exception/audit registry; prompt/session/knowledge/integration/workflow registry-index, taxonomy/vocabulary, interface/compatibility matrix, classification/access/retention, compatible version set, consumer migration, transition authority, human role acceptance, enforcement, dan approval SPOS final.
 - Integrasi vendor, aplikasi, database, deployment, atau CI/CD.
 
 ## Referensi
@@ -237,4 +245,5 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 - [`../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md)
 - [`../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md)
 - [`00-core/MASTER_INTEGRATION_SYSTEM.md`](00-core/MASTER_INTEGRATION_SYSTEM.md)
+- [`00-core/MASTER_WORKFLOW_SYSTEM.md`](00-core/MASTER_WORKFLOW_SYSTEM.md)
 - [`../docs/standards/README.md`](../docs/standards/README.md)

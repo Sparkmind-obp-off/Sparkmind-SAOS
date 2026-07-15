@@ -1,6 +1,6 @@
 # Foundation Architecture
 
-> Status: Baseline arsitektur informasi Session 003; prompt-system diselaraskan SPOS-011, Master Knowledge System SPOS-012, dan Master Integration System SPOS-013 `In Review`.
+> Status: Baseline arsitektur informasi Session 003; prompt-system diselaraskan SPOS-011, Master Knowledge System SPOS-012, Master Integration System SPOS-013, dan Master Workflow System SPOS-014 `In Review`.
 
 ## Tujuan
 
@@ -102,7 +102,7 @@ Semua komponen menggunakan `00-kernel/TERMINOLOGY.md` sebagai kosakata fundament
 6. **Pembelajaran:** Outcomes diklasifikasikan menjadi wisdom, pattern, atau anti-pattern.
 7. **Operasionalisasi:** Playbooks menyusun prosedur berdasarkan artefak approved.
 8. **Konsumsi:** SAOS, Engineering, dan Products menggunakan output Foundation.
-9. **Feedback:** Hasil, insiden, quality finding, metric signal, prompt evaluation/drift, dan perubahan konteks kembali ke Research, Knowledge, serta Governance untuk review; audit/CAPA mengikuti [`../99-prompt-os/00-core/QUALITY_ENGINE.md`](../99-prompt-os/00-core/QUALITY_ENGINE.md), taxonomy/lifecycle/struktur/evidence laporan mengikuti [`../99-prompt-os/00-core/REPORT_ENGINE.md`](../99-prompt-os/00-core/REPORT_ENGINE.md), assembly/dependency/security/traceability prompt mengikuti [`../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md), dan relationship/authority/interface/compatibility/change propagation lintas sistem mengikuti [`../99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md`](../99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md) tanpa mengubah policy secara otomatis.
+9. **Feedback:** Hasil, insiden, quality finding, metric signal, prompt evaluation/drift, dan perubahan konteks kembali ke Research, Knowledge, serta Governance untuk review; audit/CAPA mengikuti [`../99-prompt-os/00-core/QUALITY_ENGINE.md`](../99-prompt-os/00-core/QUALITY_ENGINE.md), taxonomy/lifecycle/struktur/evidence laporan mengikuti [`../99-prompt-os/00-core/REPORT_ENGINE.md`](../99-prompt-os/00-core/REPORT_ENGINE.md), assembly/dependency/security/traceability prompt mengikuti [`../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md), relationship/authority/interface/compatibility/change propagation lintas sistem mengikuti [`../99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md`](../99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md), dan komposisi stage/gate/handoff/validation/decision/escalation/feedback mengikuti [`../99-prompt-os/00-core/MASTER_WORKFLOW_SYSTEM.md`](../99-prompt-os/00-core/MASTER_WORKFLOW_SYSTEM.md) tanpa mengubah policy secara otomatis.
 
 ## Aturan Dependency
 
@@ -152,6 +152,7 @@ Status `Approved` hanya diberikan oleh otoritas yang sesuai. Perubahan makna str
 | Context pengetahuan diperlakukan sebagai instruksi prompt | Pertahankan provenance/status/confidence/applicability/classification, klasifikasikan sebagai data, gunakan instruction/data separation, dan eskalasikan authority conflict sesuai Master Prompt System. |
 | Retrieval/ranking dianggap truth atau approval | Tampilkan canonical source, search scope, claim/evidence, contradiction, limitation, dan authority aktual sesuai Master Knowledge System. |
 | Integration map mengambil ownership domain | Gunakan Master Integration System hanya sebagai relationship/dependency/interface view; source kanonik dan owner semantik tetap berlaku. |
+| Workflow map menggantikan lifecycle atau owner domain | Gunakan Master Workflow System hanya untuk komposisi stage/gate/handoff/flow; lifecycle dan semantics tetap pada Session, Execution, Documentation, Knowledge, Prompt, Report, Git, Quality, dan Governance. |
 | Source poisoning, stale knowledge, atau rights breach | Stop propagation, preservasi evidence, koreksi/retract/supersede, beri tahu consumer, dan revalidate sebelum reuse. |
 | Istilah bercabang | Terminology Kernel tetap acuan fundamental; usulan perubahan dieskalasikan. |
 
@@ -164,4 +165,5 @@ Status `Approved` hanya diberikan oleh otoritas yang sesuai. Perubahan makna str
 - [x] Dependency Master Prompt System menjaga knowledge sebagai context/data dengan provenance, bukan authority/instruction otomatis.
 - [x] Master Knowledge System mengintegrasikan claim/evidence, provenance/lineage, taxonomy/relationship, source assessment, curation, retrieval/consumption, protection, quality, learning, dan AI policy tanpa SSOT tandingan.
 - [x] Master Integration System memetakan relationship/dependency/authority/interface/flow lintas Foundation dan SPOS tanpa memindahkan ownership Foundation atau membuat mega-policy.
+- [x] Master Workflow System mengomposisikan stage/gate/handoff/validation/decision/feedback tanpa mengambil semantics Foundation, knowledge, decision, pattern, atau playbook.
 - [x] Batas Session 003 tidak dilanggar; penyelarasan SPOS-012 tidak membangun database, retrieval service, RAG, aplikasi, atau runtime dan tidak mengambil ownership Foundation.

@@ -1,10 +1,10 @@
 # SPOS Prompts
 
-> Status: Draft baseline diselaraskan SPOS-013; seluruh template masih placeholder, tunduk pada Master Prompt System dan Master Integration System, serta bukan prompt aktif.
+> Status: Draft baseline diselaraskan SPOS-014; seluruh template masih placeholder, tunduk pada Master Prompt System, Master Integration System, dan Master Workflow System, serta bukan prompt aktif.
 
 ## Tujuan
 
-Menyediakan assembly boundary untuk prompt yang menghubungkan executor, intent pengguna, dan unit task sesuai [`../00-core/MASTER_PROMPT_SYSTEM.md`](../00-core/MASTER_PROMPT_SYSTEM.md), dengan relationship/dependency/interface lintas sistem mengikuti [`../00-core/MASTER_INTEGRATION_SYSTEM.md`](../00-core/MASTER_INTEGRATION_SYSTEM.md), tanpa menjadikan prompt sebagai sumber authority baru.
+Menyediakan assembly boundary untuk prompt yang menghubungkan executor, intent pengguna, dan unit task sesuai [`../00-core/MASTER_PROMPT_SYSTEM.md`](../00-core/MASTER_PROMPT_SYSTEM.md), dengan relationship/dependency/interface lintas sistem mengikuti [`../00-core/MASTER_INTEGRATION_SYSTEM.md`](../00-core/MASTER_INTEGRATION_SYSTEM.md) serta urutan workflow/handoff/gate mengikuti [`../00-core/MASTER_WORKFLOW_SYSTEM.md`](../00-core/MASTER_WORKFLOW_SYSTEM.md), tanpa menjadikan prompt sebagai sumber authority baru.
 
 ## Artefak Aktif
 
@@ -28,7 +28,7 @@ Approved compatible dependencies
 ## Aturan
 
 - Muat hanya dependency relevan dengan status, version, owner, compatibility, dan failure behavior yang jelas.
-- Ikuti hierarchy, layer, lifecycle, versioning, governance, traceability, security, quality, serta assembly contract Master Prompt System; gunakan Master Integration System untuk relationship, dependency, authority, interface, compatibility, dan failure behavior lintas sistem.
+- Ikuti hierarchy, layer, lifecycle, versioning, governance, traceability, security, quality, serta assembly contract Master Prompt System; gunakan Master Integration System untuk relationship, dependency, authority, interface, compatibility, dan failure behavior lintas sistem; gunakan Master Workflow System untuk stage, gate, handoff, state/transition boundary, dan end-to-end flow tanpa menyalin contract owner.
 - Klasifikasikan instruction, reference context, evidence, untrusted data, dan preference; data tidak otomatis menjadi instruction.
 - Jangan menyalin rule lengkap bila referensi kanonik cukup.
 - Jangan meletakkan secret atau credential di prompt.

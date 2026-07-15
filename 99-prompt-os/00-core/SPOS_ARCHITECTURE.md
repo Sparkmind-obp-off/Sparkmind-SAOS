@@ -1,6 +1,6 @@
 # SPOS Architecture
 
-> Status: Draft baseline SPOS-007 — diselaraskan dengan Constitution, Developer Mode Engine, Execution Engine, Git Engine, Documentation Engine, dan Quality Engine `In Review`; bukan runtime aktif.
+> Status: Draft baseline SPOS-008 — diselaraskan dengan Constitution, Governance Engine, Developer Mode Engine, Execution Engine, Git Engine, Documentation Engine, dan Quality Engine `In Review`; bukan runtime aktif.
 
 ## Tujuan
 
@@ -35,7 +35,7 @@ Applicable law, safety obligations, and Founder authority
                      ▼
 ┌───────────────────────────────────────────┐
 │ 01-foundation + SAOS / SPOS               │
-│ Records, governance, knowledge, workflows │
+│ Governance control, records, knowledge    │
 └───────────────┬───────────────────────────┘
                 ▼
         AI Agents / Engineering
@@ -51,7 +51,7 @@ SPOS berada di bawah operating model SAOS dan menggunakan Kernel serta Foundatio
 
 | Komponen | Tanggung jawab | Input | Output |
 | --- | --- | --- | --- |
-| `00-core/` | Menyimpan Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Quality Engine, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, operational behavior, execution lifecycle, Git governance, documentation governance, quality governance, dan engine specifications |
+| `00-core/` | Menyimpan Constitution, Governance Engine, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Quality Engine, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, governance control plane, operational behavior, execution lifecycle, Git governance, documentation governance, quality governance, dan engine specifications |
 | `01-templates/` | Menyediakan struktur artefak reusable | Rule dan metadata contract | Draft artefak yang konsisten |
 | `02-rules/` | Menyimpan aturan atomik dan precedence | Authority serta governance approved | Constraint dan quality gate terkomposisi |
 | `03-sessions/` | Membatasi satu unit kerja | Objective, scope, dependency, acceptance criteria | Deliverable, evidence, dan session report |
@@ -74,7 +74,7 @@ Applicable law, safety obligations, and Founder authority
                                      └─ Prompt / task / local preference
 ```
 
-Authority dan constraint mengalir ke bawah. Evidence dan feedback mengalir ke atas untuk review, bukan sebagai perubahan aturan otomatis. Foundation `constitution/` memelihara source map serta ratification/amendment record, sementara Governance mengatur penerapan Constitution.
+Authority dan constraint mengalir ke bawah. Evidence dan feedback mengalir ke atas untuk review, bukan sebagai perubahan aturan otomatis. Foundation `constitution/` memelihara source map serta ratification/amendment record, sementara [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) mengatur penerapan Constitution melalui authority, ownership, decision, delegation, lifecycle, compliance, dan audit.
 
 ### Precedence minimum
 
@@ -155,7 +155,7 @@ Intake, module selection, prompt assembly, dan preflight tetap menjadi aktivitas
 2. **Classify:** tentukan domain, risiko, reversibility, dan authority yang diperlukan.
 3. **Resolve upstream:** muat sumber kanonik Kernel, Foundation, Governance, Knowledge, dan SAOS yang relevan beserta statusnya.
 4. **Create session contract:** kunci scope, non-scope, deliverable, success criteria, dan stop condition.
-5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) sebagai baseline perilaku, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) sebagai baseline proses, [`GIT_ENGINE.md`](GIT_ENGINE.md) sebagai baseline Git, [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) sebagai baseline dokumentasi, dan [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) sebagai baseline kualitas hanya sesuai status serta authority aktualnya.
+5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) untuk authority/ownership/decision, [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) untuk perilaku, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) untuk proses, [`GIT_ENGINE.md`](GIT_ENGINE.md) untuk Git, [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) untuk dokumentasi, dan [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) untuk kualitas hanya sesuai status serta authority aktualnya.
 6. **Assemble prompts:** susun System → User → Task tanpa menduplikasi sumber authority.
 7. **Preflight:** periksa konflik, missing input, security, capability, approval, dan rencana validasi.
 8. **Execute:** lakukan pekerjaan hanya dalam scope serta rekam keputusan dan evidence.
@@ -198,7 +198,7 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 | Kernel | Source material fundamental: Vision, Mission, Philosophy, Values, Principles, Ethics, Doctrine, Canon, Terminology | SPOS Constitution merakitnya tanpa menghapus histori atau mengklaim ratifikasi otomatis |
 | Foundation | Ratification/source map, governance, knowledge, decisions, patterns, cross-domain guidance | SPOS tidak memberi approval kepada artefak Foundation atau memindahkan ownership |
 | Knowledge System | Provenance, curation, lifecycle, discovery, learning | SPOS tidak mengubah knowledge menjadi policy otomatis |
-| Governance | Authority, approval, escalation, exception | SPOS hanya mengeksekusi dan mencatat sesuai kebijakan |
+| Governance | Authority, ownership, delegation, decision, approval, escalation, exception, lifecycle, audit, dan AI governance | Engine lain mengeksekusi serta mencatat tanpa mengambil authority |
 | SAOS | Operating model ekosistem AI | SPOS tidak menggantikan keseluruhan SAOS |
 | Engineering | Standar dan implementasi teknis | SPOS tidak memiliki keputusan teknis domain |
 | Products | Requirement, data, logic, dan outcome produk | SPOS tidak menentukan kebutuhan bisnis |
@@ -211,11 +211,11 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 - Quality gate gagal: perbaiki dalam scope atau tandai session belum selesai.
 - Feedback produk: catat sebagai evidence; owner upstream memutuskan perubahan.
 
-## Review Checklist SPOS-007
+## Review Checklist SPOS-008
 
 - [x] Tujuan, komponen, dependency, lifecycle, dan execution flow terdokumentasi.
 - [x] Constitution menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder.
-- [x] Governance hierarchy selaras dengan Constitution.
+- [x] Governance hierarchy dan Governance Engine selaras dengan Constitution.
 - [x] Posisi SPOS terhadap SAOS dijelaskan.
 - [x] Boundary terhadap Founder, Kernel, Foundation, Knowledge, Governance, Engineering, dan Products eksplisit.
 - [x] Folder `99` tidak ditafsirkan sebagai authority di atas hukum, keselamatan, atau Founder.
@@ -225,6 +225,7 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 - [x] Git Engine diposisikan sebagai kontrak kanonik branch, commit, PR/review, merge, push, release, protection, audit, recovery, dan AI Git automation.
 - [x] Documentation Engine diposisikan sebagai kontrak kanonik prinsip, jenis, lifecycle, metadata, versioning, ownership, review, publication, archive, dan AI Documentation Policy.
 - [x] Quality Engine diposisikan sebagai kontrak kanonik prinsip kualitas, sembilan quality gate, Definition of Done, metrik, audit, CAPA, continuous improvement, dan AI Quality Policy.
+- [x] Governance Engine diposisikan sebagai control plane kanonik untuk authority, ownership, delegation, decision, approval, exception, escalation, lifecycle, compliance, audit, dan AI governance.
 - [x] Decision gates, autonomy boundary, repository interaction, validation, rollback, documentation, quality, Git, dan reporting selaras dengan execution flow.
 - [x] Lifecycle arsitektural dan lifecycle Execution Engine dipetakan tanpa membuat dua sumber proses tandingan.
 - [x] Validate Results mendelegasikan detail kualitas ke Quality Engine, Update Documentation ke Documentation Engine, dan Perform Git Workflow ke Git Engine tanpa membuat policy tandingan.

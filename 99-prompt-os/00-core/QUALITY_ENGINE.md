@@ -20,11 +20,11 @@
 
 Quality Engine adalah standar permanen untuk mendefinisikan kualitas, validasi, review, audit, dan continuous improvement bagi seluruh artefak SparkMind, termasuk keputusan, dokumentasi, kode, konfigurasi, arsitektur, governance, knowledge, prompt, playbook, laporan, dan proses engineering.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Execution Engine tetap menjadi sumber lifecycle session; Quality Engine menjadi sumber kanonik definisi kualitas, urutan quality gate, Definition of Done, metrik, audit, corrective/preventive action, dan AI Quality Policy.
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Execution Engine tetap menjadi sumber lifecycle session; Quality Engine menjadi sumber kanonik definisi kualitas, urutan quality gate, Definition of Done, metrik, audit, corrective/preventive action, dan AI Quality Policy.
 
 Quality Engine bukan aplikasi, test runner, CI/CD, dashboard, sertifikasi, pengganti Governance, atau izin bagi AI untuk menyetujui hasilnya sendiri. Test hijau, skor metrik tinggi, commit, publication, dan completion teknis tidak otomatis membuktikan approval, fitness for purpose, keamanan, atau kualitas keseluruhan.
 
-Karena Constitution dan engine upstream masih `In Review` serta Governance substantif belum tersedia, dokumen ini juga `In Review`. Baseline dapat digunakan untuk kerja dan review, tetapi tidak menjadi standard binding sebelum activation record yang sah tersedia.
+Karena Constitution, Governance Engine, dan engine upstream masih `In Review`, dokumen ini juga `In Review`. Baseline dapat digunakan untuk kerja dan review, tetapi tidak menjadi standard binding sebelum activation record yang sah tersedia.
 
 ## 2. Scope dan Non-Scope
 
@@ -126,7 +126,7 @@ Kualitas adalah sistem belajar. Finding, incident, review feedback, dan outcome 
 | Peran | Tanggung jawab | Batas |
 | --- | --- | --- |
 | **Founder** | Keputusan fundamental, ratifikasi, dan risk acceptance strategis | Tidak menggantikan evidence atau kewajiban hukum/keselamatan |
-| **Governance owner** | Delegation, approval, exception, escalation, dan audit authority | Governance substantif masih dependency terbuka |
+| **Governance owner** | Delegation, approval, exception, escalation, separation, dan audit authority sesuai Governance Engine | Tidak menyetujui domain correctness tanpa owner/reviewer yang tepat |
 | **Quality owner/steward** | Menjaga standard, gate, metric definition, audit program, dan portfolio improvement | Tidak menyetujui correctness domain sendirian |
 | **Domain/Product owner** | Menetapkan intended purpose, requirement, acceptance, dan domain correctness | Tidak melemahkan gate lintas domain tanpa authority |
 | **Security/Privacy owner** | Review threat, data handling, access, dan residual security/privacy risk | Tidak menggantikan approval bisnis atau konstitusional |
@@ -536,7 +536,7 @@ Recovery mengikuti Execution Engine: detect, stop propagation, preserve evidence
 | [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Documentation completeness, review, lifecycle, evidence, publication gate, dan debt | Documentation Engine tetap sumber detail dokumentasi |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, evidence flow, ownership, lifecycle, feedback, learning, dan human oversight | Engine tidak mengambil ownership Foundation/domain |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | source quality, provenance, confidence, verification, lesson learned, dan review | Audit/metric output tidak otomatis menjadi approved knowledge/policy |
-| [`../../01-foundation/governance/README.md`](../../01-foundation/governance/README.md) | authority, delegation, approval, exception, escalation, separation of duties, dan risk acceptance | Governance substantif belum tersedia; ambiguity fail-closed |
+| [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | authority, ownership, delegation, approval, exception, escalation, reviewer/auditor separation, dan risk acceptance | Quality Engine menilai evidence; Governance menetapkan decision rights |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | modular contract, traceability, quality gates, bounded execution, report, dan feedback | Engine adalah kontrak dokumentasi, bukan QA runtime/dashboard |
 | [`../03-sessions/SESSION_TEMPLATE.md`](../03-sessions/SESSION_TEMPLATE.md) | dependency, quality plan, gate evidence, cross-review, DoD, dan report | Template menginstansiasi engine dan tidak menjadi policy tandingan |
 
@@ -548,8 +548,8 @@ Recovery mengikuti Execution Engine: detect, stop propagation, preserve evidence
 - Quality metrics digunakan sebagai decision support dan dilarang menjadi approval otomatis atau target yang mendorong gaming.
 - AI self-review wajib tetapi tidak dianggap independent review atau Final Approval.
 - Audit finding dan lesson learned mengalir ke Knowledge/Decision/Pattern/Standard owner melalui review; tidak mengubah source approved secara otomatis.
-- Governance gap tidak diisi oleh AI. Quality owner, auditor independence, exception, risk acceptance, dan Final Approval yang ambigu tetap fail-closed.
-- Brief SPOS-007 menetapkan Quality Engine meskipun report/handoff SPOS-006 merekomendasikan Governance Engine. Brief terbaru diikuti; deviasi roadmap dicatat dan Governance tetap dependency prioritas.
+- Governance Engine SPOS-008 menetapkan role dan decision-right policy. Sampai activation, delegation, serta human role acceptance aktual tersedia, Quality owner, auditor independence, exception, risk acceptance, dan Final Approval yang ambigu tetap fail-closed.
+- Brief SPOS-007 menetapkan Quality Engine meskipun report/handoff SPOS-006 merekomendasikan Governance Engine; deviasi historis dicatat, dan Governance Engine kemudian dibangun melalui SPOS-008.
 
 ## 15. Activation dan Change Control
 
@@ -557,7 +557,7 @@ Aktivasi sebagai standard binding memerlukan:
 
 - Constitution dengan status operasional sah atau keputusan Founder yang secara eksplisit mengizinkan baseline sementara;
 - Developer Mode, Execution Engine, Git Engine, dan Documentation Engine yang kompatibel;
-- Governance substantif untuk authority, role, independence, exception, escalation, audit, dan risk acceptance;
+- Governance Engine yang approved/active beserta role, delegation, independence, exception, escalation, audit, dan risk-acceptance record;
 - Quality owner/steward serta reviewer/auditor delegation;
 - approval eksplisit, version, effective date, scope, dan audit trail;
 - consumer migration, gate mapping, metric definitions, audit cadence, dan evidence retention yang dapat diverifikasi.
@@ -593,5 +593,5 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Scope tidak membangun aplikasi, fitur produk, dashboard, CI/CD, test framework, atau automation runtime.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
 - [ ] Seluruh upstream engine serta Quality Engine memperoleh approval operasional dan activation record.
-- [ ] Governance substantif, Quality owner, auditor delegation/independence, exception, dan risk-acceptance authority tersedia.
+- [ ] Governance Engine memperoleh approval/activation; Quality owner, auditor delegation/independence, exception, dan risk-acceptance authority diterapkan serta diterima manusia terkait.
 - [ ] Consumer migration, metric baseline, audit operation, CAPA registry, evidence retention, dan conformance automation diterapkan serta diverifikasi.

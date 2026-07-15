@@ -4,7 +4,7 @@
 
 ## Tujuan
 
-Menetapkan aturan pengelolaan Knowledge System agar artefak konsisten, dapat direview, memiliki provenance, dan tidak berubah menjadi sumber kebenaran yang saling bersaing. Policy dokumentasi lintas ekosistem mengikuti [`../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md), sedangkan quality gate, metrik, audit, finding, CAPA, dan continuous improvement mengikuti [`../../99-prompt-os/00-core/QUALITY_ENGINE.md`](../../99-prompt-os/00-core/QUALITY_ENGINE.md); dokumen ini tetap menjadi sumber domain-specific untuk confidence, verification, curation, approval, dan lifecycle Knowledge System.
+Menetapkan aturan pengelolaan Knowledge System agar artefak konsisten, dapat direview, memiliki provenance, dan tidak berubah menjadi sumber kebenaran yang saling bersaing. Policy dokumentasi lintas ekosistem mengikuti [`../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md), quality gate/metrik/audit kualitas/CAPA mengikuti [`../../99-prompt-os/00-core/QUALITY_ENGINE.md`](../../99-prompt-os/00-core/QUALITY_ENGINE.md), dan authority/ownership/delegation/approval/exception/escalation mengikuti [`../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md`](../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md); dokumen ini tetap menjadi sumber domain-specific untuk confidence, verification, curation, dan lifecycle Knowledge System.
 
 ## Naming
 
@@ -64,8 +64,8 @@ AI boleh melakukan pre-review dan cross-check, tetapi self-review AI tidak menja
 | Jenis perubahan | Approval minimum |
 | --- | --- |
 | Typo, link, format tanpa perubahan makna | Maintainer atau Knowledge Steward. |
-| Isi pengetahuan satu domain | Domain Owner setelah review. |
-| Perubahan lintas domain | Knowledge Steward dan seluruh Domain Owner terdampak. |
+| Isi pengetahuan satu domain | Domain Owner setelah review, sesuai delegation/risk ceiling Governance Engine. |
+| Perubahan lintas domain | Knowledge Steward dan seluruh Domain Owner terdampak; konflik mengikuti escalation Governance Engine. |
 | Kebijakan, etika, terminology fundamental, atau arah strategis | Otoritas Foundation dan Founder. |
 | Perubahan yang berkonflik dengan Constitution atau Kernel | Tidak boleh approved sebelum konflik authority dan eskalasi diselesaikan. |
 

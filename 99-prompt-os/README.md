@@ -1,12 +1,12 @@
 # SparkMind Prompt Operating System (`99-prompt-os`)
 
-> Status: SPOS-007 baseline — Constitution, Developer Mode Engine, Execution Engine, Git Engine, Documentation Engine, dan Quality Engine tersedia sebagai `In Review`; authority operasional menunggu approval yang sah.
+> Status: SPOS-008 baseline — Constitution, Governance Engine, Developer Mode Engine, Execution Engine, Git Engine, Documentation Engine, dan Quality Engine tersedia sebagai `In Review`; authority operasional menunggu approval yang sah.
 
 ## Apa Itu SPOS
 
 SparkMind Prompt Operating System (SPOS) adalah lapisan dokumentasi operasional yang menerjemahkan arah, batas, dan pengetahuan SparkMind menjadi kontrak kerja AI yang modular. SPOS mengorganisasi architecture, template, rule, session, playbook, dan prompt agar pekerjaan AI dapat direncanakan, dieksekusi, direview, serta dilaporkan secara konsisten.
 
-SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution Engine, Developer Mode Engine, Execution Engine, Git Engine, Documentation Engine, dan Quality Engine telah didokumentasikan sebagai `In Review`; semuanya bukan runtime otomatis atau bukti approval.
+SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution Engine, Governance Engine, Developer Mode Engine, Execution Engine, Git Engine, Documentation Engine, dan Quality Engine telah didokumentasikan sebagai `In Review`; semuanya bukan runtime otomatis atau bukti approval.
 
 ## Mengapa SPOS Ada
 
@@ -34,7 +34,7 @@ SPOS Constitution (highest authority within SPOS when ratified)
 SAOS
   │ operating model for the SparkMind AI ecosystem
   └── 99-prompt-os (SPOS)
-         │ Developer Mode + Execution + Git + Documentation + Quality contracts
+         │ Governance + Developer Mode + Execution + Git + Documentation + Quality contracts
          ▼
 Engineering / AI Agents
          │ bounded execution
@@ -72,6 +72,7 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 │   ├── GIT_ENGINE.md
 │   ├── DOCUMENTATION_ENGINE.md
 │   ├── QUALITY_ENGINE.md
+│   ├── GOVERNANCE_ENGINE.md
 │   └── SPOS_ARCHITECTURE.md
 ├── 01-templates/
 │   └── README.md
@@ -93,7 +94,7 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 
 | Komponen | Fungsi | Status terkini |
 | --- | --- | --- |
-| `00-core/` | Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Quality Engine, arsitektur, lifecycle, dan engine inti | Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, serta Quality Engine `In Review`; architecture tersedia dan runtime belum dibangun |
+| `00-core/` | Constitution, Governance, Developer Mode, Execution, Git, Documentation, Quality Engine, arsitektur, lifecycle, dan engine inti | Seluruh engine inti `In Review`; architecture tersedia dan runtime belum dibangun |
 | `01-templates/` | Kontrak artefak kerja yang dapat digunakan ulang | Kontrak folder tersedia |
 | `02-rules/` | Rule modular dengan authority dan precedence eksplisit | Kontrak folder tersedia |
 | `03-sessions/` | Objective, scope, deliverable, validasi, dan laporan eksekusi | Session Template tersedia |
@@ -119,11 +120,12 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 4. Baca [`00-core/GIT_ENGINE.md`](00-core/GIT_ENGINE.md) sebelum branch, commit, Pull Request/review, merge, push, release, protection, backup, atau Git automation.
 5. Baca [`00-core/DOCUMENTATION_ENGINE.md`](00-core/DOCUMENTATION_ENGINE.md) sebelum membuat, memperbarui, mereview, mempublikasikan, supersede, atau mengarsipkan dokumentasi.
 6. Baca [`00-core/QUALITY_ENGINE.md`](00-core/QUALITY_ENGINE.md) untuk prinsip kualitas, sembilan gate, Definition of Done, metrik, audit, CAPA, dan AI Quality Policy.
-7. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
-8. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
-9. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt; jangan menganggapnya engine aktif.
-10. Cantumkan dependency, status, owner, reviewer, quality gate, dan unresolved conflict.
-11. Laporkan evidence dan feedback agar perubahan dapat direview melalui Foundation dan governance.
+7. Baca [`00-core/GOVERNANCE_ENGINE.md`](00-core/GOVERNANCE_ENGINE.md) untuk authority, ownership, decision, delegation, approval, exception, escalation, lifecycle, compliance, audit, dan AI Governance Policy.
+8. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
+9. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
+10. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt; jangan menganggapnya engine aktif.
+11. Cantumkan dependency, status, owner, reviewer, approver, decision class, delegation, quality gate, dan unresolved conflict.
+12. Laporkan evidence dan feedback agar perubahan dapat direview melalui Foundation dan governance.
 
 ## Status Implementasi
 
@@ -173,14 +175,20 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 - Cross-review terhadap Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Governance, Foundation, Knowledge System, SPOS Architecture, serta Session Template.
 - Penyelarasan Quality Engine sebagai SSOT kualitas lintas ekosistem tanpa membangun dashboard, CI/CD, test framework, atau automation runtime.
 
+**SPOS-008**
+
+- Governance Engine dengan sepuluh prinsip, delapan role authority, decision classification, delegation contract, ownership matrix, governance lifecycle, compliance/audit, violation/CAPA, escalation/exception, dan AI Governance Policy.
+- Cross-review terhadap Constitution, Developer Mode, Execution, Git, Documentation, Quality Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template.
+- Penyelarasan Governance sebagai control plane SSOT tanpa membangun IAM, dashboard, compliance platform, policy runtime, database, atau automation.
+
 ### Belum Diimplementasikan
 
 - Ratifikasi Founder atas Constitution.
 - Approval operasional dan activation record Developer Mode Engine.
-- Governance, Session, dan Report Engine.
-- Approval operasional dan activation record Execution Engine, Git Engine, Documentation Engine, serta Quality Engine.
+- Session dan Report Engine.
+- Approval operasional dan activation record Governance, Execution, Git, Documentation, serta Quality Engine.
 - Rule substantif, template pekerjaan khusus, playbook, prompt compiler, atau runtime otomatis.
-- Authority matrix dan approval SPOS final.
+- Role/delegation/ownership/decision/exception/audit registry, human role acceptance, access enforcement, dan approval SPOS final.
 - Integrasi vendor, aplikasi, database, deployment, atau CI/CD.
 
 ## Referensi

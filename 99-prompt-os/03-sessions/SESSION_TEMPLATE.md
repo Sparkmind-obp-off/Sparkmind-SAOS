@@ -1,6 +1,6 @@
 # SPOS Session Template
 
-> Status: Draft baseline SPOS-007 — gunakan bersama Execution Engine, Git Engine, Documentation Engine, dan Quality Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
+> Status: Draft baseline SPOS-008 — gunakan bersama Governance, Execution, Git, Documentation, dan Quality Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
 
 ## Metadata
 
@@ -13,6 +13,8 @@
 | Reviewer | `<role atau nama>` |
 | Approver | `<role atau nama jika diperlukan>` |
 | Risk | `low / medium / high / critical` |
+| Decision class | `D0 / D1 / D2 / D3 / Emergency` |
+| Authority / delegation | `<source dan scope>` |
 | Created | `<YYYY-MM-DD>` |
 | Target branch | `<branch>` |
 | Source of truth | `<path atau repository>` |
@@ -34,7 +36,8 @@ Jelaskan keadaan awal, alasan session diperlukan, dan fakta yang sudah diverifik
 | Dependency | Path / reference | Status | Penggunaan |
 | --- | --- | --- | --- |
 | Kernel | `<path>` | `<status>` | `<constraint>` |
-| Foundation / Governance | `<path>` | `<status>` | `<authority atau workflow>` |
+| Foundation | `<path>` | `<status>` | `<source, record, atau domain constraint>` |
+| Governance Engine | `<path dan versi>` | `<status>` | `<authority, role, ownership, decision class, approval, exception, escalation, dan lifecycle>` |
 | Knowledge / Decision | `<path>` | `<status>` | `<context>` |
 | Developer Mode / Execution Engine | `<path dan versi>` | `<status>` | `<behavior, lifecycle, gates, dan completion contract>` |
 | Git Engine | `<path dan versi>` | `<status>` | `<branch, review, commit, push, release, protection, dan automation contract>` |
@@ -96,6 +99,7 @@ Gunakan urutan [`../00-core/QUALITY_ENGINE.md`](../00-core/QUALITY_ENGINE.md): O
 - [ ] Security serta secret review selesai.
 - [ ] During Execution Check dan Post-Execution Review lulus.
 - [ ] Acceptance criteria setiap deliverable terpenuhi.
+- [ ] Governance Engine authority/delegation, decision class, ownership, separation of responsibility, approval, exception, dan escalation dipatuhi.
 - [ ] Perubahan strategis memiliki approval yang tepat.
 - [ ] Git Engine checklist yang berlaku, diff/staged diff, whitespace, dan secret review selesai.
 - [ ] Required branch/PR/reviewer/check/approval/merge dipatuhi.
@@ -112,7 +116,7 @@ Gunakan urutan [`../00-core/QUALITY_ENGINE.md`](../00-core/QUALITY_ENGINE.md): O
 | Kernel | Apakah perubahan menduplikasi atau melemahkan sumber normatif? | `<hasil>` |
 | Foundation | Apakah ownership atau SSOT Foundation diambil alih? | `<hasil>` |
 | Knowledge | Apakah status dan provenance tetap benar? | `<hasil>` |
-| Governance | Apakah authority, approval, dan escalation dipatuhi? | `<hasil>` |
+| Governance | Apakah role, delegation, ownership, decision class, separation, approval, exception, escalation, dan lifecycle sesuai Governance Engine? | `<hasil>` |
 | SAOS / SPOS | Apakah komponen berada pada layer yang tepat? | `<hasil>` |
 | Documentation | Apakah source, jenis, status, metadata, owner, link, review, publication/archive, dan consumer sinkron? | `<hasil>` |
 | Quality | Apakah objective/requirement traceable, sembilan gate, DoD, evidence, finding, metrik, dan approval sesuai Quality Engine? | `<hasil>` |

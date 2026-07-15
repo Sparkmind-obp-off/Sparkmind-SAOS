@@ -20,11 +20,11 @@
 
 Execution Engine adalah standar proses permanen yang menentukan bagaimana setiap AI Agent menerima objective, menganalisis konteks, membaca repository, mengidentifikasi dependency, merencanakan, mengeksekusi, memvalidasi, mendokumentasikan, menjalankan Git workflow, melaporkan, dan menutup pekerjaan dalam ekosistem SparkMind.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Execution Engine menetapkan lifecycle, klasifikasi, gate, evidence, failure handling, dan completion contract untuk satu session. Detail kualitas pada **Validate Results** dan Definition of Done mengikuti [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), **Update Documentation** mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), sedangkan **Perform Git Workflow** mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md).
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip; Governance menetapkan authority, ownership, keputusan, dan approval; Developer Mode menetapkan perilaku kerja; Execution Engine menetapkan lifecycle, klasifikasi, gate, evidence, failure handling, dan completion contract untuk satu session. Detail kualitas pada **Validate Results** dan Definition of Done mengikuti [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), **Update Documentation** mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), sedangkan **Perform Git Workflow** mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md).
 
 Execution Engine bukan aplikasi, runtime otonom, scheduler, product workflow, atau sumber authority baru. Engine tidak memberi approval kepada dirinya sendiri, tidak mengubah requirement produk, dan tidak mengesampingkan Governance, owner domain, hukum, keselamatan, atau Founder Authority.
 
-Karena Constitution dan Developer Mode masih `In Review` serta Governance substantif belum tersedia, dokumen ini juga `In Review`. Dokumen dapat menjadi baseline kerja dan bahan review, tetapi commit, push, atau penggunaan berulang tidak menjadikannya `Approved`.
+Karena Constitution, Governance Engine, dan Developer Mode masih `In Review`, dokumen ini juga `In Review`. Dokumen dapat menjadi baseline kerja dan bahan review, tetapi commit, push, atau penggunaan berulang tidak menjadikannya `Approved`.
 
 ## 2. Kontrak Eksekusi
 
@@ -483,7 +483,7 @@ Lesson learned wajib:
 | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | Detail prinsip kualitas, sembilan quality gate, Definition of Done, metrik, audit, CAPA, continuous improvement, dan AI policy pada Validate Results/completion | Quality Engine menjadi sumber detail kualitas tanpa menggantikan lifecycle session. |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, derived-not-duplicated, evidence flow, ownership, lifecycle, feedback, dan playbook boundary | Engine tidak mengambil ownership Foundation atau domain. |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | provenance, status, source review, fact/assumption separation, lifecycle, dan lesson learned routing | Evidence eksekusi tidak otomatis menjadi approved knowledge atau policy. |
-| [`../../01-foundation/governance/README.md`](../../01-foundation/governance/README.md) | authority check, approval, exception, escalation, dan audit trail | Governance substantif belum tersedia; authority ambiguity tetap fail-closed. |
+| [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | authority, ownership, decision class, delegation, approval, exception, escalation, lifecycle, dan audit trail | Execution Engine tetap sumber lifecycle session dan tidak memberi approval. |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | session lifecycle, bounded execution, quality gates, output contract, feedback, dan completion state | Engine adalah kontrak dokumentasi, bukan runtime otomatis. |
 | [`../03-sessions/SESSION_TEMPLATE.md`](../03-sessions/SESSION_TEMPLATE.md) | objective, dependency, scope, plan, quality gate, report, dan status | Template menginstansiasi engine dan tidak menjadi rule tandingan. |
 | [`../../docs/standards/README.md`](../../docs/standards/README.md) | naming, folder, Markdown, documentation, commit, branch, dan versioning | Repository standards mengatur bentuk; konflik authority diselesaikan melalui precedence. |
@@ -549,10 +549,10 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Satu objective, incremental changes, validation, documentation, completion, dan repository consistency rules terdokumentasi.
 - [x] Enam Validation Gates terdokumentasi.
 - [x] Error handling, rollback, recovery, retry, failure record, dan lesson learned terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, dan repository standards dipetakan.
+- [x] Alignment dengan Constitution, Governance Engine, Developer Mode, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge, SPOS Architecture, Session Template, dan repository standards dipetakan.
 - [x] Git lifecycle minimum dan documentation lifecycle minimum terdokumentasi; detail Git didelegasikan ke Git Engine dan detail dokumentasi ke Documentation Engine.
 - [x] Evidence contract, conflict resolution, dan Definition of Done menjaga dokumentasi sebagai gate wajib serta mendelegasikan quality model, gate, metric, audit, dan CAPA ke Quality Engine.
-- [x] Scope tidak membangun aplikasi, fitur produk, runtime, atau Governance Engine.
+- [x] Scope SPOS-004 tidak membangun aplikasi, fitur produk, runtime, atau Governance Engine; Governance Engine kini tersedia melalui session terpisah SPOS-008.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
 - [ ] Developer Mode dan Execution Engine memperoleh approval operasional serta activation record.
-- [ ] Governance substantif dan consumer version pinning tersedia.
+- [ ] Governance Engine memperoleh approval/activation dan consumer version pinning tersedia.

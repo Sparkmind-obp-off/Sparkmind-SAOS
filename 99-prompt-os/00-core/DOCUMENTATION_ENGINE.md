@@ -20,11 +20,11 @@
 
 Documentation Engine adalah standar permanen untuk seluruh dokumentasi yang dibuat atau dipelihara oleh manusia dan AI di ekosistem SparkMind. Engine menetapkan prinsip, kategori, lifecycle, struktur, metadata, versioning, referensi silang, ownership, review cadence, change history, validation, serta kebijakan dokumentasi AI.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Execution Engine menetapkan lifecycle session; Git Engine menjaga histori perubahan; Documentation Engine menjadi sumber kanonik bagi tata kelola dokumentasi lintas domain.
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Execution Engine menetapkan lifecycle session; Git Engine menjaga histori perubahan; Documentation Engine menjadi sumber kanonik bagi tata kelola dokumentasi lintas domain.
 
 Documentation Engine bukan aplikasi, content management system, generator otomatis, pengganti Governance, atau izin bagi AI untuk menetapkan fakta dan approval. Dokumen menjelaskan keadaan, keputusan, atau prosedur; keberadaan file, commit, publication, atau penggunaan berulang tidak otomatis menjadikan isinya benar, approved, atau berlaku.
 
-Karena Constitution dan engine upstream masih `In Review` serta Governance substantif belum tersedia, dokumen ini juga `In Review`. Dokumen dapat digunakan sebagai baseline kerja dan bahan review, tetapi tidak boleh diperlakukan sebagai standard binding sebelum aktivasi yang sah.
+Karena Constitution, Governance Engine, dan engine upstream masih `In Review`, dokumen ini juga `In Review`. Dokumen dapat digunakan sebagai baseline kerja dan bahan review, tetapi tidak boleh diperlakukan sebagai standard binding sebelum aktivasi yang sah.
 
 ## 2. Scope dan Non-Scope
 
@@ -103,7 +103,7 @@ Status, scope, owner, audience, prerequisite, constraint, exception, risk, dan n
 | Peran | Tanggung jawab | Batas |
 | --- | --- | --- |
 | **Founder** | Ratifikasi fundamental, arah strategis, dan keputusan authority material | Tidak menggantikan kebutuhan evidence atau kewajiban hukum/keselamatan |
-| **Governance owner** | Delegation, approval, exception, escalation, dan lifecycle policy | Governance substantif masih dependency terbuka |
+| **Governance owner** | Delegation, approval, exception, escalation, dan lifecycle policy sesuai Governance Engine | Tidak menetapkan correctness domain atau mengubah Constitution |
 | **Documentation owner/steward** | Standard, information architecture, quality, discovery, dan portfolio review | Tidak menyetujui correctness domain tanpa domain owner |
 | **Domain owner** | Akurasi, completeness, applicability, dan lifecycle isi domain | Tidak mengubah authority lintas domain tanpa review yang tepat |
 | **Knowledge Steward** | Provenance, classification, curation, dan relasi Knowledge System | Knowledge tidak otomatis menjadi policy |
@@ -626,7 +626,7 @@ Recovery mengikuti [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md): detect, stop pr
 | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | Documentation Completeness, Documentation Review gate, DoD, metrics, audit, finding, CAPA, dan AI Quality Policy | Quality Engine menilai kualitas lintas artefak; Documentation Engine tetap sumber detail dokumentasi |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, derived-not-duplicated, owner, lifecycle, evidence flow, dan feedback | Engine tidak mengambil ownership Foundation/domain |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | provenance, metadata, verification, knowledge lifecycle, deprecation, archive, dan cross-reference | Knowledge-specific confidence/verification tetap dimiliki Knowledge Governance |
-| [`../../01-foundation/governance/README.md`](../../01-foundation/governance/README.md) | authority, delegation, approval, exception, escalation, dan audit | Governance substantif belum tersedia; ambiguity fail-closed |
+| [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | documentation ownership, delegation, approval, publication/archive authority, exception, escalation, lifecycle, dan audit | Documentation Engine tetap sumber detail dokumentasi |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | modular contract, traceability, lifecycle, bounded execution, report, dan feedback | Engine adalah kontrak dokumentasi, bukan runtime/CMS |
 | [`../../docs/standards/DOCUMENTATION_CONVENTION.md`](../../docs/standards/DOCUMENTATION_CONVENTION.md) | Profil ringkas lifecycle dan bentuk dokumentasi repository | Convention tunduk pada engine dan tidak menjadi policy tandingan |
 | [`../../docs/standards/MARKDOWN_CONVENTION.md`](../../docs/standards/MARKDOWN_CONVENTION.md) | Bentuk Markdown, link, bahasa, dan formatting | Markdown Convention mengatur syntax/style, bukan authority isi |
@@ -638,8 +638,8 @@ Recovery mengikuti [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md): detect, stop pr
 - Knowledge Governance tetap memiliki aturan khusus provenance, confidence, verification, dan curation Knowledge System; engine tidak menduplikasi authority domain tersebut.
 - Execution Engine tetap memiliki tahap `Update Documentation` serta Documentation Check; detail standard didelegasikan ke Documentation Engine.
 - Git Engine tetap memiliki version control dan audit history; commit/publication tidak diartikan sebagai approval.
-- Governance gap tidak diisi oleh AI; ownership, approval, archive, dan publication yang ambigu tetap fail-closed.
-- Handoff SPOS-005 merekomendasikan Governance Engine, tetapi brief terbaru menetapkan SPOS-006 sebagai Documentation Engine. Brief terbaru diikuti, deviasi roadmap dicatat, dan Governance tetap dependency terbuka.
+- Governance Engine SPOS-008 menetapkan policy ownership/approval; sampai activation dan delegation aktual tersedia, ownership, approval, archive, dan publication yang ambigu tetap fail-closed.
+- Handoff SPOS-005 merekomendasikan Governance Engine, tetapi brief SPOS-006 menetapkan Documentation Engine; deviasi historis dipertahankan, dan Governance Engine kemudian dibangun melalui SPOS-008.
 
 ## 14. Activation dan Change Control
 
@@ -676,9 +676,9 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Struktur, naming, metadata, versioning, cross-reference, internal link, ownership, review cadence, dan change history terdokumentasi.
 - [x] AI create/update/archive policy, code-documentation relationship, approval boundary, stop condition, dan prohibition on undocumented change terdokumentasi.
 - [x] Validation, publication gate, documentation debt, security/privacy, failure, dan recovery terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Execution Engine, Git Engine, Quality Engine, Governance, Foundation, Knowledge System, SPOS Architecture, dan repository standards dipetakan.
+- [x] Alignment dengan Constitution, Governance Engine, Developer Mode, Execution Engine, Git Engine, Quality Engine, Foundation, Knowledge System, SPOS Architecture, dan repository standards dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, CMS, portal, deployment, atau automation runtime.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
 - [ ] Developer Mode, Execution Engine, Git Engine, dan Documentation Engine memperoleh approval operasional serta activation record.
-- [ ] Governance substantif, authority/ownership matrix, dan Documentation Steward delegation tersedia.
+- [ ] Governance Engine memperoleh approval/activation; Documentation Steward delegation, ownership registry, dan publication controls diterapkan serta diverifikasi.
 - [ ] Consumer migration, review cadence operation, publication controls, dan conformance automation diterapkan serta diverifikasi.

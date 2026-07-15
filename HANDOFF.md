@@ -1,57 +1,58 @@
 # HANDOFF — SparkMind SAOS
 
-> Diperbarui: 2026-07-15 · Sesi: SPOS-007 · Oleh: AI Developer
+> Diperbarui: 2026-07-15 · Sesi: SPOS-008 · Oleh: AI Developer
 
 ## STATE saat ini
 
-- Fase: Quality Engine SPOS-007 selesai, di-commit, dipush, dan commit implementasi terverifikasi pada remote.
-- Branch: `main`; remote `origin` mengarah ke repository SparkMind SAOS; commit implementasi `461ad8e03079c321c60341d764f3739eeb350864`.
+- Fase: Governance Engine SPOS-008 selesai secara lokal; status commit dan push dicatat setelah Git workflow selesai.
+- Branch: `main`; remote `origin` mengarah ke repository SparkMind SAOS.
 - Service: tidak berlaku; repository documentation-only.
 - Deploy: tidak dilakukan dan berada di luar scope.
 
 ## SELESAI sesi ini
 
-- Membangun `99-prompt-os/00-core/QUALITY_ENGINE.md` sebagai quality governance baseline `In Review`.
-- Mendokumentasikan Truth Before Speed, Quality Over Quantity, Documentation Completeness, Traceability, Consistency, Reliability, Simplicity, Maintainability, Reusability, Human-Centered Quality, dan Continuous Improvement.
-- Menetapkan sembilan quality gate: Objective, Requirement, Architecture, Implementation, Documentation, Git, Security & Privacy, Governance, dan Final Approval.
-- Menetapkan Definition of Done lintas session untuk objective, repository consistency, documentation, inconsistency resolution, review, validation, Git workflow, dan Session Report.
-- Mendefinisikan delapan metrik inti beserta formula minimum, limitation, anti-gaming guardrail, serta metrik pendukung.
-- Mendefinisikan evidence contract, finding severity, quality debt, exception, audit berkala, corrective/preventive action, lesson learned, CAPA, dan continuous improvement cycle.
-- Mendokumentasikan kapan AI wajib self-review, meminta review Founder/manusia, berhenti, serta larangan mengorbankan kualitas demi kecepatan.
-- Menyelaraskan Developer Mode, Execution Engine, Git Engine, Documentation Engine, SPOS Core/Architecture, Governance, Foundation, Knowledge Governance, Session Template, repository indexes, changelog, handoff, dan report SPOS-007.
-- Mempertahankan Founder Authority serta tidak mengklaim ratification, approval, Final Approval, risk acceptance, audit operation, dashboard, CI/CD, test framework, atau automation runtime.
+- Membangun `99-prompt-os/00-core/GOVERNANCE_ENGINE.md` sebagai governance control-plane baseline `In Review`.
+- Mendokumentasikan Constitution First, Human Stewardship, Founder Authority, Amanah, Transparency, Accountability, Auditability, Least Privilege, Separation of Responsibility, dan Continuous Governance.
+- Menetapkan hak, tanggung jawab, batas, hubungan, dan delegation contract bagi Founder, AI Executive, Domain Owner, Knowledge Steward, Repository Maintainer, Reviewer, Contributor, dan Observer.
+- Menetapkan decision class D0–D3/Emergency, automatic/delegated decision, human approval, escalation, exception, conflict resolution, Final Authority, dan decision record.
+- Menetapkan ownership Repository, Domain Knowledge, Documentation, Prompt, Policy, Standard, Architecture, Product, serta AI Agent Configuration.
+- Menetapkan lifecycle Proposal, Review, Approval, Implementation, Monitoring, Audit, Improvement, dan Retirement beserta state governance.
+- Mendokumentasikan governance audit, compliance review, violation handling, corrective/preventive action, reporting, dan effectiveness verification.
+- Mendokumentasikan batas AI, pekerjaan yang wajib meminta Founder, capability/automation guardrail, least privilege, serta automatic stop.
+- Menyelaraskan Constitution, Developer Mode, Execution, Git, Documentation, Quality Engine, SPOS Core/Architecture, Foundation Governance, Knowledge Governance, Session Template, repository indexes, changelog, handoff, dan report SPOS-008.
+- Mempertahankan Founder Authority dan tidak mengklaim ratification, approval, delegation, role acceptance, risk acceptance, IAM, access enforcement, dashboard, policy runtime, compliance platform, atau automation.
 
 ## NEXT STEP (atomic — aksi pertama sesi berikut)
 
-1. Founder/authority yang tepat mereview roadmap serta dependency activation; kemudian jalankan SPOS-008 untuk membangun Governance Engine agar authority matrix, delegation, approval, exception, escalation, audit independence, Final Approval, dan risk acceptance seluruh engine memiliki sumber kanonik.
+1. Founder mereview Governance Engine dan roadmap. Jika roadmap dilanjutkan, jalankan SPOS-009 untuk membangun Session Engine yang menginstansiasi authority/delegation, decision class, dependency version, risk/scope, evidence, gate, exception, escalation, stop, recovery, dan completion contract per unit kerja.
 
 ## KEPUTUSAN penting
 
-- Execution Engine tetap sumber lifecycle session; Quality Engine menjadi SSOT definisi kualitas, sembilan gate, DoD, metrik, audit, CAPA, dan AI Quality Policy.
-- Enam Validation Gates Execution Engine tetap checkpoint lifecycle dan mendelegasikan detail kualitas kepada Quality Engine; keduanya tidak menjadi workflow tandingan.
-- Documentation Review mendelegasikan detail ke Documentation Engine; Git Review ke Git Engine; Security/Privacy dan Governance tetap memerlukan owner domain.
-- Metrik adalah decision support, bukan approval otomatis; volume, checklist, coverage, dan skor tidak menjadi kualitas tanpa hubungan dengan risiko serta outcome.
-- Self-review AI wajib tetapi tidak menjadi independent review, Final Approval, atau risk acceptance.
-- Audit finding dan lesson learned mengalir ke Knowledge/Decision/Pattern/Standard owner melalui review; tidak mengubah policy approved otomatis.
-- Brief terbaru menetapkan SPOS-007 sebagai Quality Engine meskipun handoff/report SPOS-006 merekomendasikan Governance Engine; deviasi roadmap dicatat dan Governance tetap dependency prioritas.
-- Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, dan Quality Engine tetap `In Review` sampai activation record yang sah tersedia.
+- Governance Engine menjadi SSOT lintas sistem untuk authority, ownership, decision, delegation, approval, exception, escalation, lifecycle governance, compliance, audit authority, Final Authority, dan AI governance.
+- Constitution tetap authority tertinggi di dalam SPOS setelah ratifikasi; Governance tidak dapat memberi exception Constitution.
+- Founder adalah final authority internal untuk Constitution, arah fundamental, authority hierarchy, dan konflik strategis tanpa mengesampingkan hukum, keselamatan, hak, atau evidence.
+- AI Executive adalah role koordinasi AI di bawah authority manusia, bukan approver, auditor independen, Founder, atau risk owner.
+- Execution Engine tetap sumber lifecycle session; Governance lifecycle mengatur policy/authority/ownership dan tidak menjadi workflow session tandingan.
+- Quality Engine tetap sumber quality gate, DoD, metric, audit kualitas, dan CAPA; Governance menetapkan role, independence, approval, exception, dan risk-acceptance authority.
+- Foundation governance README menjadi indeks/rumah record, bukan governance policy tandingan.
+- Akses teknis, admin repository, commit, merge, publication, atau output AI tidak dengan sendirinya memberikan authority normatif.
+- Seluruh engine tetap `In Review` sampai approval/activation record yang sah tersedia.
 
 ## KNOWN ISSUES
 
 - Ratifikasi Constitution oleh Founder belum tercatat.
-- Approval dan activation record seluruh engine inti, termasuk Quality Engine, belum tersedia.
-- Isi Kernel dan artefak Foundation substantif masih menunggu approval Founder.
-- Governance policy, authority/ownership matrix, delegation, exception/bypass, escalation, Final Approval, audit authority, dan risk acceptance belum dibangun.
-- Quality owner/steward, reviewer/auditor delegation, independence rules, dan separation of duties belum ditetapkan operasional.
-- Metric registry/baseline, finding/CAPA registry, audit calendar, evidence retention, dan exception registry belum tersedia.
-- Automated test/link/anchor/metadata/schema/style/source-drift/security conformance belum tersedia.
-- Quality dashboard, CI/CD, test framework, audit operation, dan control-effectiveness monitoring belum dibangun/diverifikasi.
-- Platform branch protection/ruleset serta backup belum diaudit terhadap Git Engine.
-- Session, Report, serta engine substantif lain belum dibangun.
-- Consumer AI belum memuat dependency version yang efektif.
+- Approval dan activation record Governance serta engine inti lain belum tersedia.
+- Role/delegation/ownership/decision/exception/audit registry belum tersedia.
+- Human role acceptance, competence record, conflict-of-interest declaration, succession, dan revocation operation belum tersedia.
+- Quality owner, Documentation Steward, Security/Privacy owner, Domain Owner, reviewer/auditor pool, dan emergency authority belum ditetapkan operasional.
+- Repository access/ruleset, branch protection, backup, audit retention, dan release authority belum diaudit terhadap Governance/Git Engine.
+- Metric/CAPA/evidence retention serta compliance mapping/reporting cadence belum dioperasikan.
+- Consumer AI belum memuat effective version pin, decision class, delegation, capability manifest, risk ceiling, monitoring, dan stop/rollback contract.
+- Access enforcement, governance dashboard, compliance platform, policy runtime, IAM, dan conformance automation belum dibangun/diverifikasi.
+- Session dan Report Engine belum dibangun.
 
 ## CONTEXT untuk resume
 
-- Scope lock SPOS-007: Quality Engine saja; tanpa Governance Engine substantif, aplikasi, fitur produk, dashboard, CI/CD, test framework, runtime automation, database, deployment, cloud, atau integrasi eksternal.
-- File kunci: `99-prompt-os/00-core/QUALITY_ENGINE.md`, `99-prompt-os/00-core/EXECUTION_ENGINE.md`, `99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md`, `99-prompt-os/00-core/GIT_ENGINE.md`, `99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`, `99-prompt-os/00-core/CONSTITUTION.md`, `99-prompt-os/00-core/SPOS_ARCHITECTURE.md`, `99-prompt-os/03-sessions/SESSION_TEMPLATE.md`, dan `reports/sessions/SPOS-007.md`.
+- Scope lock SPOS-008: Governance Engine saja; tanpa aplikasi, fitur produk, IAM, dashboard, compliance platform, policy runtime, database, deployment, cloud resource, atau automation runtime.
+- File kunci: `99-prompt-os/00-core/GOVERNANCE_ENGINE.md`, `99-prompt-os/00-core/CONSTITUTION.md`, `99-prompt-os/00-core/QUALITY_ENGINE.md`, `99-prompt-os/00-core/EXECUTION_ENGINE.md`, `99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md`, `99-prompt-os/00-core/GIT_ENGINE.md`, `99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`, `99-prompt-os/00-core/SPOS_ARCHITECTURE.md`, `99-prompt-os/03-sessions/SESSION_TEMPLATE.md`, dan `reports/sessions/SPOS-008.md`.
 - Remote: `https://github.com/Sparkmind-obp-off/Sparkmind-SAOS.git`.

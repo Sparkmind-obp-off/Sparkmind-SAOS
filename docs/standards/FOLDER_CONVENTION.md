@@ -25,6 +25,10 @@ Menyimpan dokumen fundamental dan normatif paling stabil. Perubahan makna strate
 
 Menyimpan governance, pengetahuan, panduan penerapan, library, research, dan playbook lintas domain. Setiap subfolder memiliki `README.md`. Folder dengan nama yang sama seperti dokumen Kernel hanya menyimpan penerapan dan referensi silang, bukan salinan sumber normatif.
 
+#### `01-foundation/knowledge/`
+
+Menyimpan Knowledge System terkurasi dalam domain concepts, glossary, architecture, standards, best practices, decisions, references, learning, dan onboarding. Folder glossary, standards, dan decisions berfungsi sebagai discovery view dan wajib merujuk sumber kanonik agar tidak menduplikasi Terminology, repository standards, atau Decision Library.
+
 ### `docs/standards/`
 
 Menyimpan standar repository dan dokumentasi yang dapat diterapkan lintas layer. Satu topik hanya memiliki satu dokumen kanonik.
@@ -37,7 +41,7 @@ Menyimpan laporan pekerjaan per session untuk ketertelusuran. Laporan mencatat h
 
 Folder baru hanya boleh dibuat jika:
 
-1. terdapat sekurangnya satu artefak yang sah, bukan hanya rencana abstrak;
+1. terdapat sekurangnya satu artefak yang sah, termasuk README kontrak yang diwajibkan oleh scope arsitektur aktif, bukan hanya rencana abstrak;
 2. tujuan dan batasnya berbeda dari folder yang ada;
 3. memiliki `README.md` ketika fungsi folder tidak langsung jelas;
 4. owner atau otoritas review dapat ditentukan;

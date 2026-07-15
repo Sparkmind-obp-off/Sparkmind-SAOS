@@ -2,7 +2,7 @@
 
 SparkMind AI Operating System (SAOS) adalah repository dokumentasi yang menjadi Single Source of Truth (SSOT) untuk fondasi, identitas, standar, dan pengetahuan operasional SparkMind.
 
-> Status repository: Foundation Architecture aktif. Kernel Session 001 masih berupa kerangka terstruktur yang menunggu review dan persetujuan Founder.
+> Status repository: Foundation Architecture dan Knowledge System baseline aktif. Kernel Session 001 masih berupa kerangka terstruktur yang menunggu review dan persetujuan Founder.
 
 ## Tujuan
 
@@ -23,11 +23,12 @@ Repository ini dirancang untuk:
 - Pedoman kontribusi, keamanan, dukungan, dan perilaku komunitas.
 - Struktur lengkap `01-foundation/` dengan 13 domain terdokumentasi.
 - Foundation Architecture, dependency, alur informasi, dan boundary antarlapisan.
+- Knowledge System dengan sembilan domain, arsitektur pengetahuan, lifecycle, governance, dan ownership model.
 
 ### Belum Diimplementasikan
 
 - Isi final dokumen Kernel dan persetujuan Founder.
-- Isi substantif serta approval artefak pada setiap domain Foundation.
+- Isi substantif serta approval artefak pada setiap domain Foundation dan Knowledge System.
 - Operating rules, engine, prompt, dan layer SAOS berikutnya.
 - Spesifikasi atau implementasi produk, termasuk Hifz AI.
 - Kode aplikasi, database, deployment, dan CI/CD.
@@ -72,6 +73,9 @@ Direktori baru hanya ditambahkan ketika memiliki tujuan, owner, dan dokumen inde
 
 - [`01-foundation/README.md`](01-foundation/README.md) — indeks 13 domain Foundation.
 - [`01-foundation/FOUNDATION_ARCHITECTURE.md`](01-foundation/FOUNDATION_ARCHITECTURE.md) — peran, dependency, alur informasi, dan boundary.
+- [`01-foundation/knowledge/README.md`](01-foundation/knowledge/README.md) — indeks Knowledge System.
+- [`01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md) — alur, lifecycle, role, dan dependency pengetahuan.
+- [`01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) — naming, versioning, review, approval, deprecation, archiving, dan cross-reference.
 
 ### Repository
 
@@ -88,9 +92,10 @@ Direktori baru hanya ditambahkan ketika memiliki tujuan, owner, dan dokumen inde
 1. Mulai dari dokumen ini untuk memahami ruang lingkup repository.
 2. Baca [`00-kernel/README.md`](00-kernel/README.md) sebelum mengusulkan perubahan fundamental.
 3. Baca [`01-foundation/README.md`](01-foundation/README.md) dan arsitekturnya sebelum menambah pengetahuan atau playbook.
-4. Ikuti [`CONTRIBUTING.md`](CONTRIBUTING.md) dan seluruh standar di `docs/standards/`.
-5. Bedakan isi berstatus draft, approved, deprecated, atau superseded.
-6. Gunakan issue atau jalur privat yang sesuai sebelum mengirim perubahan sensitif.
+4. Ikuti [`01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) sebelum membuat atau memperbarui artefak Knowledge System.
+5. Ikuti [`CONTRIBUTING.md`](CONTRIBUTING.md) dan seluruh standar di `docs/standards/`.
+6. Bedakan isi berstatus draft, verified, approved, deprecated, atau superseded.
+7. Gunakan issue atau jalur privat yang sesuai sebelum mengirim perubahan sensitif.
 
 ## Data dan Teknologi
 
@@ -101,7 +106,7 @@ Repository ini hanya berisi Kernel, Foundation, dan dokumentasi tata kelola repo
 - **Repository remote:** <https://github.com/Sparkmind-obp-off/Sparkmind-SAOS>
 - **Production:** Belum tersedia; deployment berada di luar ruang lingkup Foundation.
 - **Platform target:** Belum ditetapkan.
-- **Status:** Foundation aktif, belum berupa aplikasi.
+- **Status:** Foundation dan Knowledge System baseline aktif, belum berupa aplikasi.
 - **Terakhir diperbarui:** 2026-07-15.
 
 ## Lisensi

@@ -27,6 +27,17 @@ Foundation tidak menetapkan ulang Vision, Mission, Philosophy, Values, Principle
 ├── constitution/
 ├── governance/
 ├── knowledge/
+│   ├── KNOWLEDGE_ARCHITECTURE.md
+│   ├── KNOWLEDGE_GOVERNANCE.md
+│   ├── concepts/
+│   ├── glossary/
+│   ├── architecture/
+│   ├── standards/
+│   ├── best-practices/
+│   ├── decisions/
+│   ├── references/
+│   ├── learning/
+│   └── onboarding/
 ├── wisdom/
 ├── principles/
 ├── values/
@@ -45,7 +56,7 @@ Foundation tidak menetapkan ulang Vision, Mission, Philosophy, Values, Principle
 | --- | --- |
 | [`constitution/`](constitution/README.md) | Instrumen konstitusional yang diratifikasi dan peta ke sumber Kernel. |
 | [`governance/`](governance/README.md) | Otoritas, approval, lifecycle, dan mekanisme pengawasan. |
-| [`knowledge/`](knowledge/README.md) | Pengetahuan terverifikasi dan terkurasi lintas domain. |
+| [`knowledge/`](knowledge/README.md) | Knowledge System terverifikasi dan terkurasi, lengkap dengan arsitektur, governance, serta sembilan domain discovery dan transfer. |
 | [`wisdom/`](wisdom/README.md) | Pembelajaran kontekstual dari pengalaman dan refleksi. |
 | [`principles/`](principles/README.md) | Panduan penerapan prinsip Kernel dalam keputusan nyata. |
 | [`values/`](values/README.md) | Panduan perilaku dan indikator penerapan nilai Kernel. |
@@ -70,7 +81,7 @@ Kernel → Foundation → SAOS / Engineering → Products
 - **Engineering** menggunakan Foundation untuk standar dan keputusan teknis.
 - **Products** menerapkan aturan tersebut dalam konteks produk serta mengirimkan evidence kembali.
 
-Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.md`](FOUNDATION_ARCHITECTURE.md).
+Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.md`](FOUNDATION_ARCHITECTURE.md). Arsitektur dan aturan khusus Knowledge System tersedia di [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md) dan [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md).
 
 ## Aturan SSOT
 

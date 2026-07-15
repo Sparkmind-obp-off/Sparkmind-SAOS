@@ -46,7 +46,7 @@ Foundation tidak bergantung pada detail implementasi SAOS, Engineering, atau Pro
 | --- | --- | --- | --- |
 | Constitution | Mengelola instrumen konstitusional terakit dan jejak ratifikasi | Canon dan dokumen Kernel approved | Instrumen dan peta otoritas |
 | Governance | Menetapkan proses approval, ownership, review, dan eskalasi | Constitution, risiko, feedback | Kebijakan governance dan matriks otoritas |
-| Knowledge | Mengkurasi pengetahuan yang telah diverifikasi | Research, keputusan, sumber internal | Knowledge note dan referensi terkurasi |
+| Knowledge | Mengelola Knowledge System: kurasi, discovery, provenance, lifecycle, learning, dan onboarding | Research, keputusan, sumber internal/eksternal, feedback | Knowledge artifact, indeks, relationship map, learning path, dan onboarding guide |
 | Wisdom | Menangkap pembelajaran kontekstual jangka panjang | Retrospective, insiden, outcomes | Lesson dan heuristic berstatus jelas |
 | Principles | Menjelaskan penerapan prinsip Kernel | `00-kernel/PRINCIPLES.md` | Guidance, contoh, dan trade-off |
 | Values | Menjelaskan perilaku yang mencerminkan nilai Kernel | `00-kernel/VALUES.md` | Behavioral guidance dan indikator |
@@ -73,8 +73,12 @@ Foundation tidak bergantung pada detail implementasi SAOS, Engineering, atau Pro
 ### Dependency pengetahuan
 
 ```text
-Research → Knowledge → Decision Library → Patterns / Anti-patterns → Playbooks
-                  └──────────────► Wisdom ──────────────┘
+Research → Knowledge System → Decision Library → Patterns / Anti-patterns → Playbooks
+             ├── concepts / architecture / references
+             ├── glossary / standards / decisions (discovery views)
+             ├── best-practices
+             └── learning / onboarding
+                         └────────► Wisdom ──────────────┘
 ```
 
 ### Dependency istilah
@@ -85,7 +89,7 @@ Semua komponen menggunakan `00-kernel/TERMINOLOGY.md` sebagai kosakata fundament
 
 1. **Arah:** Kernel memberikan batas normatif kepada Foundation.
 2. **Akuisisi:** Research mengumpulkan sumber, evidence, asumsi, dan tingkat keyakinan.
-3. **Kurasi:** Knowledge memverifikasi serta menghubungkan evidence dengan konteks.
+3. **Kurasi:** Knowledge System memverifikasi serta menghubungkan evidence dengan konteks melalui lifecycle di [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md) dan governance di [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md).
 4. **Penilaian:** Principles, Values, dan Ethics memberi lensa evaluasi tanpa mengubah sumber Kernel.
 5. **Keputusan:** Decision Library mencatat pilihan, alasan, trade-off, owner, dan approval.
 6. **Pembelajaran:** Outcomes diklasifikasikan menjadi wisdom, pattern, atau anti-pattern.

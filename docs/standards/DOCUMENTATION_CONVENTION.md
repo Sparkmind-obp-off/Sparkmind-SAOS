@@ -66,7 +66,7 @@ Sebelum approved, tentukan:
 - pihak yang terdampak;
 - kondisi yang memicu review ulang.
 
-Dokumen Kernel yang belum memiliki owner formal tetap menunggu persetujuan Founder dan tidak dianggap final. Artefak Foundation wajib merujuk sumber Kernel terkait dan tidak boleh mengubah statusnya melalui interpretasi downstream.
+Dokumen Kernel yang belum memiliki owner formal tetap menunggu persetujuan Founder dan tidak dianggap final. Artefak Foundation wajib merujuk sumber Kernel terkait dan tidak boleh mengubah statusnya melalui interpretasi downstream. Artefak Knowledge System juga mengikuti [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) untuk metadata, verification, approval, deprecation, archiving, dan referensi silang.
 
 ## Pemeliharaan
 

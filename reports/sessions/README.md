@@ -30,3 +30,4 @@ Folder ini menyimpan laporan hasil setiap session SparkMind SAOS untuk menjaga k
 - Session 001 — Kernel foundation; tercatat dalam histori Git pada commit `7a2428e`.
 - [`SESSION-002.md`](SESSION-002.md) — Repository Foundation & Project Identity.
 - [`SESSION-003.md`](SESSION-003.md) — SparkMind Foundation Architecture.
+- [`SESSION-004.md`](SESSION-004.md) — SparkMind Knowledge System.

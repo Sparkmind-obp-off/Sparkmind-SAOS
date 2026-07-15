@@ -1,6 +1,6 @@
 # SPOS Session Template
 
-> Status: Draft baseline SPOS-001 — salin sebagai session baru dan ganti seluruh token `<...>`.
+> Status: Draft baseline SPOS-004 — gunakan bersama Execution Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
 
 ## Metadata
 
@@ -36,7 +36,8 @@ Jelaskan keadaan awal, alasan session diperlukan, dan fakta yang sudah diverifik
 | Kernel | `<path>` | `<status>` | `<constraint>` |
 | Foundation / Governance | `<path>` | `<status>` | `<authority atau workflow>` |
 | Knowledge / Decision | `<path>` | `<status>` | `<context>` |
-| SPOS engine / rule | `<path>` | `<status>` | `<execution contract>` |
+| Developer Mode / Execution Engine | `<path dan versi>` | `<status>` | `<behavior, lifecycle, gates, dan completion contract>` |
+| SPOS rule / playbook | `<path>` | `<status>` | `<constraint atau procedure>` |
 
 Jangan memperlakukan dependency Draft sebagai aturan Approved.
 
@@ -65,27 +66,36 @@ Jangan memperlakukan dependency Draft sebagai aturan Approved.
 
 ## 6. Execution Plan
 
-1. Audit current state dan dependency.
-2. Kunci scope serta risiko.
-3. Terapkan perubahan atomik.
-4. Jalankan validasi dan cross-review.
-5. Perbarui indeks, changelog, dan dokumentasi terkait.
-6. Commit serta push bila capability, akses, dan policy mengizinkan.
-7. Verifikasi hasil dan finalisasi report.
+Ikuti lifecycle kanonik [`../00-core/EXECUTION_ENGINE.md`](../00-core/EXECUTION_ENGINE.md):
 
-Sesuaikan langkah tanpa menghapus quality gate wajib.
+1. Receive Objective.
+2. Analyze Context.
+3. Read Repository.
+4. Identify Dependencies.
+5. Plan Execution.
+6. Execute Incrementally.
+7. Validate Results.
+8. Update Documentation.
+9. Perform Git Workflow.
+10. Generate Session Report.
+11. Complete Session.
+
+Turunkan tahap tersebut menjadi subtask atomik sesuai klasifikasi pekerjaan. Sesuaikan detail tanpa menghapus validation gate wajib.
 
 ## 7. Quality Gates
 
-- [ ] Dependency dan statusnya terverifikasi.
+- [ ] Pre-Execution Check lulus dan dependency serta statusnya terverifikasi.
 - [ ] Scope serta non-scope dipatuhi.
 - [ ] Tidak ada duplikasi sumber kanonik.
 - [ ] Naming, struktur, link, dan format valid.
 - [ ] Security serta secret review selesai.
+- [ ] During Execution Check dan Post-Execution Review lulus.
 - [ ] Acceptance criteria setiap deliverable terpenuhi.
 - [ ] Perubahan strategis memiliki approval yang tepat.
 - [ ] Git diff direview dan whitespace check berhasil.
 - [ ] Commit/push atau alasan blocker diverifikasi.
+- [ ] Repository Consistency Check dan Documentation Check lulus.
+- [ ] Definition of Done Check lulus.
 - [ ] Session Report selesai dan tidak menjadi sumber kanonik tandingan.
 
 ## 8. Cross-Review Matrix

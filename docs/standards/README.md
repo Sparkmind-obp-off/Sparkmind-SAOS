@@ -20,13 +20,15 @@ Folder ini menjadi sumber kanonik untuk standar pengelolaan repository SparkMind
 
 Jika ditemukan konflik:
 
-1. Instruksi Founder yang terdokumentasi dan berlaku.
-2. Dokumen Kernel yang telah berstatus approved.
-3. Kebijakan root seperti `SECURITY.md`, `LICENSE`, dan `CODE_OF_CONDUCT.md`.
-4. Standar khusus pada folder ini.
-5. Preferensi gaya lokal yang terdokumentasi.
+1. Hukum, kewajiban keselamatan, dan instruksi Founder yang terdokumentasi serta berlaku.
+2. Constitution SPOS yang telah diratifikasi, untuk pekerjaan di dalam SPOS.
+3. Dokumen Kernel approved sebagai source material fundamental sesuai kedudukan dan scope-nya.
+4. Governance dan policy approved yang berlaku.
+5. Kebijakan root seperti `SECURITY.md`, `LICENSE`, dan `CODE_OF_CONDUCT.md`.
+6. Standar khusus pada folder ini.
+7. Preferensi gaya lokal yang terdokumentasi.
 
-Konflik tidak boleh diselesaikan secara diam-diam. Catat konflik dan eskalasikan bila memengaruhi makna normatif atau hak pihak lain.
+Hanya artefak dengan status dan approval yang sah memiliki authority operasional. Konflik tidak boleh diselesaikan secara diam-diam; catat sumber, status, serta scope-nya dan eskalasikan bila memengaruhi makna normatif atau hak pihak lain.
 
 ## Cara Mengubah Standar
 

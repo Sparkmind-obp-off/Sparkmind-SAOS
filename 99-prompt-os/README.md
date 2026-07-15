@@ -1,12 +1,12 @@
 # SparkMind Prompt Operating System (`99-prompt-os`)
 
-> Status: SPOS-003 baseline — Constitution dan Developer Mode Engine tersedia sebagai `In Review`; authority operasional menunggu approval yang sah.
+> Status: SPOS-004 baseline — Constitution, Developer Mode Engine, dan Execution Engine tersedia sebagai `In Review`; authority operasional menunggu approval yang sah.
 
 ## Apa Itu SPOS
 
 SparkMind Prompt Operating System (SPOS) adalah lapisan dokumentasi operasional yang menerjemahkan arah, batas, dan pengetahuan SparkMind menjadi kontrak kerja AI yang modular. SPOS mengorganisasi architecture, template, rule, session, playbook, dan prompt agar pekerjaan AI dapat direncanakan, dieksekusi, direview, serta dilaporkan secara konsisten.
 
-SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution Engine dan Developer Mode Engine telah didokumentasikan sebagai `In Review`; keduanya bukan runtime otomatis atau bukti approval.
+SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution Engine, Developer Mode Engine, dan Execution Engine telah didokumentasikan sebagai `In Review`; semuanya bukan runtime otomatis atau bukti approval.
 
 ## Mengapa SPOS Ada
 
@@ -22,22 +22,25 @@ SPOS dibangun untuk:
 ## Posisi dan Hubungan
 
 ```text
-00-kernel
-  │ authority & constraints
+Founder authority + 00-kernel source material
+  │
   ▼
-01-foundation
-  │ governance, knowledge & approved guidance
+SPOS Constitution (highest authority within SPOS when ratified)
+  │
+  ▼
+01-foundation governance, knowledge & approved guidance
+  │
   ▼
 SAOS
   │ operating model for the SparkMind AI ecosystem
   └── 99-prompt-os (SPOS)
-         │ AI execution contracts, sessions & prompts
+         │ Developer Mode + Execution contracts, sessions & prompts
          ▼
 Engineering / AI Agents
          │ bounded execution
          ▼
 Products
-         └── evidence, outcomes, incidents & feedback ──► Foundation
+         └── evidence, outcomes, incidents & feedback ──► Foundation / SPOS review
 ```
 
 ### Hubungan dengan SAOS
@@ -65,6 +68,7 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 │   ├── README.md
 │   ├── CONSTITUTION.md
 │   ├── DEVELOPER_MODE_ENGINE.md
+│   ├── EXECUTION_ENGINE.md
 │   └── SPOS_ARCHITECTURE.md
 ├── 01-templates/
 │   └── README.md
@@ -86,7 +90,7 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 
 | Komponen | Fungsi | Status terkini |
 | --- | --- | --- |
-| `00-core/` | Constitution, Developer Mode, arsitektur, lifecycle, execution model, dan engine inti | Constitution serta Developer Mode `In Review`; architecture tersedia dan runtime belum dibangun |
+| `00-core/` | Constitution, Developer Mode, Execution Engine, arsitektur, lifecycle, dan engine inti | Constitution, Developer Mode, serta Execution Engine `In Review`; architecture tersedia dan runtime belum dibangun |
 | `01-templates/` | Kontrak artefak kerja yang dapat digunakan ulang | Kontrak folder tersedia |
 | `02-rules/` | Rule modular dengan authority dan precedence eksplisit | Kontrak folder tersedia |
 | `03-sessions/` | Objective, scope, deliverable, validasi, dan laporan eksekusi | Session Template tersedia |
@@ -108,11 +112,12 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 
 1. Baca [`00-core/CONSTITUTION.md`](00-core/CONSTITUTION.md) dan periksa status ratifikasinya.
 2. Baca [`00-core/DEVELOPER_MODE_ENGINE.md`](00-core/DEVELOPER_MODE_ENGINE.md) dan periksa status aktivasi serta authority-nya.
-3. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
-4. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
-5. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt; jangan menganggapnya engine aktif.
-6. Cantumkan dependency, status, owner, reviewer, quality gate, dan unresolved conflict.
-7. Laporkan evidence dan feedback agar perubahan dapat direview melalui Foundation dan governance.
+3. Baca [`00-core/EXECUTION_ENGINE.md`](00-core/EXECUTION_ENGINE.md) untuk lifecycle, classification, validation, recovery, evidence, dan Definition of Done.
+4. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
+5. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
+6. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt; jangan menganggapnya engine aktif.
+7. Cantumkan dependency, status, owner, reviewer, quality gate, dan unresolved conflict.
+8. Laporkan evidence dan feedback agar perubahan dapat direview melalui Foundation dan governance.
 
 ## Status Implementasi
 
@@ -138,11 +143,18 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 - Cross-review terhadap Constitution, Foundation, Knowledge, Governance, SPOS Architecture, serta repository standards.
 - Activation boundary yang mempertahankan Founder Authority dan status `In Review`.
 
+**SPOS-004**
+
+- Execution Engine dengan lifecycle sebelas tahap, sepuluh task classification, execution rules, enam validation gates, failure/recovery policy, evidence contract, dan Definition of Done.
+- Cross-review terhadap Constitution, Developer Mode, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, serta repository standards.
+- Penyelarasan precedence repository standards dan deviasi roadmap tanpa membangun Governance Engine atau fitur produk.
+
 ### Belum Diimplementasikan
 
 - Ratifikasi Founder atas Constitution.
 - Approval operasional dan activation record Developer Mode Engine.
-- Governance, Execution, Git, Documentation, Quality, Session, dan Report Engine.
+- Governance, Git, Documentation, Quality, Session, dan Report Engine.
+- Approval operasional dan activation record Execution Engine.
 - Rule substantif, template pekerjaan khusus, playbook, prompt compiler, atau runtime otomatis.
 - Authority matrix dan approval SPOS final.
 - Integrasi vendor, aplikasi, database, deployment, atau CI/CD.

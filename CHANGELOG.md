@@ -24,6 +24,8 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Laporan SPOS-002 serta penyelarasan Canon, Foundation Constitution, Governance, SPOS Architecture, indeks, dan handoff.
 - Developer Mode Engine SPOS-003 dengan operational principles, standard workflow, decision gates, autonomous execution policy, repository interaction policy, rollback, validation, Git workflow, failure handling, dan activation boundary.
 - Laporan SPOS-003 serta penyelarasan SPOS Core, SPOS Architecture, indeks repository, dan handoff.
+- Execution Engine SPOS-004 dengan lifecycle sebelas tahap, sepuluh task classification, execution rules, enam validation gates, failure/recovery policy, evidence contract, dan Definition of Done.
+- Laporan SPOS-004 serta penyelarasan SPOS Core, SPOS Architecture, precedence repository standards, indeks repository, dan handoff.
 
 ### Reviewed
 
@@ -34,6 +36,7 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Cross-review SPOS-001 terhadap Kernel, Foundation, Knowledge, Governance, SAOS, Engineering, Products, dan repository conventions.
 - Cross-review SPOS-002 terhadap Kernel, Foundation, Knowledge, Governance, dan SPOS Architecture, termasuk resolusi interim lokasi instrumen Constitution dan batas ratifikasi Founder.
 - Cross-review SPOS-003 terhadap Constitution, Foundation, Knowledge, Governance, SPOS Architecture, dan repository standards, termasuk batas otonomi serta dependency aktivasi.
+- Cross-review SPOS-004 terhadap Constitution, Developer Mode, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, dan repository standards, termasuk penyelarasan precedence Constitution.
 
 ## [0.1.0] - 2026-07-15
 

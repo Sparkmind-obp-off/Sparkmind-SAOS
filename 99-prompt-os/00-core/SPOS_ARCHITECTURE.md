@@ -1,6 +1,6 @@
 # SPOS Architecture
 
-> Status: Draft baseline SPOS-003 — diselaraskan dengan Constitution dan Developer Mode Engine `In Review`; bukan runtime aktif.
+> Status: Draft baseline SPOS-004 — diselaraskan dengan Constitution, Developer Mode Engine, dan Execution Engine `In Review`; bukan runtime aktif.
 
 ## Tujuan
 
@@ -51,7 +51,7 @@ SPOS berada di bawah operating model SAOS dan menggunakan Kernel serta Foundatio
 
 | Komponen | Tanggung jawab | Input | Output |
 | --- | --- | --- | --- |
-| `00-core/` | Menyimpan Constitution, Developer Mode, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, operational behavior, execution model, dan engine specifications |
+| `00-core/` | Menyimpan Constitution, Developer Mode, Execution Engine, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, operational behavior, execution lifecycle, dan engine specifications |
 | `01-templates/` | Menyediakan struktur artefak reusable | Rule dan metadata contract | Draft artefak yang konsisten |
 | `02-rules/` | Menyimpan aturan atomik dan precedence | Authority serta governance approved | Constraint dan quality gate terkomposisi |
 | `03-sessions/` | Membatasi satu unit kerja | Objective, scope, dependency, acceptance criteria | Deliverable, evidence, dan session report |
@@ -131,20 +131,23 @@ Perubahan status mengikuti governance upstream. Commit atau keberadaan file tida
 
 ### Lifecycle session
 
+Lifecycle kanonik mengikuti [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md):
+
 ```text
-Intake
-  → Resolve dependencies
-  → Define objective and scope
-  → Select rules, templates, and playbooks
-  → Assemble prompt package
-  → Preflight quality gate
-  → Execute bounded work
-  → Validate and cross-review
-  → Deliver and report
-  → Capture feedback and close / block
+Receive Objective
+  → Analyze Context
+  → Read Repository
+  → Identify Dependencies
+  → Plan Execution
+  → Execute Incrementally
+  → Validate Results
+  → Update Documentation
+  → Perform Git Workflow
+  → Generate Session Report
+  → Complete Session
 ```
 
-Session berstatus `Blocked` jika dependency wajib hilang, authority conflict belum selesai, akses yang diperlukan tidak tersedia, atau quality gate kritis gagal.
+Intake, module selection, prompt assembly, dan preflight tetap menjadi aktivitas arsitektural yang dipetakan ke tahap Receive/Analyze/Identify/Plan. Session berstatus `Blocked` jika dependency wajib hilang, authority conflict belum selesai, akses yang diperlukan tidak tersedia, atau quality gate kritis gagal.
 
 ## Execution Flow
 
@@ -152,7 +155,7 @@ Session berstatus `Blocked` jika dependency wajib hilang, authority conflict bel
 2. **Classify:** tentukan domain, risiko, reversibility, dan authority yang diperlukan.
 3. **Resolve upstream:** muat sumber kanonik Kernel, Foundation, Governance, Knowledge, dan SAOS yang relevan beserta statusnya.
 4. **Create session contract:** kunci scope, non-scope, deliverable, success criteria, dan stop condition.
-5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) sebagai baseline perilaku hanya sesuai status serta authority aktualnya.
+5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) sebagai baseline perilaku dan [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) sebagai baseline proses hanya sesuai status serta authority aktualnya.
 6. **Assemble prompts:** susun System → User → Task tanpa menduplikasi sumber authority.
 7. **Preflight:** periksa konflik, missing input, security, capability, approval, dan rencana validasi.
 8. **Execute:** lakukan pekerjaan hanya dalam scope serta rekam keputusan dan evidence.
@@ -214,7 +217,7 @@ Sebelum session ditutup, pastikan:
 - Quality gate gagal: perbaiki dalam scope atau tandai session belum selesai.
 - Feedback produk: catat sebagai evidence; owner upstream memutuskan perubahan.
 
-## Review Checklist SPOS-003
+## Review Checklist SPOS-004
 
 - [x] Tujuan, komponen, dependency, lifecycle, dan execution flow terdokumentasi.
 - [x] Constitution menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder.
@@ -224,5 +227,7 @@ Sebelum session ditutup, pastikan:
 - [x] Folder `99` tidak ditafsirkan sebagai authority di atas hukum, keselamatan, atau Founder.
 - [x] Prompt template diposisikan sebagai assembly boundary, bukan sumber normatif.
 - [x] Developer Mode Engine diposisikan sebagai kontrak perilaku operasional, bukan runtime atau authority baru.
+- [x] Execution Engine diposisikan sebagai kontrak proses kanonik untuk lifecycle, classification, validation, recovery, evidence, dan completion.
 - [x] Decision gates, autonomy boundary, repository interaction, validation, rollback, dan reporting selaras dengan execution flow.
+- [x] Lifecycle arsitektural dan lifecycle Execution Engine dipetakan tanpa membuat dua sumber proses tandingan.
 - [x] Baseline tidak mengklaim runtime atau automation yang belum dibangun.

@@ -1,6 +1,6 @@
 # SparkMind Knowledge System
 
-> Status: Baseline aktif untuk struktur dan governance; konten pengetahuan substantif belum dikurasi.
+> Status: Master Knowledge System baseline SPOS-012 tersedia sebagai `In Review`; struktur dan governance aktif, sedangkan konten pengetahuan substantif serta activation manusia belum tersedia.
 
 ## Tujuan
 
@@ -17,6 +17,7 @@ Knowledge System tidak menyimpan transcript mentah, opini tanpa status, duplikas
 ```text
 01-foundation/knowledge/
 ├── README.md
+├── MASTER_KNOWLEDGE_SYSTEM.md
 ├── KNOWLEDGE_ARCHITECTURE.md
 ├── KNOWLEDGE_GOVERNANCE.md
 ├── concepts/
@@ -44,8 +45,9 @@ Knowledge System tidak menyimpan transcript mentah, opini tanpa status, duplikas
 
 ## Dokumen Sistem
 
-- [`KNOWLEDGE_ARCHITECTURE.md`](KNOWLEDGE_ARCHITECTURE.md) — alur, lifecycle, dependency, peran, dan hubungan antarlapisan.
-- [`KNOWLEDGE_GOVERNANCE.md`](KNOWLEDGE_GOVERNANCE.md) — naming, versioning, review, approval, deprecation, archiving, serta referensi silang.
+- [`MASTER_KNOWLEDGE_SYSTEM.md`](MASTER_KNOWLEDGE_SYSTEM.md) — kontrak integratif model knowledge, claim/evidence, provenance, taxonomy/relationship, source assessment, curation, retrieval/consumption, traceability, security/rights, quality, learning, AI policy, dan activation.
+- [`KNOWLEDGE_ARCHITECTURE.md`](KNOWLEDGE_ARCHITECTURE.md) — sumber kanonik alur, lifecycle dasar, dependency, peran, dan hubungan antarlapisan.
+- [`KNOWLEDGE_GOVERNANCE.md`](KNOWLEDGE_GOVERNANCE.md) — sumber kanonik naming, metadata, versioning, review, approval, deprecation, archiving, serta referensi silang domain.
 
 ## Hubungan dengan Domain Foundation Lain
 
@@ -65,6 +67,8 @@ Knowledge System tidak menyimpan transcript mentah, opini tanpa status, duplikas
 4. Research belum menjadi knowledge approved sebelum kurasi dan review.
 5. Knowledge memberi konteks bagi keputusan, tetapi tidak menjadi keputusan hanya karena terdokumentasi.
 6. AI boleh mengusulkan dan memelihara draft; approval strategis tetap berada pada manusia berwenang.
+7. Claim, evidence, synthesis, recommendation, decision, dan prompt instruction wajib dibedakan; knowledge tidak memperoleh authority hanya karena ditemukan, diringkas, atau sering digunakan.
+8. Discovery, retrieval, dan learning view mempertahankan canonical source, version, status, confidence, applicability, classification, serta limitation.
 
 ## Kontrak Minimum Artefak
 
@@ -72,8 +76,9 @@ Artefak substantif harus menyatakan, bila relevan: status, owner, reviewer, tang
 
 ## Cara Menggunakan
 
-1. Mulai dari indeks ini dan pilih domain yang sesuai.
-2. Verifikasi status artefak sebelum menggunakannya.
-3. Ikuti link menuju sumber kanonik untuk keputusan atau definisi penting.
-4. Ajukan pembaruan melalui lifecycle yang ditetapkan governance.
-5. Laporkan konflik, sumber usang, dan gap ke owner atau Knowledge Steward.
+1. Mulai dari indeks ini dan baca Master Knowledge System untuk kontrak integratif.
+2. Verifikasi status, version, provenance, confidence, applicability, classification, dan review state artefak sebelum menggunakannya.
+3. Ikuti link menuju sumber kanonik untuk keputusan, definisi, claim, atau evidence penting.
+4. Perlakukan retrieval dan AI synthesis sebagai context/data sampai verification serta authority yang benar tersedia.
+5. Ajukan pembaruan melalui lifecycle yang ditetapkan Knowledge Architecture dan Governance.
+6. Laporkan conflict, stale source, rights/access issue, harmful gap, dan outcome ke owner atau Knowledge Steward.

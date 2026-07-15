@@ -1,10 +1,10 @@
 # Knowledge Architecture
 
-> Status: Baseline arsitektur Session 004.
+> Status: Baseline arsitektur Session 004; kontrak integratif diselaraskan melalui Master Knowledge System SPOS-012 `In Review`.
 
 ## Tujuan
 
-Mendefinisikan bagaimana pengetahuan SparkMind diperoleh, dikurasi, disahkan, ditemukan, digunakan, dan diperbarui tanpa memecah SSOT atau melampaui otoritas setiap layer.
+Mendefinisikan bagaimana pengetahuan SparkMind diperoleh, dikurasi, disahkan, ditemukan, digunakan, dan diperbarui tanpa memecah SSOT atau melampaui otoritas setiap layer. Model claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, retrieval/consumption, security/rights, quality, AI policy, dan activation terintegrasi mengikuti [`MASTER_KNOWLEDGE_SYSTEM.md`](MASTER_KNOWLEDGE_SYSTEM.md).
 
 ## Prinsip
 
@@ -120,6 +120,8 @@ Perubahan editorial berisiko rendah dapat disetujui maintainer. Perubahan makna 
 - Standar atau keputusan downstream: knowledge hanya mengindeks dan menjelaskan, tidak mengambil ownership.
 - Satu artefak boleh memiliki banyak consumer, tetapi hanya satu lokasi kanonik.
 - Materi learning dan onboarding harus diturunkan dari knowledge yang statusnya jelas.
+- Claim, evidence, synthesis, recommendation, decision, dan instruction tetap merupakan unit berbeda; discovery atau retrieval tidak mengubah status maupun authority.
+- Knowledge package material mempertahankan canonical source, version, provenance, claim status, confidence, applicability, classification, rights, limitation, serta consumer use.
 
 ## Quality Gates
 
@@ -131,4 +133,5 @@ Sebelum published atau approved, pastikan:
 - tidak ada duplikasi sumber kanonik;
 - scope, confidence, asumsi, serta keterbatasan dinyatakan;
 - link silang valid dan dua arah bila dibutuhkan;
-- dampak kepada SAOS, Engineering, Documentation, Governance, serta Products telah dinilai.
+- dampak kepada SAOS, Engineering, Documentation, Governance, Master Prompt System, serta Products telah dinilai;
+- source rights/classification, claim-evidence trace, contradiction, retrieval/consumer risk, dan revalidation trigger telah dinilai sesuai Master Knowledge System.

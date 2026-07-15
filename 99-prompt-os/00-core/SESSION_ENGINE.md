@@ -14,7 +14,7 @@
 >
 > Effective: setelah approval operasional yang sah, activation record, dan dependency upstream terpenuhi
 >
-> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Execution, Git, Documentation, Quality, Report, Foundation, Knowledge System, atau SPOS Architecture; perubahan model kerja AI; insiden session material; state/continuity/reporting failure berulang; atau evidence bahwa lifecycle tidak lagi efektif
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Execution, Git, Documentation, Quality, Report, Foundation, Master Knowledge System/Knowledge Architecture/Governance, atau SPOS Architecture; perubahan model kerja AI; insiden session material; state/continuity/reporting/knowledge-consumption failure berulang; atau evidence bahwa lifecycle tidak lagi efektif
 
 ## 1. Kedudukan dan Tujuan
 
@@ -663,7 +663,7 @@ Session dapat `Completed` hanya jika:
 | [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | authority, owner, delegation, decision class, separation, approval, exception, escalation, stop | Governance menetapkan siapa boleh memutus; Session Engine merekam dan menegakkan gate |
 | [`REPORT_ENGINE.md`](REPORT_ENGINE.md) | report taxonomy/lifecycle/structure, claim-evidence mapping, traceability, validation, correction, publication, dan archive | Session Engine menentukan report timing/closure; Report Engine menentukan standard report |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, dependency, evidence/feedback, ownership, boundary, learning | Session tidak mengambil ownership Foundation/domain |
-| [`../../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](../../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md) | provenance, status, confidence, review trigger, learning routing | Session evidence tidak otomatis menjadi approved knowledge |
+| [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md), [`../../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](../../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md), dan [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | claim/evidence, provenance/lineage, status, confidence/applicability, classification/rights, retrieval/consumption, review trigger, dan learning routing | Session context/evidence tidak otomatis menjadi instruction, decision, policy, atau approved knowledge |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | modular assembly, session boundary, lifecycle, input/output, bounded execution | Engine adalah kontrak dokumentasi, bukan runtime orchestrator |
 | [`../03-sessions/SESSION_TEMPLATE.md`](../03-sessions/SESSION_TEMPLATE.md) | concrete session contract, plan, gate, state, continuity, report | Template menginstansiasi dan tidak menduplikasi policy |
 
@@ -714,7 +714,7 @@ AI tidak boleh mengisi approval atau acceptance manusia. Perubahan material pada
 - [x] Resume, recovery, dependency antarsession, context preservation, checkpoint, handoff, stale/timeout, supersession, cancellation, dan archive terdokumentasi.
 - [x] Satu objective, artefak jelas, documentation update, Git Workflow, dan Session Report menjadi AI Session Policy wajib.
 - [x] Identity, contract, record, evidence, closure, dan activation contract terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Execution, Git, Documentation, Quality, Governance, Report, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
+- [x] Alignment dengan Constitution, Developer Mode, Execution, Git, Documentation, Quality, Governance, Report, Foundation, Master Knowledge System/Knowledge Architecture/Governance, SPOS Architecture, dan Session Template dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, registry service, scheduler, queue, database, dashboard, agent memory, deployment, atau automation runtime.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan Founder secara eksplisit.
 - [ ] Session Engine memperoleh approval operasional dan activation record.

@@ -14,7 +14,7 @@
 >
 > Effective: setelah approval operasional yang sah dan dependency upstream terpenuhi
 >
-> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Report Engine, Foundation, Knowledge System, atau SPOS Architecture; insiden kualitas material; perubahan risiko/capability; audit finding berulang; atau evidence bahwa gate dan metrik tidak lagi efektif
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Report Engine, Foundation, Master Knowledge System/Knowledge Governance, atau SPOS Architecture; insiden kualitas material; perubahan risiko/capability; audit finding berulang; atau evidence bahwa gate dan metrik tidak lagi efektif
 
 ## 1. Kedudukan dan Tujuan
 
@@ -537,7 +537,7 @@ Recovery mengikuti Execution Engine: detect, stop propagation, preserve evidence
 | [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Documentation completeness, review, lifecycle, evidence, publication gate, dan debt | Documentation Engine tetap sumber detail dokumentasi |
 | [`REPORT_ENGINE.md`](REPORT_ENGINE.md) | Quality/Audit report structure, claim-evidence mapping, validation result, finding/debt/risk disclosure, traceability, dan aggregation guardrail | Quality Engine menetapkan gate/finding/metric/audit; Report Engine menetapkan cara hasil dilaporkan |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, evidence flow, ownership, lifecycle, feedback, learning, dan human oversight | Engine tidak mengambil ownership Foundation/domain |
-| [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | source quality, provenance, confidence, verification, lesson learned, dan review | Audit/metric output tidak otomatis menjadi approved knowledge/policy |
+| [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) dan [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | source quality, claim/evidence, provenance, confidence/applicability, verification, retrieval/consumer feedback, lesson, dan review | Gate/audit/metric output tidak otomatis menjadi truth, decision, policy, atau approved knowledge |
 | [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | authority, ownership, delegation, approval, exception, escalation, reviewer/auditor separation, dan risk acceptance | Quality Engine menilai evidence; Governance menetapkan decision rights |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | modular contract, traceability, quality gates, bounded execution, report, dan feedback | Engine adalah kontrak dokumentasi, bukan QA runtime/dashboard |
 | [`../03-sessions/SESSION_TEMPLATE.md`](../03-sessions/SESSION_TEMPLATE.md) | dependency, quality plan, gate evidence, cross-review, DoD, dan report | Template menginstansiasi engine dan tidak menjadi policy tandingan |
@@ -592,7 +592,7 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Audit berkala, finding record, corrective action, preventive action, lesson learned, CAPA, dan continuous improvement cycle terdokumentasi.
 - [x] AI self-review, Founder/human review, automatic stop, quality-over-speed, dan approval boundary terdokumentasi.
 - [x] Finding severity, quality debt, exception, evidence, failure, dan recovery terdokumentasi.
-- [x] Alignment dengan Constitution, Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Report Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
+- [x] Alignment dengan Constitution, Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Report Engine, Foundation, Master Knowledge System/Knowledge Governance, SPOS Architecture, dan Session Template dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, dashboard, CI/CD, test framework, atau automation runtime.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
 - [ ] Seluruh upstream engine, termasuk Session dan Report Engine, serta Quality Engine memperoleh approval operasional dan activation record yang kompatibel.

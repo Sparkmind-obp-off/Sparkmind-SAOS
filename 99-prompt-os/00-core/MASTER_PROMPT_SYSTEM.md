@@ -14,13 +14,13 @@
 >
 > Effective: setelah approval operasional, activation record, compatible dependency set, dan consumer migration yang sah tersedia
 >
-> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session, Execution, Report, Documentation, Git, Quality, Foundation, Knowledge System, SPOS Architecture, model/tool/capability, threat model, prompt injection finding, incident, evaluation failure, atau evidence prompt drift
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session, Execution, Report, Documentation, Git, Quality, Foundation, Master Knowledge System, SPOS Architecture, model/tool/capability, threat model, prompt injection finding, incident, evaluation failure, atau evidence prompt/knowledge drift
 
 ## 1. Kedudukan dan Tujuan
 
 Master Prompt System adalah kontrak arsitektur dokumentasi untuk merakit instruksi AI yang konsisten, bounded, traceable, aman, dapat direview, dan vendor-agnostic. Sistem ini menetapkan hierarchy, layer, prompt contract, dependency, lifecycle, versioning, governance, traceability, security, serta quality standard bagi Core, Session, Execution, Report, Validation, Review, dan Approval Prompt.
 
-Master Prompt System mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`REPORT_ENGINE.md`](REPORT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md), [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md), dan [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md).
+Master Prompt System mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`REPORT_ENGINE.md`](REPORT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md), [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md), [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md), dan [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md).
 
 Dokumen ini adalah source of truth untuk **arsitektur dan governance prompt**, bukan sumber authority baru. Prompt package hanya membawa authority yang benar-benar diberikan oleh dependency approved, delegation, session contract, capability, dan platform boundary. Prompt tidak dapat meratifikasi Constitution, membuat delegation, memberi approval manusia, menerima risiko, atau mengubah fakta.
 
@@ -442,7 +442,8 @@ Setiap reusable prompt dan prompt package material mencatat:
 | [`GIT_ENGINE.md`](GIT_ENGINE.md) | branch, diff, commit, push, version trace | Git event tidak menjadi prompt approval |
 | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | quality plan, gates, findings, evaluation, DoD | Validation result tidak menjadi Final Approval |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, evidence flow, knowledge/decision/playbook boundary | Prompt tidak mengambil ownership Foundation |
-| [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | provenance, confidence, curation, lifecycle | Knowledge context tidak otomatis menjadi instruction |
+| [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) | claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, curation, retrieval/consumption, classification/rights, quality, traceability, learning | Knowledge package/context tidak otomatis menjadi instruction, decision, policy, atau approval |
+| [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | metadata, confidence, review/approval, lifecycle, deprecation/archive | Prompt tidak mengambil governance domain knowledge |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | component position, assembly, precedence, execution flow | Master Prompt System merinci prompt layer tanpa menjadi SAOS runtime |
 
 ## 18. Prompt Lifecycle
@@ -712,7 +713,7 @@ execution_id/version
 validation/review/report/approval component versions
 canonical dependency set + status
 model/provider/tool profile
-context sources + trust/classification
+context sources + canonical version/status/provenance/confidence/applicability/trust/classification/rights
 capability boundary
 known limitation
 content/integrity hash where applicable
@@ -778,7 +779,7 @@ AI tidak boleh mengisi field approval atas nama manusia.
 - [x] Core, Session, Execution, Report, Validation, Review, dan Approval Prompt memiliki purpose, input/output, serta boundary.
 - [x] AI Behaviour Rules, AI Limitation Rules, Human Override, dan Priority Resolution terdokumentasi.
 - [x] Prompt Dependency, Lifecycle, Versioning, Governance, Traceability, Security, dan Quality Standard terdokumentasi.
-- [x] Constitution, Governance, Developer Mode, Session, Execution, Report, Documentation, Git, Quality, Foundation, Knowledge, serta SPOS Architecture dipetakan tanpa SSOT tandingan.
+- [x] Constitution, Governance, Developer Mode, Session, Execution, Report, Documentation, Git, Quality, Foundation, Master Knowledge System/Knowledge Governance, serta SPOS Architecture dipetakan tanpa SSOT tandingan.
 - [x] Instruction/data separation, prompt injection, fake approval, secret handling, least privilege, tool/output validation, suspension, dan recovery tercakup.
 - [x] Scope tetap documentation-only; tidak ada runtime, compiler, application, API, database, dashboard, deployment, atau automation yang dibangun.
 - [x] External research diposisikan sebagai informative input, bukan authority otomatis.

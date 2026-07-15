@@ -1,6 +1,6 @@
 # Foundation Architecture
 
-> Status: Baseline arsitektur informasi Session 003; dependency prompt-system diselaraskan pada SPOS-011.
+> Status: Baseline arsitektur informasi Session 003; prompt-system diselaraskan SPOS-011 dan Master Knowledge System diselaraskan SPOS-012 `In Review`.
 
 ## Tujuan
 
@@ -50,7 +50,7 @@ Foundation tidak bergantung pada detail implementasi SAOS, Engineering, atau Pro
 | --- | --- | --- | --- |
 | Constitution | Mengelola source map, ratification record, dan amendment record | Constitution SPOS, Canon, dan dokumen Kernel | Peta sumber, status, serta jejak ratifikasi/amendment |
 | Governance | Menetapkan proses approval, ownership, review, dan eskalasi | Constitution, risiko, feedback | Kebijakan governance dan matriks otoritas |
-| Knowledge | Mengelola Knowledge System: kurasi, discovery, provenance, lifecycle, learning, dan onboarding | Research, keputusan, sumber internal/eksternal, feedback | Knowledge artifact, indeks, relationship map, learning path, dan onboarding guide |
+| Knowledge | Mengelola Master Knowledge System: claim/evidence, source/provenance, kurasi, taxonomy/relationship, discovery/retrieval, lifecycle, quality, protection, learning, dan onboarding | Research, keputusan, sumber internal/eksternal, report, outcome, insiden, feedback | Knowledge artifact/package, indeks, relationship map, learning path, onboarding guide, dan review signal |
 | Wisdom | Menangkap pembelajaran kontekstual jangka panjang | Retrospective, insiden, outcomes | Lesson dan heuristic berstatus jelas |
 | Principles | Menjelaskan penerapan prinsip Kernel | `00-kernel/PRINCIPLES.md` | Guidance, contoh, dan trade-off |
 | Values | Menjelaskan perilaku yang mencerminkan nilai Kernel | `00-kernel/VALUES.md` | Behavioral guidance dan indikator |
@@ -96,7 +96,7 @@ Semua komponen menggunakan `00-kernel/TERMINOLOGY.md` sebagai kosakata fundament
 
 1. **Arah:** Founder Authority, Constitution yang berlaku, dan source material Kernel memberikan batas normatif kepada Foundation sesuai kedudukan masing-masing.
 2. **Akuisisi:** Research mengumpulkan sumber, evidence, asumsi, dan tingkat keyakinan.
-3. **Kurasi:** Knowledge System memverifikasi serta menghubungkan evidence dengan konteks melalui lifecycle di [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md) dan governance di [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md).
+3. **Kurasi:** Knowledge System memisahkan claim/evidence, memverifikasi source/provenance, menghubungkan context/relationship, serta menjaga confidence/applicability melalui kontrak integratif [`knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](knowledge/MASTER_KNOWLEDGE_SYSTEM.md), lifecycle dasar [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md), dan governance domain [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md).
 4. **Penilaian:** Principles, Values, dan Ethics memberi lensa evaluasi tanpa mengubah sumber Kernel.
 5. **Keputusan:** Decision Library mencatat pilihan, alasan, trade-off, owner, dan approval.
 6. **Pembelajaran:** Outcomes diklasifikasikan menjadi wisdom, pattern, atau anti-pattern.
@@ -111,7 +111,7 @@ Semua komponen menggunakan `00-kernel/TERMINOLOGY.md` sebagai kosakata fundament
 - Research note tidak boleh diperlakukan sebagai keputusan approved.
 - Pattern tidak otomatis menjadi playbook sebelum review konteks dan risiko.
 - Playbook tidak boleh menetapkan Vision, Values, Principles, atau Ethics baru.
-- Knowledge, research, pattern, playbook, retrieved content, dan tool output yang dimuat ke prompt tetap mempertahankan provenance/status dan diperlakukan sebagai context/data; pemuatan tidak mengubahnya menjadi instruction atau policy approved.
+- Knowledge, research, pattern, playbook, retrieved content, dan tool output yang dimuat ke prompt tetap mempertahankan canonical source, version, claim status, provenance, confidence, applicability, classification, rights, contradiction, serta limitation dan diperlakukan sebagai context/data; pemuatan tidak mengubahnya menjadi instruction atau policy approved.
 - Konflik dengan Constitution yang telah diratifikasi diselesaikan dengan Constitution sebagai authority internal SPOS; konflik Constitution dengan source material Kernel atau authority Founder dihentikan dan dieskalasikan untuk resolusi konstitusional.
 
 ## Lifecycle Artefak
@@ -149,7 +149,9 @@ Status `Approved` hanya diberikan oleh otoritas yang sesuai. Perubahan makna str
 | Library menjadi tempat sampah | Wajibkan owner, konteks, status, dan trigger review. |
 | Playbook usang | Cantumkan dependency, owner, dan kondisi review ulang. |
 | Quality finding tidak ditindaklanjuti | Catat severity, owner, CAPA, due date, verification, escalation sesuai Quality Engine, dan report trace sesuai Report Engine. |
-| Context pengetahuan diperlakukan sebagai instruksi prompt | Pertahankan provenance/status, klasifikasikan sebagai data, gunakan instruction/data separation, dan eskalasikan authority conflict sesuai Master Prompt System. |
+| Context pengetahuan diperlakukan sebagai instruksi prompt | Pertahankan provenance/status/confidence/applicability/classification, klasifikasikan sebagai data, gunakan instruction/data separation, dan eskalasikan authority conflict sesuai Master Prompt System. |
+| Retrieval/ranking dianggap truth atau approval | Tampilkan canonical source, search scope, claim/evidence, contradiction, limitation, dan authority aktual sesuai Master Knowledge System. |
+| Source poisoning, stale knowledge, atau rights breach | Stop propagation, preservasi evidence, koreksi/retract/supersede, beri tahu consumer, dan revalidate sebelum reuse. |
 | Istilah bercabang | Terminology Kernel tetap acuan fundamental; usulan perubahan dieskalasikan. |
 
 ## Review Checklist
@@ -159,4 +161,5 @@ Status `Approved` hanya diberikan oleh otoritas yang sesuai. Perubahan makna str
 - [x] Posisi terhadap SAOS, Engineering, dan Products jelas.
 - [x] Alur arah, evidence, keputusan, operasionalisasi, dan feedback terdokumentasi.
 - [x] Dependency Master Prompt System menjaga knowledge sebagai context/data dengan provenance, bukan authority/instruction otomatis.
-- [x] Batas Session 003 tidak dilanggar; penyelarasan SPOS-011 tidak membangun runtime atau mengambil ownership Foundation.
+- [x] Master Knowledge System mengintegrasikan claim/evidence, provenance/lineage, taxonomy/relationship, source assessment, curation, retrieval/consumption, protection, quality, learning, dan AI policy tanpa SSOT tandingan.
+- [x] Batas Session 003 tidak dilanggar; penyelarasan SPOS-012 tidak membangun database, retrieval service, RAG, aplikasi, atau runtime dan tidak mengambil ownership Foundation.

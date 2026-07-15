@@ -27,6 +27,7 @@ Foundation tidak menetapkan ulang Vision, Mission, Philosophy, Values, Principle
 ├── constitution/
 ├── governance/
 ├── knowledge/
+│   ├── MASTER_KNOWLEDGE_SYSTEM.md
 │   ├── KNOWLEDGE_ARCHITECTURE.md
 │   ├── KNOWLEDGE_GOVERNANCE.md
 │   ├── concepts/
@@ -56,7 +57,7 @@ Foundation tidak menetapkan ulang Vision, Mission, Philosophy, Values, Principle
 | --- | --- |
 | [`constitution/`](constitution/README.md) | Instrumen konstitusional yang diratifikasi dan peta ke sumber Kernel. |
 | [`governance/`](governance/README.md) | Otoritas, approval, lifecycle, dan mekanisme pengawasan. |
-| [`knowledge/`](knowledge/README.md) | Knowledge System terverifikasi dan terkurasi, lengkap dengan arsitektur, governance, serta sembilan domain discovery dan transfer. |
+| [`knowledge/`](knowledge/README.md) | Master Knowledge System, arsitektur, governance, serta sembilan domain discovery/transfer untuk knowledge terverifikasi, terkurasi, traceable, dan reusable. |
 | [`wisdom/`](wisdom/README.md) | Pembelajaran kontekstual dari pengalaman dan refleksi. |
 | [`principles/`](principles/README.md) | Panduan penerapan prinsip Kernel dalam keputusan nyata. |
 | [`values/`](values/README.md) | Panduan perilaku dan indikator penerapan nilai Kernel. |
@@ -81,7 +82,7 @@ Kernel → Foundation → SAOS / Engineering → Products
 - **Engineering** menggunakan Foundation untuk standar dan keputusan teknis.
 - **Products** menerapkan aturan tersebut dalam konteks produk serta mengirimkan evidence kembali.
 
-Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.md`](FOUNDATION_ARCHITECTURE.md). Arsitektur dan aturan khusus Knowledge System tersedia di [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md) dan [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md). Ketika artefak Foundation digunakan sebagai context AI, hierarchy, dependency manifest, instruction/data separation, provenance, security, dan traceability mengikuti [`../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md) tanpa memindahkan ownership Foundation.
+Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.md`](FOUNDATION_ARCHITECTURE.md). Kontrak integratif Knowledge System tersedia di [`knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](knowledge/MASTER_KNOWLEDGE_SYSTEM.md); alur/lifecycle dasar dan governance domain tetap berada di [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md) serta [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md). Ketika artefak Foundation digunakan sebagai context AI, hierarchy, dependency manifest, instruction/data separation, provenance, security, dan traceability mengikuti [`../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md) tanpa memindahkan ownership Foundation.
 
 ## Aturan SSOT
 
@@ -91,6 +92,8 @@ Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.m
 4. Laporan session mencatat pekerjaan, bukan menggantikan dokumen kanonik.
 5. Perubahan strategis tetap memerlukan otoritas yang ditetapkan Kernel dan governance.
 6. Pemuatan knowledge, research, pattern, playbook, report, atau tool output ke prompt tidak mengubah artefak tersebut menjadi instruction atau policy approved.
+7. Claim, evidence, synthesis, recommendation, decision, dan authority dipisahkan; discovery/ranking/retrieval/publication tidak menjadi proof of truth.
+8. Provenance, confidence, applicability, classification, rights, contradiction, consumer use, dan revalidation dipertahankan sesuai Master Knowledge System.
 
 ## Status dan Review
 

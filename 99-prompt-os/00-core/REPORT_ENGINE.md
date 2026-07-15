@@ -14,7 +14,7 @@
 >
 > Effective: setelah approval operasional yang sah, activation record, dan dependency upstream terpenuhi
 >
-> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Foundation, Knowledge System, atau SPOS Architecture; perubahan kewajiban audit/retensi/klasifikasi; insiden pelaporan material; report drift berulang; atau evidence bahwa standard tidak lagi efektif
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Foundation, Master Knowledge System/Knowledge Architecture/Governance, atau SPOS Architecture; perubahan kewajiban audit/retensi/klasifikasi; insiden pelaporan material; report/knowledge drift berulang; atau evidence bahwa standard tidak lagi efektif
 
 ## 1. Kedudukan dan Tujuan
 
@@ -40,7 +40,7 @@ Engine mengatur:
 - confidentiality, privacy, least disclosure, redaction, access, serta sensitive-data handling;
 - agregasi, executive summary, metric, dan anti-misrepresentation guardrail;
 - kewajiban laporan per session dan batas AI dalam menyusun serta memvalidasi laporan;
-- referensi silang laporan dengan seluruh engine SPOS, Foundation, dan Knowledge System.
+- referensi silang laporan dengan seluruh engine SPOS, Foundation, serta Master Knowledge System/Knowledge Architecture/Governance.
 
 ### 2.2 Non-Scope
 
@@ -685,8 +685,8 @@ State session mengikuti Session Engine: `Blocked` untuk evidence/authority/confl
 | [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | authority, owner, delegation, review/approval, exception, auditability, risk acceptance | Governance menentukan decision rights; report merekam, bukan memberi authority |
 | [`SESSION_ENGINE.md`](SESSION_ENGINE.md) | Session Report wajib, lifecycle/state/continuity/closure, predecessor/successor, report checkpoint | Session Engine menentukan kapan dan state; Report Engine menentukan bentuk serta lifecycle report |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | evidence/outcome/incident/feedback flow, SSOT, ownership, learning routing | Report tidak mengambil ownership Foundation/domain |
-| [`../../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](../../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md) | provenance, confidence, source, curation, learning, review trigger | Report/lesson tidak otomatis menjadi verified/approved knowledge |
-| [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | naming, metadata, versioning, review, lifecycle, cross-reference, archive | Knowledge-specific verification/approval tetap dimiliki Knowledge Governance |
+| [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) | claim/evidence, provenance/lineage, source assessment, confidence/applicability, retrieval/consumption, traceability, protection, quality, dan learning | Report, claim, lesson, atau publication tidak otomatis menjadi truth, decision, policy, atau approved knowledge |
+| [`../../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](../../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md) dan [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | alur/lifecycle dasar, naming, metadata, versioning, review, approval, cross-reference, deprecation, dan archive | Knowledge-specific lifecycle/governance tetap dimiliki Knowledge System |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | Report Engine sebagai core contract, report stage/output, evidence-feedback loop, modular SSOT | Engine adalah kontrak dokumentasi, bukan reporting runtime |
 | [`../../reports/sessions/README.md`](../../reports/sessions/README.md) | lokasi dan indeks Session Report repository | Index menginstansiasi policy dan tidak menjadi source normatif tandingan |
 
@@ -740,7 +740,7 @@ AI tidak boleh mengisi approval manusia. Perubahan material pada taxonomy, lifec
 - [x] Setiap session wajib menghasilkan report; reproducibility, sensitive-data prohibition, validation, dan cross-reference policy eksplisit.
 - [x] Correction/retraction, versioning, publication, classification, retention, archive, aggregation, serta Executive Summary guardrail terdokumentasi.
 - [x] AI permission/prohibition, automatic stop, human approval boundary, dan honest reporting terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Execution, Git, Documentation, Quality, Governance, Session, Foundation, Knowledge System, SPOS Architecture, serta session-report index dipetakan.
+- [x] Alignment dengan Constitution, Developer Mode, Execution, Git, Documentation, Quality, Governance, Session, Foundation, Master Knowledge System/Knowledge Architecture/Governance, SPOS Architecture, serta session-report index dipetakan.
 - [x] Scope tidak membangun aplikasi, dashboard, database, API, analytics/reporting platform, generator, deployment, atau automation runtime.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan Founder secara eksplisit.
 - [ ] Report Engine memperoleh approval operasional dan activation record.

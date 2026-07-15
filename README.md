@@ -2,7 +2,7 @@
 
 SparkMind AI Operating System (SAOS) adalah repository dokumentasi yang menjadi Single Source of Truth (SSOT) untuk fondasi, identitas, standar, dan pengetahuan operasional SparkMind.
 
-> Status repository: Foundation Architecture, Knowledge System, dan SPOS baseline terdokumentasi. Constitution SPOS-002, Developer Mode SPOS-003, Execution SPOS-004, Git SPOS-005, Documentation SPOS-006, Quality SPOS-007, Governance SPOS-008, Session SPOS-009, Report Engine SPOS-010, serta Master Prompt System SPOS-011 berstatus `In Review`; Kernel Session 001 masih berupa kerangka terstruktur.
+> Status repository: Foundation Architecture, Knowledge System, dan SPOS baseline terdokumentasi. Constitution SPOS-002, Developer Mode SPOS-003, Execution SPOS-004, Git SPOS-005, Documentation SPOS-006, Quality SPOS-007, Governance SPOS-008, Session SPOS-009, Report Engine SPOS-010, Master Prompt System SPOS-011, serta Master Knowledge System SPOS-012 berstatus `In Review`; Kernel Session 001 masih berupa kerangka terstruktur.
 
 ## Tujuan
 
@@ -23,7 +23,7 @@ Repository ini dirancang untuk:
 - Pedoman kontribusi, keamanan, dukungan, dan perilaku komunitas.
 - Struktur lengkap `01-foundation/` dengan 13 domain terdokumentasi.
 - Foundation Architecture, dependency, alur informasi, dan boundary antarlapisan.
-- Knowledge System dengan sembilan domain, arsitektur pengetahuan, lifecycle, governance, dan ownership model.
+- Master Knowledge System dengan sembilan domain, model claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, lifecycle, curation, retrieval/consumption, governance, traceability, protection, quality, learning, dan AI policy.
 - Baseline SparkMind Prompt Operating System (SPOS) dengan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, architecture, session framework, dan prompt templates.
 
 ### Belum Diimplementasikan
@@ -31,8 +31,9 @@ Repository ini dirancang untuk:
 - Isi final dokumen Kernel dan persetujuan Founder.
 - Isi substantif serta approval artefak pada setiap domain Foundation dan Knowledge System.
 - Ratifikasi Founder atas Constitution SPOS.
-- Approval operasional dan activation record Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, serta Master Prompt System.
+- Approval operasional dan activation record Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, serta Master Knowledge System.
 - Prompt owner/steward, registry/index, compatible version set, consumer migration, evaluation suite, monitoring, serta operational conformance test.
+- Knowledge Steward/owner acceptance, canonical inventory, taxonomy/vocabulary, classification/access/retention controls, consumer map, scenario validation, audit, monitoring, serta operational knowledge tooling.
 - Engine substantif SPOS berikutnya, rule, playbook, dan consumer migration.
 - Spesifikasi atau implementasi produk, termasuk Hifz AI.
 - Kode aplikasi, database, deployment, dan CI/CD.
@@ -79,7 +80,8 @@ Direktori baru hanya ditambahkan ketika memiliki tujuan, owner, dan dokumen inde
 - [`01-foundation/README.md`](01-foundation/README.md) — indeks 13 domain Foundation.
 - [`01-foundation/FOUNDATION_ARCHITECTURE.md`](01-foundation/FOUNDATION_ARCHITECTURE.md) — peran, dependency, alur informasi, dan boundary.
 - [`01-foundation/knowledge/README.md`](01-foundation/knowledge/README.md) — indeks Knowledge System.
-- [`01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md) — alur, lifecycle, role, dan dependency pengetahuan.
+- [`01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) — kontrak integratif model knowledge, claim/evidence, provenance, taxonomy, source assessment, curation, retrieval, traceability, protection, quality, learning, dan AI policy.
+- [`01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md) — alur, lifecycle dasar, role, dan dependency pengetahuan.
 - [`01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) — naming, versioning, review, approval, deprecation, archiving, dan cross-reference.
 - [`01-foundation/governance/README.md`](01-foundation/governance/README.md) — indeks governance Foundation dan record yang diturunkan dari Governance Engine.
 
@@ -115,7 +117,7 @@ Direktori baru hanya ditambahkan ketika memiliki tujuan, owner, dan dokumen inde
 1. Mulai dari dokumen ini untuk memahami ruang lingkup repository.
 2. Baca [`00-kernel/README.md`](00-kernel/README.md) sebelum mengusulkan perubahan fundamental.
 3. Baca [`01-foundation/README.md`](01-foundation/README.md) dan arsitekturnya sebelum menambah pengetahuan atau playbook.
-4. Ikuti [`01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) sebelum membuat atau memperbarui artefak Knowledge System.
+4. Baca [`01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md), lalu ikuti [`01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md) dan [`01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) sebelum membuat, memperoleh, mengkurasi, meretrieval, menggunakan, memperbarui, atau mengarsipkan knowledge.
 5. Baca [`99-prompt-os/00-core/CONSTITUTION.md`](99-prompt-os/00-core/CONSTITUTION.md), [`99-prompt-os/00-core/GOVERNANCE_ENGINE.md`](99-prompt-os/00-core/GOVERNANCE_ENGINE.md), [`99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md`](99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md), [`99-prompt-os/00-core/SESSION_ENGINE.md`](99-prompt-os/00-core/SESSION_ENGINE.md), [`99-prompt-os/00-core/EXECUTION_ENGINE.md`](99-prompt-os/00-core/EXECUTION_ENGINE.md), [`99-prompt-os/00-core/GIT_ENGINE.md`](99-prompt-os/00-core/GIT_ENGINE.md), [`99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](99-prompt-os/00-core/DOCUMENTATION_ENGINE.md), [`99-prompt-os/00-core/QUALITY_ENGINE.md`](99-prompt-os/00-core/QUALITY_ENGINE.md), [`99-prompt-os/00-core/REPORT_ENGINE.md`](99-prompt-os/00-core/REPORT_ENGINE.md), [`99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md), dan [`99-prompt-os/README.md`](99-prompt-os/README.md) sebelum menyusun workflow, session, atau prompt AI; gunakan hanya artefak dengan status dan authority yang sesuai.
 6. Ikuti [`CONTRIBUTING.md`](CONTRIBUTING.md) dan seluruh standar di `docs/standards/`.
 7. Bedakan isi berstatus draft, verified, approved, deprecated, atau superseded.
@@ -123,14 +125,14 @@ Direktori baru hanya ditambahkan ketika memiliki tujuan, owner, dan dokumen inde
 
 ## Data dan Teknologi
 
-Repository ini hanya berisi Kernel, Foundation, SPOS, dan dokumentasi tata kelola repository. Tidak ada data model aplikasi, database, layanan penyimpanan, API, runtime, atau tech stack yang dipilih pada tahap ini.
+Repository ini hanya berisi Kernel, Foundation, SPOS, dan dokumentasi tata kelola repository. Model semantik Knowledge SPOS-012 adalah kontrak dokumentasi, bukan schema aplikasi. Tidak ada database, graph/vector store, retrieval service, RAG, crawler, layanan penyimpanan, API, runtime, atau tech stack yang dipilih pada tahap ini.
 
 ## URL dan Status
 
 - **Repository remote:** <https://github.com/Sparkmind-obp-off/Sparkmind-SAOS>
 - **Production:** Belum tersedia; deployment berada di luar ruang lingkup Foundation.
 - **Platform target:** Belum ditetapkan.
-- **Status:** Foundation, Knowledge System, dan SPOS-011 baseline aktif sebagai dokumentasi; Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, serta Master Prompt System menunggu approval yang sah dan repository belum berupa aplikasi.
+- **Status:** Foundation, Knowledge System, dan SPOS-012 baseline aktif sebagai dokumentasi; Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, serta Master Knowledge System menunggu approval yang sah dan repository belum berupa aplikasi.
 - **Terakhir diperbarui:** 2026-07-15.
 
 ## Lisensi

@@ -1,6 +1,6 @@
 # SPOS Session Template
 
-> Status: Draft baseline SPOS-010 — gunakan bersama Session, Governance, Execution, Git, Documentation, Quality, dan Report Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
+> Status: Draft baseline diselaraskan SPOS-012 — gunakan bersama Master Knowledge System, Master Prompt System, Session, Governance, Execution, Git, Documentation, Quality, dan Report Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
 
 ## Metadata
 
@@ -54,12 +54,13 @@ Context percakapan atau memory AI tidak menjadi satu-satunya source of truth.
 | Foundation | `<path>` | `<status>` | `<owner>` | `<source, record, atau domain constraint>` |
 | Governance Engine | `<path dan versi>` | `<status>` | `<owner>` | `<authority, role, ownership, decision class, approval, exception, escalation>` |
 | Session Engine | `<path dan versi>` | `<status>` | `<owner>` | `<lifecycle, type, state, continuity, report, closure>` |
-| Knowledge / Decision | `<path>` | `<status>` | `<owner>` | `<context>` |
+| Master Knowledge System / Knowledge / Decision | `<path dan version/status>` | `<status>` | `<owner>` | `<canonical source, claim/evidence, provenance, confidence, applicability, classification/rights, context, stale/conflict behavior>` |
 | Developer Mode / Execution | `<path dan versi>` | `<status>` | `<owner>` | `<behavior, procedure, checkpoint, recovery, evidence, completion>` |
 | Git Engine | `<path dan versi>` | `<status>` | `<owner>` | `<branch, review, commit, push, release, protection>` |
 | Documentation Engine | `<path dan versi>` | `<status>` | `<owner>` | `<type, lifecycle, metadata, review, publication, archive>` |
 | Quality Engine | `<path dan versi>` | `<status>` | `<owner>` | `<principles, gates, DoD, metrics, audit, CAPA>` |
 | Report Engine | `<path dan versi>` | `<status>` | `<owner>` | `<taxonomy, lifecycle, structure, evidence/traceability, validation, publication, archive>` |
+| Master Prompt System | `<path dan versi>` | `<status>` | `<owner>` | `<hierarchy, layer, assembly, dependency, context classification, security, traceability>` |
 | Rule / playbook / session | `<path atau ID>` | `<status>` | `<owner>` | `<constraint, procedure, dependency relation>` |
 
 Jangan memperlakukan dependency `Draft`, `In Review`, atau `Completed` session sebagai artefak `Approved` tanpa status/evidence terpisah.
@@ -171,7 +172,8 @@ Gunakan urutan [`../00-core/QUALITY_ENGINE.md`](../00-core/QUALITY_ENGINE.md): O
 | Documentation | Apakah source, jenis, status, metadata, owner, link, review, publication/archive, dan consumer sinkron? | `<hasil>` |
 | Quality | Apakah objective/requirement traceable, gate, DoD, evidence, finding, metric, dan approval sesuai? | `<hasil>` |
 | Report | Apakah taxonomy, lifecycle, struktur, claim-evidence trace, reproducibility, sensitive-data handling, correction, dan approval report sesuai? | `<hasil>` |
-| Foundation / Knowledge | Apakah ownership, provenance, status, dan learning flow tetap benar? | `<hasil>` |
+| Foundation / Knowledge | Apakah canonical ownership, claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, status, confidence/applicability, classification/rights, retrieval/consumer use, dan learning flow sesuai Master Knowledge System? | `<hasil>` |
+| Master Prompt | Apakah knowledge diperlakukan sebagai context/data dengan package manifest, instruction/data separation, least disclosure, dan prompt security yang benar? | `<hasil>` |
 | SAOS / SPOS | Apakah komponen berada pada layer dan SSOT yang tepat? | `<hasil>` |
 | Products | Apakah requirement atau logic produk dibuat di luar scope? | `<hasil>` |
 
@@ -225,7 +227,8 @@ Session hanya `Completed` jika:
 - [ ] Git workflow selesai jika berlaku dan remote evidence akurat;
 - [ ] tidak ada pekerjaan wajib parsial atau hidden blocker;
 - [ ] report final tervalidasi sesuai Report Engine serta continuity/handoff mencerminkan keadaan aktual;
-- [ ] debt, residual risk, successor, retention, dan archive trigger jelas.
+- [ ] debt, residual risk, successor, retention, dan archive trigger jelas;
+- [ ] knowledge consumed/produced memiliki canonical target, provenance, claim status, confidence/applicability, classification/rights, consumer trace, dan revalidation path yang proporsional.
 
 Jika tidak terpenuhi, gunakan `Blocked`, `Waiting for Approval`, atau `Cancelled` sesuai keadaan. Jangan mengubah session terminal kembali ke `Running`; buat successor.
 

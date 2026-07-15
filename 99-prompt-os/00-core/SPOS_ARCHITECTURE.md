@@ -1,6 +1,6 @@
 # SPOS Architecture
 
-> Status: Draft baseline SPOS-011 — diselaraskan dengan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, dan Master Prompt System `In Review`; bukan runtime aktif.
+> Status: Draft baseline SPOS-012 — diselaraskan dengan Constitution, Foundation/Master Knowledge System, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, dan Master Prompt System `In Review`; bukan runtime aktif.
 
 ## Tujuan
 
@@ -155,10 +155,10 @@ Prosedur sebelas tahap [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) dipetakan ke
 
 1. **Intake:** terima objective, context, constraint, dan expected outcome.
 2. **Classify:** tentukan domain, risiko, reversibility, dan authority yang diperlukan.
-3. **Resolve upstream:** muat sumber kanonik Kernel, Foundation, Governance, Knowledge, dan SAOS yang relevan beserta statusnya.
+3. **Resolve upstream:** muat sumber kanonik Kernel, Foundation, Governance, Master Knowledge System, dan SAOS yang relevan beserta version, status, provenance, confidence, applicability, classification, rights, contradiction, serta limitation yang material.
 4. **Create session contract:** kunci scope, non-scope, deliverable, success criteria, dan stop condition.
-5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) untuk authority/ownership/decision, [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) untuk perilaku, [`SESSION_ENGINE.md`](SESSION_ENGINE.md) untuk unit/lifecycle/state/continuity, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) untuk prosedur eksekusi, [`GIT_ENGINE.md`](GIT_ENGINE.md) untuk Git, [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) untuk dokumentasi, [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) untuk kualitas, [`REPORT_ENGINE.md`](REPORT_ENGINE.md) untuk taxonomy/lifecycle/struktur/evidence laporan, dan [`MASTER_PROMPT_SYSTEM.md`](MASTER_PROMPT_SYSTEM.md) untuk hierarchy/layer/assembly/dependency/security prompt hanya sesuai status serta authority aktualnya.
-6. **Assemble prompts:** resolve compatible dependency manifest, muat Core, bind Session dan Execution, pasang Validation/Review/Report/Approval interface yang berlaku, klasifikasikan instruction/context/evidence/untrusted data, lalu rekam package manifest; jangan menduplikasi sumber authority.
+5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) untuk claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, curation, retrieval/consumption, knowledge security/rights, quality, serta learning; gunakan [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) untuk authority/ownership/decision, [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) untuk perilaku, [`SESSION_ENGINE.md`](SESSION_ENGINE.md) untuk unit/lifecycle/state/continuity, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) untuk prosedur eksekusi, [`GIT_ENGINE.md`](GIT_ENGINE.md) untuk Git, [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) untuk dokumentasi, [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) untuk kualitas, [`REPORT_ENGINE.md`](REPORT_ENGINE.md) untuk taxonomy/lifecycle/struktur/evidence laporan, dan [`MASTER_PROMPT_SYSTEM.md`](MASTER_PROMPT_SYSTEM.md) untuk hierarchy/layer/assembly/dependency/security prompt hanya sesuai status serta authority aktualnya.
+6. **Assemble prompts:** resolve compatible dependency manifest, muat Core, bind Session dan Execution, pasang Validation/Review/Report/Approval interface yang berlaku, klasifikasikan instruction/context/evidence/untrusted data, package knowledge dengan canonical source/version/status/provenance/confidence/applicability/classification/rights/limitation, lalu rekam package manifest; jangan menduplikasi sumber authority.
 7. **Preflight:** periksa konflik, missing input, status/version/compatibility, prompt injection, context truncation, security, capability, approval, dan rencana validasi.
 8. **Execute:** lakukan pekerjaan hanya dalam scope serta rekam keputusan dan evidence.
 9. **Validate:** jalankan acceptance criteria, quality gate, cross-review, dan pemeriksaan boundary.
@@ -199,7 +199,7 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 | Founder | Ratifikasi Constitution, amendment, dan resolusi konstitusional | SPOS dan AI tidak mengambil authority Founder |
 | Kernel | Source material fundamental: Vision, Mission, Philosophy, Values, Principles, Ethics, Doctrine, Canon, Terminology | SPOS Constitution merakitnya tanpa menghapus histori atau mengklaim ratifikasi otomatis |
 | Foundation | Ratification/source map, governance, knowledge, decisions, patterns, cross-domain guidance | SPOS tidak memberi approval kepada artefak Foundation atau memindahkan ownership |
-| Knowledge System | Provenance, curation, lifecycle, discovery, learning | SPOS tidak mengubah knowledge menjadi policy otomatis |
+| Master Knowledge System | Claim/evidence, provenance/lineage, source assessment, curation, taxonomy/relationship, lifecycle, discovery/retrieval, consumption, traceability, protection, quality, learning, dan AI Knowledge Policy | SPOS/prompt/retrieval tidak mengubah knowledge menjadi instruction, decision, policy, atau approval otomatis |
 | Governance | Authority, ownership, delegation, decision, approval, escalation, exception, lifecycle, audit, dan AI governance | Engine lain mengeksekusi serta mencatat tanpa mengambil authority |
 | Master Prompt System | Hierarchy/layer prompt, package assembly, dependency, lifecycle, versioning, traceability, security, evaluation, dan approval interface | Tidak menciptakan authority, keputusan manusia, runtime, atau ownership domain |
 | SAOS | Operating model ekosistem AI | SPOS tidak menggantikan keseluruhan SAOS |
@@ -214,7 +214,7 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 - Quality gate gagal: perbaiki dalam scope atau tandai session belum selesai.
 - Feedback produk: catat sebagai evidence; owner upstream memutuskan perubahan.
 
-## Review Checklist SPOS-011
+## Review Checklist SPOS-012
 
 - [x] Tujuan, komponen, dependency, lifecycle, dan execution flow terdokumentasi.
 - [x] Constitution menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder.
@@ -232,9 +232,10 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 - [x] Governance Engine diposisikan sebagai control plane kanonik untuk authority, ownership, delegation, decision, approval, exception, escalation, lifecycle, compliance, audit, dan AI governance.
 - [x] Report Engine diposisikan sebagai kontrak kanonik taxonomy, report lifecycle, struktur, evidence/traceability, validation, correction, publication, archive, aggregation, dan AI Reporting Policy.
 - [x] Master Prompt System diposisikan sebagai kontrak kanonik hierarchy/layer, prompt package assembly, dependency, lifecycle, versioning, governance, traceability, security, quality, dan approval interface tanpa menjadi runtime atau authority baru.
+- [x] Master Knowledge System diposisikan sebagai kontrak integratif claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, lifecycle, curation, retrieval/consumption, protection, quality, learning, dan AI Knowledge Policy tanpa mengambil authority domain atau membangun runtime.
 - [x] Core, Session, Execution, Report, Validation, Review, dan Approval Prompt dipetakan ke engine owner masing-masing tanpa SSOT tandingan.
 - [x] Decision gates, autonomy boundary, repository interaction, validation, rollback, documentation, quality, Git, dan reporting selaras dengan execution flow.
 - [x] Tiga belas tahap lifecycle Session Engine dan sebelas tahap prosedur Execution Engine dipetakan tanpa membuat dua sumber proses tandingan.
 - [x] Continuous Validation/Quality Review mendelegasikan detail ke Quality Engine, Documentation Update ke Documentation Engine, Git Workflow ke Git Engine, Governance Check ke Governance Engine, dan Session Report ke Report Engine tanpa membuat policy tandingan.
 - [x] Lifecycle dokumentasi dipetakan terhadap lifecycle artefak SPOS tanpa menghapus status existing.
-- [x] Baseline tidak mengklaim prompt compiler/registry service, agent runtime, quality/reporting dashboard, database, analytics platform, report generator, test framework, CI/CD, CMS, publication platform, hosting, platform protection, atau automation yang belum dibangun/diverifikasi.
+- [x] Baseline tidak mengklaim prompt compiler/registry service, knowledge/search/retrieval service, RAG, vector/graph database, crawler, agent memory/runtime, quality/reporting dashboard, analytics platform, report generator, test framework, CI/CD, CMS, publication platform, hosting, platform protection, atau automation yang belum dibangun/diverifikasi.

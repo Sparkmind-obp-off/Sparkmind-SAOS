@@ -366,7 +366,7 @@ AI boleh melanjutkan bagian independen yang aman hanya jika dependency dan blast
 | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | Quality role, reviewer/auditor independence, Governance Review, Final Approval, finding/CAPA, risk acceptance | Quality Engine menilai kualitas; Governance menetapkan authority |
 | [`REPORT_ENGINE.md`](REPORT_ENGINE.md) | Governance/Audit/Decision/Incident/Executive reporting, evidence/traceability, approval, publication, correction, dan aggregation guardrail | Governance menetapkan authority/decision rights; Report Engine menetapkan standard representasi laporan |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | Ownership, SSOT, evidence/feedback flow, decision, lifecycle, dan domain boundary | Governance tidak mengambil ownership domain |
-| [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | Domain Owner/Knowledge Steward, verification, approval, provenance, lifecycle | Knowledge tidak otomatis menjadi policy/authority |
+| [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) dan [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | Domain Owner/Knowledge Steward, claim/evidence, provenance, confidence/applicability, verification, approval, classification/rights, lifecycle, consumer trace | Governance menetapkan authority; knowledge tidak otomatis menjadi policy/decision/authority |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | Hierarchy, control plane, module selection, conflict resolution, bounded execution | Governance adalah kontrak dokumentasi, bukan enforcement runtime |
 | [`../03-sessions/SESSION_TEMPLATE.md`](../03-sessions/SESSION_TEMPLATE.md) | Authority/delegation, decision class, owner/reviewer/approver, exception, escalation, evidence | Template menginstansiasi, bukan menduplikasi policy |
 
@@ -377,7 +377,7 @@ AI boleh melanjutkan bagian independen yang aman hanya jika dependency dan blast
 - Session Engine memiliki lifecycle orchestration/state/continuity session; Execution Engine memiliki prosedur eksekusi/checkpoint/completion; Governance lifecycle mengatur kebijakan/authority/ownership dan tidak membuat workflow session tandingan.
 - Quality Engine tetap memiliki quality gate, DoD, metric, audit-quality, dan CAPA; Governance menetapkan reviewer/auditor independence, decision right, exception, serta risk-acceptance authority.
 - Report Engine menetapkan taxonomy/lifecycle/structure/evidence laporan; Governance tetap menetapkan siapa yang boleh review, approve, publish, memberi exception, menerima risiko, atau mengarsipkan report.
-- Git, Documentation, Knowledge, Architecture, dan Product owner mempertahankan detail domain. Governance menetapkan hak/batas/relasi, bukan mengambil correctness domain.
+- Git, Documentation, Master Knowledge System/Knowledge Governance, Architecture, dan Product owner mempertahankan detail domain. Governance menetapkan hak/batas/relasi, bukan mengambil correctness domain.
 - Foundation governance README menjadi indeks/domain pointer ke dokumen ini, bukan SSOT tandingan.
 - AI Executive adalah role koordinasi AI yang selalu berada di bawah human authority; nama role tidak memberi status eksekutif manusia atau approval right otomatis.
 - Scope SPOS-008 documentation-only; tidak ada IAM, dashboard, compliance platform, policy runtime, produk, atau automation yang dibangun.
@@ -418,7 +418,7 @@ AI tidak boleh mengisi approval/acceptance atas nama manusia. Perubahan material
 - [x] Proposal, Review, Approval, Implementation, Monitoring, Audit, Improvement, dan Retirement terdokumentasi.
 - [x] Governance audit, compliance review, violation handling, corrective/preventive action, dan reporting terdokumentasi.
 - [x] AI authority boundary, Founder approval, capability/automation guardrail, dan automatic stop terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Quality Engine, Report Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
+- [x] Alignment dengan Constitution, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Quality Engine, Report Engine, Foundation, Master Knowledge System/Knowledge Governance, SPOS Architecture, dan Session Template dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, IAM, governance dashboard, compliance platform, policy runtime, database, deployment, atau automation.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan Founder secara eksplisit.
 - [ ] Governance Engine memperoleh Founder approval dan activation record.

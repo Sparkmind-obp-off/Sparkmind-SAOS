@@ -1,12 +1,12 @@
 # SparkMind Prompt Operating System (`99-prompt-os`)
 
-> Status: SPOS-011 baseline — Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, dan Master Prompt System tersedia sebagai `In Review`; authority operasional menunggu approval yang sah.
+> Status: SPOS-012 baseline — engine inti dan Master Prompt System tersedia sebagai `In Review`; Master Knowledge System upstream di Foundation juga `In Review`, dan authority operasional menunggu approval yang sah.
 
 ## Apa Itu SPOS
 
 SparkMind Prompt Operating System (SPOS) adalah lapisan dokumentasi operasional yang menerjemahkan arah, batas, dan pengetahuan SparkMind menjadi kontrak kerja AI yang modular. SPOS mengorganisasi architecture, template, rule, session, playbook, dan prompt agar pekerjaan AI dapat direncanakan, dieksekusi, direview, serta dilaporkan secara konsisten.
 
-SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, dan Master Prompt System telah didokumentasikan sebagai `In Review`; semuanya bukan runtime otomatis atau bukti approval.
+SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Master Knowledge System SPOS-012 tetap berada di Foundation sebagai dependency pengetahuan, bukan core runtime SPOS. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, dan Master Prompt System telah didokumentasikan sebagai `In Review`; semuanya bukan runtime otomatis atau bukti approval.
 
 ## Mengapa SPOS Ada
 
@@ -28,7 +28,7 @@ Founder authority + 00-kernel source material
 SPOS Constitution (highest authority within SPOS when ratified)
   │
   ▼
-01-foundation governance, knowledge & approved guidance
+01-foundation governance + Master Knowledge System & approved guidance
   │
   ▼
 SAOS
@@ -51,7 +51,7 @@ SAOS adalah operating model yang lebih luas untuk ekosistem AI SparkMind. SPOS m
 
 [`00-core/CONSTITUTION.md`](00-core/CONSTITUTION.md) adalah authority tertinggi di dalam SPOS setelah ratifikasi Founder. Dokumen tersebut merakit prinsip fundamental dari Kernel menjadi batas konstitusional SPOS tanpa menghapus source history atau mengklaim approval otomatis.
 
-Foundation mengelola ratification/source map, governance, knowledge, decision, pattern, standard, dan guidance. SPOS merujuk serta mengoperasionalkan artefak tersebut; SPOS tidak memberi approval kepada dirinya sendiri atau kepada artefak Kernel dan Foundation.
+Foundation mengelola ratification/source map, governance, Master Knowledge System, decision, pattern, standard, dan guidance. SPOS merujuk serta mengoperasionalkan artefak tersebut; SPOS tidak memberi approval kepada dirinya sendiri atau kepada artefak Kernel dan Foundation.
 
 Jika isi SPOS berkonflik dengan Constitution atau authority yang lebih tinggi, eksekusi harus dihentikan pada batas terdampak, konflik dicatat, lalu dieskalasikan. Selama Constitution belum diratifikasi, consumer wajib memperlakukannya sebagai `In Review` dan menggunakan sumber approved yang benar-benar tersedia.
 
@@ -118,20 +118,21 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 ## Cara Menggunakan Baseline
 
 1. Baca [`00-core/CONSTITUTION.md`](00-core/CONSTITUTION.md) dan periksa status ratifikasinya.
-2. Baca [`00-core/DEVELOPER_MODE_ENGINE.md`](00-core/DEVELOPER_MODE_ENGINE.md) dan periksa status aktivasi serta authority-nya.
-3. Baca [`00-core/EXECUTION_ENGINE.md`](00-core/EXECUTION_ENGINE.md) untuk lifecycle, classification, validation, recovery, evidence, dan Definition of Done.
-4. Baca [`00-core/GIT_ENGINE.md`](00-core/GIT_ENGINE.md) sebelum branch, commit, Pull Request/review, merge, push, release, protection, backup, atau Git automation.
-5. Baca [`00-core/DOCUMENTATION_ENGINE.md`](00-core/DOCUMENTATION_ENGINE.md) sebelum membuat, memperbarui, mereview, mempublikasikan, supersede, atau mengarsipkan dokumentasi.
-6. Baca [`00-core/QUALITY_ENGINE.md`](00-core/QUALITY_ENGINE.md) untuk prinsip kualitas, sembilan gate, Definition of Done, metrik, audit, CAPA, dan AI Quality Policy.
-7. Baca [`00-core/GOVERNANCE_ENGINE.md`](00-core/GOVERNANCE_ENGINE.md) untuk authority, ownership, decision, delegation, approval, exception, escalation, lifecycle governance, compliance, audit, dan AI Governance Policy.
-8. Baca [`00-core/SESSION_ENGINE.md`](00-core/SESSION_ENGINE.md) untuk identity, lifecycle orchestration, type, state, continuity, dependency antarsession, kewajiban report, closure, dan AI Session Policy.
-9. Baca [`00-core/REPORT_ENGINE.md`](00-core/REPORT_ENGINE.md) untuk taxonomy, lifecycle, struktur, evidence/traceability, validation, correction, publication, archive, aggregation, dan AI Reporting Policy.
-10. Baca [`00-core/MASTER_PROMPT_SYSTEM.md`](00-core/MASTER_PROMPT_SYSTEM.md) untuk hierarchy/layer, Core/Session/Execution/Report/Validation/Review/Approval Prompt, assembly, dependency, lifecycle, versioning, governance, traceability, security, evaluation, dan human approval boundary.
-11. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
-12. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
-13. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt sesuai Master Prompt System; jangan menganggapnya aktif.
-14. Cantumkan dependency/version/status, trust classification, type/state, owner, reviewer, approver, decision class, delegation, quality gate, continuity, prompt package manifest, dan unresolved conflict.
-15. Laporkan evidence dan feedback mengikuti Report Engine agar perubahan dapat direview melalui Foundation dan governance.
+2. Baca [`../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) bersama Knowledge Architecture/Governance sebelum mengakuisisi, mengkurasi, meretrieval, atau memuat knowledge ke prompt.
+3. Baca [`00-core/DEVELOPER_MODE_ENGINE.md`](00-core/DEVELOPER_MODE_ENGINE.md) dan periksa status aktivasi serta authority-nya.
+4. Baca [`00-core/EXECUTION_ENGINE.md`](00-core/EXECUTION_ENGINE.md) untuk lifecycle, classification, validation, recovery, evidence, dan Definition of Done.
+5. Baca [`00-core/GIT_ENGINE.md`](00-core/GIT_ENGINE.md) sebelum branch, commit, Pull Request/review, merge, push, release, protection, backup, atau Git automation.
+6. Baca [`00-core/DOCUMENTATION_ENGINE.md`](00-core/DOCUMENTATION_ENGINE.md) sebelum membuat, memperbarui, mereview, mempublikasikan, supersede, atau mengarsipkan dokumentasi.
+7. Baca [`00-core/QUALITY_ENGINE.md`](00-core/QUALITY_ENGINE.md) untuk prinsip kualitas, sembilan gate, Definition of Done, metrik, audit, CAPA, dan AI Quality Policy.
+8. Baca [`00-core/GOVERNANCE_ENGINE.md`](00-core/GOVERNANCE_ENGINE.md) untuk authority, ownership, decision, delegation, approval, exception, escalation, lifecycle governance, compliance, audit, dan AI Governance Policy.
+9. Baca [`00-core/SESSION_ENGINE.md`](00-core/SESSION_ENGINE.md) untuk identity, lifecycle orchestration, type, state, continuity, dependency antarsession, kewajiban report, closure, dan AI Session Policy.
+10. Baca [`00-core/REPORT_ENGINE.md`](00-core/REPORT_ENGINE.md) untuk taxonomy, lifecycle, struktur, evidence/traceability, validation, correction, publication, archive, aggregation, dan AI Reporting Policy.
+11. Baca [`00-core/MASTER_PROMPT_SYSTEM.md`](00-core/MASTER_PROMPT_SYSTEM.md) untuk hierarchy/layer, Core/Session/Execution/Report/Validation/Review/Approval Prompt, assembly, dependency, lifecycle, versioning, governance, traceability, security, evaluation, dan human approval boundary.
+12. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
+13. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
+14. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt sesuai Master Prompt System; jangan menganggapnya aktif.
+15. Cantumkan dependency/version/status, canonical source/provenance/confidence/applicability/rights, trust classification, type/state, owner, reviewer, approver, decision class, delegation, quality gate, continuity, prompt package manifest, dan unresolved conflict.
+16. Laporkan evidence dan feedback mengikuti Report Engine agar perubahan dapat direview melalui Foundation dan governance.
 
 ## Status Implementasi
 
@@ -205,13 +206,19 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 - Cross-review terhadap seluruh repository, Constitution, Governance, Developer Mode, Session, Execution, Report, Documentation, Git, Quality, Foundation, Knowledge System, SPOS Architecture, prompt placeholders, dan session/report index.
 - Penyelarasan prompt sebagai versioned assembly contract tanpa membangun compiler, registry service, agent runtime, application, API, database, dashboard, deployment, atau automation.
 
+**SPOS-012**
+
+- Master Knowledge System di `01-foundation/knowledge/` dengan model claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, lifecycle, curation/synthesis, verification, retrieval/consumption, prompt-context rules, traceability, protection/rights/retention, quality/metrics, audit/learning, AI policy, failure/recovery, dan activation boundary.
+- Cross-review seluruh 88 dokumen baseline, Foundation, Knowledge Architecture/Governance, Constitution, seluruh engine inti, Master Prompt System, SPOS Architecture, Session Template, indexes, changelog, dan handoff.
+- Penyelarasan knowledge sebagai context/evidence yang traceable tanpa membangun database, graph/vector store, search/retrieval service, RAG, crawler, API, dashboard, model, agent memory, deployment, atau automation.
+
 ### Belum Diimplementasikan
 
 - Ratifikasi Founder atas Constitution.
 - Approval operasional dan activation record Developer Mode Engine.
-- Approval operasional dan activation record Governance, Session, Execution, Git, Documentation, Quality, Report Engine, serta Master Prompt System.
+- Approval operasional dan activation record Governance, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, serta Master Knowledge System.
 - Rule substantif, template pekerjaan khusus, playbook, prompt compiler, prompt registry service, evaluation automation, monitoring, atau runtime otomatis.
-- Role/delegation/ownership/decision/exception/audit registry; prompt/session registry/index, compatible version set, consumer migration, transition authority, human role acceptance, access enforcement, dan approval SPOS final.
+- Role/delegation/ownership/decision/exception/audit registry; prompt/session/knowledge registry-index, taxonomy/vocabulary, classification/access/retention, compatible version set, consumer migration, transition authority, human role acceptance, enforcement, dan approval SPOS final.
 - Integrasi vendor, aplikasi, database, deployment, atau CI/CD.
 
 ## Referensi
@@ -219,5 +226,6 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 - [`../00-kernel/README.md`](../00-kernel/README.md)
 - [`../01-foundation/README.md`](../01-foundation/README.md)
 - [`../01-foundation/FOUNDATION_ARCHITECTURE.md`](../01-foundation/FOUNDATION_ARCHITECTURE.md)
+- [`../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md)
 - [`../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md)
 - [`../docs/standards/README.md`](../docs/standards/README.md)

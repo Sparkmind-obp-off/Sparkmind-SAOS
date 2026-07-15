@@ -17,6 +17,7 @@ Menetapkan lifecycle dokumentasi agar setiap dokumen memiliki fungsi, status, su
 | Kategori | Contoh | Otoritas |
 | --- | --- | --- |
 | Kernel/normatif | Vision, Ethics, Canon | Founder atau otoritas yang ditetapkan |
+| Foundation | Governance, knowledge, patterns, playbooks | Owner domain; Founder bila strategis |
 | Kebijakan repository | Security, Contributing | Maintainer; Founder bila strategis |
 | Standar | Naming, Markdown, Commit | Maintainer dengan review |
 | Laporan | Session report | Penulis dan reviewer session |
@@ -65,7 +66,7 @@ Sebelum approved, tentukan:
 - pihak yang terdampak;
 - kondisi yang memicu review ulang.
 
-Dokumen Kernel yang belum memiliki owner formal tetap menunggu persetujuan Founder dan tidak dianggap final.
+Dokumen Kernel yang belum memiliki owner formal tetap menunggu persetujuan Founder dan tidak dianggap final. Artefak Foundation wajib merujuk sumber Kernel terkait dan tidak boleh mengubah statusnya melalui interpretasi downstream.
 
 ## Pemeliharaan
 

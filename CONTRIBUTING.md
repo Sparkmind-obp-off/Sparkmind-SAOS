@@ -6,7 +6,7 @@ Pedoman ini memastikan setiap kontribusi terhadap SparkMind SAOS dapat dipahami,
 
 ## Sebelum Berkontribusi
 
-1. Baca [`README.md`](README.md) dan [`00-kernel/README.md`](00-kernel/README.md).
+1. Baca [`README.md`](README.md), [`00-kernel/README.md`](00-kernel/README.md), dan [`01-foundation/README.md`](01-foundation/README.md).
 2. Periksa dokumen terkait agar tidak membuat sumber kebenaran kedua.
 3. Tentukan apakah perubahan bersifat rutin, operasional, strategis, atau sensitif.
 4. Untuk perubahan Vision, Mission, Philosophy, Values, Ethics, Doctrine, Canon, atau identitas SparkMind, dapatkan persetujuan Founder sebelum menetapkan isi final.
@@ -20,7 +20,7 @@ Pedoman ini memastikan setiap kontribusi terhadap SparkMind SAOS dapat dipahami,
 - Klarifikasi definisi dan referensi silang.
 - Proposal perubahan normatif yang disertai alasan, dampak, dan persetujuan yang tepat.
 
-Kode aplikasi, fitur produk, deployment, database, CI/CD, dan pemilihan tech stack berada di luar ruang lingkup Foundation saat ini.
+Kode aplikasi, fitur produk, deployment, database, CI/CD, dan pemilihan tech stack berada di luar ruang lingkup repository saat ini.
 
 ## Workflow Kontribusi
 
@@ -49,7 +49,7 @@ Setiap perubahan harus:
 
 - [ ] Perubahan berada dalam ruang lingkup yang disetujui.
 - [ ] Tidak ada duplikasi sumber kebenaran.
-- [ ] Istilah konsisten dengan `00-kernel/TERMINOLOGY.md`.
+- [ ] Istilah konsisten dengan `00-kernel/TERMINOLOGY.md` dan mapping di `01-foundation/terminology/`.
 - [ ] Link internal valid.
 - [ ] Tidak ada file kosong atau placeholder rusak.
 - [ ] Tidak ada secret atau data sensitif.

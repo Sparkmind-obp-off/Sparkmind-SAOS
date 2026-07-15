@@ -9,6 +9,7 @@ Menjaga struktur repository mudah dipahami, tidak prematur, dan mampu berkembang
 ```text
 sparkmind-saos/
 ├── 00-kernel/
+├── 01-foundation/
 ├── docs/
 │   └── standards/
 ├── reports/
@@ -19,6 +20,10 @@ sparkmind-saos/
 ### `00-kernel/`
 
 Menyimpan dokumen fundamental dan normatif paling stabil. Perubahan makna strategis memerlukan persetujuan Founder. Folder ini tidak menampung SOP, implementasi produk, atau konfigurasi teknis.
+
+### `01-foundation/`
+
+Menyimpan governance, pengetahuan, panduan penerapan, library, research, dan playbook lintas domain. Setiap subfolder memiliki `README.md`. Folder dengan nama yang sama seperti dokumen Kernel hanya menyimpan penerapan dan referensi silang, bukan salinan sumber normatif.
 
 ### `docs/standards/`
 
@@ -51,7 +56,7 @@ Folder kosong tidak digunakan sebagai placeholder. Rencana struktur masa depan c
 
 ## Folder yang Belum Aktif
 
-Folder aplikasi, package, infrastructure, deployment, database, CI/CD, produk, dan Hifz AI tidak dibuat pada Foundation. Penambahannya harus menunggu scope dan keputusan session berikutnya.
+Folder aplikasi, package, infrastructure, deployment, database, CI/CD, produk, dan Hifz AI belum dibuat. Penambahannya harus menunggu scope dan keputusan session berikutnya.
 
 ## Perubahan Struktur
 

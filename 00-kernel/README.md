@@ -24,7 +24,7 @@ Folder ini tidak mencakup implementasi produk, kode, tech stack, infrastruktur, 
 
 ## Kedudukan Kernel
 
-Kernel dirancang sebagai lapisan paling stabil dan menjadi rujukan bagi Foundation, SAOS, playbook, prompt, engineering, serta produk SparkMind. Hubungan dan hierarki final antarlapisan masih memerlukan keputusan Founder.
+Kernel dirancang sebagai lapisan paling stabil dan menjadi rujukan bagi Foundation, SAOS, playbook, prompt, engineering, serta produk SparkMind. Baseline hubungan antarlapisan didokumentasikan pada [`../01-foundation/FOUNDATION_ARCHITECTURE.md`](../01-foundation/FOUNDATION_ARCHITECTURE.md); perubahan hierarki strategis tetap memerlukan keputusan Founder.
 
 ## Struktur Awal
 

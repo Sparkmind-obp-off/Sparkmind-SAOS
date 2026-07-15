@@ -50,5 +50,5 @@
 - Scope lock SPOS-013: Master Integration System dan cross-system documentation saja; tanpa aplikasi, backend, frontend, API, runtime, orchestrator, agent/workflow runtime, automation, CI/CD, deployment, infrastructure, Docker, database, dashboard, atau monitoring service.
 - File kunci: `99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md`, `99-prompt-os/00-core/SPOS_ARCHITECTURE.md`, `99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`, `01-foundation/FOUNDATION_ARCHITECTURE.md`, `01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`, `99-prompt-os/00-core/CONSTITUTION.md`, `99-prompt-os/00-core/GOVERNANCE_ENGINE.md`, dan `reports/sessions/SPOS-013.md`.
 - Last safe checkpoint: seluruh deliverable dan validation suite SPOS-013 wajib lulus; commit final dipush normal, hash lokal/remote diverifikasi identik, dan working tree dipastikan bersih saat closure.
-- Baseline commit: `c179c3c0c7313ca842f382028c05e323277e849d`.
+- Baseline commit: `c179c3c0d76e7e1ce7990f64cc392b25266f1af9`.
 - Remote: `https://github.com/Sparkmind-obp-off/Sparkmind-SAOS.git`.

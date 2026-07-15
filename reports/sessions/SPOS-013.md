@@ -16,7 +16,7 @@
 >
 > Branch: `main`
 >
-> Baseline commit: `c179c3c0c7313ca842f382028c05e323277e849d`
+> Baseline commit: `c179c3c0d76e7e1ce7990f64cc392b25266f1af9`
 
 ## 1. Objective
 
@@ -202,7 +202,7 @@ Approval valid memerlukan manusia berwenang, exact artefact/version/scope, decis
 
 - Active branch: `main`.
 - Remote: `origin` → `https://github.com/Sparkmind-obp-off/Sparkmind-SAOS.git`.
-- Baseline commit: `c179c3c0c7313ca842f382028c05e323277e849d`.
+- Baseline commit: `c179c3c0d76e7e1ce7990f64cc392b25266f1af9`.
 - Final commit: recorded by Git history and closure output.
 - Local/remote equality: required and verified during closure.
 - Working tree: required clean at closure.

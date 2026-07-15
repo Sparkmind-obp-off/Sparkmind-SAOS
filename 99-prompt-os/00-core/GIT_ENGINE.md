@@ -14,13 +14,13 @@
 >
 > Effective: setelah approval operasional yang sah dan dependency upstream terpenuhi
 >
-> Review trigger: amendment Constitution, perubahan Governance/Developer Mode/Execution Engine, insiden repository, perubahan hosting atau protection capability, perubahan release model, atau evidence bahwa workflow tidak lagi aman dan efektif
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session Engine, atau Execution Engine; insiden repository; perubahan hosting/protection capability atau release model; atau evidence bahwa workflow tidak lagi aman dan efektif
 
 ## 1. Kedudukan dan Tujuan
 
 Git Engine adalah standar permanen pengelolaan version control untuk seluruh AI Agent, repository, dan proyek dalam ekosistem SparkMind. Engine menetapkan branch strategy, commit policy, Pull Request dan review, merge, push, release, repository protection, audit, recovery, serta batas otomatisasi AI.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku; Execution Engine menetapkan lifecycle session; Git Engine menjadi sumber kanonik untuk proses Git pada tahap **Perform Git Workflow**. Dokumentasi yang menyertai branch, commit, review, release, dan audit mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md); quality plan, gate, DoD, metric, finding, dan audit kualitas mengikuti [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md).
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku; Session Engine menetapkan lifecycle orchestration/state/continuity; Execution Engine menetapkan prosedur eksekusi; Git Engine menjadi sumber kanonik proses Git pada tahap **Git Workflow**. Dokumentasi yang menyertai branch, commit, review, release, dan audit mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md); quality plan, gate, DoD, metric, finding, dan audit kualitas mengikuti [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md).
 
 Git Engine bukan layanan hosting Git, CI/CD, aplikasi, fitur produk, atau izin untuk mengubah histori tanpa batas. Capability teknis tidak sama dengan authority. Commit, push, merge, tag, dan release tidak dengan sendirinya merupakan approval normatif, ratifikasi, atau penerimaan risiko.
 
@@ -521,7 +521,8 @@ Retry mengikuti [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md): diagnosis dahulu, 
 | --- | --- | --- |
 | [`CONSTITUTION.md`](CONSTITUTION.md) | Repository First, Truth over Assumption, transparency, human oversight, traceability, reversibility, dan audit | Git event tidak menjadi ratifikasi atau approval |
 | [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) | Review before commit, commit before push, push before report, small changes, rollback, dan autonomy gates | Git Engine merinci workflow tanpa memperluas otonomi |
-| [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Perform Git Workflow, validation, evidence, failure/recovery, dan Definition of Done | Git Engine adalah sumber kanonik detail Git; Execution Engine tetap sumber lifecycle session |
+| [`SESSION_ENGINE.md`](SESSION_ENGINE.md) | Git Workflow stage, state, continuity, report, dan closure trace | Git Engine adalah sumber kanonik detail Git; Git event tidak otomatis mengubah session state |
+| [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Perform Git Workflow, validation, evidence, failure/recovery, dan Definition of Done | Git Engine adalah sumber kanonik detail Git; Execution Engine tetap sumber prosedur eksekusi |
 | [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Versioned/traceable documentation, change history, review, changelog, release notes, publication, dan archive | Git menyediakan history/evidence; Git event tidak mengubah status approval dokumen |
 | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | Git Review gate, traceability, evidence integrity, review independence, finding, release readiness, dan Final Approval | Check/merge/push hijau tidak menjadi approval kualitas atau risk acceptance |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, ownership, evidence flow, approved lifecycle, dan Git history | Engine tidak mengambil ownership Foundation/domain |
@@ -591,9 +592,9 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Push timing, verifikasi pre/post-push, tagging, changelog, release, dan rollback terdokumentasi.
 - [x] Branch protection, force-push prohibition, backup, audit history, dan traceability terdokumentasi.
 - [x] AI commit/push permission, Founder/human approval, dan automatic stop conditions terdokumentasi.
-- [x] Alignment dengan Constitution, Governance Engine, Developer Mode, Execution Engine, Documentation Engine, Quality Engine, Foundation, SPOS Architecture, dan repository standards dipetakan.
+- [x] Alignment dengan Constitution, Governance Engine, Developer Mode, Session Engine, Execution Engine, Documentation Engine, Quality Engine, Foundation, SPOS Architecture, dan repository standards dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, Git hosting, CI/CD, atau runtime automation.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
-- [ ] Developer Mode, Execution Engine, dan Git Engine memperoleh approval operasional serta activation record.
+- [ ] Developer Mode, Session Engine, Execution Engine, dan Git Engine memperoleh approval operasional serta activation record.
 - [ ] Governance Engine memperoleh approval/activation; repository role delegation dan access enforcement diterapkan serta diverifikasi.
 - [ ] Platform branch protection, backup, audit retention, dan release authority dikonfigurasi serta diverifikasi.

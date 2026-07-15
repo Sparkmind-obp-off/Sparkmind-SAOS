@@ -14,13 +14,13 @@
 >
 > Effective: setelah approval operasional yang sah dan dependency upstream terpenuhi
 >
-> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Foundation, Knowledge System, atau SPOS Architecture; insiden kualitas material; perubahan risiko/capability; audit finding berulang; atau evidence bahwa gate dan metrik tidak lagi efektif
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Foundation, Knowledge System, atau SPOS Architecture; insiden kualitas material; perubahan risiko/capability; audit finding berulang; atau evidence bahwa gate dan metrik tidak lagi efektif
 
 ## 1. Kedudukan dan Tujuan
 
 Quality Engine adalah standar permanen untuk mendefinisikan kualitas, validasi, review, audit, dan continuous improvement bagi seluruh artefak SparkMind, termasuk keputusan, dokumentasi, kode, konfigurasi, arsitektur, governance, knowledge, prompt, playbook, laporan, dan proses engineering.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Execution Engine tetap menjadi sumber lifecycle session; Quality Engine menjadi sumber kanonik definisi kualitas, urutan quality gate, Definition of Done, metrik, audit, corrective/preventive action, dan AI Quality Policy.
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Session Engine menjadi sumber lifecycle orchestration/state/continuity session; Execution Engine menjadi sumber prosedur eksekusi/checkpoint/completion; Quality Engine menjadi sumber kanonik definisi kualitas, urutan quality gate, Definition of Done, metrik, audit, corrective/preventive action, dan AI Quality Policy.
 
 Quality Engine bukan aplikasi, test runner, CI/CD, dashboard, sertifikasi, pengganti Governance, atau izin bagi AI untuk menyetujui hasilnya sendiri. Test hijau, skor metrik tinggi, commit, publication, dan completion teknis tidak otomatis membuktikan approval, fitness for purpose, keamanan, atau kualitas keseluruhan.
 
@@ -531,7 +531,8 @@ Recovery mengikuti Execution Engine: detect, stop propagation, preserve evidence
 | --- | --- | --- |
 | [`CONSTITUTION.md`](CONSTITUTION.md) | Truth over Assumption, Human First, quality, oversight, traceability, reversibility, accountability, dan Founder Authority | Engine tidak meratifikasi Constitution atau menerima risiko strategis |
 | [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) | Read/plan/review before action, Continuous Validation, self-review, stop gate, rollback, dan human oversight | Quality Engine merinci quality standard tanpa memperluas otonomi AI |
-| [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Validate Results, enam validation gate, failure/recovery, evidence, DoD, dan completion state | Execution Engine tetap sumber lifecycle session; Quality Engine sumber definisi quality/gate/metric/audit |
+| [`SESSION_ENGINE.md`](SESSION_ENGINE.md) | Lifecycle orchestration, state transition, Quality Review, Governance Check, report, dan closure | Session Engine mengorkestrasi gate; Quality Engine tetap sumber definisi quality/gate/metric/audit |
+| [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Validate Results, enam validation checkpoint, failure/recovery, evidence, dan completion criteria | Execution Engine tetap sumber prosedur eksekusi; Quality Engine sumber definisi quality/gate/metric/audit |
 | [`GIT_ENGINE.md`](GIT_ENGINE.md) | Diff/staged review, reviewer, check, audit trace, release readiness, dan recovery | Git event/check hijau tidak menjadi Final Approval kualitas |
 | [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Documentation completeness, review, lifecycle, evidence, publication gate, dan debt | Documentation Engine tetap sumber detail dokumentasi |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, evidence flow, ownership, lifecycle, feedback, learning, dan human oversight | Engine tidak mengambil ownership Foundation/domain |
@@ -589,9 +590,9 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Audit berkala, finding record, corrective action, preventive action, lesson learned, CAPA, dan continuous improvement cycle terdokumentasi.
 - [x] AI self-review, Founder/human review, automatic stop, quality-over-speed, dan approval boundary terdokumentasi.
 - [x] Finding severity, quality debt, exception, evidence, failure, dan recovery terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Governance, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
+- [x] Alignment dengan Constitution, Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, dashboard, CI/CD, test framework, atau automation runtime.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
-- [ ] Seluruh upstream engine serta Quality Engine memperoleh approval operasional dan activation record.
+- [ ] Seluruh upstream engine, termasuk Session Engine, serta Quality Engine memperoleh approval operasional dan activation record.
 - [ ] Governance Engine memperoleh approval/activation; Quality owner, auditor delegation/independence, exception, dan risk-acceptance authority diterapkan serta diterima manusia terkait.
 - [ ] Consumer migration, metric baseline, audit operation, CAPA registry, evidence retention, dan conformance automation diterapkan serta diverifikasi.

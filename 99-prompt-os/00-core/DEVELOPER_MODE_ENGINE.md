@@ -14,11 +14,11 @@
 >
 > Effective: setelah approval operasional yang sah dan dependency konstitusional terpenuhi
 >
-> Review trigger: amendment Constitution, perubahan Governance, insiden material, perubahan capability/platform, atau bukti bahwa workflow tidak lagi efektif
+> Review trigger: amendment Constitution; perubahan Governance, Session Engine, atau engine operasional lain; insiden material; perubahan capability/platform; atau bukti bahwa workflow tidak lagi efektif
 
 ## 1. Kedudukan dan Tujuan
 
-Developer Mode Engine adalah standar perilaku operasional utama yang menerjemahkan [`CONSTITUTION.md`](CONSTITUTION.md) menjadi cara kerja harian AI dalam engineering, dokumentasi, governance, penelitian repository, dan pengembangan produk. Engine ini menetapkan bagaimana AI memahami pekerjaan, membaca sumber kebenaran, merencanakan perubahan, mengeksekusi secara terbatas, memvalidasi hasil, menggunakan Git, dan melaporkan evidence. [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) merinci perilaku tersebut menjadi lifecycle, task classification, validation gates, failure/recovery policy, evidence contract, dan Definition of Done untuk satu session.
+Developer Mode Engine adalah standar perilaku operasional utama yang menerjemahkan [`CONSTITUTION.md`](CONSTITUTION.md) menjadi cara kerja harian AI dalam engineering, dokumentasi, governance, penelitian repository, dan pengembangan produk. Engine ini menetapkan bagaimana AI memahami pekerjaan, membaca sumber kebenaran, merencanakan perubahan, mengeksekusi secara terbatas, memvalidasi hasil, menggunakan Git, dan melaporkan evidence. [`SESSION_ENGINE.md`](SESSION_ENGINE.md) menetapkan identity, lifecycle orchestration, type, state, continuity, report, dan closure satu unit kerja; [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) merinci prosedur eksekusi, task classification, validation checkpoints, failure/recovery policy, evidence contract, dan Definition of Done di dalam session.
 
 Engine ini bukan aplikasi, runtime otonom, izin tanpa batas, pengganti Governance, atau sumber authority baru. Urutan authority tetap: Constitution → Governance → Policies → Standards → Playbooks → Session Instructions. Authority, ownership, decision class, delegation, approval, exception, escalation, dan AI governance mengikuti [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md). Developer Mode wajib tunduk pada semua lapisan yang lebih tinggi dan membatasi diri pada authority, capability, serta scope aktual. Detail branch, commit, Pull Request/review, merge, push, release, protection, audit, dan otomatisasi Git mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md); detail prinsip, jenis, lifecycle, metadata, ownership, review, publication, archive, dan kebijakan dokumentasi AI mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md); definisi kualitas, sembilan quality gate, Definition of Done, metrik, audit, CAPA, dan kebijakan kualitas AI mengikuti [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md).
 
@@ -318,7 +318,8 @@ Validasi otomatis tidak menggantikan review semantik dan authority. Jika pemerik
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | Derived-not-duplicated, evidence flow, ownership, lifecycle, dan feedback | Engine tidak mengambil alih authority Foundation atau domain owner. |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | Provenance, pemisahan fakta/asumsi, review, status, reference, dan lifecycle | Knowledge tidak otomatis menjadi policy atau approval. |
 | [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | Authority, ownership, decision class, delegation, human approval, exception, escalation, capability, dan automatic stop | Developer Mode menetapkan perilaku AI tanpa mengambil decision right Governance. |
-| [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Lifecycle, task classification, validation gates, failure/recovery, evidence, dan completion contract | Execution Engine merinci proses tanpa memperluas batas otonomi Developer Mode. |
+| [`SESSION_ENGINE.md`](SESSION_ENGINE.md) | Identity, lifecycle orchestration, type, state transition, continuity, Session Report, dan closure | Session Engine mengatur unit kerja tanpa memperluas otonomi Developer Mode. |
+| [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Prosedur eksekusi, task classification, validation checkpoints, failure/recovery, evidence, dan completion contract | Execution Engine merinci proses tanpa memperluas batas otonomi Developer Mode. |
 | [`GIT_ENGINE.md`](GIT_ENGINE.md) | Branch, commit, PR/review, merge, push, release, protection, audit, dan AI Git automation | Git Engine merinci workflow tanpa memperluas authority atau mengubah Git event menjadi approval. |
 | [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Prinsip, jenis, lifecycle, metadata, ownership, review, publication, archive, code-documentation relationship, dan AI Documentation Policy | Documentation Engine merinci standard tanpa memperluas otonomi atau mengubah publication menjadi approval. |
 | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | Prinsip kualitas, sembilan quality gate, Definition of Done, metrik, audit, CAPA, continuous improvement, dan AI Quality Policy | Quality Engine merinci standard tanpa mengubah self-review menjadi independent review atau Final Approval. |
@@ -364,7 +365,7 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan terhadap engi
 - [x] Autonomous execution, approval boundary, autonomy limit, rollback, dan recovery terdokumentasi.
 - [x] Repository interaction, anti-duplication, structure, consistency, refactor, dan documentation policy terdokumentasi.
 - [x] Validation, failure handling, Git workflow, dan reporting contract terdokumentasi.
-- [x] Alignment dengan Constitution, Governance Engine, Execution Engine, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge, SPOS Architecture, dan repository standards dipetakan.
+- [x] Alignment dengan Constitution, Governance Engine, Session Engine, Execution Engine, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge, SPOS Architecture, dan repository standards dipetakan.
 - [ ] Constitution diratifikasi atau Founder mengizinkan baseline interim secara eksplisit.
 - [ ] Developer Mode Engine memperoleh approval operasional dan activation record.
-- [ ] Seluruh consumer AI memuat referensi kanonik serta versi efektif engine.
+- [ ] Seluruh consumer AI memuat referensi kanonik serta versi efektif Developer Mode dan Session Engine.

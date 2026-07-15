@@ -1,6 +1,6 @@
 # SPOS Session Template
 
-> Status: Draft baseline SPOS-008 — gunakan bersama Governance, Execution, Git, Documentation, dan Quality Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
+> Status: Draft baseline SPOS-009 — gunakan bersama Session, Governance, Execution, Git, Documentation, dan Quality Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
 
 ## Metadata
 
@@ -8,44 +8,60 @@
 | --- | --- |
 | Session ID | `<SPOS-NNN atau SESSION-NNN>` |
 | Title | `<judul singkat>` |
-| Status | `Proposed / Draft / In Review / Approved / In Progress / Blocked / Completed` |
+| Type | `Foundation / Architecture / Development / Documentation / Research / Governance / Quality / Refactor / Bug Fix / Release / Maintenance / Knowledge` |
+| Secondary type | `<N/A atau type tambahan dengan alasan>` |
+| State | `Pending / Running / Blocked / Waiting for Approval / Review / Completed / Archived / Cancelled` |
+| Lifecycle phase | `<satu dari 13 tahap Session Engine>` |
 | Owner | `<role atau nama>` |
+| Executor | `<role atau nama>` |
 | Reviewer | `<role atau nama>` |
 | Approver | `<role atau nama jika diperlukan>` |
 | Risk | `low / medium / high / critical` |
 | Decision class | `D0 / D1 / D2 / D3 / Emergency` |
-| Authority / delegation | `<source dan scope>` |
-| Created | `<YYYY-MM-DD>` |
+| Authority / delegation | `<source, scope, risk ceiling, effective/expiry>` |
+| Created / updated | `<YYYY-MM-DD / YYYY-MM-DD>` |
 | Target branch | `<branch>` |
+| Baseline commit | `<full hash atau N/A>` |
 | Source of truth | `<path atau repository>` |
+| Predecessor / successor | `<session ID atau N/A>` |
+| Related / blocked by | `<session ID dan relation atau N/A>` |
 
 ## 1. Objective
 
-Nyatakan satu outcome utama yang dapat diverifikasi.
+Nyatakan tepat satu outcome utama yang dapat diverifikasi.
 
 `<objective>`
 
-## 2. Context
+### Success Criteria
 
-Jelaskan keadaan awal, alasan session diperlukan, dan fakta yang sudah diverifikasi.
+- [ ] `<hasil terukur>`
 
-- `<context item>`
+## 2. Context Manifest
+
+Jelaskan keadaan awal, alasan session diperlukan, dan fakta yang telah diverifikasi.
+
+| Context | Source / version | Status | Penggunaan / limitation |
+| --- | --- | --- | --- |
+| `<item>` | `<path, URL, decision, commit>` | `<fact / assumption / unknown>` | `<dampak>` |
+
+Context percakapan atau memory AI tidak menjadi satu-satunya source of truth.
 
 ## 3. Upstream Dependencies
 
-| Dependency | Path / reference | Status | Penggunaan |
-| --- | --- | --- | --- |
-| Kernel | `<path>` | `<status>` | `<constraint>` |
-| Foundation | `<path>` | `<status>` | `<source, record, atau domain constraint>` |
-| Governance Engine | `<path dan versi>` | `<status>` | `<authority, role, ownership, decision class, approval, exception, escalation, dan lifecycle>` |
-| Knowledge / Decision | `<path>` | `<status>` | `<context>` |
-| Developer Mode / Execution Engine | `<path dan versi>` | `<status>` | `<behavior, lifecycle, gates, dan completion contract>` |
-| Git Engine | `<path dan versi>` | `<status>` | `<branch, review, commit, push, release, protection, dan automation contract>` |
-| Documentation Engine | `<path dan versi>` | `<status>` | `<type, lifecycle, metadata, review, publication, archive, dan AI documentation contract>` |
-| Quality Engine | `<path dan versi>` | `<status>` | `<principles, gates, DoD, metrics, audit, CAPA, dan AI quality contract>` |
-| SPOS rule / playbook | `<path>` | `<status>` | `<constraint atau procedure>` |
+| Dependency | Path / reference | Version / status | Owner | Penggunaan / blocking behavior |
+| --- | --- | --- | --- | --- |
+| Constitution | `<path dan versi>` | `<status>` | `<owner>` | `<constraint>` |
+| Foundation | `<path>` | `<status>` | `<owner>` | `<source, record, atau domain constraint>` |
+| Governance Engine | `<path dan versi>` | `<status>` | `<owner>` | `<authority, role, ownership, decision class, approval, exception, escalation>` |
+| Session Engine | `<path dan versi>` | `<status>` | `<owner>` | `<lifecycle, type, state, continuity, report, closure>` |
+| Knowledge / Decision | `<path>` | `<status>` | `<owner>` | `<context>` |
+| Developer Mode / Execution | `<path dan versi>` | `<status>` | `<owner>` | `<behavior, procedure, checkpoint, recovery, evidence, completion>` |
+| Git Engine | `<path dan versi>` | `<status>` | `<owner>` | `<branch, review, commit, push, release, protection>` |
+| Documentation Engine | `<path dan versi>` | `<status>` | `<owner>` | `<type, lifecycle, metadata, review, publication, archive>` |
+| Quality Engine | `<path dan versi>` | `<status>` | `<owner>` | `<principles, gates, DoD, metrics, audit, CAPA>` |
+| Rule / playbook / session | `<path atau ID>` | `<status>` | `<owner>` | `<constraint, procedure, dependency relation>` |
 
-Jangan memperlakukan dependency Draft sebagai aturan Approved.
+Jangan memperlakukan dependency `Draft`, `In Review`, atau `Completed` session sebagai artefak `Approved` tanpa status/evidence terpisah.
 
 ## 4. Scope
 
@@ -60,111 +76,155 @@ Jangan memperlakukan dependency Draft sebagai aturan Approved.
 ### Stop Conditions
 
 - Konflik authority yang belum terselesaikan.
-- Approval wajib, capability, akses, atau input kritis tidak tersedia.
-- Perubahan akan melampaui scope atau menjadi irreversible tanpa persetujuan.
+- Approval wajib, capability, akses, input, atau evidence kritis tidak tersedia.
+- Perubahan akan melampaui scope/risk ceiling atau menjadi irreversible tanpa persetujuan.
+- Actual state tidak dapat direkonstruksi atau unrelated work berisiko tertimpa.
 - `<stop condition tambahan>`
 
 ## 5. Deliverables
 
-| Deliverable | Lokasi kanonik | Acceptance criteria |
-| --- | --- | --- |
-| `<nama>` | `<path>` | `<hasil terukur>` |
+| Deliverable | Lokasi kanonik | Acceptance criteria | Status / evidence |
+| --- | --- | --- | --- |
+| `<nama>` | `<path>` | `<hasil terukur>` | `<pending / done / blocked + reference>` |
 
-## 6. Execution Plan
+## 6. Authority, Risk, dan Approval
 
-Ikuti lifecycle kanonik [`../00-core/EXECUTION_ENGINE.md`](../00-core/EXECUTION_ENGINE.md):
+- Authority source: `<reference>`
+- Allowed actions: `<actions>`
+- Prohibited actions: `<actions>`
+- Risk ceiling / current risk: `<ceiling / current>`
+- Required reviewer / independence: `<role dan separation>`
+- Required approval / risk acceptance: `<role, artefact/version/scope>`
+- Exception / escalation: `<reference atau N/A>`
+- Capability / data / access boundary: `<boundary>`
 
-1. Receive Objective.
-2. Analyze Context.
-3. Read Repository.
-4. Identify Dependencies.
-5. Plan Execution.
-6. Execute Incrementally.
-7. Validate Results.
-8. Update Documentation.
-9. Perform Git Workflow.
-10. Generate Session Report.
-11. Complete Session.
+## 7. Session Lifecycle Plan
 
-Turunkan tahap tersebut menjadi subtask atomik sesuai klasifikasi pekerjaan. Sesuaikan detail tanpa menghapus validation gate wajib.
+Ikuti lifecycle kanonik [`../00-core/SESSION_ENGINE.md`](../00-core/SESSION_ENGINE.md). Detail execution mengikuti [`../00-core/EXECUTION_ENGINE.md`](../00-core/EXECUTION_ENGINE.md).
 
-## 7. Quality Gates
+| # | Tahap | Planned action | Output / gate | Status / evidence |
+| --- | --- | --- | --- | --- |
+| 1 | Session Initialization | `<aksi>` | `<identity/intake>` | `<status>` |
+| 2 | Context Loading | `<aksi>` | `<context manifest>` | `<status>` |
+| 3 | Repository Analysis | `<aksi>` | `<baseline/file map>` | `<status>` |
+| 4 | Objective Validation | `<aksi>` | `<validated contract>` | `<status>` |
+| 5 | Planning | `<aksi>` | `<plan/checkpoint>` | `<status>` |
+| 6 | Execution | `<aksi>` | `<increment/deliverable>` | `<status>` |
+| 7 | Continuous Validation | `<aksi>` | `<check/finding>` | `<status>` |
+| 8 | Documentation Update | `<aksi>` | `<documentation trace>` | `<status>` |
+| 9 | Git Workflow | `<aksi>` | `<branch/commit/push>` | `<status>` |
+| 10 | Quality Review | `<aksi>` | `<gate/DoD>` | `<status>` |
+| 11 | Governance Check | `<aksi>` | `<authority/approval>` | `<status>` |
+| 12 | Session Report | `<aksi>` | `<report>` | `<status>` |
+| 13 | Session Closure | `<aksi>` | `<final state/handoff>` | `<status>` |
 
-Gunakan urutan [`../00-core/QUALITY_ENGINE.md`](../00-core/QUALITY_ENGINE.md): Objective, Requirement, Architecture, Implementation, Documentation, Git, Security & Privacy, Governance, dan Final Approval. Catat `Pass / Fail / Blocked / Not Applicable`, evidence, reviewer, serta alasan untuk setiap gate.
+Turunkan tahap menjadi subtask atomik. Hanya satu subtask `in progress` bila task tracker tersedia. Tahap `Not Applicable` memerlukan alasan.
 
-- [ ] Pre-Execution Check lulus dan dependency serta statusnya terverifikasi.
-- [ ] Scope serta non-scope dipatuhi.
-- [ ] Tidak ada duplikasi sumber kanonik.
-- [ ] Naming, struktur, link, dan format valid.
-- [ ] Security serta secret review selesai.
-- [ ] During Execution Check dan Post-Execution Review lulus.
-- [ ] Acceptance criteria setiap deliverable terpenuhi.
-- [ ] Governance Engine authority/delegation, decision class, ownership, separation of responsibility, approval, exception, dan escalation dipatuhi.
-- [ ] Perubahan strategis memiliki approval yang tepat.
-- [ ] Git Engine checklist yang berlaku, diff/staged diff, whitespace, dan secret review selesai.
-- [ ] Required branch/PR/reviewer/check/approval/merge dipatuhi.
-- [ ] Commit/push/remote hash atau alasan blocker diverifikasi.
-- [ ] Documentation Engine impact assessment serta semantic/authority/lifecycle/link/security/usability check lulus.
-- [ ] Repository Consistency Check dan Documentation Check lulus.
-- [ ] Quality Engine gate yang berlaku, finding/debt/exception, dan Definition of Done Check lulus.
-- [ ] Session Report selesai dan tidak menjadi sumber kanonik tandingan.
+## 8. State History
 
-## 8. Cross-Review Matrix
+| Timestamp | From | To | Phase | Actor / authority | Trigger / evidence | Next action |
+| --- | --- | --- | --- | --- | --- | --- |
+| `<ISO-8601>` | `<N/A>` | `Pending` | `Session Initialization` | `<actor>` | `<intake>` | `<action>` |
+
+State history append-only secara semantik. Gunakan hanya transisi yang diizinkan Session Engine.
+
+## 9. Continuity dan Recovery
+
+- Last safe checkpoint: `<phase, commit, artefact, timestamp>`
+- Current repository state: `<path, branch, commit, worktree, remote>`
+- Completed work: `<ringkasan>`
+- Remaining work: `<ringkasan>`
+- Current blocker / approval: `<reference atau N/A>`
+- Next atomic action: `<aksi tunggal>`
+- Resume prerequisites: `<dependency, access, revalidation>`
+- Rollback / recovery path: `<path>`
+- Context intentionally excluded: `<security/privacy reason atau N/A>`
+- Handoff recipient / acceptance: `<recipient dan evidence atau N/A>`
+
+## 10. Quality Gates
+
+Gunakan urutan [`../00-core/QUALITY_ENGINE.md`](../00-core/QUALITY_ENGINE.md): Objective, Requirement, Architecture, Implementation, Documentation, Git, Security & Privacy, Governance, dan Final Approval. Catat `Pass / Fail / Blocked / Not Applicable`, evidence, reviewer, waktu, serta alasan.
+
+| Gate | Result | Evidence | Reviewer / independence | Finding / action |
+| --- | --- | --- | --- | --- |
+| Objective | `<result>` | `<reference>` | `<reviewer>` | `<action>` |
+| Requirement | `<result>` | `<reference>` | `<reviewer>` | `<action>` |
+| Architecture | `<result>` | `<reference>` | `<reviewer>` | `<action>` |
+| Implementation | `<result>` | `<reference>` | `<reviewer>` | `<action>` |
+| Documentation | `<result>` | `<reference>` | `<reviewer>` | `<action>` |
+| Git | `<result>` | `<reference>` | `<reviewer>` | `<action>` |
+| Security & Privacy | `<result>` | `<reference>` | `<reviewer>` | `<action>` |
+| Governance | `<result>` | `<reference>` | `<reviewer>` | `<action>` |
+| Final Approval | `<result>` | `<reference>` | `<approver>` | `<action>` |
+
+## 11. Cross-Review Matrix
 
 | Area | Pertanyaan | Hasil / evidence |
 | --- | --- | --- |
-| Kernel | Apakah perubahan menduplikasi atau melemahkan sumber normatif? | `<hasil>` |
-| Foundation | Apakah ownership atau SSOT Foundation diambil alih? | `<hasil>` |
-| Knowledge | Apakah status dan provenance tetap benar? | `<hasil>` |
-| Governance | Apakah role, delegation, ownership, decision class, separation, approval, exception, escalation, dan lifecycle sesuai Governance Engine? | `<hasil>` |
-| SAOS / SPOS | Apakah komponen berada pada layer yang tepat? | `<hasil>` |
+| Constitution | Apakah objective, tindakan, dan closure selaras dengan prinsip/authority tertinggi? | `<hasil>` |
+| Developer Mode | Apakah perilaku AI, capability, autonomy, stop, dan reporting sesuai? | `<hasil>` |
+| Session | Apakah identity, type, state, lifecycle, continuity, report, dan closure sesuai Session Engine? | `<hasil>` |
+| Execution | Apakah procedure, checkpoint, failure/recovery, evidence, dan completion sesuai? | `<hasil>` |
+| Governance | Apakah role, delegation, ownership, decision class, separation, approval, exception, dan escalation sesuai? | `<hasil>` |
+| Git | Apakah branch, diff, commit, review, push, protection, dan remote evidence sesuai? | `<hasil>` |
 | Documentation | Apakah source, jenis, status, metadata, owner, link, review, publication/archive, dan consumer sinkron? | `<hasil>` |
-| Quality | Apakah objective/requirement traceable, sembilan gate, DoD, evidence, finding, metrik, dan approval sesuai Quality Engine? | `<hasil>` |
+| Quality | Apakah objective/requirement traceable, gate, DoD, evidence, finding, metric, dan approval sesuai? | `<hasil>` |
+| Foundation / Knowledge | Apakah ownership, provenance, status, dan learning flow tetap benar? | `<hasil>` |
+| SAOS / SPOS | Apakah komponen berada pada layer dan SSOT yang tepat? | `<hasil>` |
 | Products | Apakah requirement atau logic produk dibuat di luar scope? | `<hasil>` |
 
-## 9. Git Workflow
+## 12. Git Workflow
 
 Ikuti [`../00-core/GIT_ENGINE.md`](../00-core/GIT_ENGINE.md).
 
 - Branch / upstream: `<branch dan upstream>`
-- Protection / required workflow: `<direct low-risk / pull request / reviewer / checks / blocked>`
+- Baseline / final commit: `<hash>`
+- Protection / required workflow: `<direct low-risk / PR / reviewer / checks / blocked>`
 - Commit subject: `<type>(<scope>): <description>`
 - Reviewer / approver: `<role atau N/A dengan alasan>`
 - Merge method: `<squash / merge commit / rebase / N/A>`
 - Remote: `<remote>`
-- Push policy: `<normal fast-forward push / pull request / blocked>`
-- Verification command or evidence: `<local dan remote hash/check>`
+- Push policy / status: `<normal fast-forward / PR / blocked / N/A>`
+- Verification evidence: `<local dan remote hash/check>`
 - Tag / release: `<N/A atau version dan approval>`
 
-Jangan mengklaim commit, push, merge, tag, release, protection, atau approval berhasil sebelum diverifikasi.
+Jangan mengklaim commit, push, merge, tag, release, protection, atau approval berhasil sebelum diverifikasi. Git event tidak otomatis mengubah state session.
 
-## 10. Session Report
+## 13. Session Report
 
 Laporan penutupan minimum mencakup:
 
-1. objective dan scope;
-2. ringkasan pekerjaan;
-3. struktur terbaru;
-4. dokumen dibuat dan diperbarui;
-5. cross-review serta validation evidence;
-6. branch, commit hash, dan status push;
-7. kendala dan unresolved issue;
-8. technical debt dan risiko;
-9. rekomendasi session berikutnya;
-10. status `Completed` atau `Blocked` beserta alasannya.
+1. objective, type, scope, dan ringkasan;
+2. lifecycle dan state history;
+3. dependency/predecessor/successor penting;
+4. dokumen/artefak baru serta diperbarui;
+5. cross-review, quality/governance result, dan validation evidence;
+6. branch, commit hash, remote, serta status push;
+7. failure, rollback, recovery, decision, exception, dan approval;
+8. temuan, technical debt, residual risk, dan blocker;
+9. continuity/handoff, next atomic action, dan rekomendasi session berikutnya;
+10. final state beserta alasan/evidence.
 
-## 11. Success Criteria
+Report tidak menjadi sumber kanonik tandingan.
+
+## 14. Closure Checklist
 
 Session hanya `Completed` jika:
 
+- [ ] tepat satu objective tercapai;
 - [ ] seluruh deliverable selesai pada lokasi kanonik;
-- [ ] seluruh quality gate wajib lulus;
-- [ ] review, validasi, dan Definition of Done selesai sesuai Quality Engine;
+- [ ] lifecycle wajib selesai atau N/A terjustifikasi;
+- [ ] state history dan transition evidence lengkap;
+- [ ] seluruh gate kritis lulus;
+- [ ] required review/approval tersedia;
 - [ ] dokumentasi selesai sesuai Documentation Engine;
-- [ ] Git workflow selesai jika diwajibkan serta capability, authority, review, dan protection mengizinkan;
-- [ ] jika Git terblokir, blocker dicatat jujur dan completion mengikuti Definition of Done/policy session;
-- [ ] report final mencerminkan keadaan aktual.
+- [ ] Git workflow selesai jika berlaku dan remote evidence akurat;
+- [ ] tidak ada pekerjaan wajib parsial atau hidden blocker;
+- [ ] report final serta continuity/handoff mencerminkan keadaan aktual;
+- [ ] debt, residual risk, successor, retention, dan archive trigger jelas.
 
-## 12. Open Questions
+Jika tidak terpenuhi, gunakan `Blocked`, `Waiting for Approval`, atau `Cancelled` sesuai keadaan. Jangan mengubah session terminal kembali ke `Running`; buat successor.
+
+## 15. Open Questions
 
 - `<pertanyaan yang memerlukan keputusan atau approval>`

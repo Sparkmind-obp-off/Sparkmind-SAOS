@@ -14,7 +14,7 @@
 >
 > Effective: setelah approval Founder, activation record, dan dependency upstream yang berlaku terpenuhi
 >
-> Review trigger: amendment Constitution; perubahan authority, ownership, organisasi, hukum, risiko, capability AI, engine SPOS, atau arsitektur; insiden governance material; audit finding berulang; dan evidence bahwa kontrol tidak efektif
+> Review trigger: amendment Constitution; perubahan authority, ownership, organisasi, hukum, risiko, capability AI, Session Engine/engine SPOS lain, atau arsitektur; insiden governance material; audit finding berulang; dan evidence bahwa kontrol tidak efektif
 
 ## 1. Kedudukan dan Tujuan
 
@@ -359,7 +359,8 @@ AI boleh melanjutkan bagian independen yang aman hanya jika dependency dan blast
 | --- | --- | --- |
 | [`CONSTITUTION.md`](CONSTITUTION.md) | Constitution First, Founder Authority, hierarchy, human oversight, amanah, transparency, accountability, exception prohibition | Governance tidak meratifikasi/mengubah Constitution |
 | [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) | Decision gates, autonomy, approval, stop, rollback, repository behavior, dan reporting | Governance menetapkan siapa berwenang; Developer Mode menetapkan perilaku AI |
-| [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Authority check, lifecycle checkpoint, escalation, evidence, completion | Execution Engine tetap sumber lifecycle session |
+| [`SESSION_ENGINE.md`](SESSION_ENGINE.md) | Session identity, lifecycle orchestration, state-transition authority, continuity, closure, cancellation, dan archive | Governance menetapkan decision rights; Session Engine merekam serta menegakkan gate per unit kerja |
+| [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Authority check, execution checkpoint, escalation, evidence, completion criteria | Execution Engine tetap sumber prosedur eksekusi di dalam session |
 | [`GIT_ENGINE.md`](GIT_ENGINE.md) | Repository role, access, review/approval separation, merge/release authority, audit/recovery | Git event dan admin access bukan authority normatif |
 | [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Documentation ownership, approval, publication/archive, lifecycle, audit trail | Documentation Engine tetap sumber detail dokumentasi |
 | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | Quality role, reviewer/auditor independence, Governance Review, Final Approval, finding/CAPA, risk acceptance | Quality Engine menilai kualitas; Governance menetapkan authority |
@@ -372,7 +373,7 @@ AI boleh melanjutkan bagian independen yang aman hanya jika dependency dan blast
 
 - Governance Engine menjadi SSOT lintas sistem untuk authority, ownership, delegation, approval, exception, escalation, lifecycle governance, conflict resolution, Final Authority, dan AI governance.
 - Constitution tetap authority tertinggi di dalam SPOS setelah ratifikasi; Governance tidak mengisi atau meniru ratification.
-- Execution Engine tetap memiliki lifecycle session; Governance lifecycle mengatur kebijakan/authority/ownership dan tidak membuat workflow session tandingan.
+- Session Engine memiliki lifecycle orchestration/state/continuity session; Execution Engine memiliki prosedur eksekusi/checkpoint/completion; Governance lifecycle mengatur kebijakan/authority/ownership dan tidak membuat workflow session tandingan.
 - Quality Engine tetap memiliki quality gate, DoD, metric, audit-quality, dan CAPA; Governance menetapkan reviewer/auditor independence, decision right, exception, serta risk-acceptance authority.
 - Git, Documentation, Knowledge, Architecture, dan Product owner mempertahankan detail domain. Governance menetapkan hak/batas/relasi, bukan mengambil correctness domain.
 - Foundation governance README menjadi indeks/domain pointer ke dokumen ini, bukan SSOT tandingan.
@@ -415,9 +416,9 @@ AI tidak boleh mengisi approval/acceptance atas nama manusia. Perubahan material
 - [x] Proposal, Review, Approval, Implementation, Monitoring, Audit, Improvement, dan Retirement terdokumentasi.
 - [x] Governance audit, compliance review, violation handling, corrective/preventive action, dan reporting terdokumentasi.
 - [x] AI authority boundary, Founder approval, capability/automation guardrail, dan automatic stop terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
+- [x] Alignment dengan Constitution, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, IAM, governance dashboard, compliance platform, policy runtime, database, deployment, atau automation.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan Founder secara eksplisit.
 - [ ] Governance Engine memperoleh Founder approval dan activation record.
 - [ ] Role/delegation/ownership/decision/exception/audit registry serta human role acceptance tersedia.
-- [ ] Access enforcement, consumer migration, monitoring, evidence retention, emergency operation, dan conformance automation diterapkan serta diverifikasi.
+- [ ] Access enforcement, Session Engine transition authority/registry, consumer migration, monitoring, evidence retention, emergency operation, dan conformance automation diterapkan serta diverifikasi.

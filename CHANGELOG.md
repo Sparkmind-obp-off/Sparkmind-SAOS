@@ -34,6 +34,8 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Laporan SPOS-007 serta penyelarasan Developer Mode, Execution Engine, Git Engine, Documentation Engine, SPOS Core/Architecture, Governance, Foundation, Knowledge Governance, Session Template, repository index, dan handoff.
 - Governance Engine SPOS-008 dengan sepuluh prinsip, delapan role authority, decision classification, delegation, ownership matrix, governance lifecycle, compliance/audit, violation/CAPA, escalation/exception, dan AI Governance Policy.
 - Laporan SPOS-008 serta penyelarasan seluruh engine, Foundation Governance, Knowledge Governance, SPOS Architecture, Session Template, repository index, dan handoff.
+- Session Engine SPOS-009 dengan tiga belas tahap lifecycle, dua belas session type, delapan-state transition model, continuity/resume/recovery, dependency antarsession, context preservation, handoff, closure, dan AI Session Policy.
+- Laporan SPOS-009 serta penyelarasan Constitution, Governance, Developer Mode, Execution, Git, Documentation, Quality, SPOS Core/Architecture, Session Template, repository index, dan handoff.
 
 ### Reviewed
 
@@ -49,6 +51,7 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Cross-review SPOS-006 terhadap Constitution, Developer Mode, Execution Engine, Git Engine, Foundation, Governance, Knowledge System, SPOS Architecture, serta documentation/Markdown standards, termasuk pemetaan lifecycle dan pemisahan Documentation Engine dari profile repository.
 - Cross-review SPOS-007 terhadap Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Foundation, Governance, Knowledge System, SPOS Architecture, dan Session Template, termasuk pemisahan quality gate kanonik dari checkpoint lifecycle.
 - Cross-review SPOS-008 terhadap Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template, termasuk pemisahan governance control plane dari lifecycle session dan ownership domain.
+- Cross-review SPOS-009 terhadap Constitution, Governance, Developer Mode, Execution, Git, Documentation, Quality, Foundation, Knowledge System, SPOS Architecture, dan Session Template, termasuk pemetaan lifecycle orchestration Session Engine terhadap prosedur Execution Engine tanpa SSOT tandingan.
 
 ## [0.1.0] - 2026-07-15
 

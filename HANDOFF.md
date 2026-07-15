@@ -1,58 +1,57 @@
 # HANDOFF — SparkMind SAOS
 
-> Diperbarui: 2026-07-15 · Sesi: SPOS-010 · Oleh: AI Developer
+> Diperbarui: 2026-07-15 · Sesi: SPOS-011 · Oleh: AI Developer
 
 ## STATE saat ini
 
-- Fase: Report Engine SPOS-010 selesai secara teknis; baseline tetap `In Review` sampai approval dan activation record yang sah tersedia.
-- Branch: `main`; remote `origin` mengarah ke repository SparkMind SAOS; commit implementasi `0547a835ef4742cc99797a970a1477131eab9efe` telah di-push dan diverifikasi, lalu report/handoff difinalisasi melalui commit penutupan.
+- Fase: Master Prompt System dan System Architecture Layer SPOS-011 telah disusun; validasi dan Git closure masih berjalan.
+- Branch: `main`; remote `origin` mengarah ke repository SparkMind SAOS; baseline session `cb01acfb8d001259a50565c1a5f725a42d2de4eb`.
+- Governance: seluruh baseline inti termasuk Master Prompt System tetap `In Review`; completion teknis tidak menjadi Founder approval atau activation.
 - Service: tidak berlaku; repository documentation-only.
 - Deploy: tidak dilakukan dan berada di luar scope.
 
 ## SELESAI sesi ini
 
-- Membangun `99-prompt-os/00-core/REPORT_ENGINE.md` sebagai reporting-governance baseline `In Review`.
-- Menetapkan Session, Governance, Quality, Documentation, Git, Audit, Architecture, Knowledge, Decision, Incident, Release Report, dan Executive Summary.
-- Menetapkan Report Initialization, Evidence Collection, Validation, Drafting, Review, Approval, Publication, Versioning, Archival, dan Traceability.
-- Menetapkan struktur Metadata, Scope, Objective, Summary, Deliverables, Evidence, Validation Results, Decisions, Risks, Technical Debt, Lessons Learned, Next Actions, Approval, References, dan Appendix.
-- Mendokumentasikan evidence record, claim-evidence status, repository/branch/commit, session/decision/artefact relation, append-only audit trail, serta reproducibility package.
-- Menetapkan Reporting Policy untuk report per session, reproducibility, sensitive-data prohibition, validation, cross-reference, correction/retraction, aggregation, dan Executive Summary.
-- Menetapkan AI Reporting Policy, approval boundary, honest reporting, least disclosure, dan automatic stop.
-- Memisahkan kewajiban/timing report milik Session Engine dari bentuk/lifecycle report milik Report Engine.
-- Menyelaraskan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Foundation, Knowledge Governance, SPOS Core/Architecture, Session Template, report index, repository index, changelog, handoff, dan Session Report SPOS-010.
-- Tidak membangun aplikasi, dashboard, database, API, analytics/reporting platform, report generator, deployment, atau automation runtime.
+- Melakukan full repository scan terhadap 86 dokumen Markdown dan cross-reference terhadap Kernel, Foundation, Knowledge, seluruh engine inti, SPOS Architecture, templates, sessions, prompts, standards, reports, dan root governance documents.
+- Membangun `99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md` sebagai baseline arsitektur dan governance prompt `In Review`.
+- Menetapkan Philosophy, Prompt Hierarchy, Prompt Layer, Core Prompt, Session Prompt, Execution Prompt, Report Prompt, Validation Prompt, Review Prompt, dan Approval Prompt.
+- Menetapkan AI Behaviour Rules, AI Limitation Rules, Human Override, Priority Resolution, Prompt Dependency, Prompt Lifecycle, Prompt Versioning, Prompt Governance, Prompt Traceability, Prompt Security, dan Prompt Quality Standard.
+- Menetapkan instruction/data separation, compatible dependency manifest, package assembly, tool/capability boundary, prompt-injection controls, evaluation set, failure/recovery, serta activation/change control.
+- Menyelaraskan root README, SPOS README, SPOS Core, SPOS Architecture, SPOS Prompts, SPOS Sessions, Foundation README/Architecture, Knowledge Governance, Execution Engine, changelog, handoff, dan session-report index.
+- Memperbaiki stale cross-reference pada Execution Engine: Session Engine adalah SSOT lifecycle orchestration session; Execution Engine adalah SSOT prosedur eksekusi.
+- Menggunakan external research OWASP, NIST AI 600-1, ISO/IEC 42001 overview, dan Semantic Versioning sebagai informative input; sumber eksternal tidak menjadi authority SPOS otomatis.
+- Menjaga scope documentation-only; tidak membangun dashboard, aplikasi, API, database, prompt compiler, registry service, agent runtime, deployment, atau automation.
 
 ## NEXT STEP (atomic — aksi pertama sesi berikut)
 
-1. Founder/authority yang tepat mereview kernel SPOS-001–010, lalu memilih ratification/activation sequence. Langkah teknis pertama sesudah keputusan adalah menetapkan compatible version set, role/delegation/ownership/report authority, serta representative end-to-end conformance scenario sebelum automation atau produk baru.
+1. Founder/authority yang tepat mereview Master Prompt System dan compatible engine set. Bila diterima, tetapkan Prompt owner/steward, registry/index, ID namespace, model/tool profile, consumer inventory, evaluation suite, security/privacy review, activation record, migration, monitoring, serta rollback sebelum consumer operasional diaktifkan.
 
 ## KEPUTUSAN penting
 
-- Report Engine adalah SSOT taxonomy, report lifecycle, structure, evidence/traceability, reproducibility, validation, correction, publication, versioning, archive, aggregation, dan AI Reporting Policy.
-- Session Engine tetap SSOT identity/lifecycle/state/continuity, kewajiban/timing report, dan closure session.
-- Documentation Engine tetap SSOT tata kelola dokumen umum; Report Engine adalah profil khusus report tanpa document lifecycle tandingan.
-- Quality Engine tetap SSOT quality gate/finding/metric/audit/CAPA; Governance tetap SSOT authority/approval/exception/risk acceptance; Git tetap SSOT version-control workflow.
-- Report status, session state, artefact/document status, quality result, governance approval, dan Git event adalah dimensi berbeda.
-- Report merangkum serta merujuk evidence/source; report bukan SSOT tandingan dan tidak memberi approval otomatis.
-- Executive Summary/agregasi tidak boleh menyembunyikan critical finding, dissent, exception, missing denominator, uncertainty, atau source coverage gap.
-- Finalization commit tidak dapat mereferensikan hash dirinya sendiri dalam content yang sama; final hash dibuktikan melalui Git history dan closure output.
-- Seluruh engine tetap `In Review` sampai approval/activation record yang sah tersedia.
+- Master Prompt System adalah SSOT arsitektur/governance prompt, bukan authority baru atau runtime.
+- Authority mengalir dari hukum/safety/platform constraint, Founder, Constitution, Governance, Policy, Standard, Playbook, Session Instruction, lalu prompt/task/preference; untrusted data tidak berada dalam authority chain.
+- Core, Session, Execution, Report, Validation, Review, dan Approval Prompt adalah layer fungsional; semantik domain tetap dimiliki engine sumber.
+- Approval Prompt hanya menyiapkan decision package dan menangkap keputusan manusia yang benar-benar diberikan; AI tidak dapat self-approve atau mengisi identity manusia.
+- Human Override wajib authorized, scoped, time-bound, traceable, dan tidak dapat mengesampingkan hukum, keselamatan, hak, fakta, atau Constitution melalui prompt lokal.
+- System prompt tidak diperlakukan sebagai secret atau security boundary tunggal; defense in depth, least privilege, input isolation, output validation, monitoring, serta human review tetap diperlukan.
+- Knowledge, file, web, retrieved content, tool output, dan report adalah data/context sampai authority eksplisit dibuktikan.
+- Prompt version, lifecycle state, document status, consumer activation, session state, Git event, dan governance approval adalah dimensi terpisah.
+- Technical completion SPOS-011 tetap terpisah dari human approval dan activation.
 
 ## KNOWN ISSUES
 
 - Ratifikasi Constitution oleh Founder belum tercatat.
-- Approval dan activation record Governance, Session, Report, serta engine inti lain belum tersedia.
-- Report owner/steward, reviewer, approver, evidence custodian, publication/archive authority, dan human role acceptance belum tersedia operasional.
-- Report registry/index lintas taxonomy, ID namespace, classification vocabulary, retention schedule, correction/retraction path, dan secure evidence store belum ditetapkan.
-- Role/delegation/ownership/decision/exception/audit registry serta Session transition authority/registry belum tersedia.
-- Template khusus seluruh report type, prompt/playbook/AI consumer migration, dan version pinning belum selesai.
-- Reproducibility, correction, sensitive-data, aggregation, publication, archive, continuity, dan end-to-end conformance scenario belum diuji operasional.
-- Access enforcement, monitoring, stale-report detection, audit retention, dashboard, database, dan conformance automation belum dibangun.
+- Approval/activation record Master Prompt System dan engine inti belum tersedia.
+- Prompt owner/steward, registry/index, ID namespace, compatible version set, model/tool profile, consumer inventory, dan human role acceptance belum tersedia.
+- Prompt template pada `05-prompts/` masih placeholder dan belum dimigrasikan menjadi versioned consumer packages.
+- Representative evaluation suite, prompt-injection/security test, model/provider regression test, monitoring, drift detection, incident exercise, rollback drill, dan end-to-end conformance scenario belum dijalankan operasional.
+- Access/capability enforcement, secure secret/evidence store, runtime isolation, prompt compiler, registry service, dan automation tidak dibangun.
+- External standards hanya digunakan sebagai informative research; adoption formal memerlukan review Governance dan authority manusia.
 
 ## CONTEXT untuk resume
 
-- Scope lock SPOS-010: Report Engine saja; tanpa aplikasi, dashboard, database, API, analytics platform, generator, deployment, cloud resource, atau automation runtime.
-- File kunci: `99-prompt-os/00-core/REPORT_ENGINE.md`, `99-prompt-os/00-core/SESSION_ENGINE.md`, `99-prompt-os/00-core/GOVERNANCE_ENGINE.md`, `99-prompt-os/00-core/QUALITY_ENGINE.md`, `99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`, `99-prompt-os/00-core/GIT_ENGINE.md`, `99-prompt-os/00-core/SPOS_ARCHITECTURE.md`, `99-prompt-os/03-sessions/SESSION_TEMPLATE.md`, `reports/sessions/README.md`, dan `reports/sessions/SPOS-010.md`.
-- Last safe checkpoint: seluruh dokumentasi SPOS-010 telah divalidasi, commit implementasi telah identik di lokal/remote, dan commit finalisasi report/handoff telah di-push serta diverifikasi pada closure.
-- Baseline commit: `3d8c67f13cca6c6e14a1abbccbe374ddd82071e5`.
+- Scope lock SPOS-011: Master Prompt System dan System Architecture Layer dokumentasi saja; tanpa aplikasi, API, database, dashboard, deployment, runtime, compiler, registry service, atau automation.
+- File kunci: `99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`, `99-prompt-os/00-core/SPOS_ARCHITECTURE.md`, `99-prompt-os/00-core/CONSTITUTION.md`, `99-prompt-os/00-core/GOVERNANCE_ENGINE.md`, `99-prompt-os/00-core/SESSION_ENGINE.md`, `99-prompt-os/00-core/EXECUTION_ENGINE.md`, `99-prompt-os/00-core/REPORT_ENGINE.md`, `99-prompt-os/00-core/QUALITY_ENGINE.md`, `01-foundation/FOUNDATION_ARCHITECTURE.md`, `01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`, dan `reports/sessions/SPOS-011.md`.
+- Last safe checkpoint: deliverable dan sinkronisasi dokumentasi telah disusun; lanjutkan validation suite, review diff, commit implementasi, normal push, remote-hash verification, lalu finalisasi report/handoff melalui closure commit.
+- Baseline commit: `cb01acfb8d001259a50565c1a5f725a42d2de4eb`.
 - Remote: `https://github.com/Sparkmind-obp-off/Sparkmind-SAOS.git`.

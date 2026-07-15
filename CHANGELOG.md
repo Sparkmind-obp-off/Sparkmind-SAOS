@@ -38,6 +38,8 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Laporan SPOS-009 serta penyelarasan Constitution, Governance, Developer Mode, Execution, Git, Documentation, Quality, SPOS Core/Architecture, Session Template, repository index, dan handoff.
 - Report Engine SPOS-010 dengan dua belas report taxonomy, sepuluh tahap lifecycle, struktur baku lima belas bagian, evidence/claim/traceability contract, reproducibility, correction, publication, versioning, archive, aggregation guardrail, serta AI Reporting Policy.
 - Laporan SPOS-010 serta penyelarasan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Foundation, Knowledge Governance, SPOS Core/Architecture, Session Template, session-report index, repository index, dan handoff.
+- Master Prompt System SPOS-011 dengan philosophy, hierarchy/layer, Core/Session/Execution/Report/Validation/Review/Approval Prompt, AI behaviour/limitation, Human Override, priority resolution, dependency, lifecycle, versioning, governance, traceability, prompt security, quality/evaluation, assembly, failure/recovery, dan activation boundary.
+- Laporan SPOS-011 serta penyelarasan SPOS Architecture/Core/Prompts/Sessions, Foundation, Knowledge Governance, repository index, changelog, handoff, dan session-report index tanpa membangun prompt compiler, runtime, aplikasi, API, database, dashboard, deployment, atau automation.
 
 ### Reviewed
 
@@ -55,6 +57,7 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Cross-review SPOS-008 terhadap Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template, termasuk pemisahan governance control plane dari lifecycle session dan ownership domain.
 - Cross-review SPOS-009 terhadap Constitution, Governance, Developer Mode, Execution, Git, Documentation, Quality, Foundation, Knowledge System, SPOS Architecture, dan Session Template, termasuk pemetaan lifecycle orchestration Session Engine terhadap prosedur Execution Engine tanpa SSOT tandingan.
 - Cross-review SPOS-010 terhadap Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Foundation, Knowledge System, SPOS Architecture, Session Template, dan session-report index, termasuk pemisahan timing/closure Session Engine dari bentuk/lifecycle Report Engine serta pemisahan approval/source domain dari representasi laporan.
+- Cross-review SPOS-011 terhadap seluruh 86 dokumen Markdown, Constitution, Governance, Developer Mode, Session, Execution, Report, Documentation, Git, Quality, Foundation, Knowledge System, SPOS Architecture, prompt placeholders, serta session/report indexes; termasuk instruction/data separation, human approval boundary, compatible version set, dan koreksi ownership lifecycle session pada Execution Engine.
 
 ## [0.1.0] - 2026-07-15
 

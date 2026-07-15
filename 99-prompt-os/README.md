@@ -1,12 +1,12 @@
 # SparkMind Prompt Operating System (`99-prompt-os`)
 
-> Status: SPOS-010 baseline — Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, dan Report Engine tersedia sebagai `In Review`; authority operasional menunggu approval yang sah.
+> Status: SPOS-011 baseline — Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, dan Master Prompt System tersedia sebagai `In Review`; authority operasional menunggu approval yang sah.
 
 ## Apa Itu SPOS
 
 SparkMind Prompt Operating System (SPOS) adalah lapisan dokumentasi operasional yang menerjemahkan arah, batas, dan pengetahuan SparkMind menjadi kontrak kerja AI yang modular. SPOS mengorganisasi architecture, template, rule, session, playbook, dan prompt agar pekerjaan AI dapat direncanakan, dieksekusi, direview, serta dilaporkan secara konsisten.
 
-SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, dan Report Engine telah didokumentasikan sebagai `In Review`; semuanya bukan runtime otomatis atau bukti approval.
+SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, dan Master Prompt System telah didokumentasikan sebagai `In Review`; semuanya bukan runtime otomatis atau bukti approval.
 
 ## Mengapa SPOS Ada
 
@@ -34,7 +34,7 @@ SPOS Constitution (highest authority within SPOS when ratified)
 SAOS
   │ operating model for the SparkMind AI ecosystem
   └── 99-prompt-os (SPOS)
-         │ Governance + Developer Mode + Session + Execution + Git + Documentation + Quality + Report contracts
+         │ Governance + Developer Mode + Session + Execution + Git + Documentation + Quality + Report + Master Prompt contracts
          ▼
 Engineering / AI Agents
          │ bounded execution
@@ -75,6 +75,7 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 │   ├── GOVERNANCE_ENGINE.md
 │   ├── SESSION_ENGINE.md
 │   ├── REPORT_ENGINE.md
+│   ├── MASTER_PROMPT_SYSTEM.md
 │   └── SPOS_ARCHITECTURE.md
 ├── 01-templates/
 │   └── README.md
@@ -96,12 +97,12 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 
 | Komponen | Fungsi | Status terkini |
 | --- | --- | --- |
-| `00-core/` | Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, arsitektur, lifecycle, dan engine inti | Seluruh engine inti `In Review`; architecture tersedia dan runtime belum dibangun |
+| `00-core/` | Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, arsitektur, lifecycle, dan engine inti | Seluruh engine inti dan Master Prompt System `In Review`; architecture tersedia dan runtime belum dibangun |
 | `01-templates/` | Kontrak artefak kerja yang dapat digunakan ulang | Kontrak folder tersedia |
 | `02-rules/` | Rule modular dengan authority dan precedence eksplisit | Kontrak folder tersedia |
 | `03-sessions/` | Instance identity, objective, type, state, scope, authority, dependency, lifecycle, continuity, deliverable, validation, report, dan closure | Session Template SPOS-009 tersedia |
 | `04-playbooks/` | Prosedur terurut untuk kelas pekerjaan berulang | Kontrak folder tersedia |
-| `05-prompts/` | Template assembly untuk system, user, dan task prompt | Tiga placeholder terstruktur tersedia |
+| `05-prompts/` | Template assembly system, user, dan task yang tunduk pada hierarchy/layer/dependency/security Master Prompt System | Tiga placeholder terstruktur tersedia; belum aktif |
 
 ## Aturan SSOT dan Boundary
 
@@ -125,11 +126,12 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 7. Baca [`00-core/GOVERNANCE_ENGINE.md`](00-core/GOVERNANCE_ENGINE.md) untuk authority, ownership, decision, delegation, approval, exception, escalation, lifecycle governance, compliance, audit, dan AI Governance Policy.
 8. Baca [`00-core/SESSION_ENGINE.md`](00-core/SESSION_ENGINE.md) untuk identity, lifecycle orchestration, type, state, continuity, dependency antarsession, kewajiban report, closure, dan AI Session Policy.
 9. Baca [`00-core/REPORT_ENGINE.md`](00-core/REPORT_ENGINE.md) untuk taxonomy, lifecycle, struktur, evidence/traceability, validation, correction, publication, archive, aggregation, dan AI Reporting Policy.
-10. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
-11. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
-12. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt; jangan menganggapnya engine aktif.
-13. Cantumkan dependency, type/state, owner, reviewer, approver, decision class, delegation, quality gate, continuity, dan unresolved conflict.
-14. Laporkan evidence dan feedback mengikuti Report Engine agar perubahan dapat direview melalui Foundation dan governance.
+10. Baca [`00-core/MASTER_PROMPT_SYSTEM.md`](00-core/MASTER_PROMPT_SYSTEM.md) untuk hierarchy/layer, Core/Session/Execution/Report/Validation/Review/Approval Prompt, assembly, dependency, lifecycle, versioning, governance, traceability, security, evaluation, dan human approval boundary.
+11. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
+12. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
+13. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt sesuai Master Prompt System; jangan menganggapnya aktif.
+14. Cantumkan dependency/version/status, trust classification, type/state, owner, reviewer, approver, decision class, delegation, quality gate, continuity, prompt package manifest, dan unresolved conflict.
+15. Laporkan evidence dan feedback mengikuti Report Engine agar perubahan dapat direview melalui Foundation dan governance.
 
 ## Status Implementasi
 
@@ -197,13 +199,19 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 - Cross-review terhadap Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality Engine, Foundation, Knowledge System, SPOS Architecture, Session Template, serta session-report index.
 - Penyelarasan Report Engine sebagai SSOT laporan tanpa membangun dashboard, database, API, analytics/reporting platform, generator, deployment, atau automation runtime.
 
+**SPOS-011**
+
+- Master Prompt System dengan philosophy, hierarchy/layer, Core/Session/Execution/Report/Validation/Review/Approval Prompt, AI behaviour/limitation, Human Override, priority resolution, dependency, lifecycle, versioning, governance, traceability, security, evaluation, assembly, serta recovery/activation boundary.
+- Cross-review terhadap seluruh repository, Constitution, Governance, Developer Mode, Session, Execution, Report, Documentation, Git, Quality, Foundation, Knowledge System, SPOS Architecture, prompt placeholders, dan session/report index.
+- Penyelarasan prompt sebagai versioned assembly contract tanpa membangun compiler, registry service, agent runtime, application, API, database, dashboard, deployment, atau automation.
+
 ### Belum Diimplementasikan
 
 - Ratifikasi Founder atas Constitution.
 - Approval operasional dan activation record Developer Mode Engine.
-- Approval operasional dan activation record Governance, Session, Execution, Git, Documentation, Quality, serta Report Engine.
-- Rule substantif, template pekerjaan khusus, playbook, prompt compiler, atau runtime otomatis.
-- Role/delegation/ownership/decision/exception/audit registry; session registry/index dan transition authority; human role acceptance; access enforcement; dan approval SPOS final.
+- Approval operasional dan activation record Governance, Session, Execution, Git, Documentation, Quality, Report Engine, serta Master Prompt System.
+- Rule substantif, template pekerjaan khusus, playbook, prompt compiler, prompt registry service, evaluation automation, monitoring, atau runtime otomatis.
+- Role/delegation/ownership/decision/exception/audit registry; prompt/session registry/index, compatible version set, consumer migration, transition authority, human role acceptance, access enforcement, dan approval SPOS final.
 - Integrasi vendor, aplikasi, database, deployment, atau CI/CD.
 
 ## Referensi

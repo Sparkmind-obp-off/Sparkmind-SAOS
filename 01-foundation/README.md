@@ -81,7 +81,7 @@ Kernel → Foundation → SAOS / Engineering → Products
 - **Engineering** menggunakan Foundation untuk standar dan keputusan teknis.
 - **Products** menerapkan aturan tersebut dalam konteks produk serta mengirimkan evidence kembali.
 
-Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.md`](FOUNDATION_ARCHITECTURE.md). Arsitektur dan aturan khusus Knowledge System tersedia di [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md) dan [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md).
+Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.md`](FOUNDATION_ARCHITECTURE.md). Arsitektur dan aturan khusus Knowledge System tersedia di [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md) dan [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md). Ketika artefak Foundation digunakan sebagai context AI, hierarchy, dependency manifest, instruction/data separation, provenance, security, dan traceability mengikuti [`../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md) tanpa memindahkan ownership Foundation.
 
 ## Aturan SSOT
 
@@ -90,6 +90,7 @@ Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.m
 3. Research memberi evidence, bukan otomatis menjadi kebijakan.
 4. Laporan session mencatat pekerjaan, bukan menggantikan dokumen kanonik.
 5. Perubahan strategis tetap memerlukan otoritas yang ditetapkan Kernel dan governance.
+6. Pemuatan knowledge, research, pattern, playbook, report, atau tool output ke prompt tidak mengubah artefak tersebut menjadi instruction atau policy approved.
 
 ## Status dan Review
 

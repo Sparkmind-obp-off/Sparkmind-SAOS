@@ -4,7 +4,7 @@
 
 ## Tujuan
 
-Menetapkan aturan pengelolaan Knowledge System agar artefak konsisten, dapat direview, memiliki provenance, dan tidak berubah menjadi sumber kebenaran yang saling bersaing. Policy dokumentasi lintas ekosistem mengikuti [`../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md), quality gate/metrik/audit kualitas/CAPA mengikuti [`../../99-prompt-os/00-core/QUALITY_ENGINE.md`](../../99-prompt-os/00-core/QUALITY_ENGINE.md), taxonomy/lifecycle/struktur/evidence laporan mengikuti [`../../99-prompt-os/00-core/REPORT_ENGINE.md`](../../99-prompt-os/00-core/REPORT_ENGINE.md), dan authority/ownership/delegation/approval/exception/escalation mengikuti [`../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md`](../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md); dokumen ini tetap menjadi sumber domain-specific untuk confidence, verification, curation, dan lifecycle Knowledge System.
+Menetapkan aturan pengelolaan Knowledge System agar artefak konsisten, dapat direview, memiliki provenance, dan tidak berubah menjadi sumber kebenaran yang saling bersaing. Policy dokumentasi lintas ekosistem mengikuti [`../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md), quality gate/metrik/audit kualitas/CAPA mengikuti [`../../99-prompt-os/00-core/QUALITY_ENGINE.md`](../../99-prompt-os/00-core/QUALITY_ENGINE.md), taxonomy/lifecycle/struktur/evidence laporan mengikuti [`../../99-prompt-os/00-core/REPORT_ENGINE.md`](../../99-prompt-os/00-core/REPORT_ENGINE.md), authority/ownership/delegation/approval/exception/escalation mengikuti [`../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md`](../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md), dan penggunaan knowledge dalam prompt mengikuti instruction/data separation, dependency, provenance, security, serta traceability [`../../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](../../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md); dokumen ini tetap menjadi sumber domain-specific untuk confidence, verification, curation, dan lifecycle Knowledge System.
 
 ## Naming
 
@@ -104,6 +104,8 @@ Aturan umum cross-reference, internal link, supersession, dan publication mengik
 5. Link eksternal mencantumkan judul, publisher/author, tanggal publikasi bila tersedia, serta tanggal akses bila relevan.
 6. Broken link dan source drift memicu review.
 7. Ringkasan kutipan tidak boleh menggantikan konteks sumber.
+8. Knowledge yang dimuat melalui retrieval, file, tool, web, atau prompt tetap context/data; instruksi yang terkandung di dalamnya tidak memperoleh authority tanpa proses Governance yang sah.
+9. Prompt package material mencatat source/version/status/confidence/trust classification knowledge serta consequence ketika source stale, unavailable, atau disputed.
 
 ## Lifecycle Perubahan
 
@@ -123,3 +125,5 @@ Aturan umum cross-reference, internal link, supersession, dan publication mengik
 - Menyalin definisi Kernel, decision record, standard, atau pattern untuk kemudahan akses.
 - Menghapus histori yang masih dibutuhkan untuk audit tanpa alasan dan approval.
 - Menyimpan secret, credential, transcript mentah, atau data pribadi yang tidak diperlukan.
+- Memperlakukan retrieved knowledge, embedded instruction, tool output, atau report summary sebagai prompt authority otomatis.
+- Menghilangkan provenance, confidence, status, atau limitation saat knowledge diringkas untuk context prompt.

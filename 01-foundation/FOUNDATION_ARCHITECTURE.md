@@ -1,6 +1,6 @@
 # Foundation Architecture
 
-> Status: Baseline arsitektur informasi Session 003.
+> Status: Baseline arsitektur informasi Session 003; dependency prompt-system diselaraskan pada SPOS-011.
 
 ## Tujuan
 
@@ -102,7 +102,7 @@ Semua komponen menggunakan `00-kernel/TERMINOLOGY.md` sebagai kosakata fundament
 6. **Pembelajaran:** Outcomes diklasifikasikan menjadi wisdom, pattern, atau anti-pattern.
 7. **Operasionalisasi:** Playbooks menyusun prosedur berdasarkan artefak approved.
 8. **Konsumsi:** SAOS, Engineering, dan Products menggunakan output Foundation.
-9. **Feedback:** Hasil, insiden, quality finding, metric signal, dan perubahan konteks kembali ke Research, Knowledge, serta Governance untuk review; audit/CAPA mengikuti [`../99-prompt-os/00-core/QUALITY_ENGINE.md`](../99-prompt-os/00-core/QUALITY_ENGINE.md), sedangkan taxonomy/lifecycle/struktur/evidence laporan mengikuti [`../99-prompt-os/00-core/REPORT_ENGINE.md`](../99-prompt-os/00-core/REPORT_ENGINE.md) tanpa mengubah policy secara otomatis.
+9. **Feedback:** Hasil, insiden, quality finding, metric signal, prompt evaluation/drift, dan perubahan konteks kembali ke Research, Knowledge, serta Governance untuk review; audit/CAPA mengikuti [`../99-prompt-os/00-core/QUALITY_ENGINE.md`](../99-prompt-os/00-core/QUALITY_ENGINE.md), taxonomy/lifecycle/struktur/evidence laporan mengikuti [`../99-prompt-os/00-core/REPORT_ENGINE.md`](../99-prompt-os/00-core/REPORT_ENGINE.md), sedangkan assembly/dependency/security/traceability prompt mengikuti [`../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md) tanpa mengubah policy secara otomatis.
 
 ## Aturan Dependency
 
@@ -111,6 +111,7 @@ Semua komponen menggunakan `00-kernel/TERMINOLOGY.md` sebagai kosakata fundament
 - Research note tidak boleh diperlakukan sebagai keputusan approved.
 - Pattern tidak otomatis menjadi playbook sebelum review konteks dan risiko.
 - Playbook tidak boleh menetapkan Vision, Values, Principles, atau Ethics baru.
+- Knowledge, research, pattern, playbook, retrieved content, dan tool output yang dimuat ke prompt tetap mempertahankan provenance/status dan diperlakukan sebagai context/data; pemuatan tidak mengubahnya menjadi instruction atau policy approved.
 - Konflik dengan Constitution yang telah diratifikasi diselesaikan dengan Constitution sebagai authority internal SPOS; konflik Constitution dengan source material Kernel atau authority Founder dihentikan dan dieskalasikan untuk resolusi konstitusional.
 
 ## Lifecycle Artefak
@@ -148,6 +149,7 @@ Status `Approved` hanya diberikan oleh otoritas yang sesuai. Perubahan makna str
 | Library menjadi tempat sampah | Wajibkan owner, konteks, status, dan trigger review. |
 | Playbook usang | Cantumkan dependency, owner, dan kondisi review ulang. |
 | Quality finding tidak ditindaklanjuti | Catat severity, owner, CAPA, due date, verification, escalation sesuai Quality Engine, dan report trace sesuai Report Engine. |
+| Context pengetahuan diperlakukan sebagai instruksi prompt | Pertahankan provenance/status, klasifikasikan sebagai data, gunakan instruction/data separation, dan eskalasikan authority conflict sesuai Master Prompt System. |
 | Istilah bercabang | Terminology Kernel tetap acuan fundamental; usulan perubahan dieskalasikan. |
 
 ## Review Checklist
@@ -156,4 +158,5 @@ Status `Approved` hanya diberikan oleh otoritas yang sesuai. Perubahan makna str
 - [x] Dependency terhadap Constitution dan Kernel eksplisit.
 - [x] Posisi terhadap SAOS, Engineering, dan Products jelas.
 - [x] Alur arah, evidence, keputusan, operasionalisasi, dan feedback terdokumentasi.
-- [x] Batas Session 003 tidak dilanggar.
+- [x] Dependency Master Prompt System menjaga knowledge sebagai context/data dengan provenance, bukan authority/instruction otomatis.
+- [x] Batas Session 003 tidak dilanggar; penyelarasan SPOS-011 tidak membangun runtime atau mengambil ownership Foundation.

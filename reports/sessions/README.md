@@ -40,3 +40,4 @@ Folder ini menyimpan laporan hasil setiap session SparkMind SAOS untuk menjaga k
 - [`SPOS-008.md`](SPOS-008.md) — SparkMind Governance Engine.
 - [`SPOS-009.md`](SPOS-009.md) — SparkMind Session Engine.
 - [`SPOS-010.md`](SPOS-010.md) — SparkMind Report Engine.
+- [`SPOS-011.md`](SPOS-011.md) — SparkMind Master Prompt System and System Architecture Layer.

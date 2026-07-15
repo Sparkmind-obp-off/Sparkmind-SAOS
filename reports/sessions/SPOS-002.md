@@ -107,12 +107,12 @@ Pemisahan tanggung jawab sekarang eksplisit dan mencegah dua Constitution kanoni
 
 ## 9. Commit Hash
 
-- Commit implementasi: `<diisi setelah commit>`
-- Commit finalisasi report: commit yang memuat evidence push terakhir.
+- Commit implementasi: `77b6f328b6e4723cca408b544b25c076a4613e87` (`docs(spos): establish Constitution Engine`).
+- Commit finalisasi report: commit yang memuat evidence push terakhir dan menjadi `HEAD` penutupan session.
 
 ## 10. Status Push
 
-`<diisi setelah push dan verifikasi remote>`
+Berhasil. Commit implementasi `77b6f328b6e4723cca408b544b25c076a4613e87` telah dipush ke `origin/main`; hash lokal dan `refs/heads/main` remote terverifikasi sama. Commit finalisasi report diverifikasi pada penutupan session.
 
 ## 11. Temuan Penting
 
@@ -150,8 +150,8 @@ SPOS-003 tidak boleh mengubah Constitution secara diam-diam dan harus berhenti j
 - Whitespace Git: lulus (`git diff --check`).
 - Scope review: lulus; perubahan hanya dokumentasi SPOS-002 dan sinkronisasi cross-review.
 - Secret pattern review: lulus; tidak ditemukan pola credential-shaped pada diff.
-- Remote verification: `<diisi setelah push>`.
+- Remote verification: commit implementasi lulus; commit finalisasi diverifikasi pada penutupan session.
 
 ## 15. Completion Status
 
-Status sementara: **In Review** sampai validasi, commit, push, dan verifikasi remote selesai. Constitution tetap `In Review` sampai ratifikasi Founder meskipun session SPOS-002 nantinya selesai secara teknis.
+Status session: **Completed**. Deliverable, cross-review, validasi, commit implementasi, push, dan verifikasi remote selesai; commit finalisasi report menjadi evidence penutupan terakhir. Status Constitution tetap **In Review** sampai ratifikasi Founder dan tidak berubah hanya karena session selesai.

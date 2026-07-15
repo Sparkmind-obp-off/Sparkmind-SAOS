@@ -150,12 +150,12 @@ Kegagalan tidak boleh disembunyikan, quality gate tidak boleh diturunkan, dan le
 
 ## 11. Commit Hash
 
-- Commit implementasi: `<diisi setelah commit>`
+- Commit implementasi: `dc5e3ed72f222de2907825b7db46eb329c75d26c` (`docs(spos): establish Execution Engine`).
 - Commit finalisasi report: commit yang memuat evidence push terakhir dan menjadi `HEAD` penutupan session.
 
 ## 12. Status Push
 
-`<diisi setelah push dan verifikasi remote>`
+Berhasil. Commit implementasi `dc5e3ed72f222de2907825b7db46eb329c75d26c` telah dipush ke `origin/main`; hash lokal dan `refs/heads/main` remote terverifikasi sama. Commit finalisasi report diverifikasi pada penutupan session.
 
 ## 13. Validasi
 
@@ -168,7 +168,7 @@ Kegagalan tidak boleh disembunyikan, quality gate tidak boleh diturunkan, dan le
 - Link Markdown relatif: lulus.
 - Whitespace Git: lulus (`git diff --check`).
 - Scope dan secret review: lulus; perubahan documentation-only dan tidak ditemukan credential-shaped secret.
-- Remote verification: `<diisi setelah push>`.
+- Remote verification: commit implementasi lulus; commit finalisasi diverifikasi pada penutupan session.
 
 ## 14. Technical Debt
 
@@ -202,4 +202,4 @@ Bangun **Governance Engine** untuk menutup dependency authority sebelum memperlu
 
 ## 17. Completion Status
 
-Status sementara: **In Review** sampai cross-review, validasi, commit, push, dan verifikasi remote selesai. Setelah workflow teknis selesai, session dapat `Completed`, sedangkan Execution Engine tetap `In Review` sampai approval operasional yang sah.
+Status session: **Completed**. Deliverable, cross-review, validasi, commit implementasi, push, dan verifikasi remote selesai; commit finalisasi report menjadi evidence penutupan terakhir. Execution Engine tetap **In Review** sampai approval operasional yang sah dan tidak berubah status hanya karena session selesai.

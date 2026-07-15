@@ -1,29 +1,30 @@
 # Constitution
 
-> Status: Struktur aktif; belum berisi instrumen konstitusional final.
+> Status: Struktur aktif; SPOS Constitution tersedia sebagai `In Review`, ratification record belum dibuat.
 
 ## Tujuan
 
-Mengelola instrumen konstitusional SparkMind yang telah dirakit atau diratifikasi serta memetakan setiap ketentuan ke sumber normatifnya di Kernel.
+Mengelola source map, ratification record, amendment record, dan status instrumen konstitusional SparkMind. Instrumen kanonik SPOS berada di [`../../99-prompt-os/00-core/CONSTITUTION.md`](../../99-prompt-os/00-core/CONSTITUTION.md).
 
 ## Ruang Lingkup
 
-Folder ini mencakup struktur konstitusi, catatan ratifikasi, amendment record, dan peta otoritas. Folder ini tidak menduplikasi isi `00-kernel/` dan tidak mengesahkan keputusan strategis tanpa persetujuan Founder.
+Folder ini mencakup catatan ratifikasi, amendment proposal/record, dan peta sumber/otoritas. Folder ini tidak menyimpan Constitution tandingan, tidak menduplikasi isi `00-kernel/`, dan tidak mengesahkan keputusan strategis tanpa persetujuan Founder.
 
 ## Jenis Dokumen
 
-- constitutional index dan source map;
+- constitutional index dan source map menuju Constitution kanonik;
 - ratification record;
 - amendment proposal dan amendment record;
 - catatan status serta otoritas konstitusional.
 
 ## Hubungan
 
-- Bersumber dari `00-kernel/CANON.md` dan dokumen Kernel yang approved.
-- Menjadi batas bagi [`../governance/`](../governance/README.md).
+- Source material berasal dari [`../../00-kernel/CANON.md`](../../00-kernel/CANON.md) dan dokumen Kernel terkait.
+- Instrumen konstitusional SPOS kanonik berada di [`../../99-prompt-os/00-core/CONSTITUTION.md`](../../99-prompt-os/00-core/CONSTITUTION.md).
+- Constitution menjadi batas bagi [`../governance/`](../governance/README.md) setelah ratifikasi Founder.
 - Perubahan wajib tercatat di [`../decision-library/`](../decision-library/README.md) bila berupa keputusan.
 - Istilah mengikuti [`../terminology/`](../terminology/README.md) dan Terminology Kernel.
 
 ## Aturan SSOT
 
-Ketentuan fundamental tetap kanonik di Kernel. Dokumen di sini merakit, memetakan, dan mencatat statusnya melalui referensi relatif.
+Source material fundamental dan historinya tetap berada di Kernel. Constitution SPOS adalah instrumen konstitusional terakit; folder ini hanya memetakan sumber dan mencatat ratifikasi/amendment melalui referensi relatif. Tidak boleh ada salinan Constitution kedua.

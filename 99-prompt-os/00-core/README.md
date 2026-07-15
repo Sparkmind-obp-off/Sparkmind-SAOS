@@ -1,17 +1,18 @@
 # SPOS Core
 
-> Status: Draft baseline SPOS-001.
+> Status: SPOS-002 baseline; Constitution `In Review`, architecture tetap Draft sampai ratifikasi Founder.
 
 ## Tujuan
 
-Menyimpan arsitektur dan kontrak engine inti yang mengatur lifecycle, precedence, execution flow, quality gate, reporting, dan integrasi komponen SPOS.
+Menyimpan Constitution, arsitektur, dan kontrak engine inti yang mengatur authority, lifecycle, precedence, execution flow, quality gate, reporting, dan integrasi komponen SPOS.
 
 ## Artefak Aktif
 
+- [`CONSTITUTION.md`](CONSTITUTION.md) — authority tertinggi di dalam SPOS, prinsip dasar, governance hierarchy, decision principles, dan amendment policy.
 - [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) — posisi, komponen, dependency, lifecycle, execution flow, dan boundary SPOS.
 
 ## Boundary
 
-Core menurunkan constraint dari Kernel, Foundation, Governance, dan SAOS. Core tidak menetapkan ulang sumber normatif, tidak memberi approval, dan tidak memiliki requirement produk.
+Constitution merakit sumber fundamental Kernel menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder. Foundation `constitution/` mengelola source map, ratification record, dan amendment record; Governance menerjemahkan Constitution tanpa mengubahnya.
 
-Engine tambahan hanya dibuat melalui session terpisah dengan owner, status, dependency, dan review yang eksplisit.
+Core tidak dapat memberi approval kepada dirinya sendiri dan tidak memiliki requirement produk. Engine tambahan hanya dibuat melalui session terpisah dengan owner, status, dependency, dan review yang eksplisit.

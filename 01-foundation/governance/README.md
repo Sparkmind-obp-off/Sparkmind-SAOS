@@ -1,6 +1,6 @@
 # Governance
 
-> Status: Struktur aktif; kebijakan governance substantif belum disusun.
+> Status: Struktur aktif; Constitution SPOS tersedia sebagai `In Review`, kebijakan governance substantif belum disusun.
 
 ## Tujuan
 
@@ -19,11 +19,11 @@ Mencakup ownership, level of authority, approval, review cadence, lifecycle, con
 
 ## Hubungan
 
-- Tunduk pada [`../constitution/`](../constitution/README.md) dan Kernel.
+- Tunduk pada [`../../99-prompt-os/00-core/CONSTITUTION.md`](../../99-prompt-os/00-core/CONSTITUTION.md) setelah ratifikasi Founder; [`../constitution/`](../constitution/README.md) mengelola source map dan ratification/amendment record.
 - Mengatur lifecycle seluruh folder Foundation.
 - Menggunakan [`../decision-library/`](../decision-library/README.md) untuk keputusan.
 - Memakai evidence dari [`../research/`](../research/README.md) dan feedback downstream.
 
 ## Aturan SSOT
 
-Setiap kewenangan hanya didefinisikan pada satu kebijakan governance kanonik; README domain lain cukup merujuk kepadanya.
+Setiap kewenangan hanya didefinisikan pada satu kebijakan governance kanonik; README domain lain cukup merujuk kepadanya. Governance tidak boleh mengubah Constitution, dan exception wajib memiliki authority, alasan, scope, durasi, serta audit trail.

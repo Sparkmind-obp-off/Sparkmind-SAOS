@@ -1,44 +1,45 @@
 # HANDOFF — SparkMind SAOS
 
-> Diperbarui: 2026-07-15 · Sesi: SPOS-001 · Oleh: AI Developer
+> Diperbarui: 2026-07-15 · Sesi: SPOS-002 · Oleh: AI Developer
 
 ## STATE saat ini
 
-- Fase: SPOS-001 bootstrap selesai dan commit implementasi telah dipush serta diverifikasi.
-- Branch/commit: `main`; implementasi SPOS-001 `b2514d5`; commit finalisasi report adalah `HEAD` terbaru pada repository.
+- Fase: Constitution Engine SPOS-002 selesai secara lokal; status commit dan push dicatat saat workflow Git selesai.
+- Branch: `main`; remote `origin` mengarah ke repository SparkMind SAOS.
 - Service: tidak berlaku; repository documentation-only.
 - Deploy: tidak dilakukan dan berada di luar scope.
 
 ## SELESAI sesi ini
 
-- Membangun struktur awal `99-prompt-os/` dengan enam komponen dan README kontrak pada setiap subfolder.
-- Mendokumentasikan SPOS Architecture, dependency, lifecycle, precedence, execution flow, quality gates, failure handling, dan boundary.
-- Membuat Session Template serta placeholder terstruktur untuk System, User, dan Task Prompt.
-- Menetapkan SPOS sebagai lapisan prompt/workflow di dalam SAOS, bukan authority tertinggi atau pengganti Foundation.
-- Menyelaraskan root README, folder convention, changelog, indeks laporan, dan report SPOS-001.
+- Membangun `99-prompt-os/00-core/CONSTITUTION.md` sebagai Constitution Engine `In Review`.
+- Mendokumentasikan Vision, Mission, Long-term Purpose, Core Values, Guiding Principles, Ethical Principles, Founder Authority, dan Governance Hierarchy.
+- Mendokumentasikan Decision Principles, Amendment Policy, versioning, changelog, audit trail, enforcement, escalation, dan source map.
+- Menyelaraskan Canon, Foundation Architecture, Foundation Constitution, Governance, SPOS Architecture, root README, changelog, indeks laporan, dan report SPOS-002.
+- Mempertahankan ratifikasi sebagai authority eksklusif Founder dan tidak mengklaim approval dari commit atau output AI.
 
 ## NEXT STEP (atomic — aksi pertama sesi berikut)
 
-1. Baca `reports/sessions/SPOS-001.md`, lalu jalankan SPOS-002 untuk mendefinisikan Constitution Engine dengan tetap merujuk Kernel dan menunggu keputusan Canon yang belum disahkan.
+1. Founder mereview dan meratifikasi atau meminta revisi `99-prompt-os/00-core/CONSTITUTION.md`; setelah itu jalankan SPOS-003 untuk membangun Governance Engine berdasarkan versi yang diratifikasi.
 
 ## KEPUTUSAN penting
 
-- SPOS berada di dalam operating model SAOS dan menurunkan constraint dari Kernel serta Foundation.
-- Nomor folder `99` menandai lapisan operasional lintas domain, bukan authority tertinggi.
-- Prompt adalah assembly boundary, bukan sumber normatif baru.
-- Seluruh artefak SPOS-001 berstatus Draft baseline; commit tidak sama dengan approval.
-- AI dapat membuat serta mereview draft, tetapi tidak memberi approval strategis.
+- Constitution adalah authority tertinggi di dalam SPOS setelah ratifikasi Founder.
+- Kernel mempertahankan source material fundamental; SPOS menyimpan instrumen Constitution; Foundation menyimpan source map serta ratification/amendment record.
+- Hierarki internal SPOS: Constitution → Governance → Policies → Standards → Playbooks → Session Instructions.
+- Hukum, keselamatan, dan Founder Authority tidak dikesampingkan oleh hierarchy internal.
+- Constitution saat ini `In Review`; commit tidak sama dengan ratifikasi atau approval.
+- AI dapat menyusun serta mereview, tetapi tidak dapat meratifikasi Constitution atau amendment.
 
 ## KNOWN ISSUES
 
-- Canon Kernel belum memutuskan posisi resmi Core System Prompt dan hubungan formal Kernel–Foundation–SAOS.
-- Owner, reviewer, dan approver SPOS belum ditetapkan secara nominal.
-- Rule, playbook, template khusus, dan seluruh engine substantif SPOS belum dibangun.
-- Belum ada automated documentation checks; validasi SPOS-001 dilakukan lokal.
+- Ratifikasi Constitution oleh Founder belum tercatat.
 - Isi Kernel dan artefak Foundation substantif masih menunggu approval Founder.
+- Governance policy, authority matrix, exception process, dan escalation matrix belum dibangun.
+- Developer Mode, Execution, Git, Documentation, Quality, Session, Report, serta engine substantif lain belum dibangun.
+- Belum ada automated metadata, hierarchy-conflict, source-drift, atau version-pinning checks.
 
 ## CONTEXT untuk resume
 
-- Scope lock SPOS-001: bootstrap dokumentasi saja; tanpa engine substantif, aplikasi, produk, database, deployment, cloud, CI/CD, atau integrasi eksternal.
-- File kunci: `99-prompt-os/README.md`, `99-prompt-os/00-core/SPOS_ARCHITECTURE.md`, `99-prompt-os/03-sessions/SESSION_TEMPLATE.md`, dan `reports/sessions/SPOS-001.md`.
+- Scope lock SPOS-002: Constitution Engine saja; tanpa Governance Engine substantif, aplikasi, produk, database, deployment, cloud, CI/CD, atau integrasi eksternal.
+- File kunci: `99-prompt-os/00-core/CONSTITUTION.md`, `99-prompt-os/00-core/SPOS_ARCHITECTURE.md`, `00-kernel/CANON.md`, dan `reports/sessions/SPOS-002.md`.
 - Remote: `https://github.com/Sparkmind-obp-off/Sparkmind-SAOS.git`.

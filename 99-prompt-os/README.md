@@ -1,12 +1,12 @@
 # SparkMind Prompt Operating System (`99-prompt-os`)
 
-> Status: Draft baseline SPOS-001 — belum menjadi sumber aturan yang approved.
+> Status: SPOS-002 baseline — Constitution tersedia sebagai `In Review`; authority operasional menunggu ratifikasi Founder.
 
 ## Apa Itu SPOS
 
 SparkMind Prompt Operating System (SPOS) adalah lapisan dokumentasi operasional yang menerjemahkan arah, batas, dan pengetahuan SparkMind menjadi kontrak kerja AI yang modular. SPOS mengorganisasi architecture, template, rule, session, playbook, dan prompt agar pekerjaan AI dapat direncanakan, dieksekusi, direview, serta dilaporkan secara konsisten.
 
-SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis; seluruh artefaknya adalah kontrak dokumentasi yang menunggu engine dan governance berikutnya.
+SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution Engine telah didokumentasikan, sedangkan runtime dan engine operasional lainnya belum dibangun.
 
 ## Mengapa SPOS Ada
 
@@ -44,11 +44,13 @@ Products
 
 SAOS adalah operating model yang lebih luas untuk ekosistem AI SparkMind. SPOS merupakan lapisan operasional prompt dan workflow di dalam SAOS: SPOS menentukan bagaimana instruksi dirakit dan dijalankan, tetapi tidak menggantikan identitas, governance, architecture, atau keputusan strategis SAOS.
 
-### Hubungan dengan Foundation
+### Hubungan dengan Constitution, Kernel, dan Foundation
 
-Foundation adalah upstream SPOS untuk governance, knowledge, decision, pattern, standard, dan playbook yang telah direview. SPOS merujuk dan mengoperasionalkan artefak upstream; SPOS tidak menyalin, mengubah status, atau memberi approval kepada artefak Kernel dan Foundation.
+[`00-core/CONSTITUTION.md`](00-core/CONSTITUTION.md) adalah authority tertinggi di dalam SPOS setelah ratifikasi Founder. Dokumen tersebut merakit prinsip fundamental dari Kernel menjadi batas konstitusional SPOS tanpa menghapus source history atau mengklaim approval otomatis.
 
-Jika isi SPOS berkonflik dengan sumber upstream, eksekusi harus dihentikan pada batas yang terdampak, konflik dicatat, lalu dieskalasikan melalui governance. Sumber upstream tetap menjadi acuan sementara.
+Foundation mengelola ratification/source map, governance, knowledge, decision, pattern, standard, dan guidance. SPOS merujuk serta mengoperasionalkan artefak tersebut; SPOS tidak memberi approval kepada dirinya sendiri atau kepada artefak Kernel dan Foundation.
+
+Jika isi SPOS berkonflik dengan Constitution atau authority yang lebih tinggi, eksekusi harus dihentikan pada batas terdampak, konflik dicatat, lalu dieskalasikan. Selama Constitution belum diratifikasi, consumer wajib memperlakukannya sebagai `In Review` dan menggunakan sumber approved yang benar-benar tersedia.
 
 ### Hubungan dengan Products
 
@@ -61,6 +63,7 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 ├── README.md
 ├── 00-core/
 │   ├── README.md
+│   ├── CONSTITUTION.md
 │   └── SPOS_ARCHITECTURE.md
 ├── 01-templates/
 │   └── README.md
@@ -80,9 +83,9 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 
 ## Komponen
 
-| Komponen | Fungsi | Baseline SPOS-001 |
+| Komponen | Fungsi | Status terkini |
 | --- | --- | --- |
-| `00-core/` | Arsitektur, lifecycle, execution model, dan engine inti | Architecture tersedia; engine belum dibangun |
+| `00-core/` | Constitution, arsitektur, lifecycle, execution model, dan engine inti | Constitution `In Review` dan architecture tersedia; runtime belum dibangun |
 | `01-templates/` | Kontrak artefak kerja yang dapat digunakan ulang | Kontrak folder tersedia |
 | `02-rules/` | Rule modular dengan authority dan precedence eksplisit | Kontrak folder tersedia |
 | `03-sessions/` | Objective, scope, deliverable, validasi, dan laporan eksekusi | Session Template tersedia |
@@ -91,25 +94,29 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 
 ## Aturan SSOT dan Boundary
 
-1. Kernel tetap menjadi sumber normatif fundamental.
-2. Foundation tetap memiliki governance, knowledge, keputusan, pattern, dan panduan lintas domain.
-3. SPOS hanya memiliki kontrak eksekusi AI, komposisi prompt, session, dan quality gate yang diturunkan.
-4. Products tetap memiliki requirement dan logika bisnis masing-masing.
-5. Satu rule hanya memiliki satu lokasi kanonik; template dan prompt merujuk rule tersebut, bukan menyalinnya.
-6. Artefak Draft atau placeholder tidak boleh diperlakukan sebagai aturan aktif.
-7. AI boleh menyusun dan mereview draft, tetapi approval strategis tetap memerlukan otoritas manusia yang tepat.
+1. Founder memegang ratifikasi dan amendment authority konstitusional.
+2. Constitution adalah authority tertinggi di dalam SPOS setelah diratifikasi.
+3. Kernel menyimpan source material fundamental; Foundation mengelola ratification/source map, governance, knowledge, keputusan, pattern, dan panduan lintas domain.
+4. SPOS memiliki Constitution serta kontrak eksekusi AI, komposisi prompt, session, dan quality gate yang diturunkan.
+5. Products tetap memiliki requirement dan logika bisnis masing-masing.
+6. Satu aturan hanya memiliki satu lokasi kanonik; template dan prompt merujuk aturan tersebut, bukan menyalinnya.
+7. Artefak `Draft` atau `In Review` tidak boleh diperlakukan sebagai aturan approved.
+8. AI boleh menyusun dan mereview draft, tetapi tidak dapat meratifikasi Constitution atau amendment.
 
 ## Cara Menggunakan Baseline
 
-1. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
-2. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
-3. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt; jangan menganggapnya engine aktif.
-4. Cantumkan dependency upstream, status, owner, reviewer, quality gate, dan unresolved conflict.
-5. Laporkan evidence dan feedback agar perubahan dapat direview melalui Foundation dan governance.
+1. Baca [`00-core/CONSTITUTION.md`](00-core/CONSTITUTION.md) dan periksa status ratifikasinya.
+2. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
+3. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
+4. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt; jangan menganggapnya engine aktif.
+5. Cantumkan dependency, status, owner, reviewer, quality gate, dan unresolved conflict.
+6. Laporkan evidence dan feedback agar perubahan dapat direview melalui Foundation dan governance.
 
 ## Status Implementasi
 
-### Selesai pada SPOS-001
+### Selesai
+
+**SPOS-001**
 
 - Struktur awal enam komponen SPOS.
 - Arsitektur, dependency, lifecycle, dan execution flow.
@@ -117,9 +124,16 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 - Placeholder terstruktur untuk System, User, dan Task Prompt.
 - Boundary terhadap Kernel, Foundation, Knowledge, Governance, SAOS, dan Products.
 
+**SPOS-002**
+
+- Constitution Engine dengan Vision, Mission, Long-term Purpose, Core Values, Guiding Principles, Ethical Principles, dan Founder Authority.
+- Governance Hierarchy, Decision Principles, Amendment Policy, versioning, changelog, audit trail, enforcement, dan source map.
+- Cross-review terhadap Kernel, Foundation, Knowledge, Governance, serta SPOS Architecture.
+
 ### Belum Diimplementasikan
 
-- Constitution, Developer Mode, Execution, Git, Documentation, Quality, Session, dan Report Engine.
+- Ratifikasi Founder atas Constitution.
+- Developer Mode, Execution, Git, Documentation, Quality, Session, dan Report Engine.
 - Rule substantif, template pekerjaan khusus, playbook, prompt compiler, atau runtime otomatis.
 - Authority matrix dan approval SPOS final.
 - Integrasi vendor, aplikasi, database, deployment, atau CI/CD.

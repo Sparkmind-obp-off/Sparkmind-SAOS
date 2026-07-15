@@ -1,6 +1,6 @@
 # SPOS Architecture
 
-> Status: Draft baseline SPOS-001 — architecture contract untuk review, bukan engine aktif.
+> Status: Draft baseline SPOS-002 — diselaraskan dengan Constitution `In Review`; bukan runtime aktif.
 
 ## Tujuan
 
@@ -8,32 +8,34 @@ Mendefinisikan posisi, komponen, dependency, lifecycle, execution flow, dan boun
 
 ## Sasaran Arsitektur
 
-1. **Modular:** rule stabil, template, session, playbook, dan prompt dipisahkan menurut tanggung jawab.
-2. **Traceable:** setiap instruksi dapat ditelusuri ke sumber, status, owner, dan hasil validasi.
-3. **Derived, not duplicated:** SPOS merujuk sumber upstream dan tidak membuat salinan normatif.
-4. **Deterministic assembly:** input, precedence, output, dan stop condition dinyatakan sebelum eksekusi.
-5. **Human-governed:** AI dapat menyusun, mengeksekusi dalam batas, dan memberi evidence; authority manusia tetap berlaku.
-6. **Vendor-agnostic:** kontrak inti tidak bergantung pada model atau tool tertentu.
-7. **Fail-closed on authority conflicts:** konflik otoritas menghentikan bagian eksekusi yang terdampak sampai terselesaikan.
+1. **Constitution-led:** seluruh komponen SPOS menurunkan authority dari [`CONSTITUTION.md`](CONSTITUTION.md) setelah ratifikasi Founder.
+2. **Modular:** rule stabil, template, session, playbook, dan prompt dipisahkan menurut tanggung jawab.
+3. **Traceable:** setiap instruksi dapat ditelusuri ke sumber, status, owner, dan hasil validasi.
+4. **Derived, not duplicated:** SPOS merujuk sumber upstream dan tidak membuat salinan normatif tandingan.
+5. **Deterministic assembly:** input, precedence, output, dan stop condition dinyatakan sebelum eksekusi.
+6. **Human-governed:** AI dapat menyusun, mengeksekusi dalam batas, dan memberi evidence; Founder memegang ratifikasi konstitusional.
+7. **Vendor-agnostic:** kontrak inti tidak bergantung pada model atau tool tertentu.
+8. **Fail-closed on authority conflicts:** konflik otoritas menghentikan bagian eksekusi yang terdampak sampai terselesaikan.
 
 ## Posisi Arsitektur
 
 ```text
+Applicable law, safety obligations, and Founder authority
+                     │
+                     ▼
 ┌───────────────────────────────────────────┐
 │ 00-kernel                                 │
-│ Fundamental authority and constraints     │
+│ Fundamental source material and history   │
 └────────────────────┬──────────────────────┘
                      ▼
 ┌───────────────────────────────────────────┐
-│ 01-foundation                             │
-│ Governance, knowledge, decisions, guidance│
+│ 99-prompt-os/00-core/CONSTITUTION.md      │
+│ Highest authority within SPOS when ratified│
 └────────────────────┬──────────────────────┘
                      ▼
 ┌───────────────────────────────────────────┐
-│ SAOS                                      │
-│ SparkMind AI ecosystem operating model    │
-│   └─ 99-prompt-os / SPOS                  │
-│      AI workflow and prompt contracts     │
+│ 01-foundation + SAOS / SPOS               │
+│ Records, governance, knowledge, workflows │
 └───────────────┬───────────────────────────┘
                 ▼
         AI Agents / Engineering
@@ -43,13 +45,13 @@ Mendefinisikan posisi, komponen, dependency, lifecycle, execution flow, dan boun
                 └─ evidence & feedback ──► Foundation / SPOS review
 ```
 
-SPOS berada di bawah operating model SAOS dan menggunakan Kernel serta Foundation sebagai upstream. Nomor folder `99` menyatakan lapisan operasional lintas domain, bukan tingkat authority tertinggi.
+SPOS berada di bawah operating model SAOS dan menggunakan Kernel serta Foundation sebagai sumber dan dependency. Di dalam SPOS, Constitution adalah authority tertinggi setelah ratifikasi Founder. Nomor folder `99` menyatakan lapisan operasional lintas domain, bukan authority di atas hukum, keselamatan, atau Founder.
 
 ## Komponen SPOS
 
 | Komponen | Tanggung jawab | Input | Output |
 | --- | --- | --- | --- |
-| `00-core/` | Mendefinisikan architecture dan engine contracts | Kernel, Foundation, SAOS constraints | Execution model dan engine specifications |
+| `00-core/` | Menyimpan Constitution, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, execution model, dan engine specifications |
 | `01-templates/` | Menyediakan struktur artefak reusable | Rule dan metadata contract | Draft artefak yang konsisten |
 | `02-rules/` | Menyimpan aturan atomik dan precedence | Authority serta governance approved | Constraint dan quality gate terkomposisi |
 | `03-sessions/` | Membatasi satu unit kerja | Objective, scope, dependency, acceptance criteria | Deliverable, evidence, dan session report |
@@ -61,31 +63,34 @@ SPOS berada di bawah operating model SAOS dan menggunakan Kernel serta Foundatio
 ### Dependency normatif
 
 ```text
-Kernel authority
-  └─ Foundation governance and approved interpretation
-       └─ SAOS operating model
-            └─ SPOS rules and engines
-                 └─ Session / playbook / prompt instance
-                      └─ Product-specific execution
+Applicable law, safety obligations, and Founder authority
+  └─ Kernel fundamental source material
+       └─ SPOS Constitution (highest authority within SPOS after ratification)
+            └─ Governance
+                 └─ Policies
+                      └─ Standards
+                           └─ Playbooks
+                                └─ Session Instructions
+                                     └─ Prompt / task / local preference
 ```
 
-Dependency hanya mengalir ke bawah untuk authority dan constraint. Feedback mengalir ke atas sebagai evidence, bukan sebagai perubahan aturan otomatis.
+Authority dan constraint mengalir ke bawah. Evidence dan feedback mengalir ke atas untuk review, bukan sebagai perubahan aturan otomatis. Foundation `constitution/` memelihara source map serta ratification/amendment record, sementara Governance mengatur penerapan Constitution.
 
 ### Precedence minimum
 
 Jika dua instruksi bertentangan, urutan acuan adalah:
 
-1. hukum, keamanan, dan batas platform yang berlaku;
-2. Kernel approved;
-3. Foundation governance dan keputusan approved;
-4. SAOS policy approved;
-5. SPOS core engine dan rule approved;
-6. playbook yang dipilih;
-7. session contract;
-8. task dan prompt instance;
-9. preferensi implementasi lokal.
+1. hukum, kewajiban keselamatan, dan batas platform yang berlaku;
+2. authority serta keputusan Founder yang sah;
+3. Constitution yang telah diratifikasi;
+4. Governance approved;
+5. Policies approved;
+6. Standards approved;
+7. Playbooks approved dan sesuai konteks;
+8. Session Instructions;
+9. task, prompt instance, dan preferensi implementasi lokal.
 
-Baseline ini tidak menetapkan bahwa dokumen yang belum approved memiliki authority. Status dokumen selalu diperiksa sebelum precedence diterapkan.
+Hierarki internal SPOS pada butir 3–8 mengikuti [`CONSTITUTION.md`](CONSTITUTION.md). Kernel menyediakan sumber fundamental bagi Constitution dan tidak boleh dimanipulasi oleh artefak downstream. Dokumen yang belum approved tidak memiliki authority operasional hanya karena tersedia atau telah di-commit.
 
 ### Dependency antarkomponen
 
@@ -192,8 +197,9 @@ Sebelum session ditutup, pastikan:
 
 | Layer | Memiliki | Tidak dimiliki SPOS |
 | --- | --- | --- |
-| Kernel | Vision, Mission, Philosophy, Values, Principles, Ethics, Doctrine, Canon, Terminology fundamental | SPOS tidak menetapkan ulang sumber normatif |
-| Foundation | Governance, knowledge, decisions, patterns, cross-domain guidance | SPOS tidak memberi approval atau memindahkan ownership |
+| Founder | Ratifikasi Constitution, amendment, dan resolusi konstitusional | SPOS dan AI tidak mengambil authority Founder |
+| Kernel | Source material fundamental: Vision, Mission, Philosophy, Values, Principles, Ethics, Doctrine, Canon, Terminology | SPOS Constitution merakitnya tanpa menghapus histori atau mengklaim ratifikasi otomatis |
+| Foundation | Ratification/source map, governance, knowledge, decisions, patterns, cross-domain guidance | SPOS tidak memberi approval kepada artefak Foundation atau memindahkan ownership |
 | Knowledge System | Provenance, curation, lifecycle, discovery, learning | SPOS tidak mengubah knowledge menjadi policy otomatis |
 | Governance | Authority, approval, escalation, exception | SPOS hanya mengeksekusi dan mencatat sesuai kebijakan |
 | SAOS | Operating model ekosistem AI | SPOS tidak menggantikan keseluruhan SAOS |
@@ -208,11 +214,13 @@ Sebelum session ditutup, pastikan:
 - Quality gate gagal: perbaiki dalam scope atau tandai session belum selesai.
 - Feedback produk: catat sebagai evidence; owner upstream memutuskan perubahan.
 
-## Review Checklist SPOS-001
+## Review Checklist SPOS-002
 
 - [x] Tujuan, komponen, dependency, lifecycle, dan execution flow terdokumentasi.
+- [x] Constitution menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder.
+- [x] Governance hierarchy selaras dengan Constitution.
 - [x] Posisi SPOS terhadap SAOS dijelaskan.
-- [x] Boundary terhadap Kernel, Foundation, Knowledge, Governance, Engineering, dan Products eksplisit.
-- [x] Folder `99` tidak ditafsirkan sebagai authority tertinggi.
+- [x] Boundary terhadap Founder, Kernel, Foundation, Knowledge, Governance, Engineering, dan Products eksplisit.
+- [x] Folder `99` tidak ditafsirkan sebagai authority di atas hukum, keselamatan, atau Founder.
 - [x] Prompt template diposisikan sebagai assembly boundary, bukan sumber normatif.
-- [x] Baseline tidak mengklaim engine atau automation yang belum dibangun.
+- [x] Baseline tidak mengklaim runtime atau automation yang belum dibangun.

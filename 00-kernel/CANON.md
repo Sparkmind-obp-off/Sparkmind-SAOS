@@ -1,6 +1,6 @@
 # Canon
 
-> Status: Placeholder — hierarki sumber normatif belum disahkan.
+> Status: Placeholder — source map SPOS-002 dicatat; hierarki final menunggu ratifikasi Founder.
 
 ## Tujuan
 
@@ -29,10 +29,20 @@ Dokumen ini akan mengatur komposisi Core Canon, tingkat otoritas dokumen, proses
 ## Hal yang Perlu Diputuskan
 
 - Apakah SparkMind Core System Prompt merupakan bagian Canon, turunan Canon, atau artefak implementasi.
-- Apakah Constitution berada di Kernel atau Foundation.
-- Hubungan resmi antara SparkMind Kernel, SparkMind Foundation, dan SAOS.
+- Ratifikasi resolusi SPOS-002: source material fundamental tetap di Kernel; instrumen konstitusional SPOS berada di `99-prompt-os/00-core/CONSTITUTION.md`; source map, ratification record, dan amendment record dikelola di Foundation `constitution/`.
+- Ratifikasi hubungan resmi antara SparkMind Kernel, SparkMind Foundation, SAOS, dan SPOS sebagaimana dipetakan pada Constitution.
 - Daftar dokumen yang membutuhkan persetujuan eksplisit Founder.
 - Mekanisme perubahan untuk dokumen yang hampir immutable.
+
+## Resolusi Interim SPOS-002
+
+Untuk menghindari dua sumber kebenaran, SPOS-002 menetapkan pemisahan tanggung jawab berikut sebagai proposal `In Review`:
+
+1. Kernel mempertahankan source material fundamental dan histori asal.
+2. [`../99-prompt-os/00-core/CONSTITUTION.md`](../99-prompt-os/00-core/CONSTITUTION.md) menjadi instrumen konstitusional tertinggi di dalam SPOS setelah ratifikasi Founder.
+3. [`../01-foundation/constitution/`](../01-foundation/constitution/README.md) memelihara source map, ratification record, serta amendment record.
+4. Governance, Policies, Standards, Playbooks, dan Session Instructions tidak boleh bertentangan dengan Constitution.
+5. Resolusi ini tidak berstatus `Approved` sampai Founder meratifikasinya; AI tidak boleh mengisi bukti ratifikasi.
 
 ## Review Checklist
 

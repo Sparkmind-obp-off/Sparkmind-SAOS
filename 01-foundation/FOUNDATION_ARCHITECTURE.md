@@ -44,7 +44,7 @@ Foundation tidak bergantung pada detail implementasi SAOS, Engineering, atau Pro
 
 | Komponen | Tanggung jawab | Input utama | Output utama |
 | --- | --- | --- | --- |
-| Constitution | Mengelola instrumen konstitusional terakit dan jejak ratifikasi | Canon dan dokumen Kernel approved | Instrumen dan peta otoritas |
+| Constitution | Mengelola source map, ratification record, dan amendment record | Constitution SPOS, Canon, dan dokumen Kernel | Peta sumber, status, serta jejak ratifikasi/amendment |
 | Governance | Menetapkan proses approval, ownership, review, dan eskalasi | Constitution, risiko, feedback | Kebijakan governance dan matriks otoritas |
 | Knowledge | Mengelola Knowledge System: kurasi, discovery, provenance, lifecycle, learning, dan onboarding | Research, keputusan, sumber internal/eksternal, feedback | Knowledge artifact, indeks, relationship map, learning path, dan onboarding guide |
 | Wisdom | Menangkap pembelajaran kontekstual jangka panjang | Retrospective, insiden, outcomes | Lesson dan heuristic berstatus jelas |
@@ -63,12 +63,15 @@ Foundation tidak bergantung pada detail implementasi SAOS, Engineering, atau Pro
 ### Dependency normatif
 
 ```text
-00-kernel/CANON.md
-  └─ Constitution
-      └─ Governance
-          ├─ Principles / Values / Ethics application
-          └─ approval rules for all Foundation artifacts
+Founder authority + 00-kernel source material
+  └─ 99-prompt-os/00-core/CONSTITUTION.md
+      └─ Foundation constitution records / source map
+          └─ Governance
+              ├─ Principles / Values / Ethics application
+              └─ approval rules for all Foundation artifacts
 ```
+
+Constitution menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder. Foundation tidak menyimpan Constitution tandingan; domain `constitution/` mencatat source map, ratifikasi, dan amendment.
 
 ### Dependency pengetahuan
 
@@ -99,12 +102,12 @@ Semua komponen menggunakan `00-kernel/TERMINOLOGY.md` sebagai kosakata fundament
 
 ## Aturan Dependency
 
-- Artefak Foundation wajib menyebutkan sumber upstream yang relevan.
-- Artefak downstream tidak boleh melemahkan batas upstream.
+- Artefak Foundation wajib menyebutkan sumber upstream yang relevan, termasuk versi Constitution bila berlaku.
+- Artefak downstream tidak boleh melemahkan Constitution atau batas upstream.
 - Research note tidak boleh diperlakukan sebagai keputusan approved.
 - Pattern tidak otomatis menjadi playbook sebelum review konteks dan risiko.
 - Playbook tidak boleh menetapkan Vision, Values, Principles, atau Ethics baru.
-- Konflik antara Foundation dan Kernel diselesaikan dengan Kernel sebagai acuan sementara, lalu dieskalasikan melalui governance.
+- Konflik dengan Constitution yang telah diratifikasi diselesaikan dengan Constitution sebagai authority internal SPOS; konflik Constitution dengan source material Kernel atau authority Founder dihentikan dan dieskalasikan untuk resolusi konstitusional.
 
 ## Lifecycle Artefak
 

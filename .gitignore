@@ -1,0 +1,39 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.dev.vars
+
+# Logs, temporary files, and caches
+*.log
+.tmp/
+tmp/
+.cache/
+
+# Dependency and build outputs (reserved for future layers)
+node_modules/
+dist/
+build/
+coverage/
+.wrangler/
+
+# Archives and local backups
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.bak
+*.backup

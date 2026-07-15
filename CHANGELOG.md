@@ -18,6 +18,8 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - SparkMind Knowledge System dengan sembilan domain: concepts, glossary, architecture, standards, best practices, decisions, references, learning, dan onboarding.
 - Knowledge Architecture dan Knowledge Governance untuk alur, lifecycle, ownership, naming, versioning, review, approval, deprecation, archiving, serta referensi silang.
 - Laporan Session 004 dan handoff lintas session.
+- Baseline `99-prompt-os/` untuk SparkMind Prompt Operating System (SPOS), termasuk arsitektur, kontrak setiap komponen, Session Template, dan placeholder System/User/Task Prompt.
+- Laporan SPOS-001 dan pembaruan handoff menuju pembangunan engine berikutnya.
 
 ### Reviewed
 
@@ -25,6 +27,7 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Dokumentasi Repository Foundation hasil Session 002.
 - Cross-review Session 001–003 untuk konflik, duplikasi, placeholder, dan konsistensi struktur.
 - Cross-review Session 001–004 dengan boundary eksplisit antara Knowledge System, Kernel Terminology, Foundation Decision Library, patterns, wisdom, research, dan repository standards.
+- Cross-review SPOS-001 terhadap Kernel, Foundation, Knowledge, Governance, SAOS, Engineering, Products, dan repository conventions.
 
 ## [0.1.0] - 2026-07-15
 

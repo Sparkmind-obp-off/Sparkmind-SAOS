@@ -6,7 +6,7 @@ Folder ini menyimpan laporan hasil setiap session SparkMind SAOS untuk menjaga k
 
 ## Aturan
 
-- Gunakan nama `SESSION-NNN.md` dengan tiga digit.
+- Gunakan nama `SESSION-NNN.md` untuk roadmap SAOS dan `SPOS-NNN.md` untuk roadmap Prompt Operating System, masing-masing dengan tiga digit.
 - Satu laporan mewakili satu session yang telah dijalankan.
 - Laporan mencatat keadaan pada waktu penyelesaian dan tidak menggantikan dokumen kanonik.
 - Keputusan penting yang ditemukan selama session harus diterapkan pada dokumen sumber yang tepat.
@@ -31,3 +31,4 @@ Folder ini menyimpan laporan hasil setiap session SparkMind SAOS untuk menjaga k
 - [`SESSION-002.md`](SESSION-002.md) — Repository Foundation & Project Identity.
 - [`SESSION-003.md`](SESSION-003.md) — SparkMind Foundation Architecture.
 - [`SESSION-004.md`](SESSION-004.md) — SparkMind Knowledge System.
+- [`SPOS-001.md`](SPOS-001.md) — SparkMind Prompt Operating System Bootstrap.

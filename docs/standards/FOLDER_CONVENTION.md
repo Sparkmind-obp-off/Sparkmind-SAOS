@@ -10,6 +10,7 @@ Menjaga struktur repository mudah dipahami, tidak prematur, dan mampu berkembang
 sparkmind-saos/
 ├── 00-kernel/
 ├── 01-foundation/
+├── 99-prompt-os/
 ├── docs/
 │   └── standards/
 ├── reports/
@@ -28,6 +29,12 @@ Menyimpan governance, pengetahuan, panduan penerapan, library, research, dan pla
 #### `01-foundation/knowledge/`
 
 Menyimpan Knowledge System terkurasi dalam domain concepts, glossary, architecture, standards, best practices, decisions, references, learning, dan onboarding. Folder glossary, standards, dan decisions berfungsi sebagai discovery view dan wajib merujuk sumber kanonik agar tidak menduplikasi Terminology, repository standards, atau Decision Library.
+
+### `99-prompt-os/`
+
+Menyimpan kontrak workflow AI berupa core architecture, templates, rules, sessions, playbooks, dan prompt assembly. Nomor `99` menandai lapisan operasional lintas domain, bukan authority tertinggi. SPOS wajib merujuk Kernel dan Foundation, serta tidak boleh menyalin governance, knowledge, keputusan, standar repository, atau requirement produk.
+
+Setiap subfolder SPOS wajib memiliki artefak atau README kontrak yang menjelaskan tujuan, boundary, dan status. Folder contract Draft tidak boleh dianggap sebagai engine atau rule aktif.
 
 ### `docs/standards/`
 

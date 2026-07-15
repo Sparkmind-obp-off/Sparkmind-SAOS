@@ -19,6 +19,7 @@ Thumbs.db
 
 # Logs, temporary files, and caches
 *.log
+.pm2/
 .tmp/
 tmp/
 .cache/

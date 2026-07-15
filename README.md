@@ -2,7 +2,7 @@
 
 SparkMind AI Operating System (SAOS) adalah repository dokumentasi yang menjadi Single Source of Truth (SSOT) untuk fondasi, identitas, standar, dan pengetahuan operasional SparkMind.
 
-> Status repository: Foundation Architecture dan Knowledge System baseline aktif. Kernel Session 001 masih berupa kerangka terstruktur yang menunggu review dan persetujuan Founder.
+> Status repository: Foundation Architecture, Knowledge System, dan SPOS-001 baseline aktif sebagai Draft. Kernel Session 001 masih berupa kerangka terstruktur yang menunggu review dan persetujuan Founder.
 
 ## Tujuan
 
@@ -24,12 +24,13 @@ Repository ini dirancang untuk:
 - Struktur lengkap `01-foundation/` dengan 13 domain terdokumentasi.
 - Foundation Architecture, dependency, alur informasi, dan boundary antarlapisan.
 - Knowledge System dengan sembilan domain, arsitektur pengetahuan, lifecycle, governance, dan ownership model.
+- Baseline SparkMind Prompt Operating System (SPOS) dengan architecture, session framework, dan prompt templates.
 
 ### Belum Diimplementasikan
 
 - Isi final dokumen Kernel dan persetujuan Founder.
 - Isi substantif serta approval artefak pada setiap domain Foundation dan Knowledge System.
-- Operating rules, engine, prompt, dan layer SAOS berikutnya.
+- Engine dan rule substantif SPOS, termasuk Constitution, Developer Mode, Execution, Git, Documentation, Quality, Session, dan Report Engine.
 - Spesifikasi atau implementasi produk, termasuk Hifz AI.
 - Kode aplikasi, database, deployment, dan CI/CD.
 
@@ -39,6 +40,7 @@ Repository ini dirancang untuk:
 sparkmind-saos/
 ├── 00-kernel/             # Dokumen fundamental dan normatif
 ├── 01-foundation/         # Pengetahuan, governance, library, dan playbook
+├── 99-prompt-os/          # Kontrak workflow, session, dan prompt AI
 ├── docs/
 │   └── standards/         # Standar pengelolaan repository
 ├── reports/
@@ -77,6 +79,13 @@ Direktori baru hanya ditambahkan ketika memiliki tujuan, owner, dan dokumen inde
 - [`01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md) — alur, lifecycle, role, dan dependency pengetahuan.
 - [`01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) — naming, versioning, review, approval, deprecation, archiving, dan cross-reference.
 
+### Prompt Operating System
+
+- [`99-prompt-os/README.md`](99-prompt-os/README.md) — tujuan, posisi, struktur, boundary, dan status SPOS.
+- [`99-prompt-os/00-core/SPOS_ARCHITECTURE.md`](99-prompt-os/00-core/SPOS_ARCHITECTURE.md) — komponen, dependency, lifecycle, execution flow, dan quality gates.
+- [`99-prompt-os/03-sessions/SESSION_TEMPLATE.md`](99-prompt-os/03-sessions/SESSION_TEMPLATE.md) — kontrak standar session.
+- [`99-prompt-os/05-prompts/README.md`](99-prompt-os/05-prompts/README.md) — placeholder System, User, dan Task Prompt.
+
 ### Repository
 
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — alur kontribusi dan review.
@@ -93,20 +102,21 @@ Direktori baru hanya ditambahkan ketika memiliki tujuan, owner, dan dokumen inde
 2. Baca [`00-kernel/README.md`](00-kernel/README.md) sebelum mengusulkan perubahan fundamental.
 3. Baca [`01-foundation/README.md`](01-foundation/README.md) dan arsitekturnya sebelum menambah pengetahuan atau playbook.
 4. Ikuti [`01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) sebelum membuat atau memperbarui artefak Knowledge System.
-5. Ikuti [`CONTRIBUTING.md`](CONTRIBUTING.md) dan seluruh standar di `docs/standards/`.
-6. Bedakan isi berstatus draft, verified, approved, deprecated, atau superseded.
-7. Gunakan issue atau jalur privat yang sesuai sebelum mengirim perubahan sensitif.
+5. Baca [`99-prompt-os/README.md`](99-prompt-os/README.md) sebelum menyusun workflow atau session AI; gunakan hanya artefak dengan status dan authority yang sesuai.
+6. Ikuti [`CONTRIBUTING.md`](CONTRIBUTING.md) dan seluruh standar di `docs/standards/`.
+7. Bedakan isi berstatus draft, verified, approved, deprecated, atau superseded.
+8. Gunakan issue atau jalur privat yang sesuai sebelum mengirim perubahan sensitif.
 
 ## Data dan Teknologi
 
-Repository ini hanya berisi Kernel, Foundation, dan dokumentasi tata kelola repository. Tidak ada data model aplikasi, database, layanan penyimpanan, API, runtime, atau tech stack yang dipilih pada tahap ini.
+Repository ini hanya berisi Kernel, Foundation, SPOS, dan dokumentasi tata kelola repository. Tidak ada data model aplikasi, database, layanan penyimpanan, API, runtime, atau tech stack yang dipilih pada tahap ini.
 
 ## URL dan Status
 
 - **Repository remote:** <https://github.com/Sparkmind-obp-off/Sparkmind-SAOS>
 - **Production:** Belum tersedia; deployment berada di luar ruang lingkup Foundation.
 - **Platform target:** Belum ditetapkan.
-- **Status:** Foundation dan Knowledge System baseline aktif, belum berupa aplikasi.
+- **Status:** Foundation, Knowledge System, dan SPOS-001 baseline aktif sebagai dokumentasi; belum berupa aplikasi.
 - **Terakhir diperbarui:** 2026-07-15.
 
 ## Lisensi

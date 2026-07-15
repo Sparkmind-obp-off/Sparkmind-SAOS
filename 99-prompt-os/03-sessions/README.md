@@ -1,6 +1,6 @@
 # SPOS Sessions
 
-> Status: Draft baseline SPOS-009 — folder instance session mengikuti Session Engine `In Review`.
+> Status: Draft baseline SPOS-010 — folder instance session mengikuti Session dan Report Engine `In Review`.
 
 ## Tujuan
 
@@ -8,7 +8,8 @@ Menyimpan kontrak instance yang mengoperasionalkan [`../00-core/SESSION_ENGINE.m
 
 ## Artefak Aktif
 
-- [`../00-core/SESSION_ENGINE.md`](../00-core/SESSION_ENGINE.md) — policy kanonik lifecycle, type, state, continuity, report, dan closure session.
+- [`../00-core/SESSION_ENGINE.md`](../00-core/SESSION_ENGINE.md) — policy kanonik lifecycle, type, state, continuity, kewajiban report, dan closure session.
+- [`../00-core/REPORT_ENGINE.md`](../00-core/REPORT_ENGINE.md) — policy kanonik taxonomy, lifecycle, struktur, evidence/traceability, validation, correction, publication, dan archive report.
 - [`SESSION_TEMPLATE.md`](SESSION_TEMPLATE.md) — template instance untuk session SPOS dan session SAOS yang menggunakan SPOS.
 
 ## Aturan
@@ -18,4 +19,4 @@ Menyimpan kontrak instance yang mengoperasionalkan [`../00-core/SESSION_ENGINE.m
 - Session tidak memperluas authority upstream; `Completed` tidak berarti artefak otomatis `Approved`.
 - Resume menggunakan continuity package, actual repository state, dan last safe checkpoint; session terminal dilanjutkan melalui successor ber-ID baru.
 - Dependency, approval, atau gate kritis yang gagal menggunakan `Blocked`/`Waiting for Approval`, bukan false completion.
-- Laporan hasil tetap disimpan di [`../../reports/sessions/`](../../reports/sessions/); folder ini menyimpan kontrak instance, bukan laporan historis atau policy tandingan.
+- Laporan hasil tetap disimpan di [`../../reports/sessions/`](../../reports/sessions/) dan wajib mengikuti Report Engine; folder ini menyimpan kontrak instance, bukan laporan historis atau policy tandingan.

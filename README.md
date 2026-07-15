@@ -2,7 +2,7 @@
 
 SparkMind AI Operating System (SAOS) adalah repository dokumentasi yang menjadi Single Source of Truth (SSOT) untuk fondasi, identitas, standar, dan pengetahuan operasional SparkMind.
 
-> Status repository: Foundation Architecture, Knowledge System, dan SPOS baseline terdokumentasi. Constitution SPOS-002, Developer Mode SPOS-003, Execution SPOS-004, Git SPOS-005, Documentation SPOS-006, Quality SPOS-007, Governance SPOS-008, serta Session Engine SPOS-009 berstatus `In Review`; Kernel Session 001 masih berupa kerangka terstruktur.
+> Status repository: Foundation Architecture, Knowledge System, dan SPOS baseline terdokumentasi. Constitution SPOS-002, Developer Mode SPOS-003, Execution SPOS-004, Git SPOS-005, Documentation SPOS-006, Quality SPOS-007, Governance SPOS-008, Session SPOS-009, serta Report Engine SPOS-010 berstatus `In Review`; Kernel Session 001 masih berupa kerangka terstruktur.
 
 ## Tujuan
 
@@ -24,15 +24,15 @@ Repository ini dirancang untuk:
 - Struktur lengkap `01-foundation/` dengan 13 domain terdokumentasi.
 - Foundation Architecture, dependency, alur informasi, dan boundary antarlapisan.
 - Knowledge System dengan sembilan domain, arsitektur pengetahuan, lifecycle, governance, dan ownership model.
-- Baseline SparkMind Prompt Operating System (SPOS) dengan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality Engine, architecture, session framework, dan prompt templates.
+- Baseline SparkMind Prompt Operating System (SPOS) dengan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, architecture, session framework, dan prompt templates.
 
 ### Belum Diimplementasikan
 
 - Isi final dokumen Kernel dan persetujuan Founder.
 - Isi substantif serta approval artefak pada setiap domain Foundation dan Knowledge System.
 - Ratifikasi Founder atas Constitution SPOS.
-- Approval operasional dan activation record Governance, Developer Mode, Session, Execution, Git, Documentation, serta Quality Engine.
-- Report Engine dan engine substantif SPOS lainnya.
+- Approval operasional dan activation record Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, serta Report Engine.
+- Engine substantif SPOS berikutnya, rule, playbook, dan consumer migration.
 - Spesifikasi atau implementasi produk, termasuk Hifz AI.
 - Kode aplikasi, database, deployment, dan CI/CD.
 
@@ -88,7 +88,8 @@ Direktori baru hanya ditambahkan ketika memiliki tujuan, owner, dan dokumen inde
 - [`99-prompt-os/00-core/CONSTITUTION.md`](99-prompt-os/00-core/CONSTITUTION.md) — authority konstitusional SPOS, prinsip dasar, hierarchy, decision principles, dan amendment policy.
 - [`99-prompt-os/00-core/GOVERNANCE_ENGINE.md`](99-prompt-os/00-core/GOVERNANCE_ENGINE.md) — control plane authority, ownership, decision, delegation, lifecycle governance, compliance, audit, escalation, exception, dan AI Governance Policy.
 - [`99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md`](99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md) — standar perilaku operasional AI, decision gates, autonomy boundary, repository policy, rollback, dan validation.
-- [`99-prompt-os/00-core/SESSION_ENGINE.md`](99-prompt-os/00-core/SESSION_ENGINE.md) — identity, lifecycle orchestration, type, state, continuity, dependency antarsession, report, closure, dan AI Session Policy.
+- [`99-prompt-os/00-core/SESSION_ENGINE.md`](99-prompt-os/00-core/SESSION_ENGINE.md) — identity, lifecycle orchestration, type, state, continuity, dependency antarsession, kewajiban report, closure, dan AI Session Policy.
+- [`99-prompt-os/00-core/REPORT_ENGINE.md`](99-prompt-os/00-core/REPORT_ENGINE.md) — taxonomy, lifecycle, struktur, evidence/traceability, reproducibility, validation, correction, publication, archive, aggregation, dan AI Reporting Policy.
 - [`99-prompt-os/00-core/EXECUTION_ENGINE.md`](99-prompt-os/00-core/EXECUTION_ENGINE.md) — prosedur eksekusi, task classification, validation checkpoints, failure/recovery, evidence, dan Definition of Done.
 - [`99-prompt-os/00-core/GIT_ENGINE.md`](99-prompt-os/00-core/GIT_ENGINE.md) — branch, commit, Pull Request/review, merge, push, release, protection, audit, recovery, dan AI Git automation.
 - [`99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](99-prompt-os/00-core/DOCUMENTATION_ENGINE.md) — prinsip, jenis, lifecycle, metadata, versioning, ownership, review, publication, archive, dan AI Documentation Policy.
@@ -113,7 +114,7 @@ Direktori baru hanya ditambahkan ketika memiliki tujuan, owner, dan dokumen inde
 2. Baca [`00-kernel/README.md`](00-kernel/README.md) sebelum mengusulkan perubahan fundamental.
 3. Baca [`01-foundation/README.md`](01-foundation/README.md) dan arsitekturnya sebelum menambah pengetahuan atau playbook.
 4. Ikuti [`01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) sebelum membuat atau memperbarui artefak Knowledge System.
-5. Baca [`99-prompt-os/00-core/CONSTITUTION.md`](99-prompt-os/00-core/CONSTITUTION.md), [`99-prompt-os/00-core/GOVERNANCE_ENGINE.md`](99-prompt-os/00-core/GOVERNANCE_ENGINE.md), [`99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md`](99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md), [`99-prompt-os/00-core/SESSION_ENGINE.md`](99-prompt-os/00-core/SESSION_ENGINE.md), [`99-prompt-os/00-core/EXECUTION_ENGINE.md`](99-prompt-os/00-core/EXECUTION_ENGINE.md), [`99-prompt-os/00-core/GIT_ENGINE.md`](99-prompt-os/00-core/GIT_ENGINE.md), [`99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](99-prompt-os/00-core/DOCUMENTATION_ENGINE.md), [`99-prompt-os/00-core/QUALITY_ENGINE.md`](99-prompt-os/00-core/QUALITY_ENGINE.md), dan [`99-prompt-os/README.md`](99-prompt-os/README.md) sebelum menyusun workflow atau session AI; gunakan hanya artefak dengan status dan authority yang sesuai.
+5. Baca [`99-prompt-os/00-core/CONSTITUTION.md`](99-prompt-os/00-core/CONSTITUTION.md), [`99-prompt-os/00-core/GOVERNANCE_ENGINE.md`](99-prompt-os/00-core/GOVERNANCE_ENGINE.md), [`99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md`](99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md), [`99-prompt-os/00-core/SESSION_ENGINE.md`](99-prompt-os/00-core/SESSION_ENGINE.md), [`99-prompt-os/00-core/EXECUTION_ENGINE.md`](99-prompt-os/00-core/EXECUTION_ENGINE.md), [`99-prompt-os/00-core/GIT_ENGINE.md`](99-prompt-os/00-core/GIT_ENGINE.md), [`99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](99-prompt-os/00-core/DOCUMENTATION_ENGINE.md), [`99-prompt-os/00-core/QUALITY_ENGINE.md`](99-prompt-os/00-core/QUALITY_ENGINE.md), [`99-prompt-os/00-core/REPORT_ENGINE.md`](99-prompt-os/00-core/REPORT_ENGINE.md), dan [`99-prompt-os/README.md`](99-prompt-os/README.md) sebelum menyusun workflow atau session AI; gunakan hanya artefak dengan status dan authority yang sesuai.
 6. Ikuti [`CONTRIBUTING.md`](CONTRIBUTING.md) dan seluruh standar di `docs/standards/`.
 7. Bedakan isi berstatus draft, verified, approved, deprecated, atau superseded.
 8. Gunakan issue atau jalur privat yang sesuai sebelum mengirim perubahan sensitif.
@@ -127,7 +128,7 @@ Repository ini hanya berisi Kernel, Foundation, SPOS, dan dokumentasi tata kelol
 - **Repository remote:** <https://github.com/Sparkmind-obp-off/Sparkmind-SAOS>
 - **Production:** Belum tersedia; deployment berada di luar ruang lingkup Foundation.
 - **Platform target:** Belum ditetapkan.
-- **Status:** Foundation, Knowledge System, dan SPOS-009 baseline aktif sebagai dokumentasi; Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, serta Quality Engine menunggu approval yang sah dan repository belum berupa aplikasi.
+- **Status:** Foundation, Knowledge System, dan SPOS-010 baseline aktif sebagai dokumentasi; Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, serta Report Engine menunggu approval yang sah dan repository belum berupa aplikasi.
 - **Terakhir diperbarui:** 2026-07-15.
 
 ## Lisensi

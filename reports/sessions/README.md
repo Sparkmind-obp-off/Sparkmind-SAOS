@@ -2,28 +2,27 @@
 
 ## Tujuan
 
-Folder ini menyimpan laporan hasil setiap session SparkMind SAOS untuk menjaga ketertelusuran objective, perubahan, validasi, kendala, technical debt, dan rekomendasi berikutnya.
+Folder ini menyimpan laporan hasil setiap session SparkMind SAOS untuk menjaga ketertelusuran objective, perubahan, evidence, validasi, keputusan, risiko, technical debt, lesson, dan rekomendasi berikutnya. Standard kanonik mengikuti [`../../99-prompt-os/00-core/REPORT_ENGINE.md`](../../99-prompt-os/00-core/REPORT_ENGINE.md).
 
 ## Aturan
 
 - Gunakan nama `SESSION-NNN.md` untuk roadmap SAOS dan `SPOS-NNN.md` untuk roadmap Prompt Operating System, masing-masing dengan tiga digit.
-- Satu laporan mewakili satu session yang telah dijalankan.
-- Laporan mencatat keadaan pada waktu penyelesaian dan tidak menggantikan dokumen kanonik.
+- Satu laporan mewakili satu session yang telah dijalankan dan mengikuti lifecycle/status Report Engine.
+- Laporan mencatat keadaan pada reporting period/as-of time, memiliki claim-evidence trace, dan tidak menggantikan dokumen kanonik.
 - Keputusan penting yang ditemukan selama session harus diterapkan pada dokumen sumber yang tepat.
 - Jangan memasukkan secret, credential, data pribadi, atau transcript mentah yang tidak diperlukan.
-- Cantumkan commit dan branch jika Git tersedia.
+- Cantumkan repository, branch, baseline/final commit, status push, serta verifikasi lokal/remote jika Git tersedia.
+- Setiap report wajib tervalidasi, dapat direproduksi secara proporsional, dan tidak memuat secret atau data sensitif yang tidak diperlukan.
+- Correction, supersession, publication, retention, serta archive mengikuti Report Engine dan Documentation Engine.
 
 ## Struktur Minimum
 
-1. Objective dan scope.
-2. Ringkasan pekerjaan.
-3. Struktur repository terbaru.
-4. Dokumen dibuat dan diperbarui.
-5. Validasi dan quality review.
-6. Commit, branch, dan status push.
-7. Kendala.
-8. Technical debt.
-9. Rekomendasi session berikutnya.
+1. Metadata, objective, scope, dan summary.
+2. Deliverables serta dokumen dibuat/diperbarui.
+3. Evidence dan validation results.
+4. Decisions, risks, technical debt, dan lessons learned.
+5. Branch, repository, commit, push, serta remote verification.
+6. Next actions, approval/status, references, dan appendix bila diperlukan.
 
 ## Indeks
 
@@ -40,3 +39,4 @@ Folder ini menyimpan laporan hasil setiap session SparkMind SAOS untuk menjaga k
 - [`SPOS-007.md`](SPOS-007.md) — SparkMind Quality Engine.
 - [`SPOS-008.md`](SPOS-008.md) — SparkMind Governance Engine.
 - [`SPOS-009.md`](SPOS-009.md) — SparkMind Session Engine.
+- [`SPOS-010.md`](SPOS-010.md) — SparkMind Report Engine.

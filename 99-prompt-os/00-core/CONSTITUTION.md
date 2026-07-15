@@ -318,7 +318,8 @@ Dugaan pelanggaran Constitution dicatat sebagai insiden governance. Pemulihan me
 | Decision Principles | [`../../00-kernel/DOCTRINE.md`](../../00-kernel/DOCTRINE.md) | Mengoperasionalkan orientasi keputusan |
 | Authority dan hierarchy | [`../../00-kernel/CANON.md`](../../00-kernel/CANON.md) | Resolusi SPOS-002; memerlukan ratifikasi Founder |
 | Governance control plane | [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | Authority, ownership, decision, delegation, lifecycle, compliance, audit, dan AI governance wajib tunduk pada Constitution |
-| Session governance | [`SESSION_ENGINE.md`](SESSION_ENGINE.md) | Objective, lifecycle, state, continuity, report, closure, dan instruksi session tidak dapat memperluas authority |
+| Session governance | [`SESSION_ENGINE.md`](SESSION_ENGINE.md) | Objective, lifecycle, state, continuity, report timing, closure, dan instruksi session tidak dapat memperluas authority |
+| Reporting governance | [`REPORT_ENGINE.md`](REPORT_ENGINE.md) | Laporan wajib truth/evidence/traceability-first dan tidak dapat menciptakan approval, authority, atau SSOT tandingan |
 | Knowledge | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | Evidence dan knowledge tidak otomatis menjadi authority |
 | Execution contracts | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | Arsitektur SPOS menerapkan hierarchy Constitution |
 
@@ -342,6 +343,6 @@ Sebelum field ratifikasi dilengkapi oleh authority yang sah, seluruh consumer wa
 - [x] Founder Authority dan Governance Hierarchy terdokumentasi.
 - [x] Decision Principles dan urutan prioritas aturan terdokumentasi.
 - [x] Amendment owner, review, approval, versioning, changelog, dan audit trail terdokumentasi.
-- [x] Hubungan dengan Kernel, Foundation, Knowledge, Governance Engine, Session Engine, dan SPOS Architecture dipetakan.
+- [x] Hubungan dengan Kernel, Foundation, Knowledge, Governance Engine, Session Engine, Report Engine, dan SPOS Architecture dipetakan.
 - [ ] Ratifikasi Founder tercatat.
 - [ ] Seluruh artefak turunan telah diverifikasi terhadap versi yang diratifikasi.

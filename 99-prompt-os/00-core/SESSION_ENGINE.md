@@ -14,13 +14,13 @@
 >
 > Effective: setelah approval operasional yang sah, activation record, dan dependency upstream terpenuhi
 >
-> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Execution, Git, Documentation, Quality, Foundation, Knowledge System, atau SPOS Architecture; perubahan model kerja AI; insiden session material; state/continuity failure berulang; atau evidence bahwa lifecycle tidak lagi efektif
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Execution, Git, Documentation, Quality, Report, Foundation, Knowledge System, atau SPOS Architecture; perubahan model kerja AI; insiden session material; state/continuity/reporting failure berulang; atau evidence bahwa lifecycle tidak lagi efektif
 
 ## 1. Kedudukan dan Tujuan
 
 Session Engine adalah standar permanen untuk mengelola satu unit kerja AI dari intake sampai closure. Engine ini menetapkan identitas dan kontrak session, lifecycle orkestrasi, jenis session, state machine, continuity, dependency, context preservation, handoff, report, serta kebijakan session AI di seluruh ekosistem SparkMind.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) tetap menjadi sumber kanonik prosedur eksekusi incremental, validation checkpoint, failure/recovery, evidence, dan completion contract di dalam session. Session Engine menjadi sumber kanonik boundary, lifecycle orchestration, state, continuity, dan closure session. Detail Git, dokumentasi, dan kualitas masing-masing mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), dan [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md).
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) tetap menjadi sumber kanonik prosedur eksekusi incremental, validation checkpoint, failure/recovery, evidence, dan completion contract di dalam session. Session Engine menjadi sumber kanonik boundary, lifecycle orchestration, state, continuity, dan closure session. Detail Git, dokumentasi, kualitas, dan bentuk/lifecycle laporan masing-masing mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), dan [`REPORT_ENGINE.md`](REPORT_ENGINE.md).
 
 Session Engine bukan aplikasi, orchestrator runtime, scheduler, queue, database, agent memory, workflow produk, atau izin otonomi tanpa batas. Dokumen, status, report, commit, push, atau output sukses tidak memberikan approval, delegation, risk acceptance, maupun authority baru.
 
@@ -322,6 +322,8 @@ Periksa:
 ### 5.12 Session Report
 
 **Tujuan:** menyediakan closure evidence yang ringkas dan dapat diaudit.
+
+Report mengikuti [`REPORT_ENGINE.md`](REPORT_ENGINE.md) sebagai SSOT taxonomy, lifecycle, struktur, evidence/traceability, validation, correction, publication, dan reporting policy. Session Engine tetap menentukan kapan report wajib dibuat serta bagaimana report menjadi bagian continuity dan closure.
 
 Report minimum memuat:
 
@@ -631,7 +633,7 @@ Evidence minimum per session:
 - failure/retry/rollback/recovery dan limitation;
 - report, closure, handoff, debt, residual risk, dan next action.
 
-Evidence mengikuti retention, security, privacy, dan least disclosure. Report merangkum evidence; report tidak menggantikan source, test output, decision record, atau approval record.
+Evidence mengikuti retention, security, privacy, dan least disclosure. Report merangkum evidence sesuai Report Engine; report tidak menggantikan source, test output, decision record, atau approval record.
 
 ### 11.1 Definition of Session Closure
 
@@ -659,6 +661,7 @@ Session dapat `Completed` hanya jika:
 | [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | impact assessment, source update, status, report/handoff, archive | Documentation Engine tetap SSOT detail dokumentasi; session state bukan document status |
 | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | objective/requirement/gate/DoD/evidence/finding/audit | Quality Engine tetap SSOT quality; session state bukan quality approval |
 | [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | authority, owner, delegation, decision class, separation, approval, exception, escalation, stop | Governance menetapkan siapa boleh memutus; Session Engine merekam dan menegakkan gate |
+| [`REPORT_ENGINE.md`](REPORT_ENGINE.md) | report taxonomy/lifecycle/structure, claim-evidence mapping, traceability, validation, correction, publication, dan archive | Session Engine menentukan report timing/closure; Report Engine menentukan standard report |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, dependency, evidence/feedback, ownership, boundary, learning | Session tidak mengambil ownership Foundation/domain |
 | [`../../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`](../../01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md) | provenance, status, confidence, review trigger, learning routing | Session evidence tidak otomatis menjadi approved knowledge |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | modular assembly, session boundary, lifecycle, input/output, bounded execution | Engine adalah kontrak dokumentasi, bukan runtime orchestrator |
@@ -666,11 +669,12 @@ Session dapat `Completed` hanya jika:
 
 ### 12.1 Resolusi Cross-Review SPOS-009
 
-- Session Engine menjadi SSOT untuk session identity, boundary, lifecycle orchestration, type, state machine, continuity, dependency antarsession, report, dan closure.
+- Session Engine menjadi SSOT untuk session identity, boundary, lifecycle orchestration, type, state machine, continuity, dependency antarsession, kewajiban/timing report, dan closure; Report Engine menjadi SSOT bentuk serta lifecycle report.
 - Execution Engine tetap SSOT prosedur eksekusi incremental, validation checkpoint, failure/recovery, evidence, dan completion criteria; sebelas tahap lama dipetakan ke tiga belas tahap session tanpa menghapus semantics.
 - Governance lifecycle mengatur policy/authority/ownership; Documentation lifecycle mengatur dokumen; Knowledge lifecycle mengatur knowledge; lifecycle tersebut tidak disamakan dengan state session.
 - Quality gate menilai fitness; Governance menentukan decision rights; Git menjaga version trace; tidak satu pun eventnya otomatis mengubah session ke `Completed`.
 - Session Template diperbarui agar menggunakan state, type, continuity, predecessor/successor, checkpoint, resume, cancellation, dan archive contract kanonik.
+- Report Engine menetapkan taxonomy, lifecycle, structure, evidence/traceability, correction, publication, dan aggregation guardrail tanpa mengubah state/closure Session Engine.
 - Foundation dan Knowledge tetap menerima evidence/learning melalui review; Session Report tidak menjadi policy atau knowledge approved otomatis.
 - Scope SPOS-009 documentation-only; tidak ada session registry service, scheduler, queue, dashboard, database, memory system, aplikasi, atau automation runtime yang dibangun.
 
@@ -679,7 +683,7 @@ Session dapat `Completed` hanya jika:
 Aktivasi memerlukan:
 
 - Constitution diratifikasi atau Founder mengizinkan baseline interim secara eksplisit;
-- Governance Engine dan engine dependency memiliki version/status yang kompatibel;
+- Governance Engine, Report Engine, dan engine dependency memiliki version/status yang kompatibel;
 - Founder/authorized human menyetujui lifecycle, state machine, transition authority, continuity, report, serta closure contract;
 - owner, reviewer, approver, session registry/index location, retention, dan security/privacy control ditetapkan;
 - template, playbook, prompt, report, handoff, dan AI consumer dimigrasikan serta version-pinned;
@@ -710,9 +714,9 @@ AI tidak boleh mengisi approval atau acceptance manusia. Perubahan material pada
 - [x] Resume, recovery, dependency antarsession, context preservation, checkpoint, handoff, stale/timeout, supersession, cancellation, dan archive terdokumentasi.
 - [x] Satu objective, artefak jelas, documentation update, Git Workflow, dan Session Report menjadi AI Session Policy wajib.
 - [x] Identity, contract, record, evidence, closure, dan activation contract terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Execution, Git, Documentation, Quality, Governance, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
+- [x] Alignment dengan Constitution, Developer Mode, Execution, Git, Documentation, Quality, Governance, Report, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, registry service, scheduler, queue, database, dashboard, agent memory, deployment, atau automation runtime.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan Founder secara eksplisit.
 - [ ] Session Engine memperoleh approval operasional dan activation record.
 - [ ] Session owner/reviewer/approver delegation, registry/index, retention, dan transition authority tersedia.
-- [ ] Template/consumer migration, version pinning, continuity/recovery test, monitoring, dan conformance automation diterapkan serta diverifikasi.
+- [ ] Report Engine dan Session Engine memperoleh compatible approval/activation; template/consumer migration, version pinning, continuity/recovery/reporting test, monitoring, dan conformance automation diterapkan serta diverifikasi.

@@ -1,6 +1,6 @@
 # SPOS Core
 
-> Status: SPOS-009 baseline; Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, dan Quality Engine `In Review`, architecture tetap Draft sampai authority yang sah mengaktifkannya.
+> Status: SPOS-010 baseline; Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, dan Report Engine `In Review`, architecture tetap Draft sampai authority yang sah mengaktifkannya.
 
 ## Tujuan
 
@@ -15,11 +15,12 @@ Menyimpan Constitution, arsitektur, dan kontrak engine inti yang mengatur author
 - [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) — standar prinsip, jenis, lifecycle, metadata, versioning, ownership, review, publication, archive, dan kebijakan dokumentasi AI.
 - [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) — standar prinsip kualitas, sembilan quality gate, Definition of Done, metrik, audit, CAPA, continuous improvement, dan kebijakan kualitas AI.
 - [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) — control plane authority, ownership, decision, delegation, lifecycle, compliance, audit, escalation, exception, dan tata kelola AI.
-- [`SESSION_ENGINE.md`](SESSION_ENGINE.md) — standar identity, lifecycle orchestration, type, state, continuity, dependency antarsession, report, closure, dan kebijakan session AI.
+- [`SESSION_ENGINE.md`](SESSION_ENGINE.md) — standar identity, lifecycle orchestration, type, state, continuity, dependency antarsession, kewajiban report, closure, dan kebijakan session AI.
+- [`REPORT_ENGINE.md`](REPORT_ENGINE.md) — standar taxonomy, lifecycle, struktur, evidence/traceability, validation, correction, publication, versioning, archive, aggregation, dan kebijakan pelaporan AI.
 - [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) — posisi, komponen, dependency, lifecycle, execution flow, dan boundary SPOS.
 
 ## Boundary
 
 Constitution merakit sumber fundamental Kernel menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder. Foundation `constitution/` mengelola source map, ratification record, dan amendment record; Governance menerjemahkan Constitution tanpa mengubahnya.
 
-Governance Engine menerjemahkan Constitution menjadi authority, ownership, decision, delegation, lifecycle governance, compliance, dan AI governance. Developer Mode menetapkan perilaku operasional AI; Session Engine menetapkan unit kerja, lifecycle orchestration, state, continuity, report, dan closure; Execution Engine menetapkan prosedur eksekusi, checkpoint, recovery, evidence, serta completion criteria; Git Engine menetapkan workflow version control; Documentation Engine menetapkan tata kelola dokumentasi; Quality Engine menetapkan quality gate, DoD, metrik, audit kualitas, dan continuous improvement. Seluruh engine mempertahankan ownership domain dan tidak dapat memberi approval kepada dirinya sendiri. Core tidak memiliki requirement produk; engine tambahan hanya dibuat melalui session terpisah dengan owner, status, dependency, dan review eksplisit.
+Governance Engine menerjemahkan Constitution menjadi authority, ownership, decision, delegation, lifecycle governance, compliance, dan AI governance. Developer Mode menetapkan perilaku operasional AI; Session Engine menetapkan unit kerja, lifecycle orchestration, state, continuity, kewajiban report, dan closure; Execution Engine menetapkan prosedur eksekusi, checkpoint, recovery, evidence, serta completion criteria; Git Engine menetapkan workflow version control; Documentation Engine menetapkan tata kelola dokumentasi; Quality Engine menetapkan quality gate, DoD, metrik, audit kualitas, dan continuous improvement; Report Engine menetapkan taxonomy, lifecycle, struktur, evidence/traceability, validasi, koreksi, publication, archive, dan aggregation guardrail laporan. Seluruh engine mempertahankan ownership domain dan tidak dapat memberi approval kepada dirinya sendiri. Core tidak memiliki requirement produk; engine tambahan hanya dibuat melalui session terpisah dengan owner, status, dependency, dan review eksplisit.

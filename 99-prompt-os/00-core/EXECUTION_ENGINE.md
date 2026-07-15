@@ -14,13 +14,13 @@
 >
 > Effective: setelah approval operasional yang sah dan dependency upstream terpenuhi
 >
-> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session Engine, Git, Documentation, Quality, atau SPOS Architecture; insiden material; perubahan capability/platform; atau evidence bahwa prosedur, checkpoint, dan completion contract tidak lagi efektif
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session Engine, Git, Documentation, Quality, Report, atau SPOS Architecture; insiden material; perubahan capability/platform; atau evidence bahwa prosedur, checkpoint, reporting, dan completion contract tidak lagi efektif
 
 ## 1. Kedudukan dan Tujuan
 
 Execution Engine adalah standar proses permanen yang menentukan bagaimana setiap AI Agent menerima objective, menganalisis konteks, membaca repository, mengidentifikasi dependency, merencanakan, mengeksekusi secara incremental, memvalidasi, mendokumentasikan, menjalankan Git workflow, melaporkan, dan membuktikan completion dalam ekosistem SparkMind.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip; Governance menetapkan authority, ownership, keputusan, dan approval; Developer Mode menetapkan perilaku kerja; Session Engine menetapkan identity, lifecycle orchestration, type, state, continuity, report, dan closure satu unit kerja; Execution Engine menjadi sumber kanonik prosedur eksekusi incremental, task classification, validation checkpoint, failure/recovery, evidence, dan completion contract di dalam session. Detail kualitas pada **Validate Results** dan Definition of Done mengikuti [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), **Update Documentation** mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), sedangkan **Perform Git Workflow** mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md).
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip; Governance menetapkan authority, ownership, keputusan, dan approval; Developer Mode menetapkan perilaku kerja; Session Engine menetapkan identity, lifecycle orchestration, type, state, continuity, report, dan closure satu unit kerja; Execution Engine menjadi sumber kanonik prosedur eksekusi incremental, task classification, validation checkpoint, failure/recovery, evidence, dan completion contract di dalam session. Detail kualitas pada **Validate Results** dan Definition of Done mengikuti [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), **Update Documentation** mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), **Perform Git Workflow** mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md), sedangkan taxonomy/lifecycle/struktur/evidence laporan pada **Generate Session Report** mengikuti [`REPORT_ENGINE.md`](REPORT_ENGINE.md).
 
 Execution Engine bukan aplikasi, runtime otonom, scheduler, product workflow, atau sumber authority baru. Engine tidak memberi approval kepada dirinya sendiri, tidak mengubah requirement produk, dan tidak mengesampingkan Governance, owner domain, hukum, keselamatan, atau Founder Authority.
 
@@ -550,10 +550,10 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Satu objective, incremental changes, validation, documentation, completion, dan repository consistency rules terdokumentasi.
 - [x] Enam Validation Gates terdokumentasi.
 - [x] Error handling, rollback, recovery, retry, failure record, dan lesson learned terdokumentasi.
-- [x] Alignment dengan Constitution, Governance Engine, Developer Mode, Session Engine, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge, SPOS Architecture, Session Template, dan repository standards dipetakan.
+- [x] Alignment dengan Constitution, Governance Engine, Developer Mode, Session Engine, Git Engine, Documentation Engine, Quality Engine, Report Engine, Foundation, Knowledge, SPOS Architecture, Session Template, dan repository standards dipetakan.
 - [x] Git lifecycle minimum dan documentation lifecycle minimum terdokumentasi; detail Git didelegasikan ke Git Engine dan detail dokumentasi ke Documentation Engine.
 - [x] Evidence contract, conflict resolution, dan Definition of Done menjaga dokumentasi sebagai gate wajib serta mendelegasikan quality model, gate, metric, audit, dan CAPA ke Quality Engine.
 - [x] Scope SPOS-004 tidak membangun aplikasi, fitur produk, runtime, Governance Engine, atau Session Engine; kedua engine tersebut tersedia melalui session terpisah SPOS-008 dan SPOS-009.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
 - [ ] Developer Mode dan Execution Engine memperoleh approval operasional serta activation record.
-- [ ] Governance dan Session Engine memperoleh approval/activation serta consumer version pinning tersedia.
+- [ ] Governance, Session, dan Report Engine memperoleh approval/activation serta consumer version pinning tersedia.

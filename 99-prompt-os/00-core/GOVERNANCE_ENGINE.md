@@ -14,7 +14,7 @@
 >
 > Effective: setelah approval Founder, activation record, dan dependency upstream yang berlaku terpenuhi
 >
-> Review trigger: amendment Constitution; perubahan authority, ownership, organisasi, hukum, risiko, capability AI, Session Engine/engine SPOS lain, atau arsitektur; insiden governance material; audit finding berulang; dan evidence bahwa kontrol tidak efektif
+> Review trigger: amendment Constitution; perubahan authority, ownership, organisasi, hukum, risiko, capability AI, Session Engine, Report Engine/engine SPOS lain, atau arsitektur; insiden governance material; audit/reporting failure berulang; dan evidence bahwa kontrol tidak efektif
 
 ## 1. Kedudukan dan Tujuan
 
@@ -36,7 +36,7 @@ Engine mengatur:
 - ownership untuk repository, knowledge, dokumentasi, prompt, policy, standard, architecture, product, dan konfigurasi AI Agent;
 - keputusan otomatis, keputusan dengan persetujuan, escalation, exception, conflict resolution, dan final authority;
 - lifecycle governance dari proposal sampai retirement;
-- compliance review, audit, violation handling, corrective/preventive action, dan reporting;
+- compliance review, audit, violation handling, corrective/preventive action, serta kewajiban Governance Report sesuai [`REPORT_ENGINE.md`](REPORT_ENGINE.md);
 - batas kewenangan AI, penggunaan capability/automation, serta automatic stop;
 - hubungan control-plane dengan seluruh engine SPOS dan domain Foundation.
 
@@ -364,6 +364,7 @@ AI boleh melanjutkan bagian independen yang aman hanya jika dependency dan blast
 | [`GIT_ENGINE.md`](GIT_ENGINE.md) | Repository role, access, review/approval separation, merge/release authority, audit/recovery | Git event dan admin access bukan authority normatif |
 | [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Documentation ownership, approval, publication/archive, lifecycle, audit trail | Documentation Engine tetap sumber detail dokumentasi |
 | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | Quality role, reviewer/auditor independence, Governance Review, Final Approval, finding/CAPA, risk acceptance | Quality Engine menilai kualitas; Governance menetapkan authority |
+| [`REPORT_ENGINE.md`](REPORT_ENGINE.md) | Governance/Audit/Decision/Incident/Executive reporting, evidence/traceability, approval, publication, correction, dan aggregation guardrail | Governance menetapkan authority/decision rights; Report Engine menetapkan standard representasi laporan |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | Ownership, SSOT, evidence/feedback flow, decision, lifecycle, dan domain boundary | Governance tidak mengambil ownership domain |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | Domain Owner/Knowledge Steward, verification, approval, provenance, lifecycle | Knowledge tidak otomatis menjadi policy/authority |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | Hierarchy, control plane, module selection, conflict resolution, bounded execution | Governance adalah kontrak dokumentasi, bukan enforcement runtime |
@@ -375,6 +376,7 @@ AI boleh melanjutkan bagian independen yang aman hanya jika dependency dan blast
 - Constitution tetap authority tertinggi di dalam SPOS setelah ratifikasi; Governance tidak mengisi atau meniru ratification.
 - Session Engine memiliki lifecycle orchestration/state/continuity session; Execution Engine memiliki prosedur eksekusi/checkpoint/completion; Governance lifecycle mengatur kebijakan/authority/ownership dan tidak membuat workflow session tandingan.
 - Quality Engine tetap memiliki quality gate, DoD, metric, audit-quality, dan CAPA; Governance menetapkan reviewer/auditor independence, decision right, exception, serta risk-acceptance authority.
+- Report Engine menetapkan taxonomy/lifecycle/structure/evidence laporan; Governance tetap menetapkan siapa yang boleh review, approve, publish, memberi exception, menerima risiko, atau mengarsipkan report.
 - Git, Documentation, Knowledge, Architecture, dan Product owner mempertahankan detail domain. Governance menetapkan hak/batas/relasi, bukan mengambil correctness domain.
 - Foundation governance README menjadi indeks/domain pointer ke dokumen ini, bukan SSOT tandingan.
 - AI Executive adalah role koordinasi AI yang selalu berada di bawah human authority; nama role tidak memberi status eksekutif manusia atau approval right otomatis.
@@ -416,9 +418,9 @@ AI tidak boleh mengisi approval/acceptance atas nama manusia. Perubahan material
 - [x] Proposal, Review, Approval, Implementation, Monitoring, Audit, Improvement, dan Retirement terdokumentasi.
 - [x] Governance audit, compliance review, violation handling, corrective/preventive action, dan reporting terdokumentasi.
 - [x] AI authority boundary, Founder approval, capability/automation guardrail, dan automatic stop terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
+- [x] Alignment dengan Constitution, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Quality Engine, Report Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, IAM, governance dashboard, compliance platform, policy runtime, database, deployment, atau automation.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan Founder secara eksplisit.
 - [ ] Governance Engine memperoleh Founder approval dan activation record.
 - [ ] Role/delegation/ownership/decision/exception/audit registry serta human role acceptance tersedia.
-- [ ] Access enforcement, Session Engine transition authority/registry, consumer migration, monitoring, evidence retention, emergency operation, dan conformance automation diterapkan serta diverifikasi.
+- [ ] Access enforcement, Session Engine transition authority/registry, Report Engine ownership/classification/retention/publication controls, consumer migration, monitoring, evidence retention, emergency operation, dan conformance automation diterapkan serta diverifikasi.

@@ -14,13 +14,13 @@
 >
 > Effective: setelah approval operasional yang sah dan dependency upstream terpenuhi
 >
-> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Foundation, Knowledge System, atau SPOS Architecture; insiden kualitas material; perubahan risiko/capability; audit finding berulang; atau evidence bahwa gate dan metrik tidak lagi efektif
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Report Engine, Foundation, Knowledge System, atau SPOS Architecture; insiden kualitas material; perubahan risiko/capability; audit finding berulang; atau evidence bahwa gate dan metrik tidak lagi efektif
 
 ## 1. Kedudukan dan Tujuan
 
 Quality Engine adalah standar permanen untuk mendefinisikan kualitas, validasi, review, audit, dan continuous improvement bagi seluruh artefak SparkMind, termasuk keputusan, dokumentasi, kode, konfigurasi, arsitektur, governance, knowledge, prompt, playbook, laporan, dan proses engineering.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Session Engine menjadi sumber lifecycle orchestration/state/continuity session; Execution Engine menjadi sumber prosedur eksekusi/checkpoint/completion; Quality Engine menjadi sumber kanonik definisi kualitas, urutan quality gate, Definition of Done, metrik, audit, corrective/preventive action, dan AI Quality Policy.
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), [`REPORT_ENGINE.md`](REPORT_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Session Engine menjadi sumber lifecycle orchestration/state/continuity session; Execution Engine menjadi sumber prosedur eksekusi/checkpoint/completion; Quality Engine menjadi sumber kanonik definisi kualitas, urutan quality gate, Definition of Done, metrik, audit, corrective/preventive action, dan AI Quality Policy.
 
 Quality Engine bukan aplikasi, test runner, CI/CD, dashboard, sertifikasi, pengganti Governance, atau izin bagi AI untuk menyetujui hasilnya sendiri. Test hijau, skor metrik tinggi, commit, publication, dan completion teknis tidak otomatis membuktikan approval, fitness for purpose, keamanan, atau kualitas keseluruhan.
 
@@ -535,6 +535,7 @@ Recovery mengikuti Execution Engine: detect, stop propagation, preserve evidence
 | [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Validate Results, enam validation checkpoint, failure/recovery, evidence, dan completion criteria | Execution Engine tetap sumber prosedur eksekusi; Quality Engine sumber definisi quality/gate/metric/audit |
 | [`GIT_ENGINE.md`](GIT_ENGINE.md) | Diff/staged review, reviewer, check, audit trace, release readiness, dan recovery | Git event/check hijau tidak menjadi Final Approval kualitas |
 | [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Documentation completeness, review, lifecycle, evidence, publication gate, dan debt | Documentation Engine tetap sumber detail dokumentasi |
+| [`REPORT_ENGINE.md`](REPORT_ENGINE.md) | Quality/Audit report structure, claim-evidence mapping, validation result, finding/debt/risk disclosure, traceability, dan aggregation guardrail | Quality Engine menetapkan gate/finding/metric/audit; Report Engine menetapkan cara hasil dilaporkan |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, evidence flow, ownership, lifecycle, feedback, learning, dan human oversight | Engine tidak mengambil ownership Foundation/domain |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | source quality, provenance, confidence, verification, lesson learned, dan review | Audit/metric output tidak otomatis menjadi approved knowledge/policy |
 | [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | authority, ownership, delegation, approval, exception, escalation, reviewer/auditor separation, dan risk acceptance | Quality Engine menilai evidence; Governance menetapkan decision rights |
@@ -548,6 +549,7 @@ Recovery mengikuti Execution Engine: detect, stop propagation, preserve evidence
 - Documentation Review mendelegasikan detail ke Documentation Engine; Git Review ke Git Engine; Security/Privacy serta Governance tetap memerlukan owner/authority domain.
 - Quality metrics digunakan sebagai decision support dan dilarang menjadi approval otomatis atau target yang mendorong gaming.
 - AI self-review wajib tetapi tidak dianggap independent review atau Final Approval.
+- Audit finding, gate result, metric, dan CAPA dilaporkan mengikuti Report Engine; reporting tidak mengubah severity, gate, approval, atau closure authority.
 - Audit finding dan lesson learned mengalir ke Knowledge/Decision/Pattern/Standard owner melalui review; tidak mengubah source approved secara otomatis.
 - Governance Engine SPOS-008 menetapkan role dan decision-right policy. Sampai activation, delegation, serta human role acceptance aktual tersedia, Quality owner, auditor independence, exception, risk acceptance, dan Final Approval yang ambigu tetap fail-closed.
 - Brief SPOS-007 menetapkan Quality Engine meskipun report/handoff SPOS-006 merekomendasikan Governance Engine; deviasi historis dicatat, dan Governance Engine kemudian dibangun melalui SPOS-008.
@@ -590,9 +592,9 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Audit berkala, finding record, corrective action, preventive action, lesson learned, CAPA, dan continuous improvement cycle terdokumentasi.
 - [x] AI self-review, Founder/human review, automatic stop, quality-over-speed, dan approval boundary terdokumentasi.
 - [x] Finding severity, quality debt, exception, evidence, failure, dan recovery terdokumentasi.
-- [x] Alignment dengan Constitution, Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
+- [x] Alignment dengan Constitution, Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Documentation Engine, Report Engine, Foundation, Knowledge System, SPOS Architecture, dan Session Template dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, dashboard, CI/CD, test framework, atau automation runtime.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
-- [ ] Seluruh upstream engine, termasuk Session Engine, serta Quality Engine memperoleh approval operasional dan activation record.
+- [ ] Seluruh upstream engine, termasuk Session dan Report Engine, serta Quality Engine memperoleh approval operasional dan activation record yang kompatibel.
 - [ ] Governance Engine memperoleh approval/activation; Quality owner, auditor delegation/independence, exception, dan risk-acceptance authority diterapkan serta diterima manusia terkait.
 - [ ] Consumer migration, metric baseline, audit operation, CAPA registry, evidence retention, dan conformance automation diterapkan serta diverifikasi.

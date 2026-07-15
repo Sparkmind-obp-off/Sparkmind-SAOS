@@ -1,6 +1,6 @@
 # SPOS Architecture
 
-> Status: Draft baseline SPOS-009 — diselaraskan dengan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, dan Quality Engine `In Review`; bukan runtime aktif.
+> Status: Draft baseline SPOS-010 — diselaraskan dengan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, dan Report Engine `In Review`; bukan runtime aktif.
 
 ## Tujuan
 
@@ -51,7 +51,7 @@ SPOS berada di bawah operating model SAOS dan menggunakan Kernel serta Foundatio
 
 | Komponen | Tanggung jawab | Input | Output |
 | --- | --- | --- | --- |
-| `00-core/` | Menyimpan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality Engine, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, governance control plane, operational behavior, session orchestration/state/continuity, execution procedure, Git governance, documentation governance, quality governance, dan engine specifications |
+| `00-core/` | Menyimpan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, governance control plane, operational behavior, session orchestration/state/continuity, execution procedure, Git/documentation/quality/reporting governance, dan engine specifications |
 | `01-templates/` | Menyediakan struktur artefak reusable | Rule dan metadata contract | Draft artefak yang konsisten |
 | `02-rules/` | Menyimpan aturan atomik dan precedence | Authority serta governance approved | Constraint dan quality gate terkomposisi |
 | `03-sessions/` | Menginstansiasi Session Engine untuk satu unit kerja | Objective, type, scope, authority, dependency, acceptance criteria | Session contract/state history, deliverable, evidence, continuity, closure, dan report |
@@ -157,13 +157,13 @@ Prosedur sebelas tahap [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) dipetakan ke
 2. **Classify:** tentukan domain, risiko, reversibility, dan authority yang diperlukan.
 3. **Resolve upstream:** muat sumber kanonik Kernel, Foundation, Governance, Knowledge, dan SAOS yang relevan beserta statusnya.
 4. **Create session contract:** kunci scope, non-scope, deliverable, success criteria, dan stop condition.
-5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) untuk authority/ownership/decision, [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) untuk perilaku, [`SESSION_ENGINE.md`](SESSION_ENGINE.md) untuk unit/lifecycle/state/continuity, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) untuk prosedur eksekusi, [`GIT_ENGINE.md`](GIT_ENGINE.md) untuk Git, [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) untuk dokumentasi, dan [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) untuk kualitas hanya sesuai status serta authority aktualnya.
+5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) untuk authority/ownership/decision, [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) untuk perilaku, [`SESSION_ENGINE.md`](SESSION_ENGINE.md) untuk unit/lifecycle/state/continuity, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) untuk prosedur eksekusi, [`GIT_ENGINE.md`](GIT_ENGINE.md) untuk Git, [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) untuk dokumentasi, [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) untuk kualitas, dan [`REPORT_ENGINE.md`](REPORT_ENGINE.md) untuk taxonomy/lifecycle/struktur/evidence laporan hanya sesuai status serta authority aktualnya.
 6. **Assemble prompts:** susun System → User → Task tanpa menduplikasi sumber authority.
 7. **Preflight:** periksa konflik, missing input, security, capability, approval, dan rencana validasi.
 8. **Execute:** lakukan pekerjaan hanya dalam scope serta rekam keputusan dan evidence.
 9. **Validate:** jalankan acceptance criteria, quality gate, cross-review, dan pemeriksaan boundary.
 10. **Deliver:** terapkan hasil pada source of truth yang ditetapkan; jangan mengganti hasil repository dengan artefak manual bila integrasi tersedia.
-11. **Report:** catat outcome, perubahan, validation result, commit/push bila tersedia, kendala, dan technical debt.
+11. **Report:** ikuti Report Engine untuk metadata, scope/objective, summary, deliverable, evidence, validation, decision, risk, debt, lesson, next action, approval, references, lifecycle, versioning, serta traceability.
 12. **Feedback:** kirim gap, insiden, dan pembelajaran ke owner upstream untuk review; jangan mengubah rule secara otomatis.
 
 ## Kontrak Input dan Output
@@ -184,7 +184,7 @@ Prosedur sebelas tahap [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) dipetakan ke
 - evidence validasi serta quality gate;
 - unresolved issue, risk, dan technical debt;
 - status completion atau blocked;
-- session report dan trace Git bila tersedia.
+- session report tervalidasi sesuai Report Engine dan trace Git bila tersedia.
 
 ## Quality Gates Baseline
 
@@ -213,7 +213,7 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 - Quality gate gagal: perbaiki dalam scope atau tandai session belum selesai.
 - Feedback produk: catat sebagai evidence; owner upstream memutuskan perubahan.
 
-## Review Checklist SPOS-009
+## Review Checklist SPOS-010
 
 - [x] Tujuan, komponen, dependency, lifecycle, dan execution flow terdokumentasi.
 - [x] Constitution menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder.
@@ -229,8 +229,9 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 - [x] Documentation Engine diposisikan sebagai kontrak kanonik prinsip, jenis, lifecycle, metadata, versioning, ownership, review, publication, archive, dan AI Documentation Policy.
 - [x] Quality Engine diposisikan sebagai kontrak kanonik prinsip kualitas, sembilan quality gate, Definition of Done, metrik, audit, CAPA, continuous improvement, dan AI Quality Policy.
 - [x] Governance Engine diposisikan sebagai control plane kanonik untuk authority, ownership, delegation, decision, approval, exception, escalation, lifecycle, compliance, audit, dan AI governance.
+- [x] Report Engine diposisikan sebagai kontrak kanonik taxonomy, report lifecycle, struktur, evidence/traceability, validation, correction, publication, archive, aggregation, dan AI Reporting Policy.
 - [x] Decision gates, autonomy boundary, repository interaction, validation, rollback, documentation, quality, Git, dan reporting selaras dengan execution flow.
 - [x] Tiga belas tahap lifecycle Session Engine dan sebelas tahap prosedur Execution Engine dipetakan tanpa membuat dua sumber proses tandingan.
-- [x] Continuous Validation/Quality Review mendelegasikan detail ke Quality Engine, Documentation Update ke Documentation Engine, Git Workflow ke Git Engine, dan Governance Check ke Governance Engine tanpa membuat policy tandingan.
+- [x] Continuous Validation/Quality Review mendelegasikan detail ke Quality Engine, Documentation Update ke Documentation Engine, Git Workflow ke Git Engine, Governance Check ke Governance Engine, dan Session Report ke Report Engine tanpa membuat policy tandingan.
 - [x] Lifecycle dokumentasi dipetakan terhadap lifecycle artefak SPOS tanpa menghapus status existing.
-- [x] Baseline tidak mengklaim runtime, quality dashboard, test framework, CI/CD, CMS, publication platform, hosting, platform protection, atau automation yang belum dibangun/diverifikasi.
+- [x] Baseline tidak mengklaim runtime, quality/reporting dashboard, database, analytics platform, report generator, test framework, CI/CD, CMS, publication platform, hosting, platform protection, atau automation yang belum dibangun/diverifikasi.

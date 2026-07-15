@@ -14,13 +14,13 @@
 >
 > Effective: setelah approval operasional yang sah dan dependency upstream terpenuhi
 >
-> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Foundation, Knowledge System, atau SPOS Architecture; perubahan struktur repository atau consumer; insiden akibat dokumentasi usang; atau evidence bahwa standard tidak lagi efektif
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session Engine, Execution Engine, Git Engine, Quality Engine, Report Engine, Foundation, Knowledge System, atau SPOS Architecture; perubahan struktur repository atau consumer; insiden akibat dokumentasi usang; atau evidence bahwa standard tidak lagi efektif
 
 ## 1. Kedudukan dan Tujuan
 
 Documentation Engine adalah standar permanen untuk seluruh dokumentasi yang dibuat atau dipelihara oleh manusia dan AI di ekosistem SparkMind. Engine menetapkan prinsip, kategori, lifecycle, struktur, metadata, versioning, referensi silang, ownership, review cadence, change history, validation, serta kebijakan dokumentasi AI.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Session Engine menetapkan lifecycle orchestration/state/continuity session; Execution Engine menetapkan prosedur eksekusi; Git Engine menjaga histori perubahan; Documentation Engine menjadi sumber kanonik bagi tata kelola dokumentasi lintas domain.
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), [`REPORT_ENGINE.md`](REPORT_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Session Engine menetapkan lifecycle orchestration/state/continuity session; Execution Engine menetapkan prosedur eksekusi; Git Engine menjaga histori perubahan; Documentation Engine menjadi sumber kanonik bagi tata kelola dokumentasi lintas domain.
 
 Documentation Engine bukan aplikasi, content management system, generator otomatis, pengganti Governance, atau izin bagi AI untuk menetapkan fakta dan approval. Dokumen menjelaskan keadaan, keputusan, atau prosedur; keberadaan file, commit, publication, atau penggunaan berulang tidak otomatis menjadikan isinya benar, approved, atau berlaku.
 
@@ -625,6 +625,7 @@ Recovery mengikuti [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md): detect, stop pr
 | [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Documentation task classification, Update Documentation, Documentation Check, evidence, failure/recovery, dan DoD | Execution Engine tetap sumber prosedur eksekusi; engine ini sumber detail dokumentasi |
 | [`GIT_ENGINE.md`](GIT_ENGINE.md) | Versioned documentation, atomic diff, review, commit, audit, release, dan recovery | Git event tidak menjadi approval dokumentasi |
 | [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | Documentation Completeness, Documentation Review gate, DoD, metrics, audit, finding, CAPA, dan AI Quality Policy | Quality Engine menilai kualitas lintas artefak; Documentation Engine tetap sumber detail dokumentasi |
+| [`REPORT_ENGINE.md`](REPORT_ENGINE.md) | Profil khusus report: taxonomy, lifecycle, struktur, evidence/traceability, correction, publication, dan archive | Documentation Engine tetap SSOT tata kelola dokumen umum; Report Engine merinci report tanpa lifecycle tandingan |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, derived-not-duplicated, owner, lifecycle, evidence flow, dan feedback | Engine tidak mengambil ownership Foundation/domain |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | provenance, metadata, verification, knowledge lifecycle, deprecation, archive, dan cross-reference | Knowledge-specific confidence/verification tetap dimiliki Knowledge Governance |
 | [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) | documentation ownership, delegation, approval, publication/archive authority, exception, escalation, lifecycle, dan audit | Documentation Engine tetap sumber detail dokumentasi |
@@ -635,7 +636,7 @@ Recovery mengikuti [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md): detect, stop pr
 ### 13.1 Resolusi Cross-Review SPOS-006
 
 - Lifecycle brief `Draft → Review → Approved → Published → Updated → Archived` ditetapkan sebagai lifecycle kanonik; status repository `In Review`, `Deprecated`, dan `Superseded` dipetakan tanpa menghapus semantics yang sudah ada.
-- Documentation Engine menjadi SSOT policy lintas ekosistem; `DOCUMENTATION_CONVENTION.md` tetap profil repository dan harus merujuk engine.
+- Documentation Engine menjadi SSOT policy dokumentasi umum lintas ekosistem; Report Engine menjadi profil khusus laporan dan `DOCUMENTATION_CONVENTION.md` tetap profil repository yang harus merujuk engine.
 - Knowledge Governance tetap memiliki aturan khusus provenance, confidence, verification, dan curation Knowledge System; engine tidak menduplikasi authority domain tersebut.
 - Execution Engine tetap memiliki tahap `Update Documentation` serta Documentation Check; detail standard didelegasikan ke Documentation Engine.
 - Git Engine tetap memiliki version control dan audit history; commit/publication tidak diartikan sebagai approval.
@@ -677,9 +678,9 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Struktur, naming, metadata, versioning, cross-reference, internal link, ownership, review cadence, dan change history terdokumentasi.
 - [x] AI create/update/archive policy, code-documentation relationship, approval boundary, stop condition, dan prohibition on undocumented change terdokumentasi.
 - [x] Validation, publication gate, documentation debt, security/privacy, failure, dan recovery terdokumentasi.
-- [x] Alignment dengan Constitution, Governance Engine, Developer Mode, Session Engine, Execution Engine, Git Engine, Quality Engine, Foundation, Knowledge System, SPOS Architecture, dan repository standards dipetakan.
+- [x] Alignment dengan Constitution, Governance Engine, Developer Mode, Session Engine, Execution Engine, Git Engine, Quality Engine, Report Engine, Foundation, Knowledge System, SPOS Architecture, dan repository standards dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, CMS, portal, deployment, atau automation runtime.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
-- [ ] Developer Mode, Session Engine, Execution Engine, Git Engine, dan Documentation Engine memperoleh approval operasional serta activation record.
+- [ ] Developer Mode, Session, Execution, Git, Documentation, Quality, dan Report Engine memperoleh approval operasional serta activation record yang kompatibel.
 - [ ] Governance Engine memperoleh approval/activation; Documentation Steward delegation, ownership registry, dan publication controls diterapkan serta diverifikasi.
 - [ ] Consumer migration, review cadence operation, publication controls, dan conformance automation diterapkan serta diverifikasi.

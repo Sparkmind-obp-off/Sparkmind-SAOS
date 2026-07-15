@@ -4,7 +4,7 @@
 
 ## Tujuan
 
-Menetapkan aturan pengelolaan Knowledge System agar artefak konsisten, dapat direview, memiliki provenance, dan tidak berubah menjadi sumber kebenaran yang saling bersaing. Policy dokumentasi lintas ekosistem mengikuti [`../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md), quality gate/metrik/audit kualitas/CAPA mengikuti [`../../99-prompt-os/00-core/QUALITY_ENGINE.md`](../../99-prompt-os/00-core/QUALITY_ENGINE.md), dan authority/ownership/delegation/approval/exception/escalation mengikuti [`../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md`](../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md); dokumen ini tetap menjadi sumber domain-specific untuk confidence, verification, curation, dan lifecycle Knowledge System.
+Menetapkan aturan pengelolaan Knowledge System agar artefak konsisten, dapat direview, memiliki provenance, dan tidak berubah menjadi sumber kebenaran yang saling bersaing. Policy dokumentasi lintas ekosistem mengikuti [`../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md), quality gate/metrik/audit kualitas/CAPA mengikuti [`../../99-prompt-os/00-core/QUALITY_ENGINE.md`](../../99-prompt-os/00-core/QUALITY_ENGINE.md), taxonomy/lifecycle/struktur/evidence laporan mengikuti [`../../99-prompt-os/00-core/REPORT_ENGINE.md`](../../99-prompt-os/00-core/REPORT_ENGINE.md), dan authority/ownership/delegation/approval/exception/escalation mengikuti [`../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md`](../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md); dokumen ini tetap menjadi sumber domain-specific untuk confidence, verification, curation, dan lifecycle Knowledge System.
 
 ## Naming
 
@@ -118,7 +118,7 @@ Aturan umum cross-reference, internal link, supersession, dan publication mengik
 
 ## Larangan
 
-- Menggunakan laporan session sebagai sumber kanonik.
+- Menggunakan laporan session atau report lain sebagai sumber kanonik tanpa menelusuri artefak/evidence sumber sesuai Report Engine.
 - Mengubah status menjadi Approved hanya karena AI atau satu contributor menyatakan selesai.
 - Menyalin definisi Kernel, decision record, standard, atau pattern untuk kemudahan akses.
 - Menghapus histori yang masih dibutuhkan untuk audit tanpa alasan dan approval.

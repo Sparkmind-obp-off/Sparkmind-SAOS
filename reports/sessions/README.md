@@ -37,3 +37,4 @@ Folder ini menyimpan laporan hasil setiap session SparkMind SAOS untuk menjaga k
 - [`SPOS-004.md`](SPOS-004.md) — SparkMind Execution Engine.
 - [`SPOS-005.md`](SPOS-005.md) — SparkMind Git Engine.
 - [`SPOS-006.md`](SPOS-006.md) — SparkMind Documentation Engine.
+- [`SPOS-007.md`](SPOS-007.md) — SparkMind Quality Engine.

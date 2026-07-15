@@ -102,7 +102,7 @@ Semua komponen menggunakan `00-kernel/TERMINOLOGY.md` sebagai kosakata fundament
 6. **Pembelajaran:** Outcomes diklasifikasikan menjadi wisdom, pattern, atau anti-pattern.
 7. **Operasionalisasi:** Playbooks menyusun prosedur berdasarkan artefak approved.
 8. **Konsumsi:** SAOS, Engineering, dan Products menggunakan output Foundation.
-9. **Feedback:** Hasil, insiden, dan perubahan konteks kembali ke Research dan Governance untuk review.
+9. **Feedback:** Hasil, insiden, quality finding, metric signal, dan perubahan konteks kembali ke Research, Knowledge, serta Governance untuk review; audit/CAPA mengikuti [`../99-prompt-os/00-core/QUALITY_ENGINE.md`](../99-prompt-os/00-core/QUALITY_ENGINE.md) tanpa mengubah policy secara otomatis.
 
 ## Aturan Dependency
 
@@ -147,6 +147,7 @@ Status `Approved` hanya diberikan oleh otoritas yang sesuai. Perubahan makna str
 | Research dianggap kebijakan | Status eksplisit dan approval melalui Decision Library/Governance. |
 | Library menjadi tempat sampah | Wajibkan owner, konteks, status, dan trigger review. |
 | Playbook usang | Cantumkan dependency, owner, dan kondisi review ulang. |
+| Quality finding tidak ditindaklanjuti | Catat severity, owner, CAPA, due date, verification, dan escalation sesuai Quality Engine. |
 | Istilah bercabang | Terminology Kernel tetap acuan fundamental; usulan perubahan dieskalasikan. |
 
 ## Review Checklist

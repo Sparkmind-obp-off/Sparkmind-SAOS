@@ -30,6 +30,8 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Laporan SPOS-005 serta penyelarasan Developer Mode, Execution Engine, SPOS Core/Architecture, Governance index, contributing flow, branch/commit/versioning standards, indeks repository, dan handoff.
 - Documentation Engine SPOS-006 dengan sembilan prinsip dokumentasi, enam belas jenis, lifecycle Draft–Archived, struktur, metadata, versioning, cross-reference, ownership, review cadence, change history, code-documentation relationship, validation, publication, archive, dan AI Documentation Policy.
 - Laporan SPOS-006 serta penyelarasan Developer Mode, Execution Engine, Git Engine, SPOS Core/Architecture, Governance, Knowledge Governance, Documentation Convention, repository index, dan handoff.
+- Quality Engine SPOS-007 dengan sebelas prinsip, sembilan quality gate, Definition of Done, delapan metrik inti, evidence contract, finding/severity, exception, audit, CAPA, continuous improvement, dan AI Quality Policy.
+- Laporan SPOS-007 serta penyelarasan Developer Mode, Execution Engine, Git Engine, Documentation Engine, SPOS Core/Architecture, Governance, Foundation, Knowledge Governance, Session Template, repository index, dan handoff.
 
 ### Reviewed
 
@@ -43,6 +45,7 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Cross-review SPOS-004 terhadap Constitution, Developer Mode, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, dan repository standards, termasuk penyelarasan precedence Constitution.
 - Cross-review SPOS-005 terhadap Constitution, Developer Mode, Execution Engine, Foundation, Governance, SPOS Architecture, contributing flow, serta branch/commit/versioning standards, termasuk pemisahan Git policy kanonik dari profile repository.
 - Cross-review SPOS-006 terhadap Constitution, Developer Mode, Execution Engine, Git Engine, Foundation, Governance, Knowledge System, SPOS Architecture, serta documentation/Markdown standards, termasuk pemetaan lifecycle dan pemisahan Documentation Engine dari profile repository.
+- Cross-review SPOS-007 terhadap Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, Foundation, Governance, Knowledge System, SPOS Architecture, dan Session Template, termasuk pemisahan quality gate kanonik dari checkpoint lifecycle.
 
 ## [0.1.0] - 2026-07-15
 

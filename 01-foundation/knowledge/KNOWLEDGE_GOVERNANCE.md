@@ -4,7 +4,7 @@
 
 ## Tujuan
 
-Menetapkan aturan pengelolaan Knowledge System agar artefak konsisten, dapat direview, memiliki provenance, dan tidak berubah menjadi sumber kebenaran yang saling bersaing. Policy dokumentasi lintas ekosistem mengikuti [`../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md); dokumen ini tetap menjadi sumber domain-specific untuk confidence, verification, curation, approval, dan lifecycle Knowledge System.
+Menetapkan aturan pengelolaan Knowledge System agar artefak konsisten, dapat direview, memiliki provenance, dan tidak berubah menjadi sumber kebenaran yang saling bersaing. Policy dokumentasi lintas ekosistem mengikuti [`../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md), sedangkan quality gate, metrik, audit, finding, CAPA, dan continuous improvement mengikuti [`../../99-prompt-os/00-core/QUALITY_ENGINE.md`](../../99-prompt-os/00-core/QUALITY_ENGINE.md); dokumen ini tetap menjadi sumber domain-specific untuk confidence, verification, curation, approval, dan lifecycle Knowledge System.
 
 ## Naming
 
@@ -57,7 +57,7 @@ Setiap review menilai:
 6. dampak kepada consumer serta kebutuhan migrasi;
 7. tanggal atau kondisi review ulang.
 
-AI boleh melakukan pre-review dan cross-check, tetapi reviewer manusia bertanggung jawab untuk artefak yang akan digunakan secara operasional atau strategis. AI create/update/archive juga mengikuti AI Documentation Policy; publication atau archive tidak boleh memperluas audience, menghapus evidence, atau mengubah status approval tanpa authority.
+AI boleh melakukan pre-review dan cross-check, tetapi self-review AI tidak menjadi independent review atau Final Approval; reviewer manusia bertanggung jawab untuk artefak yang akan digunakan secara operasional atau strategis. AI create/update/archive juga mengikuti AI Documentation Policy; publication atau archive tidak boleh memperluas audience, menghapus evidence, atau mengubah status approval tanpa authority.
 
 ## Approval
 
@@ -109,7 +109,7 @@ Aturan umum cross-reference, internal link, supersession, dan publication mengik
 
 1. **Propose:** catat kebutuhan, owner awal, dan sumber.
 2. **Draft:** susun pada folder yang tepat dengan status eksplisit.
-3. **Review:** jalankan quality gate dan minta reviewer berwenang.
+3. **Review:** jalankan gate Quality Engine yang berlaku dan minta reviewer berwenang.
 4. **Resolve:** tangani komentar, konflik, dan perubahan downstream.
 5. **Approve/Verify:** tetapkan status sesuai bukti dan authority sebenarnya.
 6. **Publish:** perbarui indeks, link silang, changelog, dan consumer terkait.

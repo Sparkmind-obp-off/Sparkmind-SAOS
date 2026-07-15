@@ -1,6 +1,6 @@
 # SPOS Session Template
 
-> Status: Draft baseline SPOS-006 — gunakan bersama Execution Engine, Git Engine, dan Documentation Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
+> Status: Draft baseline SPOS-007 — gunakan bersama Execution Engine, Git Engine, Documentation Engine, dan Quality Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
 
 ## Metadata
 
@@ -39,6 +39,7 @@ Jelaskan keadaan awal, alasan session diperlukan, dan fakta yang sudah diverifik
 | Developer Mode / Execution Engine | `<path dan versi>` | `<status>` | `<behavior, lifecycle, gates, dan completion contract>` |
 | Git Engine | `<path dan versi>` | `<status>` | `<branch, review, commit, push, release, protection, dan automation contract>` |
 | Documentation Engine | `<path dan versi>` | `<status>` | `<type, lifecycle, metadata, review, publication, archive, dan AI documentation contract>` |
+| Quality Engine | `<path dan versi>` | `<status>` | `<principles, gates, DoD, metrics, audit, CAPA, dan AI quality contract>` |
 | SPOS rule / playbook | `<path>` | `<status>` | `<constraint atau procedure>` |
 
 Jangan memperlakukan dependency Draft sebagai aturan Approved.
@@ -86,6 +87,8 @@ Turunkan tahap tersebut menjadi subtask atomik sesuai klasifikasi pekerjaan. Ses
 
 ## 7. Quality Gates
 
+Gunakan urutan [`../00-core/QUALITY_ENGINE.md`](../00-core/QUALITY_ENGINE.md): Objective, Requirement, Architecture, Implementation, Documentation, Git, Security & Privacy, Governance, dan Final Approval. Catat `Pass / Fail / Blocked / Not Applicable`, evidence, reviewer, serta alasan untuk setiap gate.
+
 - [ ] Pre-Execution Check lulus dan dependency serta statusnya terverifikasi.
 - [ ] Scope serta non-scope dipatuhi.
 - [ ] Tidak ada duplikasi sumber kanonik.
@@ -99,7 +102,7 @@ Turunkan tahap tersebut menjadi subtask atomik sesuai klasifikasi pekerjaan. Ses
 - [ ] Commit/push/remote hash atau alasan blocker diverifikasi.
 - [ ] Documentation Engine impact assessment serta semantic/authority/lifecycle/link/security/usability check lulus.
 - [ ] Repository Consistency Check dan Documentation Check lulus.
-- [ ] Definition of Done Check lulus.
+- [ ] Quality Engine gate yang berlaku, finding/debt/exception, dan Definition of Done Check lulus.
 - [ ] Session Report selesai dan tidak menjadi sumber kanonik tandingan.
 
 ## 8. Cross-Review Matrix
@@ -112,6 +115,7 @@ Turunkan tahap tersebut menjadi subtask atomik sesuai klasifikasi pekerjaan. Ses
 | Governance | Apakah authority, approval, dan escalation dipatuhi? | `<hasil>` |
 | SAOS / SPOS | Apakah komponen berada pada layer yang tepat? | `<hasil>` |
 | Documentation | Apakah source, jenis, status, metadata, owner, link, review, publication/archive, dan consumer sinkron? | `<hasil>` |
+| Quality | Apakah objective/requirement traceable, sembilan gate, DoD, evidence, finding, metrik, dan approval sesuai Quality Engine? | `<hasil>` |
 | Products | Apakah requirement atau logic produk dibuat di luar scope? | `<hasil>` |
 
 ## 9. Git Workflow
@@ -151,7 +155,8 @@ Session hanya `Completed` jika:
 
 - [ ] seluruh deliverable selesai pada lokasi kanonik;
 - [ ] seluruh quality gate wajib lulus;
-- [ ] review dan dokumentasi selesai sesuai Documentation Engine;
+- [ ] review, validasi, dan Definition of Done selesai sesuai Quality Engine;
+- [ ] dokumentasi selesai sesuai Documentation Engine;
 - [ ] Git workflow selesai jika diwajibkan serta capability, authority, review, dan protection mengizinkan;
 - [ ] jika Git terblokir, blocker dicatat jujur dan completion mengikuti Definition of Done/policy session;
 - [ ] report final mencerminkan keadaan aktual.

@@ -20,7 +20,7 @@
 
 Execution Engine adalah standar proses permanen yang menentukan bagaimana setiap AI Agent menerima objective, menganalisis konteks, membaca repository, mengidentifikasi dependency, merencanakan, mengeksekusi, memvalidasi, mendokumentasikan, menjalankan Git workflow, melaporkan, dan menutup pekerjaan dalam ekosistem SparkMind.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Execution Engine menetapkan lifecycle, klasifikasi, gate, evidence, failure handling, dan completion contract untuk satu session. Detail tahap **Update Documentation** mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), sedangkan **Perform Git Workflow** mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md).
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Execution Engine menetapkan lifecycle, klasifikasi, gate, evidence, failure handling, dan completion contract untuk satu session. Detail kualitas pada **Validate Results** dan Definition of Done mengikuti [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), **Update Documentation** mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), sedangkan **Perform Git Workflow** mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md).
 
 Execution Engine bukan aplikasi, runtime otonom, scheduler, product workflow, atau sumber authority baru. Engine tidak memberi approval kepada dirinya sendiri, tidak mengubah requirement produk, dan tidak mengesampingkan Governance, owner domain, hukum, keselamatan, atau Founder Authority.
 
@@ -162,7 +162,7 @@ Aturan:
 
 **Tujuan:** membuktikan bahwa hasil memenuhi objective tanpa melanggar boundary.
 
-Validasi berlapis mencakup:
+Jalankan [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) sebagai sumber kanonik prinsip kualitas, sembilan quality gate, Definition of Done, metrik, finding, audit, CAPA, dan AI Quality Policy. Validasi berlapis mencakup:
 
 - acceptance criteria dan Definition of Done;
 - correctness semantik serta teknis;
@@ -480,6 +480,7 @@ Lesson learned wajib:
 | [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) | Read/plan/review before action, incremental work, validation, documentation, Git, reporting, autonomy, dan rollback | Execution Engine merinci proses; tidak menggandakan authority atau memperluas otonomi. |
 | [`GIT_ENGINE.md`](GIT_ENGINE.md) | Detail branch, commit, PR/review, merge, push, release, protection, audit, dan AI Git automation pada tahap Perform Git Workflow | Git Engine menjadi sumber detail Git tanpa menggantikan lifecycle session. |
 | [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Detail prinsip, jenis, lifecycle, metadata, ownership, review, publication, archive, code-documentation relationship, dan AI policy pada tahap Update Documentation | Documentation Engine menjadi sumber detail dokumentasi tanpa menggantikan lifecycle session. |
+| [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) | Detail prinsip kualitas, sembilan quality gate, Definition of Done, metrik, audit, CAPA, continuous improvement, dan AI policy pada Validate Results/completion | Quality Engine menjadi sumber detail kualitas tanpa menggantikan lifecycle session. |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, derived-not-duplicated, evidence flow, ownership, lifecycle, feedback, dan playbook boundary | Engine tidak mengambil ownership Foundation atau domain. |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | provenance, status, source review, fact/assumption separation, lifecycle, dan lesson learned routing | Evidence eksekusi tidak otomatis menjadi approved knowledge atau policy. |
 | [`../../01-foundation/governance/README.md`](../../01-foundation/governance/README.md) | authority check, approval, exception, escalation, dan audit trail | Governance substantif belum tersedia; authority ambiguity tetap fail-closed. |
@@ -548,9 +549,9 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Satu objective, incremental changes, validation, documentation, completion, dan repository consistency rules terdokumentasi.
 - [x] Enam Validation Gates terdokumentasi.
 - [x] Error handling, rollback, recovery, retry, failure record, dan lesson learned terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Git Engine, Documentation Engine, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, dan repository standards dipetakan.
+- [x] Alignment dengan Constitution, Developer Mode, Git Engine, Documentation Engine, Quality Engine, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, dan repository standards dipetakan.
 - [x] Git lifecycle minimum dan documentation lifecycle minimum terdokumentasi; detail Git didelegasikan ke Git Engine dan detail dokumentasi ke Documentation Engine.
-- [x] Evidence contract, conflict resolution, dan Definition of Done menjaga dokumentasi sebagai gate wajib.
+- [x] Evidence contract, conflict resolution, dan Definition of Done menjaga dokumentasi sebagai gate wajib serta mendelegasikan quality model, gate, metric, audit, dan CAPA ke Quality Engine.
 - [x] Scope tidak membangun aplikasi, fitur produk, runtime, atau Governance Engine.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
 - [ ] Developer Mode dan Execution Engine memperoleh approval operasional serta activation record.

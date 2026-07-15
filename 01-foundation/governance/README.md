@@ -1,6 +1,6 @@
 # Governance
 
-> Status: Struktur aktif; Constitution SPOS tersedia sebagai `In Review`, kebijakan governance substantif belum disusun.
+> Status: Struktur aktif; Constitution dan Developer Mode SPOS tersedia sebagai `In Review`, kebijakan governance substantif belum disusun.
 
 ## Tujuan
 
@@ -20,6 +20,7 @@ Mencakup ownership, level of authority, approval, review cadence, lifecycle, con
 ## Hubungan
 
 - Tunduk pada [`../../99-prompt-os/00-core/CONSTITUTION.md`](../../99-prompt-os/00-core/CONSTITUTION.md) setelah ratifikasi Founder; [`../constitution/`](../constitution/README.md) mengelola source map dan ratification/amendment record.
+- Menjadi authority operasional upstream bagi [`../../99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md`](../../99-prompt-os/00-core/DEVELOPER_MODE_ENGINE.md); selama policy substantif belum tersedia, kasus authority ambigu wajib fail-closed dan dieskalasikan.
 - Mengatur lifecycle seluruh folder Foundation.
 - Menggunakan [`../decision-library/`](../decision-library/README.md) untuk keputusan.
 - Memakai evidence dari [`../research/`](../research/README.md) dan feedback downstream.

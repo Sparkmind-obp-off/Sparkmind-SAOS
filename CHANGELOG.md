@@ -22,6 +22,8 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Laporan SPOS-001 dan pembaruan handoff menuju pembangunan engine berikutnya.
 - Constitution Engine SPOS-002 dengan Vision, Mission, Long-term Purpose, Core Values, Guiding Principles, Ethical Principles, Founder Authority, Governance Hierarchy, Decision Principles, Amendment Policy, enforcement, dan source map.
 - Laporan SPOS-002 serta penyelarasan Canon, Foundation Constitution, Governance, SPOS Architecture, indeks, dan handoff.
+- Developer Mode Engine SPOS-003 dengan operational principles, standard workflow, decision gates, autonomous execution policy, repository interaction policy, rollback, validation, Git workflow, failure handling, dan activation boundary.
+- Laporan SPOS-003 serta penyelarasan SPOS Core, SPOS Architecture, indeks repository, dan handoff.
 
 ### Reviewed
 
@@ -31,6 +33,7 @@ Format mengikuti prinsip [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - Cross-review Session 001–004 dengan boundary eksplisit antara Knowledge System, Kernel Terminology, Foundation Decision Library, patterns, wisdom, research, dan repository standards.
 - Cross-review SPOS-001 terhadap Kernel, Foundation, Knowledge, Governance, SAOS, Engineering, Products, dan repository conventions.
 - Cross-review SPOS-002 terhadap Kernel, Foundation, Knowledge, Governance, dan SPOS Architecture, termasuk resolusi interim lokasi instrumen Constitution dan batas ratifikasi Founder.
+- Cross-review SPOS-003 terhadap Constitution, Foundation, Knowledge, Governance, SPOS Architecture, dan repository standards, termasuk batas otonomi serta dependency aktivasi.
 
 ## [0.1.0] - 2026-07-15
 

@@ -51,7 +51,7 @@ Setiap review menilai:
 
 1. kecukupan dan kredibilitas sumber;
 2. pemisahan fakta, interpretasi, asumsi, dan rekomendasi;
-3. consistency dengan Kernel dan Foundation;
+3. consistency dengan Constitution yang berlaku, Kernel, dan Foundation;
 4. terminology dan referensi silang;
 5. scope, confidence, limitation, risiko, dan bias;
 6. dampak kepada consumer serta kebutuhan migrasi;
@@ -67,7 +67,7 @@ AI boleh melakukan pre-review dan cross-check, tetapi reviewer manusia bertanggu
 | Isi pengetahuan satu domain | Domain Owner setelah review. |
 | Perubahan lintas domain | Knowledge Steward dan seluruh Domain Owner terdampak. |
 | Kebijakan, etika, terminology fundamental, atau arah strategis | Otoritas Foundation dan Founder. |
-| Perubahan yang berkonflik dengan Kernel | Tidak boleh approved sebelum eskalasi diselesaikan. |
+| Perubahan yang berkonflik dengan Constitution atau Kernel | Tidak boleh approved sebelum konflik authority dan eskalasi diselesaikan. |
 
 `Verified` berarti sumber telah diperiksa; `Approved` berarti artefak boleh menjadi referensi operasional dalam scope yang dinyatakan. Keduanya tidak boleh disamakan.
 

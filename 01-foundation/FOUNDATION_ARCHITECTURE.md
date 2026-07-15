@@ -8,7 +8,7 @@ Mendefinisikan posisi, tanggung jawab, dependency, dan alur informasi `01-founda
 
 ## Prinsip Arsitektur
 
-1. **Kernel authority:** sumber normatif fundamental tetap berada di `00-kernel/`.
+1. **Constitutional boundary:** Constitution yang diratifikasi menjadi authority tertinggi di dalam SPOS; `00-kernel/` mempertahankan source material fundamental dan historinya.
 2. **Single Source of Truth:** tidak ada dua artefak yang menetapkan aturan atau definisi yang sama.
 3. **Derived, not duplicated:** Foundation merujuk dan menerapkan Kernel, bukan menyalinnya.
 4. **Evidence before adoption:** research dan knowledge harus dapat ditelusuri sebelum memengaruhi keputusan.
@@ -19,10 +19,14 @@ Mendefinisikan posisi, tanggung jawab, dependency, dan alur informasi `01-founda
 
 ```text
 ┌──────────────────────────────────────┐
-│ 00-kernel                            │
-│ Arah dan sumber normatif fundamental │
+│ Founder + 00-kernel                  │
+│ Authority + fundamental source       │
 └──────────────────┬───────────────────┘
-                   │ constraints & authority
+                   ▼
+┌──────────────────────────────────────┐
+│ SPOS Constitution                    │
+│ Highest SPOS authority when ratified │
+└──────────────────┬───────────────────┘
                    ▼
 ┌──────────────────────────────────────┐
 │ 01-foundation                        │
@@ -90,7 +94,7 @@ Semua komponen menggunakan `00-kernel/TERMINOLOGY.md` sebagai kosakata fundament
 
 ## Alur Informasi
 
-1. **Arah:** Kernel memberikan batas normatif kepada Foundation.
+1. **Arah:** Founder Authority, Constitution yang berlaku, dan source material Kernel memberikan batas normatif kepada Foundation sesuai kedudukan masing-masing.
 2. **Akuisisi:** Research mengumpulkan sumber, evidence, asumsi, dan tingkat keyakinan.
 3. **Kurasi:** Knowledge System memverifikasi serta menghubungkan evidence dengan konteks melalui lifecycle di [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md) dan governance di [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md).
 4. **Penilaian:** Principles, Values, dan Ethics memberi lensa evaluasi tanpa mengubah sumber Kernel.
@@ -148,7 +152,7 @@ Status `Approved` hanya diberikan oleh otoritas yang sesuai. Perubahan makna str
 ## Review Checklist
 
 - [x] Seluruh komponen Foundation memiliki peran tunggal.
-- [x] Dependency terhadap Kernel eksplisit.
+- [x] Dependency terhadap Constitution dan Kernel eksplisit.
 - [x] Posisi terhadap SAOS, Engineering, dan Products jelas.
 - [x] Alur arah, evidence, keputusan, operasionalisasi, dan feedback terdokumentasi.
 - [x] Batas Session 003 tidak dilanggar.

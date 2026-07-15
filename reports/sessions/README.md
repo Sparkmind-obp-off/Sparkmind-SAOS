@@ -33,3 +33,4 @@ Folder ini menyimpan laporan hasil setiap session SparkMind SAOS untuk menjaga k
 - [`SESSION-004.md`](SESSION-004.md) — SparkMind Knowledge System.
 - [`SPOS-001.md`](SPOS-001.md) — SparkMind Prompt Operating System Bootstrap.
 - [`SPOS-002.md`](SPOS-002.md) — SparkMind Constitution Engine.
+- [`SPOS-003.md`](SPOS-003.md) — SparkMind Developer Mode Engine.

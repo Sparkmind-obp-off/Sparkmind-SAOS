@@ -1,12 +1,12 @@
 # SparkMind Prompt Operating System (`99-prompt-os`)
 
-> Status: SPOS-002 baseline — Constitution tersedia sebagai `In Review`; authority operasional menunggu ratifikasi Founder.
+> Status: SPOS-003 baseline — Constitution dan Developer Mode Engine tersedia sebagai `In Review`; authority operasional menunggu approval yang sah.
 
 ## Apa Itu SPOS
 
 SparkMind Prompt Operating System (SPOS) adalah lapisan dokumentasi operasional yang menerjemahkan arah, batas, dan pengetahuan SparkMind menjadi kontrak kerja AI yang modular. SPOS mengorganisasi architecture, template, rule, session, playbook, dan prompt agar pekerjaan AI dapat direncanakan, dieksekusi, direview, serta dilaporkan secara konsisten.
 
-SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution Engine telah didokumentasikan, sedangkan runtime dan engine operasional lainnya belum dibangun.
+SPOS bukan produk, aplikasi, model AI, atau runtime vendor. Pada baseline ini SPOS juga belum mengeksekusi pekerjaan secara otomatis. Constitution Engine dan Developer Mode Engine telah didokumentasikan sebagai `In Review`; keduanya bukan runtime otomatis atau bukti approval.
 
 ## Mengapa SPOS Ada
 
@@ -64,6 +64,7 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 ├── 00-core/
 │   ├── README.md
 │   ├── CONSTITUTION.md
+│   ├── DEVELOPER_MODE_ENGINE.md
 │   └── SPOS_ARCHITECTURE.md
 ├── 01-templates/
 │   └── README.md
@@ -85,7 +86,7 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 
 | Komponen | Fungsi | Status terkini |
 | --- | --- | --- |
-| `00-core/` | Constitution, arsitektur, lifecycle, execution model, dan engine inti | Constitution `In Review` dan architecture tersedia; runtime belum dibangun |
+| `00-core/` | Constitution, Developer Mode, arsitektur, lifecycle, execution model, dan engine inti | Constitution serta Developer Mode `In Review`; architecture tersedia dan runtime belum dibangun |
 | `01-templates/` | Kontrak artefak kerja yang dapat digunakan ulang | Kontrak folder tersedia |
 | `02-rules/` | Rule modular dengan authority dan precedence eksplisit | Kontrak folder tersedia |
 | `03-sessions/` | Objective, scope, deliverable, validasi, dan laporan eksekusi | Session Template tersedia |
@@ -106,11 +107,12 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 ## Cara Menggunakan Baseline
 
 1. Baca [`00-core/CONSTITUTION.md`](00-core/CONSTITUTION.md) dan periksa status ratifikasinya.
-2. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
-3. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
-4. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt; jangan menganggapnya engine aktif.
-5. Cantumkan dependency, status, owner, reviewer, quality gate, dan unresolved conflict.
-6. Laporkan evidence dan feedback agar perubahan dapat direview melalui Foundation dan governance.
+2. Baca [`00-core/DEVELOPER_MODE_ENGINE.md`](00-core/DEVELOPER_MODE_ENGINE.md) dan periksa status aktivasi serta authority-nya.
+3. Baca [`00-core/SPOS_ARCHITECTURE.md`](00-core/SPOS_ARCHITECTURE.md).
+4. Susun session menggunakan [`03-sessions/SESSION_TEMPLATE.md`](03-sessions/SESSION_TEMPLATE.md).
+5. Gunakan placeholder di `05-prompts/` hanya untuk merancang kontrak prompt; jangan menganggapnya engine aktif.
+6. Cantumkan dependency, status, owner, reviewer, quality gate, dan unresolved conflict.
+7. Laporkan evidence dan feedback agar perubahan dapat direview melalui Foundation dan governance.
 
 ## Status Implementasi
 
@@ -130,10 +132,17 @@ Products mengonsumsi hasil kerja AI yang dijalankan melalui SPOS sesuai konteks 
 - Governance Hierarchy, Decision Principles, Amendment Policy, versioning, changelog, audit trail, enforcement, dan source map.
 - Cross-review terhadap Kernel, Foundation, Knowledge, Governance, serta SPOS Architecture.
 
+**SPOS-003**
+
+- Developer Mode Engine dengan operational principles, standard workflow, decision gates, autonomous execution, repository interaction, rollback, validation, Git workflow, dan reporting contract.
+- Cross-review terhadap Constitution, Foundation, Knowledge, Governance, SPOS Architecture, serta repository standards.
+- Activation boundary yang mempertahankan Founder Authority dan status `In Review`.
+
 ### Belum Diimplementasikan
 
 - Ratifikasi Founder atas Constitution.
-- Developer Mode, Execution, Git, Documentation, Quality, Session, dan Report Engine.
+- Approval operasional dan activation record Developer Mode Engine.
+- Governance, Execution, Git, Documentation, Quality, Session, dan Report Engine.
 - Rule substantif, template pekerjaan khusus, playbook, prompt compiler, atau runtime otomatis.
 - Authority matrix dan approval SPOS final.
 - Integrasi vendor, aplikasi, database, deployment, atau CI/CD.

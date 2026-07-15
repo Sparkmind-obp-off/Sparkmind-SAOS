@@ -165,12 +165,12 @@ Founder approval wajib untuk perubahan fundamental, hierarchy/role utama, D3, cr
 
 ## 13. Commit Hash
 
-- Commit implementasi: `<diisi setelah commit>`
+- Commit implementasi: `e8aeb476009c4b1e232ff904783b934b74bdad43` (`docs(spos): establish Governance Engine`).
 - Commit finalisasi report: commit yang memuat evidence push terakhir dan menjadi `HEAD` penutupan session.
 
 ## 14. Status Push
 
-`<diisi setelah push dan verifikasi remote>`
+Push implementasi berhasil ke `origin/main`. Hash lokal dan `refs/heads/main` remote sama-sama `e8aeb476009c4b1e232ff904783b934b74bdad43` saat verifikasi pertama.
 
 ## 15. Validasi
 
@@ -184,7 +184,7 @@ Founder approval wajib untuk perubahan fundamental, hierarchy/role utama, D3, cr
 - AI Governance Policy: lulus; authority boundary, Founder approval, capability/automation guardrail, least privilege, dan automatic stop tersedia.
 - Cross-system alignment: lulus; Constitution, Developer Mode, Execution, Git, Documentation, Quality, Foundation, Knowledge, SPOS Architecture, dan Session Template direview.
 - Link/struktur Markdown, whitespace, scope, dan secret review: lulus; link relatif valid, satu H1, hierarchy heading/newline valid, `git diff --check` bersih, scope documentation-only, dan tidak ditemukan credential-shaped secret.
-- Remote verification: `<diisi setelah push>`.
+- Remote verification: lulus untuk commit implementasi; hash lokal dan remote identik (`e8aeb476009c4b1e232ff904783b934b74bdad43`).
 
 ## 16. Temuan Penting
 
@@ -228,4 +228,4 @@ Bangun **Session Engine** untuk menginstansiasi Governance, Execution, Documenta
 
 ## 20. Completion Status
 
-Status sementara: **In Review** sampai validasi final, commit, push, dan verifikasi remote selesai. Setelah workflow teknis selesai, session dapat `Completed`, sedangkan Governance Engine tetap `In Review` sampai Founder approval, activation record, serta role/delegation acceptance yang sah tersedia.
+Status session: **Completed**. Deliverable, cross-review, validasi, commit implementasi, push, dan verifikasi remote selesai. Governance Engine tetap `In Review` sampai Founder approval, activation record, serta role/delegation acceptance yang sah tersedia; completion session tidak mengubah authority dokumen.

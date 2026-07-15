@@ -14,13 +14,13 @@
 >
 > Effective: setelah approval operasional, activation record, compatible dependency set, dan consumer migration yang sah tersedia
 >
-> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session, Execution, Report, Documentation, Git, Quality, Foundation, Master Knowledge System, SPOS Architecture, model/tool/capability, threat model, prompt injection finding, incident, evaluation failure, atau evidence prompt/knowledge drift
+> Review trigger: amendment Constitution; perubahan Governance, Developer Mode, Session, Execution, Report, Documentation, Git, Quality, Foundation, Master Knowledge System, Master Integration System, SPOS Architecture, model/tool/capability, threat model, prompt injection finding, incident, evaluation failure, atau evidence prompt/knowledge/integration drift
 
 ## 1. Kedudukan dan Tujuan
 
 Master Prompt System adalah kontrak arsitektur dokumentasi untuk merakit instruksi AI yang konsisten, bounded, traceable, aman, dapat direview, dan vendor-agnostic. Sistem ini menetapkan hierarchy, layer, prompt contract, dependency, lifecycle, versioning, governance, traceability, security, serta quality standard bagi Core, Session, Execution, Report, Validation, Review, dan Approval Prompt.
 
-Master Prompt System mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`REPORT_ENGINE.md`](REPORT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md), [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md), [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md), dan [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md).
+Master Prompt System mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`SESSION_ENGINE.md`](SESSION_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), [`REPORT_ENGINE.md`](REPORT_ENGINE.md), [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), [`GIT_ENGINE.md`](GIT_ENGINE.md), [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md), [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md), [`MASTER_INTEGRATION_SYSTEM.md`](MASTER_INTEGRATION_SYSTEM.md), [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md), [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md), dan [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md).
 
 Dokumen ini adalah source of truth untuk **arsitektur dan governance prompt**, bukan sumber authority baru. Prompt package hanya membawa authority yang benar-benar diberikan oleh dependency approved, delegation, session contract, capability, dan platform boundary. Prompt tidak dapat meratifikasi Constitution, membuat delegation, memberi approval manusia, menerima risiko, atau mengubah fakta.
 
@@ -445,6 +445,7 @@ Setiap reusable prompt dan prompt package material mencatat:
 | [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) | claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, curation, retrieval/consumption, classification/rights, quality, traceability, learning | Knowledge package/context tidak otomatis menjadi instruction, decision, policy, atau approval |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | metadata, confidence, review/approval, lifecycle, deprecation/archive | Prompt tidak mengambil governance domain knowledge |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | component position, assembly, precedence, execution flow | Master Prompt System merinci prompt layer tanpa menjadi SAOS runtime |
+| [`MASTER_INTEGRATION_SYSTEM.md`](MASTER_INTEGRATION_SYSTEM.md) | relationship, dependency, authority, interface, information/decision/traceability flow, compatibility, dan change propagation lintas sistem | Prompt package menggunakan integration map tanpa menjadikannya instruction authority atau mengambil ownership engine |
 
 ## 18. Prompt Lifecycle
 

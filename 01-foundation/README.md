@@ -82,7 +82,7 @@ Kernel → Foundation → SAOS / Engineering → Products
 - **Engineering** menggunakan Foundation untuk standar dan keputusan teknis.
 - **Products** menerapkan aturan tersebut dalam konteks produk serta mengirimkan evidence kembali.
 
-Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.md`](FOUNDATION_ARCHITECTURE.md). Kontrak integratif Knowledge System tersedia di [`knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](knowledge/MASTER_KNOWLEDGE_SYSTEM.md); alur/lifecycle dasar dan governance domain tetap berada di [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md) serta [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md). Ketika artefak Foundation digunakan sebagai context AI, hierarchy, dependency manifest, instruction/data separation, provenance, security, dan traceability mengikuti [`../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md) tanpa memindahkan ownership Foundation.
+Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.md`](FOUNDATION_ARCHITECTURE.md). Kontrak integratif Knowledge System tersedia di [`knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](knowledge/MASTER_KNOWLEDGE_SYSTEM.md); alur/lifecycle dasar dan governance domain tetap berada di [`knowledge/KNOWLEDGE_ARCHITECTURE.md`](knowledge/KNOWLEDGE_ARCHITECTURE.md) serta [`knowledge/KNOWLEDGE_GOVERNANCE.md`](knowledge/KNOWLEDGE_GOVERNANCE.md). Ketika artefak Foundation digunakan sebagai context AI, hierarchy, dependency manifest, instruction/data separation, provenance, security, dan traceability mengikuti [`../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md); relationship, authority, interface, compatibility, dan change propagation lintas sistem mengikuti [`../99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md`](../99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md) tanpa memindahkan ownership Foundation.
 
 ## Aturan SSOT
 
@@ -94,6 +94,7 @@ Penjelasan dependency dan alur informasi tersedia di [`FOUNDATION_ARCHITECTURE.m
 6. Pemuatan knowledge, research, pattern, playbook, report, atau tool output ke prompt tidak mengubah artefak tersebut menjadi instruction atau policy approved.
 7. Claim, evidence, synthesis, recommendation, decision, dan authority dipisahkan; discovery/ranking/retrieval/publication tidak menjadi proof of truth.
 8. Provenance, confidence, applicability, classification, rights, contradiction, consumer use, dan revalidation dipertahankan sesuai Master Knowledge System.
+9. Integration map hanya menjadi controlled view; source kanonik, owner, status, version, approval, dan lifecycle domain tetap berlaku.
 
 ## Status dan Review
 

@@ -1,6 +1,6 @@
 # SPOS Sessions
 
-> Status: Draft baseline diselaraskan SPOS-012 — folder instance session mengikuti Session, Report, Master Prompt System, dan Master Knowledge System `In Review`.
+> Status: Draft baseline diselaraskan SPOS-013 — folder instance session mengikuti Session, Report, Master Prompt System, Master Knowledge System, dan Master Integration System `In Review`.
 
 ## Tujuan
 
@@ -12,6 +12,7 @@ Menyimpan kontrak instance yang mengoperasionalkan [`../00-core/SESSION_ENGINE.m
 - [`../00-core/REPORT_ENGINE.md`](../00-core/REPORT_ENGINE.md) — policy kanonik taxonomy, lifecycle, struktur, evidence/traceability, validation, correction, publication, dan archive report.
 - [`../00-core/MASTER_PROMPT_SYSTEM.md`](../00-core/MASTER_PROMPT_SYSTEM.md) — kontrak kanonik hierarchy/layer, prompt package, dependency manifest, instruction/data separation, security, versioning, evaluation, dan approval interface.
 - [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) — kontrak integratif claim/evidence, provenance, source assessment, retrieval/consumption, protection, quality, learning, dan knowledge-context boundary.
+- [`../00-core/MASTER_INTEGRATION_SYSTEM.md`](../00-core/MASTER_INTEGRATION_SYSTEM.md) — peta kanonik relationship, dependency, authority, interface, information/decision/traceability flow, compatibility, dan change propagation lintas sistem.
 - [`SESSION_TEMPLATE.md`](SESSION_TEMPLATE.md) — template instance untuk session SPOS dan session SAOS yang menggunakan SPOS.
 
 ## Aturan
@@ -23,4 +24,5 @@ Menyimpan kontrak instance yang mengoperasionalkan [`../00-core/SESSION_ENGINE.m
 - Dependency, approval, atau gate kritis yang gagal menggunakan `Blocked`/`Waiting for Approval`, bukan false completion.
 - Prompt package session wajib terikat pada ID, state, scope, authority, dependency, version set, trust classification, dan stop condition session; prompt tidak boleh memperluas kontrak session.
 - Knowledge yang dikonsumsi atau dihasilkan session mempertahankan canonical source, claim/evidence, provenance, confidence/applicability, classification/rights, consumer trace, limitation, dan revalidation path; session tidak memberi status atau authority otomatis.
+- Session mencatat integration interface/dependency/version/failure behavior yang digunakan, tetapi lifecycle dan state session tidak menggantikan lifecycle integrasi atau owner engine.
 - Laporan hasil tetap disimpan di [`../../reports/sessions/`](../../reports/sessions/) dan wajib mengikuti Report Engine; folder ini menyimpan kontrak instance, bukan laporan historis atau policy tandingan.

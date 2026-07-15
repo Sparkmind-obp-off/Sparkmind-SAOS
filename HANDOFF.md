@@ -1,56 +1,54 @@
 # HANDOFF — SparkMind SAOS
 
-> Diperbarui: 2026-07-15 · Sesi: SPOS-012 · Oleh: AI Developer
+> Diperbarui: 2026-07-15 · Sesi: SPOS-013 · Oleh: AI Developer
 
 ## STATE saat ini
 
-- Fase: Master Knowledge System SPOS-012 selesai secara teknis; baseline tetap `In Review` sampai approval, role acceptance, compatible dependency set, dan activation record yang sah tersedia.
-- Branch: `main`; remote `origin` mengarah ke repository SparkMind SAOS; commit final SPOS-012 dicatat melalui Git history dan closure output setelah push normal serta verifikasi hash lokal/remote.
-- Governance: Constitution, seluruh Core Engine, Master Prompt System, dan Master Knowledge System tetap `In Review`; completion teknis tidak menjadi Founder approval, verification domain, atau activation.
-- Service: tidak berlaku; repository documentation-only.
-- Deploy: tidak dilakukan dan berada di luar scope.
+- Fase: Master Integration System SPOS-013 selesai secara teknis setelah validation/Git closure; baseline tetap `In Review` sampai approval, role acceptance, compatible dependency set, consumer mapping, dan activation record yang sah tersedia.
+- Branch: `main`; remote `origin` mengarah ke repository SparkMind SAOS; commit final SPOS-013 dicatat melalui Git history dan closure output setelah push normal serta verifikasi hash lokal/remote.
+- Governance: Constitution, seluruh Core Engine, Master Prompt System, Master Knowledge System, dan Master Integration System tetap `In Review`; completion teknis tidak menjadi Founder approval, ratification, risk acceptance, atau activation.
+- Service/deploy: tidak berlaku; repository documentation-only dan tidak ada runtime.
 
 ## SELESAI sesi ini
 
-- Melakukan full repository scan terhadap 88 dokumen Markdown baseline dan cross-reference terhadap Kernel, Foundation, sembilan domain Knowledge, seluruh Core Engine, SPOS Architecture, templates, sessions, prompts, standards, reports, dan root governance documents.
-- Membangun `01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md` sebagai kontrak integratif knowledge-system `In Review`.
-- Menetapkan philosophy, model source/evidence/claim/synthesis/recommendation, claim status, confidence/applicability, knowledge classes, canonical location, taxonomy, relationship, identifier, provenance, dan lineage.
-- Menetapkan source discovery/assessment, lifecycle, curation/synthesis, verification/review/approval, conflict, retrieval/consumption, prompt-context rules, dan traceability.
-- Menetapkan security/privacy/consent/IP/license/retention, quality gates/metrics, audit/learning, AI Knowledge Policy, failure/correction/recovery, activation, dan Definition of Done.
-- Menyelaraskan Foundation, Knowledge Architecture/Governance/index, Constitution, Developer Mode, Session, Execution, Documentation, Quality, Report, Governance, Master Prompt, SPOS Architecture/Core/Session Template, README, CHANGELOG, HANDOFF, dan report index.
-- Menggunakan W3C PROV-O, FAIR Principles, ISO 30401:2018, NIST AI RMF, dan NIST AI 600-1 sebagai informative input; sumber eksternal tidak menjadi authority internal otomatis.
-- Menjaga scope documentation-only; tidak membangun database, graph/vector store, search/retrieval service, RAG, crawler, API, dashboard, model, agent memory, deployment, atau automation.
+- Melakukan full repository scan terhadap 90 dokumen Markdown baseline dan memetakan Constitution, Foundation, Master Knowledge System, Master Prompt System, SPOS Architecture, seluruh Core Engine, templates, prompts, sessions, standards, reports, dan root governance documents.
+- Membangun `99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md` sebagai integration control map `In Review`.
+- Menetapkan philosophy, objectives, integration principles, architecture overview, layer model, system relationship, dependency, authority, knowledge, prompt, documentation, governance, session, execution, validation, dan report mapping.
+- Menetapkan information, decision, dan traceability flow; integration lifecycle/versioning/governance; Human Override; AI boundary; conflict resolution; security rules; quality standard; serta future compatibility.
+- Menjaga satu owner untuk setiap semantic contract: Integration System memetakan edge, bukan mengambil ownership Constitution, Foundation, Knowledge, Prompt, atau Core Engine.
+- Memisahkan lifecycle artefak, knowledge, prompt, session, execution, documentation, report, integration, dan Git event serta memisahkan technical completion dari approval/activation.
+- Menyelaraskan Foundation Architecture, Master Knowledge System, Master Prompt System, SPOS Architecture, Core/Foundation/Prompt/Session/Report indexes, root README, SPOS README, changelog, handoff, dan session report.
+- Menjaga scope documentation-only; tidak membangun aplikasi, backend, frontend, API, runtime, orchestrator, agent/workflow runtime, automation, CI/CD, deployment, infrastructure, Docker, database, dashboard, atau monitoring service.
 
 ## NEXT STEP (atomic — aksi pertama sesi berikut)
 
-1. Founder/authorized human mereview Master Knowledge System dan compatible dependency set. Jika diterima, tetapkan Knowledge Steward, Domain Owner, reviewer, approver, Security/Privacy/IP owner, role acceptance, canonical inventory, taxonomy/vocabulary, claim/provenance model, classification/access/retention, consumer map, scenario validation, migration, monitoring, audit, incident, rollback, dan activation record sebelum consumer operasional diaktifkan.
+1. Founder/authorized human mereview Master Integration System dan compatible dependency set. Jika diterima, tetapkan Integration Steward, seluruh system/domain owner, reviewer, approver, Security/Privacy owner, role acceptance, interface/dependency inventory, compatibility matrix, consumer map, representative scenario validation, migration, rollback, monitoring, incident, audit, dan activation record sebelum integrasi operasional diaktifkan.
 
 ## KEPUTUSAN penting
 
-- Master Knowledge System berada di `01-foundation/knowledge/`; bukan Core Engine, runtime, database, atau authority baru.
-- Knowledge Architecture tetap sumber alur/lifecycle dasar dan Knowledge Governance tetap sumber metadata, review, approval, versioning, deprecation, archive, serta cross-reference domain.
-- Source, evidence, claim, synthesis, recommendation, decision, dan instruction merupakan unit berbeda.
-- Claim status berbeda dari lifecycle artefak; `Verified`, `Approved`, `Published`, dan `Consumed` tidak saling menyiratkan.
-- Retrieval, ranking, popularity, publication, model fluency, frequent use, dan Git event tidak membuktikan truth, authority, approval, atau correctness.
-- Knowledge dalam prompt selalu context/data sampai authority instruction terbukti secara terpisah; embedded instruction dari file/web/tool/report/retrieval tidak memperoleh authority.
-- Context package material mempertahankan canonical source, version, status, claim/evidence, provenance, confidence, applicability, classification/rights, contradiction, limitation, consumer use, dan revalidation path.
-- AI boleh membantu discovery, extraction, comparison, synthesis draft, checks, serta review packet; AI tidak dapat mengarang citation, memberi verification/approval manusia, menerima risiko, atau menjadi owner manusia.
-- Technical completion SPOS-012 tetap terpisah dari human review, approval, publication, dan activation.
+- Master Integration System berada di `99-prompt-os/00-core/` karena menghubungkan seluruh Core dan Foundation, tetapi bukan engine runtime, mega-policy, atau authority baru.
+- Constitution/Governance tetap memiliki authority dan decision right; Integration Steward hanya memelihara relationship/dependency/interface map.
+- Master Knowledge System tetap memiliki claim/evidence/provenance/consumption semantics; Master Prompt System tetap memiliki prompt assembly semantics.
+- Session memiliki identity/state/continuity; Execution memiliki procedure/checkpoint/recovery; Documentation memiliki document lifecycle; Report memiliki representation; Git memiliki version-control trace; Quality memiliki gate/finding/DoD.
+- Authority/constraint mengalir ke bawah; evidence/feedback mengalir ke atas untuk review, bukan perubahan otomatis.
+- Setiap integration edge material wajib mencatat source, owner, status/version, consumer/use, classification, interface, compatibility, validation, failure behavior, dan review trigger.
+- Access, capability, authorship, confidence, validation pass, commit, merge, push, publication, atau penggunaan tidak memberi authority manusia.
+- Technical completion SPOS-013 tetap terpisah dari human review, approval, activation, publication, dan operational conformance.
 
 ## KNOWN ISSUES
 
 - Ratifikasi Constitution oleh Founder belum tercatat.
-- Approval/activation record seluruh Core Engine, Master Prompt System, dan Master Knowledge System belum tersedia.
-- Knowledge Steward, Domain Owner, reviewer, approver, Security/Privacy/IP owner, delegation, serta human role acceptance belum tersedia operasional.
-- Canonical inventory, taxonomy/vocabulary registry, source/claim/provenance model, classification/access/retention control, dan consumer map belum tersedia.
-- Representative source-assessment, conflict, synthesis, retrieval, correction, deprecation, privacy/license, prompt-context, incident, rollback, dan conformance scenario belum dijalankan operasional.
-- Monitoring, stale/source-drift detection, audit cadence, correction notification, consumer migration, secure evidence/secret storage, serta enforcement tidak dibangun.
-- External standards hanya informative research; adopsi formal atau conformity claim memerlukan Governance review dan authority manusia.
+- Approval/activation record seluruh Core Engine, Master Prompt System, Master Knowledge System, dan Master Integration System belum tersedia.
+- Integration Steward, system/domain owner, reviewer, approver, Security/Privacy/Rights owner, delegation, separation, dan human role acceptance belum tersedia operasional.
+- Interface/dependency inventory, authority map, compatibility matrix, consumer map, classification/access controls, change-propagation registry, dan trace registry belum tersedia sebagai control operasional.
+- Representative positive, negative, boundary, conflict, failure, recovery, migration, rollback, security, override, deprecation, dan future-system scenarios belum dijalankan operasional.
+- Monitoring, integration-drift detection, stale/revoked dependency handling, incident response, audit cadence, correction notification, consumer migration, secure evidence/secret storage, dan enforcement tidak dibangun.
+- Documentation map tidak boleh disalahartikan sebagai runtime, implementation, security control, atau bukti efektivitas.
 
 ## CONTEXT untuk resume
 
-- Scope lock SPOS-012: Master Knowledge System dan cross-system documentation saja; tanpa aplikasi, API, database, graph/vector store, search/retrieval service, RAG, crawler, dashboard, deployment, model, agent memory, atau automation.
-- File kunci: `01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`, `01-foundation/knowledge/KNOWLEDGE_ARCHITECTURE.md`, `01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`, `01-foundation/FOUNDATION_ARCHITECTURE.md`, `99-prompt-os/00-core/CONSTITUTION.md`, `99-prompt-os/00-core/GOVERNANCE_ENGINE.md`, `99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`, `99-prompt-os/00-core/SPOS_ARCHITECTURE.md`, dan `reports/sessions/SPOS-012.md`.
-- Last safe checkpoint: seluruh deliverable dan validation suite SPOS-012 wajib lulus; commit final dipush normal, hash lokal/remote diverifikasi identik, dan working tree dipastikan bersih saat closure.
-- Baseline commit: `8f9f295e6ef7d745314cf84fce30a88bcf7378fa`.
+- Scope lock SPOS-013: Master Integration System dan cross-system documentation saja; tanpa aplikasi, backend, frontend, API, runtime, orchestrator, agent/workflow runtime, automation, CI/CD, deployment, infrastructure, Docker, database, dashboard, atau monitoring service.
+- File kunci: `99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md`, `99-prompt-os/00-core/SPOS_ARCHITECTURE.md`, `99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`, `01-foundation/FOUNDATION_ARCHITECTURE.md`, `01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`, `99-prompt-os/00-core/CONSTITUTION.md`, `99-prompt-os/00-core/GOVERNANCE_ENGINE.md`, dan `reports/sessions/SPOS-013.md`.
+- Last safe checkpoint: seluruh deliverable dan validation suite SPOS-013 wajib lulus; commit final dipush normal, hash lokal/remote diverifikasi identik, dan working tree dipastikan bersih saat closure.
+- Baseline commit: `c179c3c0c7313ca842f382028c05e323277e849d`.
 - Remote: `https://github.com/Sparkmind-obp-off/Sparkmind-SAOS.git`.

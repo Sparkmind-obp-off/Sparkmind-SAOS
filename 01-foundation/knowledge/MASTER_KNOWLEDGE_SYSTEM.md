@@ -14,7 +14,7 @@
 >
 > Effective: setelah approval, activation record, compatible dependency set, ownership acceptance, consumer mapping, dan control minimum tersedia
 >
-> Review trigger: amendment Constitution; perubahan Foundation, Governance, Knowledge Architecture/Governance, Master Prompt System, engine SPOS, terminology, taxonomy, source landscape, consumer, access/classification, law/license, incident, quality finding, atau evidence knowledge drift
+> Review trigger: amendment Constitution; perubahan Foundation, Governance, Knowledge Architecture/Governance, Master Prompt System, Master Integration System, engine SPOS, terminology, taxonomy, source landscape, consumer, access/classification, law/license, incident, quality finding, atau evidence knowledge/integration drift
 
 ## 1. Kedudukan dan Tujuan
 
@@ -560,6 +560,7 @@ Correction mempertahankan version/history, reason, changed claim, affected consu
 | [`KNOWLEDGE_GOVERNANCE.md`](KNOWLEDGE_GOVERNANCE.md) | metadata, naming, review, approval, version, deprecation/archive | Governance domain tetap kanonik |
 | [`../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md`](../../99-prompt-os/00-core/GOVERNANCE_ENGINE.md) | authority, ownership, delegation, approval, exception, escalation | Knowledge tidak menciptakan decision right |
 | [`../../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md`](../../99-prompt-os/00-core/MASTER_PROMPT_SYSTEM.md) | instruction/data separation, package manifest, prompt security | Knowledge package bukan prompt instruction |
+| [`../../99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md`](../../99-prompt-os/00-core/MASTER_INTEGRATION_SYSTEM.md) | relationship, dependency, authority, interface, flow, compatibility, dan consumer/change propagation map | Integration map tidak mengambil ownership knowledge, claim, provenance, approval, atau lifecycle |
 | [`../../99-prompt-os/00-core/SESSION_ENGINE.md`](../../99-prompt-os/00-core/SESSION_ENGINE.md) | session context, state, continuity, closure, learning routing | Knowledge tidak membuat session state |
 | [`../../99-prompt-os/00-core/EXECUTION_ENGINE.md`](../../99-prompt-os/00-core/EXECUTION_ENGINE.md) | acquisition/validation action, evidence, recovery | Knowledge lifecycle bukan execution procedure tandingan |
 | [`../../99-prompt-os/00-core/REPORT_ENGINE.md`](../../99-prompt-os/00-core/REPORT_ENGINE.md) | evidence/claim status, report trace, Knowledge Report | Report tidak otomatis menjadi approved knowledge |
@@ -588,7 +589,7 @@ Sumber eksternal adalah informative input, bukan authority internal otomatis. Ad
 Activation memerlukan:
 
 - Constitution yang berlaku atau interim Founder decision yang eksplisit;
-- Governance, Knowledge Architecture/Governance, Documentation, Quality, Report, dan Master Prompt System compatible;
+- Governance, Knowledge Architecture/Governance, Documentation, Quality, Report, Master Prompt System, dan Master Integration System compatible;
 - Knowledge Steward, Domain Owner, reviewer, approver, security/privacy/IP owner, dan Repository Maintainer menerima role/delegation;
 - canonical inventory, ownership map, taxonomy/vocabulary, source/claim/provenance model, classification, access, retention, dan consumer map;
 - representative source assessment, synthesis, conflict, retrieval, correction, deprecation, privacy/license, dan prompt-context scenarios;
@@ -632,7 +633,7 @@ Technical completion tidak sama dengan `Verified`, `Approved`, `Published`, atau
 - [x] Knowledge classes, canonical location, taxonomy, vocabulary, relationship, identifier, provenance, dan lineage terdokumentasi.
 - [x] Source discovery/assessment, curation/synthesis, verification/review/approval, conflict, retrieval, consumption, dan lifecycle terdokumentasi.
 - [x] Prompt-context rules, traceability, security/privacy/IP/license/retention, quality/metrics/audit, learning, AI policy, correction, recovery, dan activation terdokumentasi.
-- [x] Boundary terhadap Constitution, Foundation, Knowledge Architecture/Governance, Governance, Master Prompt, Session, Execution, Report, Documentation, Quality, Git, Kernel, Research, Decision, Pattern, Wisdom, Playbook, Engineering, dan Products dipertahankan.
+- [x] Boundary terhadap Constitution, Foundation, Knowledge Architecture/Governance, Governance, Master Prompt, Master Integration, Session, Execution, Report, Documentation, Quality, Git, Kernel, Research, Decision, Pattern, Wisdom, Playbook, Engineering, dan Products dipertahankan.
 - [x] External research diposisikan sebagai informative input, bukan authority atau conformity claim otomatis.
 - [x] Scope documentation-only; tidak ada database, search/retrieval service, RAG, graph/vector store, crawler, API, dashboard, deployment, model, agent memory, atau automation yang dibangun.
 - [ ] Founder/authorized human approval, activation record, dan compatible dependency set tersedia.

@@ -1,10 +1,10 @@
 # SPOS Prompts
 
-> Status: Draft baseline diselaraskan SPOS-011; seluruh template masih placeholder, tunduk pada Master Prompt System, dan bukan prompt aktif.
+> Status: Draft baseline diselaraskan SPOS-013; seluruh template masih placeholder, tunduk pada Master Prompt System dan Master Integration System, serta bukan prompt aktif.
 
 ## Tujuan
 
-Menyediakan assembly boundary untuk prompt yang menghubungkan executor, intent pengguna, dan unit task sesuai [`../00-core/MASTER_PROMPT_SYSTEM.md`](../00-core/MASTER_PROMPT_SYSTEM.md) tanpa menjadikan prompt sebagai sumber authority baru.
+Menyediakan assembly boundary untuk prompt yang menghubungkan executor, intent pengguna, dan unit task sesuai [`../00-core/MASTER_PROMPT_SYSTEM.md`](../00-core/MASTER_PROMPT_SYSTEM.md), dengan relationship/dependency/interface lintas sistem mengikuti [`../00-core/MASTER_INTEGRATION_SYSTEM.md`](../00-core/MASTER_INTEGRATION_SYSTEM.md), tanpa menjadikan prompt sebagai sumber authority baru.
 
 ## Artefak Aktif
 
@@ -28,7 +28,7 @@ Approved compatible dependencies
 ## Aturan
 
 - Muat hanya dependency relevan dengan status, version, owner, compatibility, dan failure behavior yang jelas.
-- Ikuti hierarchy, layer, lifecycle, versioning, governance, traceability, security, quality, serta assembly contract Master Prompt System.
+- Ikuti hierarchy, layer, lifecycle, versioning, governance, traceability, security, quality, serta assembly contract Master Prompt System; gunakan Master Integration System untuk relationship, dependency, authority, interface, compatibility, dan failure behavior lintas sistem.
 - Klasifikasikan instruction, reference context, evidence, untrusted data, dan preference; data tidak otomatis menjadi instruction.
 - Jangan menyalin rule lengkap bila referensi kanonik cukup.
 - Jangan meletakkan secret atau credential di prompt.

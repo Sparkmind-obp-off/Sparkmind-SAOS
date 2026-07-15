@@ -1,6 +1,6 @@
 # SPOS Architecture
 
-> Status: Draft baseline SPOS-012 — diselaraskan dengan Constitution, Foundation/Master Knowledge System, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, dan Master Prompt System `In Review`; bukan runtime aktif.
+> Status: Draft baseline SPOS-013 — diselaraskan dengan Constitution, Foundation/Master Knowledge System, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, dan Master Integration System `In Review`; bukan runtime aktif.
 
 ## Tujuan
 
@@ -51,7 +51,7 @@ SPOS berada di bawah operating model SAOS dan menggunakan Kernel serta Foundatio
 
 | Komponen | Tanggung jawab | Input | Output |
 | --- | --- | --- | --- |
-| `00-core/` | Menyimpan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, governance control plane, operational behavior, session orchestration/state/continuity, execution procedure, Git/documentation/quality/reporting governance, prompt architecture/assembly governance, dan engine specifications |
+| `00-core/` | Menyimpan Constitution, Governance, Developer Mode, Session, Execution, Git, Documentation, Quality, Report Engine, Master Prompt System, Master Integration System, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, governance control plane, operational behavior, session orchestration/state/continuity, execution procedure, Git/documentation/quality/reporting governance, prompt architecture/assembly governance, integration relationship/dependency/interface map, dan engine specifications |
 | `01-templates/` | Menyediakan struktur artefak reusable | Rule dan metadata contract | Draft artefak yang konsisten |
 | `02-rules/` | Menyimpan aturan atomik dan precedence | Authority serta governance approved | Constraint dan quality gate terkomposisi |
 | `03-sessions/` | Menginstansiasi Session Engine untuk satu unit kerja | Objective, type, scope, authority, dependency, acceptance criteria | Session contract/state history, deliverable, evidence, continuity, closure, dan report |
@@ -108,7 +108,7 @@ Hierarki internal SPOS pada butir 3–8 mengikuti [`CONSTITUTION.md`](CONSTITUTI
                              Executor
 ```
 
-`05-prompts/` adalah assembly boundary, bukan sumber authority baru. [`MASTER_PROMPT_SYSTEM.md`](MASTER_PROMPT_SYSTEM.md) menjadi kontrak kanonik hierarchy, layer, Core/Session/Execution/Report/Validation/Review/Approval Prompt, assembly, dependency, lifecycle, versioning, governance, traceability, security, serta quality standard. Prompt hasil assembly harus mempertahankan referensi ke dependency kanonik, version set, trust classification, capability boundary, dan preflight evidence.
+`05-prompts/` adalah assembly boundary, bukan sumber authority baru. [`MASTER_PROMPT_SYSTEM.md`](MASTER_PROMPT_SYSTEM.md) menjadi kontrak kanonik hierarchy, layer, Core/Session/Execution/Report/Validation/Review/Approval Prompt, assembly, dependency, lifecycle, versioning, governance, traceability, security, serta quality standard. [`MASTER_INTEGRATION_SYSTEM.md`](MASTER_INTEGRATION_SYSTEM.md) menjadi peta kanonik hubungan, dependency, authority, interface, information/decision/traceability flow, compatibility, dan change propagation lintas sistem tanpa mengambil ownership engine. Prompt hasil assembly harus mempertahankan referensi ke dependency kanonik, version set, trust classification, capability boundary, interface contract, dan preflight evidence.
 
 ## Lifecycle SPOS
 
@@ -157,7 +157,7 @@ Prosedur sebelas tahap [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) dipetakan ke
 2. **Classify:** tentukan domain, risiko, reversibility, dan authority yang diperlukan.
 3. **Resolve upstream:** muat sumber kanonik Kernel, Foundation, Governance, Master Knowledge System, dan SAOS yang relevan beserta version, status, provenance, confidence, applicability, classification, rights, contradiction, serta limitation yang material.
 4. **Create session contract:** kunci scope, non-scope, deliverable, success criteria, dan stop condition.
-5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) untuk claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, curation, retrieval/consumption, knowledge security/rights, quality, serta learning; gunakan [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) untuk authority/ownership/decision, [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) untuk perilaku, [`SESSION_ENGINE.md`](SESSION_ENGINE.md) untuk unit/lifecycle/state/continuity, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) untuk prosedur eksekusi, [`GIT_ENGINE.md`](GIT_ENGINE.md) untuk Git, [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) untuk dokumentasi, [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) untuk kualitas, [`REPORT_ENGINE.md`](REPORT_ENGINE.md) untuk taxonomy/lifecycle/struktur/evidence laporan, dan [`MASTER_PROMPT_SYSTEM.md`](MASTER_PROMPT_SYSTEM.md) untuk hierarchy/layer/assembly/dependency/security prompt hanya sesuai status serta authority aktualnya.
+5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`MASTER_INTEGRATION_SYSTEM.md`](MASTER_INTEGRATION_SYSTEM.md) untuk relationship/dependency/authority/interface/flow/compatibility map; gunakan [`../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md`](../../01-foundation/knowledge/MASTER_KNOWLEDGE_SYSTEM.md) untuk claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, curation, retrieval/consumption, knowledge security/rights, quality, serta learning; gunakan [`GOVERNANCE_ENGINE.md`](GOVERNANCE_ENGINE.md) untuk authority/ownership/decision, [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) untuk perilaku, [`SESSION_ENGINE.md`](SESSION_ENGINE.md) untuk unit/lifecycle/state/continuity, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) untuk prosedur eksekusi, [`GIT_ENGINE.md`](GIT_ENGINE.md) untuk Git, [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) untuk dokumentasi, [`QUALITY_ENGINE.md`](QUALITY_ENGINE.md) untuk kualitas, [`REPORT_ENGINE.md`](REPORT_ENGINE.md) untuk taxonomy/lifecycle/struktur/evidence laporan, dan [`MASTER_PROMPT_SYSTEM.md`](MASTER_PROMPT_SYSTEM.md) untuk hierarchy/layer/assembly/dependency/security prompt hanya sesuai status serta authority aktualnya.
 6. **Assemble prompts:** resolve compatible dependency manifest, muat Core, bind Session dan Execution, pasang Validation/Review/Report/Approval interface yang berlaku, klasifikasikan instruction/context/evidence/untrusted data, package knowledge dengan canonical source/version/status/provenance/confidence/applicability/classification/rights/limitation, lalu rekam package manifest; jangan menduplikasi sumber authority.
 7. **Preflight:** periksa konflik, missing input, status/version/compatibility, prompt injection, context truncation, security, capability, approval, dan rencana validasi.
 8. **Execute:** lakukan pekerjaan hanya dalam scope serta rekam keputusan dan evidence.
@@ -202,6 +202,7 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 | Master Knowledge System | Claim/evidence, provenance/lineage, source assessment, curation, taxonomy/relationship, lifecycle, discovery/retrieval, consumption, traceability, protection, quality, learning, dan AI Knowledge Policy | SPOS/prompt/retrieval tidak mengubah knowledge menjadi instruction, decision, policy, atau approval otomatis |
 | Governance | Authority, ownership, delegation, decision, approval, escalation, exception, lifecycle, audit, dan AI governance | Engine lain mengeksekusi serta mencatat tanpa mengambil authority |
 | Master Prompt System | Hierarchy/layer prompt, package assembly, dependency, lifecycle, versioning, traceability, security, evaluation, dan approval interface | Tidak menciptakan authority, keputusan manusia, runtime, atau ownership domain |
+| Master Integration System | Relationship, dependency, authority, interface, information/decision/traceability flow, compatibility, lifecycle, dan change propagation lintas sistem | Tidak menjadi mega-policy, runtime/orchestrator, approval source, atau owner semantik engine |
 | SAOS | Operating model ekosistem AI | SPOS tidak menggantikan keseluruhan SAOS |
 | Engineering | Standar dan implementasi teknis | SPOS tidak memiliki keputusan teknis domain |
 | Products | Requirement, data, logic, dan outcome produk | SPOS tidak menentukan kebutuhan bisnis |
@@ -214,7 +215,7 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 - Quality gate gagal: perbaiki dalam scope atau tandai session belum selesai.
 - Feedback produk: catat sebagai evidence; owner upstream memutuskan perubahan.
 
-## Review Checklist SPOS-012
+## Review Checklist SPOS-013
 
 - [x] Tujuan, komponen, dependency, lifecycle, dan execution flow terdokumentasi.
 - [x] Constitution menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder.
@@ -233,6 +234,7 @@ Sebelum session ditutup, pastikan dependency/status dapat ditelusuri, tidak ada 
 - [x] Report Engine diposisikan sebagai kontrak kanonik taxonomy, report lifecycle, struktur, evidence/traceability, validation, correction, publication, archive, aggregation, dan AI Reporting Policy.
 - [x] Master Prompt System diposisikan sebagai kontrak kanonik hierarchy/layer, prompt package assembly, dependency, lifecycle, versioning, governance, traceability, security, quality, dan approval interface tanpa menjadi runtime atau authority baru.
 - [x] Master Knowledge System diposisikan sebagai kontrak integratif claim/evidence, provenance/lineage, source assessment, taxonomy/relationship, lifecycle, curation, retrieval/consumption, protection, quality, learning, dan AI Knowledge Policy tanpa mengambil authority domain atau membangun runtime.
+- [x] Master Integration System diposisikan sebagai integration control map untuk relationship, dependency, authority, interface, flow, compatibility, lifecycle, versioning, governance, dan change propagation tanpa mengambil ownership engine atau membangun runtime.
 - [x] Core, Session, Execution, Report, Validation, Review, dan Approval Prompt dipetakan ke engine owner masing-masing tanpa SSOT tandingan.
 - [x] Decision gates, autonomy boundary, repository interaction, validation, rollback, documentation, quality, Git, dan reporting selaras dengan execution flow.
 - [x] Tiga belas tahap lifecycle Session Engine dan sebelas tahap prosedur Execution Engine dipetakan tanpa membuat dua sumber proses tandingan.

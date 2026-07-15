@@ -136,12 +136,12 @@ Automatic stop conditions mencakup repository/target/owner ambigu, unrelated wor
 
 ## 12. Commit Hash
 
-- Commit implementasi: `<diisi setelah commit>`
+- Commit implementasi: `fb6cd9d77bd8801e251f7b5dea9835872635fb23` (`docs(spos): establish Git Engine`).
 - Commit finalisasi report: commit yang memuat evidence push terakhir dan menjadi `HEAD` penutupan session.
 
 ## 13. Status Push
 
-`<diisi setelah push dan verifikasi remote>`
+Berhasil. Commit implementasi `fb6cd9d77bd8801e251f7b5dea9835872635fb23` telah dipush ke `origin/main`; hash lokal dan `refs/heads/main` remote terverifikasi sama. Commit finalisasi report diverifikasi pada penutupan session.
 
 ## 14. Validasi
 
@@ -156,7 +156,7 @@ Automatic stop conditions mencakup repository/target/owner ambigu, unrelated wor
 - Link Markdown relatif: lulus.
 - Whitespace Git: lulus (`git diff --check`).
 - Scope dan secret review: lulus; perubahan documentation-only dan tidak ditemukan credential-shaped secret.
-- Remote verification: `<diisi setelah push>`.
+- Remote verification: commit implementasi lulus; commit finalisasi diverifikasi pada penutupan session.
 
 ## 15. Temuan Penting
 
@@ -198,4 +198,4 @@ Bangun **Governance Engine** untuk menutup dependency authority seluruh engine, 
 
 ## 19. Completion Status
 
-Status sementara: **In Review** sampai cross-review, validasi, commit, push, dan verifikasi remote selesai. Setelah workflow teknis selesai, session dapat `Completed`, sedangkan Git Engine tetap `In Review` sampai approval operasional yang sah.
+Status session: **Completed**. Deliverable, cross-review, validasi, commit implementasi, push, dan verifikasi remote selesai; commit finalisasi report menjadi evidence penutupan terakhir. Git Engine tetap **In Review** sampai approval operasional yang sah dan tidak berubah status hanya karena session selesai.

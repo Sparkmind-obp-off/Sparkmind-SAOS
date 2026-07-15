@@ -6,7 +6,7 @@ Pedoman ini memastikan setiap kontribusi terhadap SparkMind SAOS dapat dipahami,
 
 ## Sebelum Berkontribusi
 
-1. Baca [`README.md`](README.md), [`00-kernel/README.md`](00-kernel/README.md), [`01-foundation/README.md`](01-foundation/README.md), dan [`99-prompt-os/00-core/GIT_ENGINE.md`](99-prompt-os/00-core/GIT_ENGINE.md).
+1. Baca [`README.md`](README.md), [`00-kernel/README.md`](00-kernel/README.md), [`01-foundation/README.md`](01-foundation/README.md), [`99-prompt-os/00-core/GIT_ENGINE.md`](99-prompt-os/00-core/GIT_ENGINE.md), dan [`99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](99-prompt-os/00-core/DOCUMENTATION_ENGINE.md).
 2. Periksa dokumen terkait agar tidak membuat sumber kebenaran kedua.
 3. Tentukan apakah perubahan bersifat rutin, operasional, strategis, atau sensitif.
 4. Untuk perubahan Vision, Mission, Philosophy, Values, Ethics, Doctrine, Canon, atau identitas SparkMind, dapatkan persetujuan Founder sebelum menetapkan isi final.
@@ -28,7 +28,7 @@ Kode aplikasi, fitur produk, deployment, database, CI/CD, dan pemilihan tech sta
 2. Sinkronkan branch utama lokal dengan remote tanpa menimpa pekerjaan pihak lain.
 3. Buat branch sesuai [`docs/standards/BRANCH_CONVENTION.md`](docs/standards/BRANCH_CONVENTION.md); `develop` hanya digunakan bila policy repository mengaktifkannya.
 4. Buat perubahan sekecil dan sefokus mungkin.
-5. Perbarui dokumen terkait, link, indeks, dan `CHANGELOG.md` bila relevan.
+5. Lakukan documentation impact assessment lalu perbarui source kanonik, link, indeks, guide, migration/release note, dan `CHANGELOG.md` yang relevan sesuai Documentation Engine.
 6. Lakukan self-review menggunakan checklist di bawah.
 7. Commit sesuai [`docs/standards/COMMIT_CONVENTION.md`](docs/standards/COMMIT_CONVENTION.md).
 8. Push normal tanpa force push atau protection bypass.
@@ -58,6 +58,8 @@ Setiap perubahan harus:
 - [ ] `CHANGELOG.md` diperbarui bila perubahan relevan bagi pengguna repository.
 - [ ] Commit mengikuti Conventional Commits.
 - [ ] Branch, Pull Request, reviewer, check, approval, merge, dan push mengikuti Git Engine.
+- [ ] Jenis, metadata, lifecycle, link, review, publication/archive, dan AI boundary mengikuti Documentation Engine.
+- [ ] Perubahan code/behavior dan dokumentasi consumer sinkron.
 - [ ] Perubahan strategis telah mendapat persetujuan Founder.
 
 ## Pelaporan Security

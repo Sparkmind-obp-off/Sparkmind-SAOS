@@ -4,7 +4,7 @@
 
 ## Tujuan
 
-Menetapkan aturan pengelolaan Knowledge System agar artefak konsisten, dapat direview, memiliki provenance, dan tidak berubah menjadi sumber kebenaran yang saling bersaing.
+Menetapkan aturan pengelolaan Knowledge System agar artefak konsisten, dapat direview, memiliki provenance, dan tidak berubah menjadi sumber kebenaran yang saling bersaing. Policy dokumentasi lintas ekosistem mengikuti [`../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md`](../../99-prompt-os/00-core/DOCUMENTATION_ENGINE.md); dokumen ini tetap menjadi sumber domain-specific untuk confidence, verification, curation, approval, dan lifecycle Knowledge System.
 
 ## Naming
 
@@ -57,7 +57,7 @@ Setiap review menilai:
 6. dampak kepada consumer serta kebutuhan migrasi;
 7. tanggal atau kondisi review ulang.
 
-AI boleh melakukan pre-review dan cross-check, tetapi reviewer manusia bertanggung jawab untuk artefak yang akan digunakan secara operasional atau strategis.
+AI boleh melakukan pre-review dan cross-check, tetapi reviewer manusia bertanggung jawab untuk artefak yang akan digunakan secara operasional atau strategis. AI create/update/archive juga mengikuti AI Documentation Policy; publication atau archive tidak boleh memperluas audience, menghapus evidence, atau mengubah status approval tanpa authority.
 
 ## Approval
 
@@ -94,6 +94,8 @@ Artefak superseded tetap dapat diakses untuk audit dan harus memiliki link dua a
 - Secret, data pribadi, dan materi berlisensi tidak dipertahankan hanya karena alasan histori.
 
 ## Referensi Silang
+
+Aturan umum cross-reference, internal link, supersession, dan publication mengikuti Documentation Engine; aturan berikut memperjelas kebutuhan Knowledge System:
 
 1. Gunakan link Markdown relatif untuk artefak repository.
 2. Tautkan ke sumber kanonik, bukan ke salinan atau laporan session.

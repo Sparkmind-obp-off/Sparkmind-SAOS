@@ -20,7 +20,7 @@
 
 Git Engine adalah standar permanen pengelolaan version control untuk seluruh AI Agent, repository, dan proyek dalam ekosistem SparkMind. Engine menetapkan branch strategy, commit policy, Pull Request dan review, merge, push, release, repository protection, audit, recovery, serta batas otomatisasi AI.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku; Execution Engine menetapkan lifecycle session; Git Engine menjadi sumber kanonik untuk proses Git pada tahap **Perform Git Workflow**.
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku; Execution Engine menetapkan lifecycle session; Git Engine menjadi sumber kanonik untuk proses Git pada tahap **Perform Git Workflow**. Dokumentasi yang menyertai branch, commit, review, release, dan audit mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md).
 
 Git Engine bukan layanan hosting Git, CI/CD, aplikasi, fitur produk, atau izin untuk mengubah histori tanpa batas. Capability teknis tidak sama dengan authority. Commit, push, merge, tag, dan release tidak dengan sendirinya merupakan approval normatif, ratifikasi, atau penerimaan risiko.
 
@@ -251,7 +251,7 @@ Reviewer memeriksa:
 - test, link, lint, build, compatibility, dan negative path yang relevan;
 - security, privacy, secret, permission, legal/license, dan data handling;
 - architecture, upstream/downstream, migration, rollback, dan blast radius;
-- dokumentasi, changelog, versioning, release note, dan audit evidence;
+- dokumentasi, metadata/lifecycle, changelog, versioning, release note, publication impact, dan audit evidence sesuai Documentation Engine;
 - commit quality serta absence of unrelated changes;
 - unresolved comment, blocker, risk owner, dan approval wajib.
 
@@ -522,6 +522,7 @@ Retry mengikuti [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md): diagnosis dahulu, 
 | [`CONSTITUTION.md`](CONSTITUTION.md) | Repository First, Truth over Assumption, transparency, human oversight, traceability, reversibility, dan audit | Git event tidak menjadi ratifikasi atau approval |
 | [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) | Review before commit, commit before push, push before report, small changes, rollback, dan autonomy gates | Git Engine merinci workflow tanpa memperluas otonomi |
 | [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) | Perform Git Workflow, validation, evidence, failure/recovery, dan Definition of Done | Git Engine adalah sumber kanonik detail Git; Execution Engine tetap sumber lifecycle session |
+| [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Versioned/traceable documentation, change history, review, changelog, release notes, publication, dan archive | Git menyediakan history/evidence; Git event tidak mengubah status approval dokumen |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, ownership, evidence flow, approved lifecycle, dan Git history | Engine tidak mengambil ownership Foundation/domain |
 | [`../../01-foundation/governance/README.md`](../../01-foundation/governance/README.md) | approval, delegation, exception, escalation, dan audit | Governance substantif belum tersedia; ambiguity tetap fail-closed |
 | [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md) | traceable component flow, bounded execution, report, dan feedback | Engine adalah kontrak dokumentasi, bukan Git hosting/automation runtime |
@@ -589,7 +590,7 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Push timing, verifikasi pre/post-push, tagging, changelog, release, dan rollback terdokumentasi.
 - [x] Branch protection, force-push prohibition, backup, audit history, dan traceability terdokumentasi.
 - [x] AI commit/push permission, Founder/human approval, dan automatic stop conditions terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Execution Engine, Foundation, Governance, SPOS Architecture, dan repository standards dipetakan.
+- [x] Alignment dengan Constitution, Developer Mode, Execution Engine, Documentation Engine, Foundation, Governance, SPOS Architecture, dan repository standards dipetakan.
 - [x] Scope tidak membangun aplikasi, fitur produk, Git hosting, CI/CD, atau runtime automation.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
 - [ ] Developer Mode, Execution Engine, dan Git Engine memperoleh approval operasional serta activation record.

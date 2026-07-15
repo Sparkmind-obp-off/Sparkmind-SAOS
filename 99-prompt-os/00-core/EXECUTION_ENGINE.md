@@ -20,7 +20,7 @@
 
 Execution Engine adalah standar proses permanen yang menentukan bagaimana setiap AI Agent menerima objective, menganalisis konteks, membaca repository, mengidentifikasi dependency, merencanakan, mengeksekusi, memvalidasi, mendokumentasikan, menjalankan Git workflow, melaporkan, dan menutup pekerjaan dalam ekosistem SparkMind.
 
-Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Execution Engine menetapkan lifecycle, klasifikasi, gate, evidence, failure handling, dan completion contract untuk satu session. Detail tahap **Perform Git Workflow** mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md).
+Engine ini mengoperasionalkan [`CONSTITUTION.md`](CONSTITUTION.md), [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md), dan [`SPOS_ARCHITECTURE.md`](SPOS_ARCHITECTURE.md). Constitution menetapkan prinsip dan authority; Developer Mode menetapkan perilaku kerja; Execution Engine menetapkan lifecycle, klasifikasi, gate, evidence, failure handling, dan completion contract untuk satu session. Detail tahap **Update Documentation** mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md), sedangkan **Perform Git Workflow** mengikuti [`GIT_ENGINE.md`](GIT_ENGINE.md).
 
 Execution Engine bukan aplikasi, runtime otonom, scheduler, product workflow, atau sumber authority baru. Engine tidak memberi approval kepada dirinya sendiri, tidak mengubah requirement produk, dan tidak mengesampingkan Governance, owner domain, hukum, keselamatan, atau Founder Authority.
 
@@ -178,16 +178,18 @@ Validasi berlapis mencakup:
 
 **Tujuan:** menjaga source of truth, consumer, dan handoff tetap sinkron dengan hasil.
 
-Perbarui hanya artefak yang terdampak, seperti:
+Jalankan [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) sebagai sumber kanonik untuk prinsip, jenis, lifecycle, metadata, versioning, ownership, review, publication, archive, code-documentation relationship, dan AI Documentation Policy. Urutan minimum:
 
-- dokumen kanonik dan cross-reference;
-- README, index, architecture, standard, atau user guide;
-- decision record, migration note, changelog, dan handoff;
-- Session Report sebagai evidence session, bukan SSOT tandingan.
+1. lakukan documentation impact assessment;
+2. perbarui source kanonik serta cross-reference;
+3. sinkronkan README, index, architecture, standard, guide, decision record, migration note, changelog, handoff, dan release note yang benar-benar terdampak;
+4. gunakan Session Report sebagai evidence session, bukan SSOT tandingan;
+5. bedakan completed work, fakta, assumption, limitation, technical debt, dan unresolved risk;
+6. jalankan semantic, authority, lifecycle, link, security/privacy, dan usability review.
 
-Dokumentasi wajib membedakan completed work, limitation, assumption, technical debt, dan unresolved risk. Jangan menduplikasi aturan kanonik ke banyak file.
+Jangan menduplikasi aturan kanonik ke banyak file. Documentation debt tidak boleh digunakan untuk menutup session jika dokumentasi tersebut diperlukan untuk penggunaan atau operasi aman.
 
-**Gate keluar:** tidak ada referensi yang diketahui usang, broken link, status palsu, atau instruksi consumer yang bertentangan.
+**Gate keluar:** Documentation Engine gate yang berlaku lulus; tidak ada referensi yang diketahui usang, broken link kritis, status palsu, atau instruksi consumer yang bertentangan.
 
 ### 3.9 Perform Git Workflow
 
@@ -289,9 +291,11 @@ Satu session dapat memiliki satu klasifikasi primer dan klasifikasi sekunder bil
 
 ### 5.4 Dokumentasi Selalu Diperbarui
 
-- Dokumentasi adalah bagian deliverable, bukan pekerjaan opsional setelah implementasi.
-- Ubah sumber kanonik dan consumer yang benar-benar terdampak pada session yang sama.
-- Nyatakan status dan limitation secara jujur.
+- Dokumentasi adalah bagian deliverable dan Definition of Done, bukan pekerjaan opsional setelah implementasi.
+- Lakukan documentation impact assessment dan ikuti Documentation Engine.
+- Ubah sumber kanonik dan consumer yang benar-benar terdampak pada session/release yang sama bila memungkinkan.
+- Jika publication terpisah, tracking item, owner, deadline, mitigation, dan release gate wajib tersedia.
+- Nyatakan status, source, assumption, limitation, debt, dan risk secara jujur.
 
 ### 5.5 Tidak Meninggalkan Pekerjaan Setengah Selesai
 
@@ -357,11 +361,15 @@ Pastikan:
 
 Pastikan:
 
-- dokumen kanonik, README, index, changelog, handoff, decision/migration note diperbarui sesuai dampak;
+- Documentation Engine gate yang relevan diterapkan;
+- documentation impact assessment mencakup code, config, schema, API, behavior, architecture, setup, operations, security, dan prompt yang berubah;
+- dokumen kanonik, README, index, changelog, handoff, release note, decision/migration note diperbarui sesuai dampak;
+- jenis, metadata, owner, lifecycle, review, publication, archive, dan cadence tepat;
 - fakta, asumsi, keputusan, limitation, debt, dan risiko dibedakan;
 - link relatif serta referensi source valid;
 - report tidak menggantikan sumber kanonik;
-- status `In Review`, `Approved`, atau `Completed` tidak diklaim tanpa authority/evidence.
+- status `In Review`, `Approved`, `Published`, atau `Completed` tidak diklaim tanpa authority/evidence;
+- perubahan tidak ditutup jika dokumentasi wajib untuk penggunaan aman masih tertinggal.
 
 ### 6.6 Definition of Done Check
 
@@ -471,6 +479,7 @@ Lesson learned wajib:
 | [`CONSTITUTION.md`](CONSTITUTION.md) | Amanah, Human First, Truth over Assumption, quality, reversibility, oversight, escalation, dan auditability | Engine tidak meratifikasi atau mengubah Constitution. |
 | [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) | Read/plan/review before action, incremental work, validation, documentation, Git, reporting, autonomy, dan rollback | Execution Engine merinci proses; tidak menggandakan authority atau memperluas otonomi. |
 | [`GIT_ENGINE.md`](GIT_ENGINE.md) | Detail branch, commit, PR/review, merge, push, release, protection, audit, dan AI Git automation pada tahap Perform Git Workflow | Git Engine menjadi sumber detail Git tanpa menggantikan lifecycle session. |
+| [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) | Detail prinsip, jenis, lifecycle, metadata, ownership, review, publication, archive, code-documentation relationship, dan AI policy pada tahap Update Documentation | Documentation Engine menjadi sumber detail dokumentasi tanpa menggantikan lifecycle session. |
 | [`../../01-foundation/FOUNDATION_ARCHITECTURE.md`](../../01-foundation/FOUNDATION_ARCHITECTURE.md) | SSOT, derived-not-duplicated, evidence flow, ownership, lifecycle, feedback, dan playbook boundary | Engine tidak mengambil ownership Foundation atau domain. |
 | [`../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md`](../../01-foundation/knowledge/KNOWLEDGE_GOVERNANCE.md) | provenance, status, source review, fact/assumption separation, lifecycle, dan lesson learned routing | Evidence eksekusi tidak otomatis menjadi approved knowledge atau policy. |
 | [`../../01-foundation/governance/README.md`](../../01-foundation/governance/README.md) | authority check, approval, exception, escalation, dan audit trail | Governance substantif belum tersedia; authority ambiguity tetap fail-closed. |
@@ -539,8 +548,9 @@ AI tidak boleh mengisi field approval atas nama manusia. Perubahan material pada
 - [x] Satu objective, incremental changes, validation, documentation, completion, dan repository consistency rules terdokumentasi.
 - [x] Enam Validation Gates terdokumentasi.
 - [x] Error handling, rollback, recovery, retry, failure record, dan lesson learned terdokumentasi.
-- [x] Alignment dengan Constitution, Developer Mode, Git Engine, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, dan repository standards dipetakan.
-- [x] Git lifecycle minimum, evidence contract, conflict resolution, dan Definition of Done terdokumentasi; detail Git didelegasikan ke Git Engine kanonik.
+- [x] Alignment dengan Constitution, Developer Mode, Git Engine, Documentation Engine, Foundation, Knowledge, Governance, SPOS Architecture, Session Template, dan repository standards dipetakan.
+- [x] Git lifecycle minimum dan documentation lifecycle minimum terdokumentasi; detail Git didelegasikan ke Git Engine dan detail dokumentasi ke Documentation Engine.
+- [x] Evidence contract, conflict resolution, dan Definition of Done menjaga dokumentasi sebagai gate wajib.
 - [x] Scope tidak membangun aplikasi, fitur produk, runtime, atau Governance Engine.
 - [ ] Constitution diratifikasi atau baseline interim diizinkan secara eksplisit.
 - [ ] Developer Mode dan Execution Engine memperoleh approval operasional serta activation record.

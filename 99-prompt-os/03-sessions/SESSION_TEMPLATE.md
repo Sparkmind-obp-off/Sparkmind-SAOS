@@ -1,6 +1,6 @@
 # SPOS Session Template
 
-> Status: Draft baseline SPOS-005 — gunakan bersama Execution Engine dan Git Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
+> Status: Draft baseline SPOS-006 — gunakan bersama Execution Engine, Git Engine, dan Documentation Engine; salin sebagai session baru dan ganti seluruh token `<...>`.
 
 ## Metadata
 
@@ -38,6 +38,7 @@ Jelaskan keadaan awal, alasan session diperlukan, dan fakta yang sudah diverifik
 | Knowledge / Decision | `<path>` | `<status>` | `<context>` |
 | Developer Mode / Execution Engine | `<path dan versi>` | `<status>` | `<behavior, lifecycle, gates, dan completion contract>` |
 | Git Engine | `<path dan versi>` | `<status>` | `<branch, review, commit, push, release, protection, dan automation contract>` |
+| Documentation Engine | `<path dan versi>` | `<status>` | `<type, lifecycle, metadata, review, publication, archive, dan AI documentation contract>` |
 | SPOS rule / playbook | `<path>` | `<status>` | `<constraint atau procedure>` |
 
 Jangan memperlakukan dependency Draft sebagai aturan Approved.
@@ -96,6 +97,7 @@ Turunkan tahap tersebut menjadi subtask atomik sesuai klasifikasi pekerjaan. Ses
 - [ ] Git Engine checklist yang berlaku, diff/staged diff, whitespace, dan secret review selesai.
 - [ ] Required branch/PR/reviewer/check/approval/merge dipatuhi.
 - [ ] Commit/push/remote hash atau alasan blocker diverifikasi.
+- [ ] Documentation Engine impact assessment serta semantic/authority/lifecycle/link/security/usability check lulus.
 - [ ] Repository Consistency Check dan Documentation Check lulus.
 - [ ] Definition of Done Check lulus.
 - [ ] Session Report selesai dan tidak menjadi sumber kanonik tandingan.
@@ -109,6 +111,7 @@ Turunkan tahap tersebut menjadi subtask atomik sesuai klasifikasi pekerjaan. Ses
 | Knowledge | Apakah status dan provenance tetap benar? | `<hasil>` |
 | Governance | Apakah authority, approval, dan escalation dipatuhi? | `<hasil>` |
 | SAOS / SPOS | Apakah komponen berada pada layer yang tepat? | `<hasil>` |
+| Documentation | Apakah source, jenis, status, metadata, owner, link, review, publication/archive, dan consumer sinkron? | `<hasil>` |
 | Products | Apakah requirement atau logic produk dibuat di luar scope? | `<hasil>` |
 
 ## 9. Git Workflow
@@ -148,7 +151,7 @@ Session hanya `Completed` jika:
 
 - [ ] seluruh deliverable selesai pada lokasi kanonik;
 - [ ] seluruh quality gate wajib lulus;
-- [ ] review dan dokumentasi selesai;
+- [ ] review dan dokumentasi selesai sesuai Documentation Engine;
 - [ ] Git workflow selesai jika diwajibkan serta capability, authority, review, dan protection mengizinkan;
 - [ ] jika Git terblokir, blocker dicatat jujur dan completion mengikuti Definition of Done/policy session;
 - [ ] report final mencerminkan keadaan aktual.

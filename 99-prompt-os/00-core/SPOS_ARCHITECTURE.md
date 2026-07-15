@@ -1,6 +1,6 @@
 # SPOS Architecture
 
-> Status: Draft baseline SPOS-005 — diselaraskan dengan Constitution, Developer Mode Engine, Execution Engine, dan Git Engine `In Review`; bukan runtime aktif.
+> Status: Draft baseline SPOS-006 — diselaraskan dengan Constitution, Developer Mode Engine, Execution Engine, Git Engine, dan Documentation Engine `In Review`; bukan runtime aktif.
 
 ## Tujuan
 
@@ -51,7 +51,7 @@ SPOS berada di bawah operating model SAOS dan menggunakan Kernel serta Foundatio
 
 | Komponen | Tanggung jawab | Input | Output |
 | --- | --- | --- | --- |
-| `00-core/` | Menyimpan Constitution, Developer Mode, Execution Engine, Git Engine, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, operational behavior, execution lifecycle, Git governance, dan engine specifications |
+| `00-core/` | Menyimpan Constitution, Developer Mode, Execution Engine, Git Engine, Documentation Engine, architecture, dan engine contracts | Founder authority, Kernel source material, Foundation, SAOS constraints | Constitutional boundaries, operational behavior, execution lifecycle, Git governance, documentation governance, dan engine specifications |
 | `01-templates/` | Menyediakan struktur artefak reusable | Rule dan metadata contract | Draft artefak yang konsisten |
 | `02-rules/` | Menyimpan aturan atomik dan precedence | Authority serta governance approved | Constraint dan quality gate terkomposisi |
 | `03-sessions/` | Membatasi satu unit kerja | Objective, scope, dependency, acceptance criteria | Deliverable, evidence, dan session report |
@@ -127,7 +127,7 @@ Proposed → Draft → In Review → Approved → Deprecated → Archived
 - **Deprecated:** masih tersedia untuk transisi, tidak untuk penggunaan baru.
 - **Archived:** dipertahankan untuk audit atau histori.
 
-Perubahan status mengikuti governance upstream. Commit atau keberadaan file tidak sama dengan approval.
+Perubahan status mengikuti governance upstream. Mapping detail terhadap lifecycle `Draft → Review → Approved → Published → Updated → Archived`, termasuk state `In Review`, `Deprecated`, dan `Superseded`, mengikuti [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md). Commit atau keberadaan file tidak sama dengan approval.
 
 ### Lifecycle session
 
@@ -155,7 +155,7 @@ Intake, module selection, prompt assembly, dan preflight tetap menjadi aktivitas
 2. **Classify:** tentukan domain, risiko, reversibility, dan authority yang diperlukan.
 3. **Resolve upstream:** muat sumber kanonik Kernel, Foundation, Governance, Knowledge, dan SAOS yang relevan beserta statusnya.
 4. **Create session contract:** kunci scope, non-scope, deliverable, success criteria, dan stop condition.
-5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) sebagai baseline perilaku, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) sebagai baseline proses, dan [`GIT_ENGINE.md`](GIT_ENGINE.md) sebagai baseline Git hanya sesuai status serta authority aktualnya.
+5. **Select modules:** pilih engine, rule, template, dan playbook yang approved serta sesuai versi; gunakan [`DEVELOPER_MODE_ENGINE.md`](DEVELOPER_MODE_ENGINE.md) sebagai baseline perilaku, [`EXECUTION_ENGINE.md`](EXECUTION_ENGINE.md) sebagai baseline proses, [`GIT_ENGINE.md`](GIT_ENGINE.md) sebagai baseline Git, dan [`DOCUMENTATION_ENGINE.md`](DOCUMENTATION_ENGINE.md) sebagai baseline dokumentasi hanya sesuai status serta authority aktualnya.
 6. **Assemble prompts:** susun System → User → Task tanpa menduplikasi sumber authority.
 7. **Preflight:** periksa konflik, missing input, security, capability, approval, dan rencana validasi.
 8. **Execute:** lakukan pekerjaan hanya dalam scope serta rekam keputusan dan evidence.
@@ -217,7 +217,7 @@ Sebelum session ditutup, pastikan:
 - Quality gate gagal: perbaiki dalam scope atau tandai session belum selesai.
 - Feedback produk: catat sebagai evidence; owner upstream memutuskan perubahan.
 
-## Review Checklist SPOS-005
+## Review Checklist SPOS-006
 
 - [x] Tujuan, komponen, dependency, lifecycle, dan execution flow terdokumentasi.
 - [x] Constitution menjadi authority tertinggi di dalam SPOS setelah ratifikasi Founder.
@@ -229,7 +229,9 @@ Sebelum session ditutup, pastikan:
 - [x] Developer Mode Engine diposisikan sebagai kontrak perilaku operasional, bukan runtime atau authority baru.
 - [x] Execution Engine diposisikan sebagai kontrak proses kanonik untuk lifecycle, classification, validation, recovery, evidence, dan completion.
 - [x] Git Engine diposisikan sebagai kontrak kanonik branch, commit, PR/review, merge, push, release, protection, audit, recovery, dan AI Git automation.
-- [x] Decision gates, autonomy boundary, repository interaction, validation, rollback, Git, dan reporting selaras dengan execution flow.
+- [x] Documentation Engine diposisikan sebagai kontrak kanonik prinsip, jenis, lifecycle, metadata, versioning, ownership, review, publication, archive, dan AI Documentation Policy.
+- [x] Decision gates, autonomy boundary, repository interaction, validation, rollback, documentation, Git, dan reporting selaras dengan execution flow.
 - [x] Lifecycle arsitektural dan lifecycle Execution Engine dipetakan tanpa membuat dua sumber proses tandingan.
-- [x] Perform Git Workflow mendelegasikan detail ke Git Engine tanpa membuat workflow Git tandingan.
-- [x] Baseline tidak mengklaim runtime, hosting, platform protection, atau automation yang belum dibangun/diverifikasi.
+- [x] Update Documentation mendelegasikan detail ke Documentation Engine dan Perform Git Workflow mendelegasikan detail ke Git Engine tanpa membuat policy tandingan.
+- [x] Lifecycle dokumentasi dipetakan terhadap lifecycle artefak SPOS tanpa menghapus status existing.
+- [x] Baseline tidak mengklaim runtime, CMS, publication platform, hosting, platform protection, atau automation yang belum dibangun/diverifikasi.
